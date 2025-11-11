@@ -1,17 +1,17 @@
 {
   "notifications": {
     "newUser": {
-      "subject": "🎉 New User Registration - The Lux Mining",
-      "preheader": "A new profile was created on the storefront."
+      "subject": "✨ New Household Added - CMK Home Services",
+      "preheader": "A new client profile was created. Review the details in the portal."
     },
     "cartShare": {
-      "subject": "The Lux Mining · Cart Selection"
+      "subject": "CMK Concierge · Service Selection"
     },
     "contact": {
-      "subject": "The Lux Mining · Contact Message"
+      "subject": "CMK Concierge · Inquiry from {name}"
     },
     "inventoryAlert": {
-      "subject": "Inventory Alert - The Lux Mining"
+      "subject": "Schedule Capacity Alert - CMK Home Services"
     }
   }
 }

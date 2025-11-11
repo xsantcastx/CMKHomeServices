@@ -1,0 +1,140 @@
+<!-- Service Areas Hero -->
+<section class="areas-hero">
+  <div class="hero-content">
+    <h1>{{ 'service_areas.hero.title' | translate }}</h1>
+    <p class="hero-subtitle">{{ 'service_areas.hero.subtitle' | translate }}</p>
+  </div>
+</section>
+
+<!-- Service Areas Map Section -->
+<section class="areas-intro">
+  <div class="container">
+    <div class="intro-content">
+      <h2>{{ 'service_areas.intro.title' | translate }}</h2>
+      <p class="intro-text">
+        {{ 'service_areas.intro.description' | translate }}
+      </p>
+      <div class="service-highlights">
+        <div class="highlight">
+          <span class="highlight-icon">📍</span>
+          <span>{{ 'service_areas.intro.highlights.areas_served' | translate }}</span>
+        </div>
+        <div class="highlight">
+          <span class="highlight-icon">🚗</span>
+          <span>{{ 'service_areas.intro.highlights.same_day' | translate }}</span>
+        </div>
+        <div class="highlight">
+          <span class="highlight-icon">💚</span>
+          <span>{{ 'service_areas.intro.highlights.eco_friendly' | translate }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Areas Grid -->
+<section class="areas-grid-section">
+  <div class="container">
+    <div class="areas-grid">
+      @for (area of serviceAreas; track area.slug) {
+        <div class="area-card">
+          <h3>{{ area.name }}</h3>
+          <p class="area-description">{{ area.description }}</p>
+          
+          @if (area.neighborhoods) {
+            <div class="neighborhoods">
+              <p class="neighborhoods-label">{{ 'service_areas.card.neighborhoods_label' | translate }}</p>
+              <ul class="neighborhoods-list">
+                @for (hood of area.neighborhoods; track hood) {
+                  <li>{{ hood }}</li>
+                }
+              </ul>
+            </div>
+          }
+          
+          <div class="area-services">
+            <p class="services-label">{{ 'service_areas.card.services_label' | translate }}</p>
+            <div class="services-links">
+              @for (service of services; track service.slug) {
+                <a [routerLink]="['/services', service.slug]" class="service-link">
+                  <span>{{ service.icon }}</span>
+                  <span>{{ service.name }}</span>
+                </a>
+              }
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Not Listed Section -->
+<section class="not-listed">
+  <div class="container">
+    <div class="not-listed-content">
+      <h2>{{ 'service_areas.not_listed.title' | translate }}</h2>
+      <p>
+        {{ 'service_areas.not_listed.description' | translate }}
+      </p>
+      <div class="cta-buttons">
+        <a href="https://wa.me/17863807579?text=Hi! I'm interested in cleaning services. My area is:" 
+           target="_blank" 
+           class="btn btn-primary">
+          {{ 'service_areas.not_listed.cta_ask' | translate }}
+        </a>
+        <a href="tel:+17863807579" class="btn btn-secondary">
+          {{ 'service_areas.not_listed.cta_call' | translate }}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Service Features -->
+<section class="service-features">
+  <div class="container">
+    <h2>{{ 'service_areas.why_choose.title' | translate }}</h2>
+    <div class="features-grid">
+      <div class="feature">
+        <div class="feature-icon">🏆</div>
+        <h3>{{ 'service_areas.why_choose.local_expertise.title' | translate }}</h3>
+        <p>{{ 'service_areas.why_choose.local_expertise.description' | translate }}</p>
+      </div>
+      
+      <div class="feature">
+        <div class="feature-icon">⚡</div>
+        <h3>{{ 'service_areas.why_choose.fast_response.title' | translate }}</h3>
+        <p>{{ 'service_areas.why_choose.fast_response.description' | translate }}</p>
+      </div>
+      
+      <div class="feature">
+        <div class="feature-icon">✅</div>
+        <h3>{{ 'service_areas.why_choose.licensed.title' | translate }}</h3>
+        <p>{{ 'service_areas.why_choose.licensed.description' | translate }}</p>
+      </div>
+      
+      <div class="feature">
+        <div class="feature-icon">🌟</div>
+        <h3>{{ 'service_areas.why_choose.five_star.title' | translate }}</h3>
+        <p>{{ 'service_areas.why_choose.five_star.description' | translate }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Bottom CTA -->
+<section class="bottom-cta">
+  <div class="container">
+    <h2>{{ 'service_areas.bottom_cta.title' | translate }}</h2>
+    <p>{{ 'service_areas.bottom_cta.subtitle' | translate }}</p>
+    <div class="cta-buttons">
+      <a routerLink="/contact" class="btn btn-primary-large">
+        {{ 'service_areas.bottom_cta.cta_quote' | translate }}
+      </a>
+      <a routerLink="/services" class="btn btn-outline-large">
+        {{ 'service_areas.bottom_cta.cta_services' | translate }}
+      </a>
+    </div>
+  </div>
+</section>

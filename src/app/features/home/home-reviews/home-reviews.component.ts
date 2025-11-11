@@ -115,7 +115,7 @@ export class HomeReviewsComponent {
     try {
       await this.reviewService.saveReview({
         uid: user.uid,
-        displayName: user.displayName || user.email || 'Anonymous Miner',
+        displayName: user.displayName || user.email || 'Anonymous Customer',
         rating,
         comment,
         photoURL: null

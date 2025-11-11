@@ -1,66 +1,64 @@
-<section class="section-gap relative overflow-hidden">
-  <div class="luxury-overlay"></div>
-  <div class="page-container relative z-10">
-    <div class="grid xl:grid-cols-2 gap-12 items-start">
-      <div>
-        <p class="text-sm uppercase tracking-wide text-bitcoin-gold mb-3">
+<section class="section-spacing reviews-section">
+  <div class="page-container">
+    <div class="reviews-grid">
+      <div class="reviews-intro">
+        <p class="reviews-eyebrow">
           {{ 'home.reviews.eyebrow' | translate }}
         </p>
-        <h2 class="font-serif text-4xl lg:text-5xl bitcoin-gradient-text mb-6">
+        <h2 class="reviews-title">
           {{ 'home.reviews.title' | translate }}
         </h2>
-        <p class="text-lg text-bitcoin-gray max-w-2xl">
+        <p class="reviews-subtitle">
           {{ 'home.reviews.subtitle' | translate }}
         </p>
 
-        <div class="mt-8 flex flex-wrap items-center gap-8">
-          <div class="flex items-center gap-3">
-            <div class="flex items-center gap-1 text-bitcoin-gold text-2xl">
+        <div class="reviews-metrics">
+          <div class="reviews-metric">
+            <div class="reviews-stars">
               @for (star of stars; track star) {
-                <svg class="w-6 h-6" [class.opacity-30]="star > math.round(averageRating())" fill="currentColor" viewBox="0 0 20 20">
+                <svg class="w-6 h-6" [class.dimmed]="star > math.round(averageRating())" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
                 </svg>
               }
             </div>
-            <div>
-              <div class="text-3xl font-bold text-white">{{ averageRating() | number:'1.1-1' }}</div>
-              <div class="text-sm text-bitcoin-gray">{{ 'home.reviews.average_rating' | translate }}</div>
+            <div class="reviews-metric-copy">
+              <div class="reviews-metric-value">{{ averageRating() | number:'1.1-1' }}</div>
+              <div class="reviews-metric-label">{{ 'home.reviews.average_rating' | translate }}</div>
             </div>
           </div>
-          <div>
-            <div class="text-3xl font-bold text-white">{{ totalReviews() }}</div>
-            <div class="text-sm text-bitcoin-gray">{{ 'home.reviews.published_reviews' | translate }}</div>
+          <div class="reviews-metric">
+            <div class="reviews-metric-value">{{ totalReviews() }}</div>
+            <div class="reviews-metric-label">{{ 'home.reviews.published_reviews' | translate }}</div>
           </div>
         </div>
       </div>
 
-      <div class="bg-bitcoin-dark/50 border border-white/10 rounded-2xl p-6 lg:p-8 shadow-bitcoin space-y-4">
+      <div class="reviews-form-card">
         @if (submissionMessage()) {
-          <div class="p-4 rounded-lg border border-emerald-500/40 bg-emerald-500/10 text-emerald-300 text-sm">
+          <div class="reviews-alert reviews-alert--success">
             {{ submissionMessage() }}
           </div>
         }
         @if (submissionError()) {
-          <div class="p-4 rounded-lg border border-red-500/40 bg-red-500/10 text-red-300 text-sm">
+          <div class="reviews-alert reviews-alert--error">
             {{ submissionError() }}
           </div>
         }
 
         @if (currentUser()) {
-          <div class="space-y-4">
+          <div class="reviews-form">
             <div>
-              <div class="text-sm text-white/80 mb-2">{{ 'home.reviews.rate_experience' | translate }}</div>
-              <div class="flex items-center gap-2">
+              <div class="reviews-label">{{ 'home.reviews.rate_experience' | translate }}</div>
+              <div class="reviews-rating-picker">
                 @for (star of stars; track star) {
                   <button
                     type="button"
-                    class="w-10 h-10 flex items-center justify-center rounded-full border border-white/10 transition-colors"
-                    [class.bg-bitcoin-gold/20]="star <= ratingInput()"
-                    [class.text-bitcoin-gold]="star <= ratingInput()"
+                    class="reviews-rating-button"
+                    [class.is-active]="star <= ratingInput()"
                     (click)="selectRating(star)"
                     [disabled]="isSubmitting()"
                     [attr.aria-label]="'home.reviews.rate_stars' | translate:{stars: star}">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
                     </svg>
                   </button>
@@ -69,7 +67,7 @@
             </div>
 
             <div>
-              <label class="text-sm text-white/80 mb-2 block" for="review-comment">
+              <label class="reviews-label" for="review-comment">
                 {{ 'home.reviews.share_testimonial' | translate }}
               </label>
               <textarea
@@ -80,16 +78,16 @@
                 [ngModel]="commentInput()"
                 (ngModelChange)="commentInput.set($event)"
                 [disabled]="isSubmitting()"
-                class="w-full px-4 py-3 bg-gray-900/60 border border-white/10 rounded-xl text-white placeholder-white/40 focus:border-bitcoin-orange focus:ring-1 focus:ring-bitcoin-orange transition-all"></textarea>
-              <div class="text-xs text-white/40 mt-1">
+                class="reviews-textarea"></textarea>
+              <div class="reviews-help">
                 {{ 'home.reviews.testimonial_help' | translate }}
               </div>
             </div>
 
-            <div class="flex flex-col sm:flex-row gap-3">
+            <div class="reviews-actions">
               <button
                 type="button"
-                class="w-full px-6 py-3 bg-bitcoin-orange text-white rounded-full font-semibold hover:bg-bitcoin-orange/90 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                class="reviews-btn reviews-btn--primary"
                 (click)="submitReview()"
                 [disabled]="isSubmitting()">
                 @if (isSubmitting()) {
@@ -105,7 +103,7 @@
               @if (userReview()) {
                 <button
                   type="button"
-                  class="w-full sm:w-auto px-6 py-3 bg-red-500/20 text-red-300 rounded-full font-semibold hover:bg-red-500/30 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                  class="reviews-btn reviews-btn--ghost"
                   (click)="deleteReview()"
                   [disabled]="isSubmitting()">
                   {{ 'home.reviews.delete_review' | translate }}
@@ -114,51 +112,51 @@
             </div>
           </div>
         } @else {
-          <div class="space-y-4">
-            <h3 class="text-xl font-semibold text-white">{{ 'home.reviews.sign_in_title' | translate }}</h3>
-            <p class="text-bitcoin-gray">
+          <div class="reviews-signin">
+            <h3>{{ 'home.reviews.sign_in_title' | translate }}</h3>
+            <p>
               {{ 'home.reviews.sign_in_desc' | translate }}
             </p>
             <a
               routerLink="/client/login"
-              class="inline-flex items-center justify-center px-6 py-3 bg-bitcoin-gold/20 text-bitcoin-gold rounded-full font-semibold hover:bg-bitcoin-gold/30 transition-all">
+              class="reviews-btn reviews-btn--primary reviews-btn--wide">
               {{ 'home.reviews.sign_in_button' | translate }}
             </a>
-            <p class="text-xs text-white/40">{{ 'home.reviews.no_account' | translate }} <a routerLink="/client/register" class="text-bitcoin-gold hover:text-bitcoin-orange">{{ 'home.reviews.create_account' | translate }}</a></p>
+            <p class="reviews-signin-hint">{{ 'home.reviews.no_account' | translate }} <a routerLink="/client/register">{{ 'home.reviews.create_account' | translate }}</a></p>
           </div>
         }
       </div>
     </div>
 
-    <div class="mt-14">
+    <div class="reviews-list">
       @if (displayedReviews().length) {
-        <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+        <div class="reviews-card-grid">
           @for (review of displayedReviews(); track trackByReviewId($index, review)) {
-            <article class="bg-bitcoin-dark/50 border border-white/10 rounded-2xl p-6 shadow-bitcoin hover:border-bitcoin-orange/40 transition-all duration-300">
+            <article class="reviews-card">
               <div class="flex items-center gap-3 mb-4">
-                <div class="w-12 h-12 rounded-full bg-bitcoin-gold/20 text-bitcoin-gold flex items-center justify-center font-semibold text-lg">
+                <div class="reviews-avatar">
                   {{ review.displayName | slice:0:1 }}
                 </div>
                 <div>
-                  <div class="text-white font-semibold">{{ review.displayName }}</div>
-                  <div class="flex items-center gap-1 text-bitcoin-gold text-sm">
+                  <div class="reviews-name">{{ review.displayName }}</div>
+                  <div class="reviews-mini-stars">
                     @for (star of stars; track star) {
-                      <svg class="w-4 h-4" [class.opacity-30]="star > review.rating" fill="currentColor" viewBox="0 0 20 20">
+                      <svg class="w-3.5 h-3.5" [class.dimmed]="star > review.rating" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
                       </svg>
                     }
                   </div>
                 </div>
               </div>
-              <p class="text-bitcoin-gray leading-relaxed">{{ review.comment }}</p>
-              <div class="mt-4 text-xs text-white/40">
+              <p class="reviews-comment">{{ review.comment }}</p>
+              <div class="reviews-date">
                 {{ (review.updatedAt || review.createdAt) | date:'mediumDate' }}
               </div>
             </article>
           }
         </div>
       } @else {
-        <div class="border border-dashed border-white/10 rounded-2xl p-8 text-center text-bitcoin-gray">
+        <div class="reviews-empty">
           <p class="text-lg">{{ 'home.reviews.no_reviews_title' | translate }}</p>
           <p class="text-sm mt-2">{{ 'home.reviews.no_reviews_desc' | translate }}</p>
         </div>
@@ -166,4 +164,3 @@
     </div>
   </div>
 </section>
-

@@ -1,0 +1,74 @@
+<!-- 404 Page -->
+<div class="not-found-wrapper">
+  <div class="container">
+    <!-- 404 Header -->
+    <div class="error-header">
+      <div class="error-number">{{ 'not_found_page.error_number' | translate }}</div>
+      <h1>{{ 'not_found_page.title' | translate }}</h1>
+      <p class="error-message">
+        {{ 'not_found_page.message' | translate }}
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <section class="quick-links-section">
+      <h2>{{ 'not_found_page.quick_links_title' | translate }}</h2>
+      <div class="links-grid">
+        @for (link of quickLinks; track link.path) {
+          <a [routerLink]="link.path" class="quick-link-card">
+            <span class="link-icon">{{ link.icon }}</span>
+            <span class="link-name">{{ link.name }}</span>
+            <span class="link-arrow">→</span>
+          </a>
+        }
+      </div>
+    </section>
+
+    <!-- Popular Services -->
+    <section class="services-section">
+      <h2>{{ 'not_found_page.popular_services_title' | translate }}</h2>
+      <div class="services-grid">
+        @for (service of popularServices; track service.slug) {
+          <a [routerLink]="['/services', service.slug]" class="service-card">
+            <span class="service-icon">{{ service.icon }}</span>
+            <span class="service-name">{{ service.name }}</span>
+            <span class="service-arrow">→</span>
+          </a>
+        }
+      </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="contact-cta">
+      <h2>{{ 'not_found_page.need_help_title' | translate }}</h2>
+      <p>{{ 'not_found_page.need_help_subtitle' | translate }}</p>
+      <div class="cta-buttons">
+        <a
+          href="https://wa.me/17863807579?text=Hi! I need help finding something on your website"
+          target="_blank"
+          rel="noopener"
+          class="button button--whatsapp cta-buttons__item">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/></svg>
+          <span>{{ 'not_found_page.cta.whatsapp' | translate }}</span>
+        </a>
+        <a href="tel:+17863807579" class="button button--primary cta-buttons__item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.86 19.86 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.86 19.86 0 012.08 4.18A2 2 0 014.06 2h3a2 2 0 012 1.72c.12.86.37 1.69.72 2.47a2 2 0 01-.45 2.11l-1.27 1.27a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.78.35 1.61.6 2.47.72A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>{{ 'not_found_page.cta.call' | translate }}</span>
+        </a>
+        <a routerLink="/contact" class="button button--ghost cta-buttons__item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm0 0l8 7 8-7" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>{{ 'not_found_page.cta.email' | translate }}</span>
+          <span>Chat on WhatsApp</span>
+        </a>
+        <a href="tel:+17863807579" class="button button--primary cta-buttons__item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.86 19.86 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.86 19.86 0 012.08 4.18 2 2 0 014.06 2h3a2 2 0 012 1.72c.12.86.37 1.69.72 2.47a2 2 0 01-.45 2.11l-1.27 1.27a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.78.35 1.61.6 2.47.72A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Call (786) 380-7579</span>
+        </a>
+        <a routerLink="/contact" class="button button--ghost cta-buttons__item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm0 0l8 7 8-7" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Send Email</span>
+        </a>
+      </div>
+    </section>
+  </div>
+</div>

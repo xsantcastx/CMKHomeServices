@@ -1,8 +1,8 @@
-import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZonelessChangeDetection, importProvidersFrom } from '@angular/core';
-import { provideRouter, TitleStrategy, withPreloading, PreloadAllModules } from '@angular/router';
+import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZonelessChangeDetection, importProvidersFrom, inject } from '@angular/core';
+import { provideRouter, TitleStrategy, withPreloading, PreloadAllModules, withInMemoryScrolling } from '@angular/router';
 import { provideHttpClient, withFetch, HttpClient } from '@angular/common/http';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
+import { provideFirebaseApp, initializeApp, getApps, FirebaseApp } from '@angular/fire/app';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 import { provideStorage, getStorage } from '@angular/fire/storage';
@@ -26,12 +26,15 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
-    provideRouter(routes, withPreloading(PreloadAllModules)),
+    provideRouter(routes, withPreloading(PreloadAllModules), withInMemoryScrolling({ anchorScrolling: 'enabled', scrollPositionRestoration: 'enabled' })),
     provideAnimationsAsync(),
     { provide: TitleStrategy, useClass: PageTitleStrategy },
     provideClientHydration(withEventReplay()),
     provideHttpClient(withFetch()),
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirebaseApp(() => {
+      const existingApp = getApps()[0];
+      return existingApp ?? initializeApp(environment.firebase);
+    }),
     provideFirestore(() => {
       const firestore = getFirestore();
       return firestore;
@@ -53,8 +56,8 @@ export const appConfig: ApplicationConfig = {
       const storage = getStorage();
       return storage;
     }),
-    // App Check for security (browser only, production only or when not using emulators)
-    ...(!environment.useEmulators && typeof window !== 'undefined' ? [
+    // App Check for security (browser only, production only)
+    ...(environment.production && !environment.useEmulators && typeof window !== 'undefined' ? [
       provideAppCheck(() => {
         console.log('[AppCheck] Initializing App Check with reCAPTCHA v3');
         
@@ -65,7 +68,8 @@ export const appConfig: ApplicationConfig = {
             : environment.recaptcha.siteKey
         );
           
-        const appCheck = initializeAppCheck(undefined as any, {
+        const app = inject(FirebaseApp);
+        const appCheck = initializeAppCheck(app, {
           provider,
           isTokenAutoRefreshEnabled: true
         });

@@ -1,134 +1,130 @@
-import { Component, OnInit, PLATFORM_ID, inject } from '@angular/core';
-import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { Component, OnInit, inject } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { TranslateModule } from '@ngx-translate/core';
-import { ProductFirestoreService, FirestoreProduct } from '../../services/product-firestore.service';
-import { GalleryService, GalleryImage } from '../../services/gallery.service';
-import { CategoryService } from '../../services/category.service';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { HomeHeroComponent } from '../../features/home/home-hero/home-hero.component';
-import { HomeStatsComponent } from '../../features/home/home-stats/home-stats.component';
 import { HomeReviewsComponent } from '../../features/home/home-reviews/home-reviews.component';
-import { LoadingComponentBase } from '../../core/classes/loading-component.base';
 import { MetaService } from '../../services/meta.service';
-import { take } from 'rxjs/operators';
+import { BrandConfigService } from '../../core/services/brand-config.service';
+import { ServicePackagesService } from '../../services/service-packages.service';
+import type { ServicePackage } from '@config';
+
+interface HighlightCard {
+  title: string;
+  copy: string;
+  icon: string;
+}
+
+interface Testimonial {
+  quote: string;
+  author: string;
+  location: string;
+}
 
 @Component({
   selector: 'app-home-page',
   standalone: true,
-  imports: [CommonModule, RouterModule, TranslateModule, HomeHeroComponent, HomeStatsComponent, HomeReviewsComponent],
+  imports: [CommonModule, RouterModule, TranslateModule, HomeHeroComponent, HomeReviewsComponent],
   templateUrl: './home.page.html',
   styleUrl: './home.page.scss'
 })
-export class HomePageComponent extends LoadingComponentBase implements OnInit {
-  private platformId = inject(PLATFORM_ID);
-  private productService = inject(ProductFirestoreService);
-  private galleryService = inject(GalleryService);
-  private categoryService = inject(CategoryService);
+export class HomePageComponent implements OnInit {
   private metaService = inject(MetaService);
-  
-  // Dynamic product data from Firestore
-  featuredProducts: FirestoreProduct[] = [];
-  soloMinerProducts: FirestoreProduct[] = [];
-  galleryImages: GalleryImage[] = [];
-  hasProducts = false;
-  hasSoloMiners = false;
+  private brandConfig = inject(BrandConfigService);
+  private servicePackagesService = inject(ServicePackagesService);
+  private translate = inject(TranslateService);
 
-  ngOnInit() {
-    // Set page meta tags from settings
-    this.metaService.setPageMeta({
-      title: 'page_titles.home',
-      description: 'home.hero.subtitle'
-    });
-
-    // Only load from service if in browser (not during SSR)
-    if (isPlatformBrowser(this.platformId)) {
-      this.loadLatestProducts();
-      this.loadSoloMiners();
-      this.loadGalleryPreview();
-    } else {
-      // During SSR, set loading to false to show empty state
-      this.setLoading(false);
-    }
-  }
-
-  private async loadLatestProducts() {
-    await this.withLoading(async () => {
-      const products = await new Promise<FirestoreProduct[]>((resolve, reject) => {
-        this.productService.getProducts()
-          .pipe(take(1))
-          .subscribe({
-            next: (products) => resolve(products),
-            error: (error) => reject(error)
-          });
-      });
-      
-      // Filter available products and sort by creation date (newest first)
-      const availableProducts = products
-        .filter(p => p.available !== false)
-        .sort((a, b) => {
-          const dateA = a.createdAt ? new Date(a.createdAt).getTime() : 0;
-          const dateB = b.createdAt ? new Date(b.createdAt).getTime() : 0;
-          return dateB - dateA;
-        });
-      
-      // Take up to 8 latest products for featured section
-      this.featuredProducts = availableProducts.slice(0, 8);
-      this.hasProducts = this.featuredProducts.length > 0;
-    });
-  }
-
-  private async loadSoloMiners() {
-    try {
-      // Get solo-miners category
-      const categories = await new Promise<any[]>((resolve, reject) => {
-        this.categoryService.getActiveCategories()
-          .pipe(take(1))
-          .subscribe({
-            next: (categories) => resolve(categories),
-            error: (error) => reject(error)
-          });
-      });
-
-      const soloCategory = categories.find(cat => cat.slug === 'solo-miners');
-      
-      if (!soloCategory) {
-        this.hasSoloMiners = false;
-        return;
+  get featuredServices(): ServicePackage[] {
+    const services = ['premier_weekly', 'signature_biweekly', 'deep_restore'];
+    const prices = [420, 320, 980]; // Keep prices from catalog
+    const skus = ['CMK-PREM-WEEKLY', 'CMK-SIGNATURE-BIWEEKLY', 'CMK-DEEP-RESTORE'];
+    
+    return services.map((key, index) => ({
+      sku: skus[index],
+      name: this.translate.instant(`home.featured_services.${key}.name`),
+      description: this.translate.instant(`home.featured_services.${key}.description`),
+      price: prices[index],
+      currency: 'USD',
+      badge: this.translate.instant(`home.featured_services.${key}.badge`),
+      category: key,
+      attributes: {
+        'frequency': this.translate.instant(`home.featured_services.${key}.frequency`),
+        'duration': this.translate.instant(`home.featured_services.${key}.duration`),
+        'team': this.translate.instant(`home.featured_services.${key}.team`)
       }
-
-      // Get all products
-      const products = await new Promise<FirestoreProduct[]>((resolve, reject) => {
-        this.productService.getProducts()
-          .pipe(take(1))
-          .subscribe({
-            next: (products) => resolve(products),
-            error: (error) => reject(error)
-          });
-      });
-
-      // Filter solo miner products
-      this.soloMinerProducts = products
-        .filter(p => p.category === 'solo-miners' && p.available !== false)
-        .slice(0, 3); // Take up to 3 for featured section
-
-      this.hasSoloMiners = this.soloMinerProducts.length > 0;
-    } catch (error) {
-      console.error('Error loading solo miners:', error);
-      this.hasSoloMiners = false;
-    }
+    } as ServicePackage));
   }
 
-  private async loadGalleryPreview() {
-    // Get latest 6 gallery images (don't show loading for this secondary content)
-    this.galleryService.getAllImages()
-      .pipe(take(1))
-      .subscribe({
-        next: (images: GalleryImage[]) => {
-          this.galleryImages = images.slice(0, 6);
-        },
-        error: (error: any) => {
-          console.error('Error loading gallery:', error);
-        }
-      });
+  get highlights(): HighlightCard[] {
+    return [
+      {
+        title: this.translate.instant('home.why_choose.hashrate.title'),
+        copy: this.translate.instant('home.why_choose.hashrate.description'),
+        icon: 'users'
+      },
+      {
+        title: this.translate.instant('home.why_choose.efficiency.title'),
+        copy: this.translate.instant('home.why_choose.efficiency.description'),
+        icon: 'leaf'
+      },
+      {
+        title: this.translate.instant('home.why_choose.roi.title'),
+        copy: this.translate.instant('home.why_choose.roi.description'),
+        icon: 'calendar'
+      }
+    ];
+  }
+
+  get membershipPerks(): HighlightCard[] {
+    return [
+      {
+        title: this.translate.instant('home.features.enterprise.title'),
+        copy: this.translate.instant('home.features.enterprise.description'),
+        icon: 'bed'
+      },
+      {
+        title: this.translate.instant('home.features.efficiency.title'),
+        copy: this.translate.instant('home.features.efficiency.description'),
+        icon: 'sparkles'
+      },
+      {
+        title: this.translate.instant('home.features.roi.title'),
+        copy: this.translate.instant('home.features.roi.description'),
+        icon: 'clipboard'
+      }
+    ];
+  }
+
+  get testimonials(): Testimonial[] {
+    const items = this.translate.instant('home.testimonials.items');
+    if (Array.isArray(items)) {
+      return items;
+    }
+    // Fallback if translations aren't loaded yet
+    return [];
+  }
+
+  get membershipBenefits(): string[] {
+    const benefits = this.translate.instant('home.membership.benefits');
+    if (Array.isArray(benefits)) {
+      return benefits;
+    }
+    return [];
+  }
+
+  get serviceAreas(): string[] {
+    const areas = this.translate.instant('home.contact_section.areas');
+    if (Array.isArray(areas)) {
+      return areas;
+    }
+    return [];
+  }
+
+  ngOnInit(): void {
+    this.metaService.setPageMeta({
+      title: this.brandConfig.site.seo?.defaultTitle,
+      description: this.brandConfig.site.hero?.subtitle
+    });
   }
 }
+

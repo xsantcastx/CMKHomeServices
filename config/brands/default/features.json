@@ -4,9 +4,11 @@
   "donations": false,
   "reviews": true,
   "affiliates": false,
-  "educationalHub": true,
+  "educationalHub": false,
   "cookieBanner": true,
   "maintenanceMode": false,
-  "gallery": true,
-  "adminPanel": true
+  "gallery": false,
+  "adminPanel": true,
+  "pressBadges": true,
+  "servicePackages": true
 }

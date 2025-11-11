@@ -221,19 +221,30 @@ service cloud.firestore {
 
     // Mail collection for contact form (Brevo integration)
     match /mail/{document} {
-      allow create: if resource == null
-        && request.resource.data.keys().hasAll(['to', 'message'])
+      // Allow anyone to create contact form emails
+      allow create: if request.resource.data.keys().hasAll(['to', 'message'])
         && request.resource.data.to is list
+        && request.resource.data.to.size() >= 1
         && request.resource.data.to.size() <= 3
         && request.resource.data.message.keys().hasAll(['subject', 'html'])
+        && request.resource.data.message.subject is string
+        && request.resource.data.message.html is string
         && (
           // Allow hardcoded safe emails
-          request.resource.data.to[0] in ['support@theluxmining.com', 'contact@theluxmining.com', 'xsantcastx@xsantcastx.com']
+          request.resource.data.to[0] in [
+            'info@cmkhomeservices.com',
+            'hello@cmkhomeservices.com',
+            'support@theluxmining.com', 
+            'contact@theluxmining.com', 
+            'xsantcastx@xsantcastx.com'
+          ]
           // OR allow email from settings (admins can configure it)
           || request.resource.data.to[0] == get(/databases/$(database)/documents/settings/app-settings).data.contactEmail
         );
       
+      // Nobody can read mail documents (handled by extension)
       allow read: if false;
+      // Nobody can update or delete (extension handles cleanup)
       allow update, delete: if false;
     }
 

@@ -22,9 +22,10 @@
       
       <!-- Desktop Navigation (hidden on mobile) -->
       <nav class="app-navbar__links">
-        @for (link of headerLinks; track link.href) {
+        @for (link of headerLinks; track link.fragment || link.href) {
           <a
             [routerLink]="link.href"
+            [fragment]="link.fragment"
             routerLinkActive="active"
             [routerLinkActiveOptions]="link.exact ? exactMatchOption : partialMatchOption"
             class="app-navbar__link">
@@ -35,8 +36,16 @@
     </div>
 
     <div class="app-navbar__end">
-      @if (linkedinUrl || instagramUrl) {
+      @if (facebookUrl || linkedinUrl || instagramUrl || twitterUrl || youtubeUrl) {
         <div class="app-navbar__social hidden lg:flex">
+          @if (facebookUrl) {
+            <a [href]="facebookUrl" target="_blank" rel="noopener noreferrer" class="app-navbar__social-link" aria-label="Facebook">
+              <svg class="w-[18px] h-[18px]" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+          }
+          
           @if (linkedinUrl) {
             <a [href]="linkedinUrl" target="_blank" rel="noopener noreferrer" class="app-navbar__social-link" aria-label="LinkedIn">
               <svg class="w-[18px] h-[18px]" fill="currentColor" viewBox="0 0 24 24">
@@ -51,6 +60,22 @@
                 <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.056 1.97.24 2.427.403a4.92 4.92 0 011.675 1.092 4.92 4.92 0 011.092 1.675c.163.457.347 1.257.403 2.427.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.056 1.17-.24 1.97-.403 2.427a4.92 4.92 0 01-1.092 1.675 4.92 4.92 0 01-1.675 1.092c-.457.163-1.257.347-2.427.403-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.056-1.97-.24-2.427-.403a4.92 4.92 0 01-1.675-1.092 4.92 4.92 0 01-1.092-1.675c-.163-.457-.347-1.257-.403-2.427C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.056-1.17.24-1.97.403-2.427A4.92 4.92 0 013.728 3.05 4.92 4.92 0 015.403 1.958c.457-.163 1.257-.347 2.427-.403C9.096 1.497 9.476 1.485 12 1.485m0-1.485C8.741 0 8.332.014 7.052.072c-1.29.059-2.177.25-2.947.535a6.41 6.41 0 00-2.32 1.511A6.41 6.41 0 00.274 4.438c-.285.77-.476 1.657-.535 2.947C-.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.059 1.29.25 2.177.535 2.947a6.41 6.41 0 001.511 2.32 6.41 6.41 0 002.32 1.511c.77.285 1.657.476 2.947.535C8.332 23.986 8.741 24 12 24s3.668-.014 4.948-.072c1.29-.059 2.177-.25 2.947-.535a6.41 6.41 0 002.32-1.511 6.41 6.41 0 001.511-2.32c.285-.77.476-1.657.535-2.947.058-1.28.072-1.689.072-4.948s-.014-3.668-.072-4.948c-.059-1.29-.25-2.177-.535-2.947a6.41 6.41 0 00-1.511-2.32A6.41 6.41 0 0019.895.607c-.77-.285-1.657-.476-2.947-.535C15.668.014 15.259 0 12 0z"/>
                 <path d="M12 5.838A6.162 6.162 0 005.838 12 6.162 6.162 0 0012 18.162 6.162 6.162 0 0018.162 12 6.162 6.162 0 0012 5.838zm0 10.162A4 4 0 118 12a4 4 0 014 4z"/>
                 <circle cx="18.406" cy="5.594" r="1.44"/>
+              </svg>
+            </a>
+          }
+          
+          @if (twitterUrl) {
+            <a [href]="twitterUrl" target="_blank" rel="noopener noreferrer" class="app-navbar__social-link" aria-label="Twitter">
+              <svg class="w-[18px] h-[18px]" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+              </svg>
+            </a>
+          }
+          
+          @if (youtubeUrl) {
+            <a [href]="youtubeUrl" target="_blank" rel="noopener noreferrer" class="app-navbar__social-link" aria-label="YouTube">
+              <svg class="w-[18px] h-[18px]" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
               </svg>
             </a>
           }
@@ -82,7 +107,7 @@
                 @if (userProfile$ | async; as profile) {
                   @if (profile.role === 'admin') {
                     <a routerLink="/admin" (click)="closeUserMenu()" class="app-navbar__dropdown-link">
-                      <svg class="w-5 h-5 text-[#f5a623]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
                       </svg>
                       <span class="font-medium">{{ 'admin.title' | translate }}</span>
@@ -118,29 +143,26 @@
           }
         </div>
       } @else {
-        <a routerLink="/client/login" class="app-navbar__auth hidden md:inline-flex">
+        <a routerLink="/client/login" class="button button--primary button--sm app-navbar__auth hidden md:inline-flex">
           {{ 'client.login' | translate }}
         </a>
       }
 
-      <div class="app-navbar__cart">
-        <app-cart-button />
-      </div>
     </div>
   </div>
 </header>
 
 <!-- Mobile overlay -->
-<div *ngIf="mobileOpen"
-     class="fixed inset-0 bg-black bg-opacity-75"
-     style="z-index: 9998;"
-     (click)="closeMobile()"></div>
+<div
+  *ngIf="mobileOpen"
+  class="app-navbar__overlay"
+  (click)="closeMobile()"></div>
 
 <!-- Mobile drawer -->
-<aside *ngIf="mobileOpen"
-       class="fixed top-0 right-0 w-[85%] max-w-sm h-full overflow-y-auto"
-       style="z-index: 9999; background: linear-gradient(135deg, #0a0b0d 0%, #13151a 100%); border-left: 2px solid rgba(247, 147, 26, 0.5); box-shadow: -8px 0 32px rgba(0, 0, 0, 0.8);"
-       (click)="$event.stopPropagation()">
+<aside
+  *ngIf="mobileOpen"
+  class="mobile-drawer"
+  (click)="$event.stopPropagation()">
 
   <!-- Mobile drawer header -->
   <div class="mobile-drawer__header">
@@ -158,21 +180,31 @@
   <!-- Mobile navigation -->
   <nav class="mobile-drawer__nav">
     <div class="mobile-drawer__links">
-      @for (link of headerLinks; track link.href) {
-        <a [routerLink]="link.href" (click)="closeMobile()" class="mobile-drawer__link">
+      @for (link of headerLinks; track link.fragment || link.href) {
+        <a [routerLink]="link.href" [fragment]="link.fragment" (click)="closeMobile()" class="mobile-drawer__link">
           {{ link.label | translate }}
         </a>
       }
     </div>
 
     <!-- Social Media Links (Mobile) -->
-    @if (linkedinUrl || instagramUrl) {
+    @if (facebookUrl || linkedinUrl || instagramUrl || twitterUrl || youtubeUrl) {
       <div class="mobile-drawer__section">
         <p class="mobile-drawer__section-title">{{ 'nav.follow_us' | translate }}</p>
-        <div class="flex gap-3">
+        <div class="mobile-drawer__social">
+          @if (facebookUrl) {
+            <a [href]="facebookUrl" target="_blank" rel="noopener noreferrer"
+               class="mobile-drawer__social-link"
+               aria-label="Facebook">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+          }
+          
           @if (linkedinUrl) {
             <a [href]="linkedinUrl" target="_blank" rel="noopener noreferrer"
-               class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#f7931a]/10 hover:bg-[#f7931a]/20 text-[#f7931a] transition-colors"
+               class="mobile-drawer__social-link"
                aria-label="LinkedIn">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
@@ -182,12 +214,32 @@
 
           @if (instagramUrl) {
             <a [href]="instagramUrl" target="_blank" rel="noopener noreferrer"
-               class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#f7931a]/10 hover:bg-[#f7931a]/20 text-[#f7931a] transition-colors"
+               class="mobile-drawer__social-link"
                aria-label="Instagram">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.056 1.97.24 2.427.403a4.92 4.92 0 011.675 1.092 4.92 4.92 0 011.092 1.675c.163.457.347 1.257.403 2.427.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.056 1.17-.24 1.97-.403 2.427a4.92 4.92 0 01-1.092 1.675 4.92 4.92 0 01-1.675 1.092c-.457.163-1.257.347-2.427.403-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.056-1.97-.24-2.427-.403a4.92 4.92 0 01-1.675-1.092 4.92 4.92 0 01-1.092-1.675c-.163-.457-.347-1.257-.403-2.427C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.056-1.17.24-1.97.403-2.427A4.92 4.92 0 013.728 3.05 4.92 4.92 0 015.403 1.958c.457-.163 1.257-.347 2.427-.403C9.096 1.497 9.476 1.485 12 1.485m0-1.485C8.741 0 8.332.014 7.052.072c-1.29.059-2.177.25-2.947.535a6.41 6.41 0 00-2.32 1.511A6.41 6.41 0 00.274 4.438c-.285.77-.476 1.657-.535 2.947C-.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.059 1.29.25 2.177.535 2.947a6.41 6.41 0 001.511 2.32 6.41 6.41 0 002.32 1.511c.77.285 1.657.476 2.947.535C8.332 23.986 8.741 24 12 24s3.668-.014 4.948-.072c1.29-.059 2.177-.25 2.947-.535a6.41 6.41 0 002.32-1.511 6.41 6.41 0 001.511-2.32c.285-.77.476-1.657.535-2.947.058-1.28.072-1.689.072-4.948s-.014-3.668-.072-4.948c-.059-1.29-.25-2.177-.535-2.947a6.41 6.41 0 00-1.511-2.32A6.41 6.41 0 0019.895.607c-.77-.285-1.657-.476-2.947-.535C15.668.014 15.259 0 12 0z"/>
                 <path d="M12 5.838A6.162 6.162 0 005.838 12 6.162 6.162 0 0012 18.162 6.162 6.162 0 0018.162 12 6.162 6.162 0 0012 5.838zm0 10.162A4 4 0 118 12a4 4 0 014 4z"/>
                 <circle cx="18.406" cy="5.594" r="1.44"/>
+              </svg>
+            </a>
+          }
+          
+          @if (twitterUrl) {
+            <a [href]="twitterUrl" target="_blank" rel="noopener noreferrer"
+               class="mobile-drawer__social-link"
+               aria-label="Twitter">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+              </svg>
+            </a>
+          }
+          
+          @if (youtubeUrl) {
+            <a [href]="youtubeUrl" target="_blank" rel="noopener noreferrer"
+               class="mobile-drawer__social-link"
+               aria-label="YouTube">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
               </svg>
             </a>
           }
@@ -210,7 +262,7 @@
           @if (userProfile$ | async; as profile) {
             @if (profile.role === 'admin') {
               <a routerLink="/admin" (click)="closeMobile()" class="mobile-drawer__user-link">
-                <svg class="w-5 h-5 text-[#f7931a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
                 </svg>
                 <span>{{ 'admin.title' | translate }}</span>

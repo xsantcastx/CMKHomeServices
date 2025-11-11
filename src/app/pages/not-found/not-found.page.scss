@@ -1,2 +1,191 @@
-// 404 Page Styles
-// Inherits global styles from styles.scss
+// 404 Page Styles - CMK Home Services
+.not-found-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #0b1f3b 0%, #021024 100%);
+  padding: 4rem 0;
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+}
+
+.error-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  
+  .error-number {
+    font-size: 10rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #d4af37 0%, #f5a623 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    margin-bottom: 1rem;
+    font-family: 'Cormorant Garamond', serif;
+    
+    @media (max-width: 768px) {
+      font-size: 6rem;
+    }
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 1rem;
+    font-family: 'Cormorant Garamond', serif;
+    
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
+  }
+  
+  .error-message {
+    font-size: 1.25rem;
+    color: #9fbbe0;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    
+    @media (max-width: 768px) {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+.quick-links-section,
+.services-section {
+  margin-bottom: 4rem;
+  
+  h2 {
+    font-size: 2rem;
+    color: #d4af37;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: 'Cormorant Garamond', serif;
+  }
+}
+
+.links-grid,
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.quick-link-card,
+.service-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: rgba(84, 131, 179, 0.1);
+  border: 1px solid rgba(193, 232, 255, 0.18);
+  border-radius: 12px;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: rgba(84, 131, 179, 0.2);
+    border-color: #d4af37;
+    transform: translateY(-2px);
+    
+    .link-arrow,
+    .service-arrow {
+      transform: translateX(4px);
+    }
+  }
+  
+  .link-icon,
+  .service-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+  }
+  
+  .link-name,
+  .service-name {
+    flex: 1;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  
+  .link-arrow,
+  .service-arrow {
+    color: #d4af37;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+}
+
+.contact-cta {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 16px;
+  margin-top: 4rem;
+  
+  h2 {
+    font-size: 2rem;
+    color: #d4af37;
+    margin-bottom: 0.5rem;
+    font-family: 'Cormorant Garamond', serif;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    color: #9fbbe0;
+    margin-bottom: 2rem;
+  }
+}
+
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+
+  .button {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+
+    svg {
+      width: 1.1rem;
+      height: 1.1rem;
+    }
+  }
+
+  .cta-buttons__item {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .button--ghost {
+    color: #f5f5f7;
+    border-color: rgba(255, 255, 255, 0.35);
+  }
+}
+
+@media (max-width: 640px) {
+  .links-grid,
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    
+    .button {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}

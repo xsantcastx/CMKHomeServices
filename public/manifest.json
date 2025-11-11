@@ -1,11 +1,11 @@
 {
-  "name": "TheLuxMining - Premium Bitcoin Mining Hardware",
-  "short_name": "TheLuxMining",
-  "description": "Enterprise-grade Bitcoin mining hardware and ASIC miners",
+  "name": "CMK Home Services",
+  "short_name": "CMK",
+  "description": "Luxury residential cleaning and concierge housekeeping",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0a0b0d",
-  "theme_color": "#f7931a",
+  "background_color": "#021024",
+  "theme_color": "#c9a24a",
   "orientation": "portrait-primary",
   "icons": [
     {

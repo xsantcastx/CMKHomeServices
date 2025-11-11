@@ -2,12 +2,12 @@
   <div class="container contacto__grid">
     <div class="contacto__info">
       <app-section-title
-        titulo="Let's discuss your mining setup"
-        subtitulo="Contact"
+        titulo="Request a concierge clean"
+        subtitulo="Connect with CMK"
       ></app-section-title>
       <p>
-        Our technical team will guide you in selecting the right mining hardware, logistics,
-        and documentation needed for your operation.
+        Share your household cadence, square footage, and any special notes. Our concierge will
+        craft a bespoke service plan and confirm a visit window within one business day.
       </p>
       <ul>
         <li>
@@ -22,7 +22,7 @@
       <div class="contacto__mapa" aria-hidden="true">
         <iframe
           [attr.title]="brandName + ' Location'"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.3!2d-73.5387!3d41.0534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2a1e1f1f1f1f1%3A0x1f1f1f1f1f1f1f1f!2s100%20Greyrock%20Pl%2C%20Stamford%2C%20CT%2006901!5e0!3m2!1sen!2sus!4v1700000000000"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3308.536459694107!2d-96.82686352372373!3d32.84693727360759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864e9f933699e5c1%3A0x72acab56543a30df!2s5757%20W%20Lovers%20Ln%20%23101%2C%20Dallas%2C%20TX%2075209!5e0!3m2!1sen!2sus!4v1731260000000!5m2!1sen!2sus"
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
@@ -32,28 +32,28 @@
     <form class="contacto__form" [formGroup]="formulario" (ngSubmit)="enviar()">
       <label>
         Full Name
-        <input type="text" formControlName="nombre" placeholder="Satoshi Nakamoto" class="text-neutral-800 placeholder-neutral-500" />
+        <input type="text" formControlName="nombre" placeholder="Olivia Carter" class="text-neutral-800 placeholder-neutral-500" />
       </label>
       <label>
         Email
-        <input type="email" formControlName="email" placeholder="satoshi@bitcoin.com" class="text-neutral-800 placeholder-neutral-500" />
+        <input type="email" formControlName="email" placeholder="olivia@residence.com" class="text-neutral-800 placeholder-neutral-500" />
       </label>
       <label>
         Phone
-        <input type="tel" formControlName="telefono" placeholder="+1 203 555 0123" class="text-neutral-800 placeholder-neutral-500" />
+        <input type="tel" formControlName="telefono" placeholder="+1 972 555 0142" class="text-neutral-800 placeholder-neutral-500" />
       </label>
       <label>
-        Company / Mining Operation
-        <input type="text" formControlName="empresa" placeholder="Your mining operation (optional)" class="text-neutral-800 placeholder-neutral-500" />
+        Residence / Neighborhood
+        <input type="text" formControlName="empresa" placeholder="Preston Hollow residence (optional)" class="text-neutral-800 placeholder-neutral-500" />
       </label>
       <label class="contacto__full">
-        Tell us what you need
-        <textarea formControlName="mensaje" rows="5" placeholder="ASIC miners, solo mining setups, cold wallets, bulk orders..." class="text-neutral-800 placeholder-neutral-500"></textarea>
+        Share your priorities
+        <textarea formControlName="mensaje" rows="5" placeholder="Preferred cadence, square footage, pets on site, special requests..." class="text-neutral-800 placeholder-neutral-500"></textarea>
       </label>
-      <button type="submit" class="ts-btn ts-btn-primary ts-btn-lg contacto__submit">Send Message</button>
+      <button type="submit" class="ts-btn ts-btn-primary ts-btn-lg contacto__submit">Submit request</button>
 
       @if (enviado) {
-        <p class="contacto__exito">Thank you for contacting us! We'll respond within 24 business hours.</p>
+        <p class="contacto__exito">Thank you! Our concierge will respond within one business day.</p>
       }
     </form>
   </div>

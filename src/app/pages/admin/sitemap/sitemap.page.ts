@@ -11,9 +11,9 @@ import { AdminQuickActionsComponent } from '../../../shared/components/admin-qui
   standalone: true,
   imports: [CommonModule, RouterLink, TranslateModule, AdminQuickActionsComponent],
   template: `
-<div class="min-h-screen bg-gradient-to-b from-[#0a0b0d] to-[#13151a]">
+<div class="min-h-screen bg-gradient-to-b from-[#021024] to-[#052659]">
   <!-- Header -->
-  <div class="bg-gradient-to-r from-bitcoin-dark via-[#13151a] to-bitcoin-dark border-b border-bitcoin-orange/20 shadow-bitcoin">
+  <div class="bg-gradient-to-r from-bitcoin-dark via-[#052659] to-bitcoin-dark border-b border-bitcoin-orange/20 shadow-bitcoin">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
       <div class="flex items-center justify-between">
         <div class="flex items-center gap-4">
@@ -156,7 +156,7 @@ import { AdminQuickActionsComponent } from '../../../shared/components/admin-qui
     @if (previewXml()) {
       <div class="bg-bitcoin-dark/40 border border-bitcoin-gray/20 rounded-xl p-8">
         <h2 class="text-xl font-semibold text-white mb-4">Sitemap Preview</h2>
-        <div class="bg-[#0a0b0d] border border-bitcoin-gray/20 rounded-lg p-4 overflow-auto max-h-96">
+        <div class="bg-[#021024] border border-bitcoin-gray/20 rounded-lg p-4 overflow-auto max-h-96">
           <pre class="text-xs text-green-400 font-mono">{{ previewXml() }}</pre>
         </div>
         <p class="mt-4 text-sm text-bitcoin-gray">

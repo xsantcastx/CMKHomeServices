@@ -1,24 +1,66 @@
 {
-  "products": [
+  "services": [
     {
-      "sku": "ASIC-001",
-      "name": "Signature Solo Miner S19 XP",
-      "description": "Factory-binned ASIC miner with immersion-ready mods and serialized certificate.",
-      "price": 11900,
+      "sku": "CMK-PREM-WEEKLY",
+      "name": "Premier Residence Care",
+      "description": "Weekly white-glove clean with linen service, organization touch-ups, and seasonal detailing scheduled quarterly.",
+      "price": 420,
       "currency": "USD",
-      "badge": "Ships in 5 days",
-      "category": "solo-miners",
+      "badge": "Most requested",
+      "category": "weekly",
       "attributes": {
-        "hashrate": "141 TH/s",
-        "power": "3010 W",
-        "efficiency": "21.3 J/TH"
+        "frequency": "Weekly",
+        "duration": "4-5 hrs",
+        "team": "2 housekeepers"
       },
       "images": [
-        "/assets/productos/solo/signature-s19xp.jpg"
+        "/assets/services/premier-weekly.jpg"
       ],
       "seo": {
-        "title": "Signature Solo Miner S19 XP | The Lux Mining",
-        "metaDescription": "Premium S19 XP ASIC for solo miners. Prepped for immersion, serialized, and backed by concierge support."
+        "title": "Premier Residence Care | CMK Home Services",
+        "metaDescription": "Signature weekly housekeeping for luxury residences, including linen refresh, surface detailing, and concierge touch-ups."
+      }
+    },
+    {
+      "sku": "CMK-SIGNATURE-BIWEEKLY",
+      "name": "Signature Bi-Weekly",
+      "description": "Detailed bi-weekly clean focused on kitchens, baths, and high-touch living spaces using non-toxic products.",
+      "price": 320,
+      "currency": "USD",
+      "badge": "Flexible",
+      "category": "bi-weekly",
+      "attributes": {
+        "frequency": "Bi-weekly",
+        "duration": "3 hrs",
+        "team": "2 housekeepers"
+      },
+      "images": [
+        "/assets/services/signature-biweekly.jpg"
+      ],
+      "seo": {
+        "title": "Signature Bi-Weekly | CMK Home Services",
+        "metaDescription": "Bi-weekly luxury cleaning plan with eco products, appliance detailing, and turn-down finishing touches."
+      }
+    },
+    {
+      "sku": "CMK-DEEP-RESTORE",
+      "name": "Seasonal Deep Restore",
+      "description": "Top-to-bottom seasonal refresh covering baseboards, fixtures, interiors of cabinetry, and outdoor living spaces.",
+      "price": 980,
+      "currency": "USD",
+      "badge": "Quarterly",
+      "category": "deep-clean",
+      "attributes": {
+        "frequency": "Seasonal",
+        "duration": "8 hrs",
+        "team": "3 housekeepers"
+      },
+      "images": [
+        "/assets/services/seasonal-deep.jpg"
+      ],
+      "seo": {
+        "title": "Seasonal Deep Restore | CMK Home Services",
+        "metaDescription": "Comprehensive home reset with fixture polishing, upholstery refresh, and terrace/balcony detailing."
       }
     }
   ]
