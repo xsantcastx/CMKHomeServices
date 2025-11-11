@@ -13,7 +13,7 @@
     "rules": "storage.rules"
   },
   "hosting": {
-    "public": "public",
+    "public": "dist/cmk-home-services/browser",
     "ignore": [
       "firebase.json",
       "**/.*",

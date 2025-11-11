@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "tstone-web": {
+    "cmk-home-services": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -114,10 +114,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "tstone-web:build:production"
+              "buildTarget": "cmk-home-services:build:production"
             },
             "development": {
-              "buildTarget": "tstone-web:build:development"
+              "buildTarget": "cmk-home-services:build:development"
             }
           },
           "defaultConfiguration": "development"

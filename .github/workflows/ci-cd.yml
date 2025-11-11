@@ -32,7 +32,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: dist-browser
-          path: dist/tstone-web/browser
+          path: dist/cmk-home-services/browser
 
   deploy-preview:
     needs: build
@@ -47,7 +47,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: dist-browser
-          path: dist/tstone-web/browser
+          path: dist/cmk-home-services/browser
 
       - name: Deploy preview channel
         uses: FirebaseExtended/action-hosting-deploy@v0
@@ -70,7 +70,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: dist-browser
-          path: dist/tstone-web/browser
+          path: dist/cmk-home-services/browser
 
       - name: Deploy to Firebase Hosting
         uses: FirebaseExtended/action-hosting-deploy@v0

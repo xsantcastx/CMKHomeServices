@@ -262,8 +262,8 @@ export class DetalleComponent implements OnInit, AfterViewInit {
 
     // 🎯 Generate Breadcrumb Schema
     const breadcrumbs = [
-      { name: 'Home', url: 'https://theluxmining.com/' },
-      { name: 'Products', url: 'https://theluxmining.com/productos' }
+      { name: 'Home', url: 'https://cmkhomeservices.com/' },
+      { name: 'Products', url: 'https://cmkhomeservices.com/productos' }
     ];
     
     if (this.category) {
