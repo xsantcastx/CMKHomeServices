@@ -1,0 +1,413 @@
+{
+  "page_titles": {
+    "home": "Servizi di Pulizia Professionale a Miami",
+    "products": "I Nostri Servizi",
+    "product_details": "Dettagli del Servizio",
+    "gallery": "Galleria",
+    "contact": "Contatti",
+    "cart": "Richiesta di Servizio",
+    "checkout_review": "Revisione Richiesta",
+    "payment": "Pagamento",
+    "order_confirmation": "Conferma Richiesta",
+    "login": "Accedi",
+    "register": "Registrati",
+    "profile": "Il Mio Profilo",
+    "orders": "Le Mie Richieste",
+    "solo_miners": "Servizi Specializzati",
+    "admin_dashboard": "Dashboard Admin",
+    "product_management": "Gestione Servizi",
+    "quick_add_product": "Aggiunta Rapida Servizio",
+    "gallery_management": "Gestione Galleria",
+    "order_management": "Gestione Richieste",
+    "user_management": "Gestione Utenti",
+    "benefit_templates": "Modelli di Servizio",
+    "analytics": "Dashboard Analitica",
+    "settings": "Impostazioni",
+    "email_templates": "Modelli Email",
+    "size_groups": "Gestione Gruppi di Servizi",
+    "reviews": "Gestione Recensioni",
+    "not_found": "Pagina Non Trovata"
+  },
+  "not_found_page": {
+    "error_number": "404",
+    "title": "Pagina Non Trovata",
+    "message": "Ops! La pagina che stai cercando sembra essere stata spostata o non esiste. Ma non preoccuparti—possiamo aiutarti a trovare ciò di cui hai bisogno!",
+    "quick_links_title": "Link Rapidi",
+    "popular_services_title": "Servizi Popolari",
+    "need_help_title": "Hai Bisogno di Aiuto?",
+    "need_help_subtitle": "Il nostro team è qui per assisterti",
+    "links": {
+      "home": "Home",
+      "all_services": "Tutti i Servizi",
+      "about": "Chi Siamo",
+      "service_areas": "Zone di Servizio",
+      "contact": "Contattaci"
+    },
+    "services": {
+      "residential": "Pulizia Residenziale",
+      "commercial": "Pulizia Commerciale",
+      "deep_clean": "Pulizia Profonda",
+      "windows": "Lavaggio Vetri"
+    },
+    "cta": {
+      "whatsapp": "Chatta su WhatsApp",
+      "call": "Chiama (786) 380-7579",
+      "email": "Invia Email"
+    }
+  },
+  "service_areas": {
+    "hero": {
+      "title": "Dove Operiamo",
+      "subtitle": "Servizi di pulizia professionali in tutta la Greater Miami"
+    },
+    "intro": {
+      "title": "Serviamo Tutta la Contea di Miami-Dade",
+      "description": "CMK Home Services è orgogliosa di servire clienti residenziali e commerciali in tutta Miami e le aree circostanti. Che tu sia in un grattacielo del centro, un condominio fronte mare o una casa suburbana, il nostro team professionale di pulizia è pronto ad aiutarti.",
+      "highlights": {
+        "areas_served": "Oltre 12 Aree Servite",
+        "same_day": "Servizio in Giornata Disponibile",
+        "eco_friendly": "Prodotti Ecologici"
+      }
+    },
+    "areas": {
+      "miami": {
+        "name": "Miami",
+        "description": "Downtown Miami, Brickell e aree circostanti",
+        "neighborhoods": ["Downtown Miami", "Brickell", "Edgewater", "Wynwood", "Midtown"]
+      },
+      "miami_beach": {
+        "name": "Miami Beach",
+        "description": "South Beach, Mid-Beach e aree di North Beach",
+        "neighborhoods": ["South Beach", "Mid-Beach", "North Beach", "Sunset Islands"]
+      },
+      "coral_gables": {
+        "name": "Coral Gables",
+        "description": "The City Beautiful - case eleganti e strade alberate",
+        "neighborhoods": ["Old Cutler Road", "Gables Estates", "Cocoplum"]
+      },
+      "coconut_grove": {
+        "name": "Coconut Grove",
+        "description": "Il quartiere più antico di Miami con paesaggi lussureggianti",
+        "neighborhoods": ["The Village", "Silver Bluff", "Brickell Grove"]
+      },
+      "aventura": {
+        "name": "Aventura",
+        "description": "Quartiere residenziale e commerciale di lusso",
+        "neighborhoods": ["Williams Island", "Porto Vita", "Aventura Isles"]
+      },
+      "sunny_isles": {
+        "name": "Sunny Isles Beach",
+        "description": "La Riviera della Florida - vita di lusso sul mare",
+        "neighborhoods": ["Golden Beach", "Sunny Isles", "North Beach"]
+      },
+      "kendall": {
+        "name": "Kendall",
+        "description": "Quartieri suburbani adatti alle famiglie",
+        "neighborhoods": ["The Hammocks", "Pinecrest", "Palmetto Bay"]
+      },
+      "doral": {
+        "name": "Doral",
+        "description": "Città moderna con campi da golf e centri commerciali",
+        "neighborhoods": ["Downtown Doral", "Doral Isles", "Costa Del Sol"]
+      },
+      "hialeah": {
+        "name": "Hialeah",
+        "description": "Comunità residenziale vivace",
+        "neighborhoods": ["Hialeah Gardens", "Palm Springs North", "Country Club"]
+      },
+      "key_biscayne": {
+        "name": "Key Biscayne",
+        "description": "Paradiso insulare con spiagge incontaminate",
+        "neighborhoods": ["Cape Florida", "Crandon Park"]
+      },
+      "homestead": {
+        "name": "Homestead",
+        "description": "Porta d'accesso alle Florida Keys",
+        "neighborhoods": ["Naranja", "Florida City", "Leisure City"]
+      },
+      "miami_lakes": {
+        "name": "Miami Lakes",
+        "description": "Comunità pianificata con bei laghi",
+        "neighborhoods": ["Main Street", "Royal Oaks", "Shenandoah"]
+      }
+    },
+    "card": {
+      "neighborhoods_label": "Quartieri:",
+      "services_label": "Servizi Disponibili:"
+    },
+    "services": {
+      "residential": "Pulizia Residenziale",
+      "commercial": "Pulizia Commerciale",
+      "deep_clean": "Pulizia Profonda",
+      "move": "Trasloco (Ingresso/Uscita)"
+    },
+    "not_listed": {
+      "title": "Non Vedi la Tua Area?",
+      "description": "Stiamo costantemente espandendo le nostre aree di servizio in tutto il sud della Florida. Se il tuo quartiere non è elencato, non preoccuparti, potremmo comunque aiutarti!",
+      "cta_ask": "💬 Chiedi Informazioni sulla Tua Area",
+      "cta_call": "📞 Chiama (786) 380-7579"
+    },
+    "why_choose": {
+      "title": "Perché Scegliere CMK nella Tua Area?",
+      "local_expertise": {
+        "title": "Esperienza Locale",
+        "description": "Comprendiamo le case di Miami, dalla preparazione agli uragani alle sfide dell'umidità."
+      },
+      "fast_response": {
+        "title": "Risposta Rapida",
+        "description": "Appuntamenti in giornata e il giorno successivo disponibili nella maggior parte delle aree."
+      },
+      "licensed": {
+        "title": "Licenziati e Assicurati",
+        "description": "Completamente licenziati, garantiti e assicurati per la tua protezione."
+      },
+      "five_star": {
+        "title": "Valutazione 5 Stelle",
+        "description": "Costantemente valutati al massimo dai proprietari di case e aziende di Miami."
+      }
+    },
+    "bottom_cta": {
+      "title": "Pronti a Iniziare?",
+      "subtitle": "Prenota il tuo servizio di pulizia oggi e scopri la differenza CMK",
+      "cta_quote": "Ottieni un Preventivo Gratuito",
+      "cta_services": "Vedi Tutti i Servizi"
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "PROFESSIONISTI DELLA PULIZIA DI FIDUCIA A MIAMI",
+      "title": "La Tua Casa, Impeccabile e Senza Stress",
+      "subtitle": "Servizi di pulizia professionali per case e aziende in tutta Miami. Licenziati, assicurati e dedicati all'eccellenza dal primo giorno.",
+      "badge": "Licenziati e Assicurati • Valutazione 5 Stelle",
+      "cta_primary": "Ottieni un Preventivo Gratuito",
+      "cta_secondary": "Vedi i Nostri Servizi"
+    },
+    "featured": {
+      "title": "Servizi in Evidenza",
+      "subtitle": "Scopri le nostre soluzioni di pulizia più popolari",
+      "latest": "Progetti Recenti",
+      "flagship": "Servizi Premium",
+      "professional": "Pulizia Professionale",
+      "enterprise": "Soluzioni Commerciali",
+      "view_all": "Vedi Tutto"
+    },
+    "gallery_preview": {
+      "title": "Galleria del Nostro Lavoro",
+      "subtitle": "Esplora il nostro portfolio di progetti di trasformazione a Miami",
+      "view_full": "Vedi Galleria Completa →"
+    },
+    "why_choose": {
+      "title": "Perché Scegliere CMK Home Services?",
+      "subtitle": "Il Tuo Successo È la Nostra Missione",
+      "hashrate": {
+        "title": "Eccellenza Professionale",
+        "description": "Standard di pulizia leader del settore con professionisti formati, garantendo che la tua casa o ufficio brilli."
+      },
+      "efficiency": {
+        "title": "Prodotti Ecologici",
+        "description": "Soluzioni di pulizia sicure ed efficaci che proteggono la tua famiglia, gli animali domestici e l'ambiente."
+      },
+      "roi": {
+        "title": "Servizio Affidabile",
+        "description": "Garanzie di qualità costante e puntualità, assicurando tranquillità ad ogni appuntamento."
+      }
+    },
+    "cta": {
+      "gallery": {
+        "title": "Esplora i Nostri Progetti",
+        "button": "Vedi Galleria"
+      },
+      "contact": {
+        "title": "Pronto per una Casa Impeccabile?",
+        "button": "Ottieni un Preventivo Gratuito"
+      }
+    },
+    "services": {
+      "title": "I Nostri Servizi",
+      "subtitle": "Soluzioni Complete di Pulizia per Casa e Azienda",
+      "hardware": {
+        "title": "Pulizia Residenziale",
+        "description": "Servizi di pulizia domestica di alta qualità, dalla pulizia profonda alla manutenzione regolare per famiglie impegnate."
+      },
+      "setup": {
+        "title": "Pulizia Commerciale",
+        "description": "Pulizia professionale di uffici e spazi commerciali per mantenere un ambiente di lavoro produttivo e sano."
+      },
+      "support": {
+        "title": "Orari Flessibili",
+        "description": "Prenota servizi settimanali, bisettimanali o una tantum che si adattano al tuo stile di vita e alle esigenze aziendali."
+      },
+      "consulting": {
+        "title": "Soluzioni Personalizzate",
+        "description": "Piani di pulizia personalizzati su misura per le tue esigenze e preferenze specifiche."
+      }
+    },
+    "features": {
+      "title": "Perché Pulire con CMK Home Services",
+      "enterprise": {
+        "title": "Professionisti Formati",
+        "description": "Specialisti della pulizia esperti e controllati, impegnati per l'eccellenza."
+      },
+      "efficiency": {
+        "title": "Prodotti Premium",
+        "description": "Utilizziamo prodotti di pulizia professionali ed ecologici per risultati superiori."
+      },
+      "roi": {
+        "title": "Soddisfazione Garantita",
+        "description": "Track record di clienti soddisfatti con servizio trasparente e garanzie di qualità."
+      },
+      "security": {
+        "title": "Assicurati e Garantiti",
+        "description": "Copertura assicurativa completa e garanzia per proteggere la tua proprietà e offrirti tranquillità."
+      }
+    },
+    "stats": {
+      "miners_deployed": "Case Servite",
+      "miners_deployed_desc": "Case felici in tutta Miami",
+      "customer_satisfaction": "Soddisfazione Cliente",
+      "customer_satisfaction_desc": "Valutazione soddisfazione cliente verificata",
+      "uptime_guarantee": "Garanzia di Puntualità",
+      "uptime_guarantee_desc": "Standard di puntualità leader del settore",
+      "years_experience": "Anni di Eccellenza",
+      "years_experience_desc": "Anni al servizio di famiglie e aziende di Miami"
+    },
+    "reviews": {
+      "eyebrow": "Testimonianze Clienti",
+      "title": "Ascolta le Famiglie che si Fidano di CMK Home Services",
+      "subtitle": "Collaboriamo con famiglie in tutta Miami per fornire servizi di pulizia eccezionali. Storie reali di clienti reali ci rendono responsabili e aiutano i futuri clienti a sentirsi sicuri.",
+      "average_rating": "Valutazione media",
+      "published_reviews": "Recensioni pubblicate",
+      "rate_experience": "Valuta la tua esperienza",
+      "rate_stars": "Valuta {{stars}} stelle",
+      "share_testimonial": "Condividi una breve testimonianza",
+      "testimonial_placeholder": "Racconta agli altri del tuo servizio di pulizia, del nostro team o della trasformazione della tua casa.",
+      "testimonial_help": "Minimo 10 caratteri. Menziona dettagli come il tipo di servizio, la qualità o il nostro team.",
+      "saving_review": "Salvataggio della tua recensione...",
+      "update_review": "Aggiorna la mia recensione",
+      "publish_review": "Pubblica la mia recensione",
+      "delete_review": "Elimina la mia recensione",
+      "sign_in_title": "Pronto a lasciare una recensione?",
+      "sign_in_desc": "Accedi per valutare la tua esperienza e aiutare altre famiglie a scegliere il loro partner di pulizia di fiducia.",
+      "sign_in_button": "Accedi per condividere feedback",
+      "no_account": "Non hai ancora un account?",
+      "create_account": "Creane uno in pochi minuti.",
+      "no_reviews_title": "Le recensioni appariranno qui una volta che i clienti inizieranno a condividere la loro esperienza.",
+      "no_reviews_desc": "Sii il primo a lasciare una recensione dopo il tuo servizio!",
+      "verified_purchase": "Acquisto Verificato"
+    },
+    "testimonials": {
+      "eyebrow": "Testimonianze",
+      "title": "Cosa dicono i nostri clienti.",
+      "items": [
+        {
+          "quote": "Gloria e il suo team sono incredibili! Hanno trasformato il nostro condominio e ora vengono ogni settimana. Professionali e affidabili.",
+          "author": "Maria C.",
+          "location": "Brickell"
+        },
+        {
+          "quote": "Il miglior servizio di pulizia a Miami! Gestiscono le nostre case vacanza e il posto è sempre impeccabile per i nostri ospiti.",
+          "author": "David & Elena R.",
+          "location": "South Beach"
+        },
+        {
+          "quote": "Usiamo CMK per la nostra proprietà stagionale. Mantengono il nostro posto fresco mentre siamo al nord ed è sempre perfetto quando torniamo.",
+          "author": "Robert T.",
+          "location": "Coral Gables"
+        }
+      ]
+    },
+    "difference": {
+      "description": "Fondata da Gloria, residente di Miami appassionata di creare spazi puliti e sani per famiglie e aziende. Portiamo professionalità, affidabilità e attenzione ai dettagli in ogni lavoro."
+    },
+    "services_intro": {
+      "description": "Dalle case residenziali agli spazi commerciali, offriamo servizi di pulizia completi su misura per le tue esigenze. Tutti i servizi includono prodotti ecologici e garanzia di soddisfazione."
+    },
+    "quick_services": {
+      "residential": {
+        "category": "Case e condomini",
+        "title": "Cura Residenziale",
+        "description": "Manutenzione settimanale, bisettimanale o mensile su misura per il tuo stile di vita."
+      },
+      "commercial": {
+        "category": "Uffici e negozi",
+        "title": "Suite Commerciali",
+        "description": "Uffici boutique, showroom e spazi commerciali rinfrescati fuori orario."
+      },
+      "windows": {
+        "category": "Vetro e dettagli",
+        "title": "Vetri e Rifiniture",
+        "description": "Finestre cristalline, specchi e dettagli in acciaio inossidabile ovunque."
+      },
+      "deep_clean": {
+        "category": "Ripristino stagionale",
+        "title": "Restauro Profondo",
+        "description": "Traslochi, post-ristrutturazione e dettagli stagionali per ogni superficie."
+      }
+    },
+    "service_card": {
+      "frequency": "Frequenza",
+      "duration": "Durata",
+      "team": "Team",
+      "starting_at": "A partire da",
+      "view_details": "Vedi Dettagli Servizio",
+      "view_all": "Vedi Tutti i Servizi"
+    },
+    "featured_services": {
+      "premier_weekly": {
+        "name": "Cura Premier di Residenza",
+        "description": "Pulizia settimanale con guanti bianchi con servizio biancheria, ritocchi organizzativi e dettagli stagionali programmati trimestralmente.",
+        "badge": "Più Richiesto",
+        "frequency": "Settimanale",
+        "duration": "4-5 ore",
+        "team": "2 addetti"
+      },
+      "signature_biweekly": {
+        "name": "Firma Bisettimanale",
+        "description": "Pulizia bisettimanale dettagliata focalizzata su cucine, bagni e spazi abitativi ad alto contatto utilizzando prodotti non tossici.",
+        "badge": "Flessibile",
+        "frequency": "Bisettimanale",
+        "duration": "3 ore",
+        "team": "2 addetti"
+      },
+      "deep_restore": {
+        "name": "Restauro Profondo Stagionale",
+        "description": "Rinfresco stagionale dall'alto al basso coprendo battiscopa, infissi, interni degli armadi e spazi abitativi esterni.",
+        "badge": "Trimestrale",
+        "frequency": "Trimestrale",
+        "duration": "Giornata intera",
+        "team": "3-4 addetti"
+      }
+    },
+    "about": {
+      "eyebrow": "Su Gloria",
+      "title": "Passione per Spazi Puliti e Sani",
+      "description": "Gloria ha fondato CMK Home Services con una missione semplice: fornire alle famiglie e alle aziende di Miami servizi di pulizia affidabili e professionali di cui possono fidarsi. Con anni di esperienza e un team dedicato, trattiamo ogni casa e ufficio come se fosse il nostro."
+    },
+    "membership": {
+      "eyebrow": "Contattaci",
+      "title": "Pronto per uno spazio impeccabile?",
+      "description": "Contattaci oggi per un preventivo gratuito. Serviamo tutta Miami e le aree circostanti con programmazione flessibile per soddisfare le tue esigenze.",
+      "benefits": [
+        "Professionisti licenziati, assicurati e garantiti",
+        "Servizio in giornata disponibile",
+        "Prodotti e attrezzature ecologici",
+        "Garanzia di soddisfazione 100%"
+      ],
+      "whatsapp_button": "Chatta su WhatsApp",
+      "quote_button": "Richiedi Preventivo Online"
+    },
+    "contact_section": {
+      "eyebrow": "Pronti quando lo sei tu",
+      "title": "Progettiamo un programma di pulizia intorno alla tua vita.",
+      "description": "Condividi la tua frequenza preferita, la metratura e qualsiasi nota di concierge. Ti invieremo una proposta personalizzata entro un giorno lavorativo.",
+      "cta": "Richiedi pulizia concierge",
+      "service_areas_title": "Aree di servizio",
+      "areas": [
+        "Miami Beach · Coral Gables · Coconut Grove",
+        "Brickell · Downtown Miami · Edgewater",
+        "Aventura · Sunny Isles · Key Biscayne"
+      ],
+      "areas_note": "Cerchi fuori da questi quartieri? Contattaci—il nostro concierge confermerà la disponibilità."
+    }
+  }
+}
