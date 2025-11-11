@@ -1,162 +1,836 @@
-{
+﻿{
   "page_titles": {
-    "home": "Premium Bitcoin Mining Hardware",
-    "products": "Mining Products",
-    "product_details": "Product Details",
+    "home": "Professional Home Cleaning Services Miami",
+    "products": "Our Services",
+    "product_details": "Service Details",
     "gallery": "Gallery",
     "contact": "Contact",
-    "cart": "Shopping Cart",
-    "checkout_review": "Checkout Review",
+    "cart": "Service Request",
+    "checkout_review": "Request Review",
     "payment": "Payment",
-    "order_confirmation": "Order Confirmation",
+    "order_confirmation": "Request Confirmation",
     "login": "Login",
     "register": "Register",
     "profile": "My Profile",
-    "orders": "My Orders",
-    "solo_miners": "Solo Miners",
+    "orders": "My Service Requests",
+    "solo_miners": "Specialized Services",
     "admin_dashboard": "Admin Dashboard",
-    "product_management": "Product Management",
-    "quick_add_product": "Quick Add Product",
+    "product_management": "Service Management",
+    "quick_add_product": "Quick Add Service",
     "gallery_management": "Gallery Management",
-    "order_management": "Order Management",
+    "order_management": "Request Management",
     "user_management": "User Management",
-    "benefit_templates": "Benefit Templates",
+    "benefit_templates": "Service Templates",
     "analytics": "Analytics Dashboard",
     "settings": "Settings",
     "email_templates": "Email Templates",
-    "size_groups": "Size Groups Management",
+    "size_groups": "Service Groups Management",
     "reviews": "Review Management",
     "not_found": "Page Not Found"
   },
+  "not_found_page": {
+    "error_number": "404",
+    "title": "Page Not Found",
+    "message": "Oops! The page you're looking for seems to have been moved or doesn't exist. But don't worry—we can help you find what you need!",
+    "quick_links_title": "Quick Links",
+    "popular_services_title": "Popular Services",
+    "need_help_title": "Need Help?",
+    "need_help_subtitle": "Our team is here to assist you",
+    "links": {
+      "home": "Home",
+      "all_services": "All Services",
+      "about": "About Us",
+      "service_areas": "Service Areas",
+      "contact": "Contact Us"
+    },
+    "services": {
+      "residential": "Residential Cleaning",
+      "commercial": "Commercial Cleaning",
+      "deep_clean": "Deep Cleaning",
+      "windows": "Window Washing"
+    },
+    "cta": {
+      "whatsapp": "Chat on WhatsApp",
+      "call": "Call (786) 380-7579",
+      "email": "Send Email"
+    }
+  },
+  "service_areas": {
+    "hero": {
+      "title": "Where We Serve",
+      "subtitle": "Professional cleaning services throughout Greater Miami"
+    },
+    "intro": {
+      "title": "Serving All of Miami-Dade County",
+      "description": "CMK Home Services is proud to serve residential and commercial clients throughout Miami and surrounding areas. Whether you're in a downtown high-rise, a beachfront condo, or a suburban home, our professional cleaning team is ready to help.",
+      "highlights": {
+        "areas_served": "12+ Areas Served",
+        "same_day": "Same-Day Service Available",
+        "eco_friendly": "Eco-Friendly Products"
+      }
+    },
+    "areas": {
+      "miami": {
+        "name": "Miami",
+        "description": "Downtown Miami, Brickell, and surrounding areas",
+        "neighborhoods": ["Downtown Miami", "Brickell", "Edgewater", "Wynwood", "Midtown"]
+      },
+      "miami_beach": {
+        "name": "Miami Beach",
+        "description": "South Beach, Mid-Beach, and North Beach areas",
+        "neighborhoods": ["South Beach", "Mid-Beach", "North Beach", "Sunset Islands"]
+      },
+      "coral_gables": {
+        "name": "Coral Gables",
+        "description": "The City Beautiful - elegant homes and tree-lined streets",
+        "neighborhoods": ["Old Cutler Road", "Gables Estates", "Cocoplum"]
+      },
+      "coconut_grove": {
+        "name": "Coconut Grove",
+        "description": "Miami's oldest neighborhood with lush landscapes",
+        "neighborhoods": ["The Village", "Silver Bluff", "Brickell Grove"]
+      },
+      "aventura": {
+        "name": "Aventura",
+        "description": "Upscale residential and shopping district",
+        "neighborhoods": ["Williams Island", "Porto Vita", "Aventura Isles"]
+      },
+      "sunny_isles": {
+        "name": "Sunny Isles Beach",
+        "description": "Florida's Riviera - beachfront luxury living",
+        "neighborhoods": ["Golden Beach", "Sunny Isles", "North Beach"]
+      },
+      "kendall": {
+        "name": "Kendall",
+        "description": "Family-friendly suburban neighborhoods",
+        "neighborhoods": ["The Hammocks", "Pinecrest", "Palmetto Bay"]
+      },
+      "doral": {
+        "name": "Doral",
+        "description": "Modern city with golf courses and shopping",
+        "neighborhoods": ["Downtown Doral", "Doral Isles", "Costa Del Sol"]
+      },
+      "hialeah": {
+        "name": "Hialeah",
+        "description": "Vibrant residential community",
+        "neighborhoods": ["Hialeah Gardens", "Palm Springs North", "Country Club"]
+      },
+      "key_biscayne": {
+        "name": "Key Biscayne",
+        "description": "Island paradise with pristine beaches",
+        "neighborhoods": ["Cape Florida", "Crandon Park"]
+      },
+      "homestead": {
+        "name": "Homestead",
+        "description": "Gateway to the Florida Keys",
+        "neighborhoods": ["Naranja", "Florida City", "Leisure City"]
+      },
+      "miami_lakes": {
+        "name": "Miami Lakes",
+        "description": "Planned community with beautiful lakes",
+        "neighborhoods": ["Main Street", "Royal Oaks", "Shenandoah"]
+      }
+    },
+    "card": {
+      "neighborhoods_label": "Neighborhoods:",
+      "services_label": "Available Services:"
+    },
+    "services": {
+      "residential": "Residential Cleaning",
+      "commercial": "Commercial Cleaning",
+      "deep_clean": "Deep Cleaning",
+      "move": "Move-In/Out"
+    },
+    "not_listed": {
+      "title": "Don't See Your Area?",
+      "description": "We're constantly expanding our service areas throughout South Florida. If your neighborhood isn't listed above, don't worry—we may still be able to help!",
+      "cta_ask": "💬 Ask About Your Area",
+      "cta_call": "📞 Call (786) 380-7579"
+    },
+    "why_choose": {
+      "title": "Why Choose CMK in Your Area?",
+      "local_expertise": {
+        "title": "Local Expertise",
+        "description": "We understand Miami homes—from hurricane prep to humidity challenges."
+      },
+      "fast_response": {
+        "title": "Fast Response",
+        "description": "Same-day and next-day appointments available in most areas."
+      },
+      "licensed": {
+        "title": "Licensed & Insured",
+        "description": "Fully licensed, bonded, and insured for your protection."
+      },
+      "five_star": {
+        "title": "5-Star Rated",
+        "description": "Consistently top-rated by Miami homeowners and businesses."
+      }
+    },
+    "bottom_cta": {
+      "title": "Ready to Get Started?",
+      "subtitle": "Book your cleaning service today and experience the CMK difference",
+      "cta_quote": "Get Free Quote",
+      "cta_services": "View All Services"
+    }
+  },
   "home": {
     "hero": {
-      "title": "Mine Your Future",
-      "subtitle": " Where crypto tech becomes lifestyle.\nExplore mining gear, secure storage, and gadgets that show your passion for the decentralized future. Innovation, security, and design  without limits.",
-      "description": "Join the revolution. Maximize your profits with cutting-edge ASIC miners engineered for peak performance and unmatched efficiency.",
-      "cta_primary": "Explore Miners",
-      "cta_secondary": "Request Quote"
+      "eyebrow": "MIAMI'S TRUSTED CLEANING PROFESSIONALS",
+      "title": "Your Home, Spotless & Stress-Free",
+      "subtitle": "Professional cleaning services for homes and businesses throughout Miami. Licensed, insured, and dedicated to excellence since day one.",
+      "badge": "Licensed & Insured • 5-Star Rated",
+      "cta_primary": "Get Free Quote",
+      "cta_secondary": "View Our Services"
     },
     "featured": {
-      "title": "Featured Mining Hardware",
-      "subtitle": "Discover our latest Bitcoin mining solutions",
-      "latest": "Latest Products",
-      "flagship": "Flagship Miners",
-      "professional": "Professional Series",
-      "enterprise": "Enterprise Solutions",
+      "title": "Featured Services",
+      "subtitle": "Discover our most popular cleaning solutions",
+      "latest": "Recent Projects",
+      "flagship": "Premium Services",
+      "professional": "Professional Cleaning",
+      "enterprise": "Commercial Solutions",
       "view_all": "View All"
     },
     "gallery_preview": {
-      "title": "Mining Farm Gallery",
-      "subtitle": "Explore our professional mining installations and setups",
+      "title": "Our Work Gallery",
+      "subtitle": "Explore our portfolio of transformation projects across Miami",
       "view_full": "View Full Gallery â†’"
     },
     "why_choose": {
-      "title": "Why Choose TheLuxMining?",
+      "title": "Why Choose CMK Home Services?",
       "subtitle": "Your Success Is Our Mission",
       "hashrate": {
-        "title": "Peak Hash Rate",
-        "description": "Industry-leading hash rate performance with cutting-edge ASIC technology, maximizing your Bitcoin mining profitability."
+        "title": "Professional Excellence",
+        "description": "Industry-leading cleaning standards with trained professionals, ensuring your home or office shines."
       },
       "efficiency": {
-        "title": "Superior Efficiency",
-        "description": "Optimized power consumption with advanced cooling systems, delivering the best J/TH ratio in the market."
+        "title": "Eco-Friendly Products",
+        "description": "Safe, effective cleaning solutions that protect your family, pets, and the environment."
       },
       "roi": {
-        "title": "Maximum ROI",
-        "description": "Enterprise-grade reliability and uptime guarantees, ensuring consistent returns on your mining investment."
+        "title": "Reliable Service",
+        "description": "Consistent quality and punctuality guarantees, ensuring peace of mind with every appointment."
       }
     },
     "cta": {
       "gallery": {
-        "title": "Explore Mining Setups",
+        "title": "Explore Our Projects",
         "button": "View Gallery"
       },
       "contact": {
-        "title": "Ready to Start Mining?",
-        "button": "Get Custom Quote"
+        "title": "Ready for a Spotless Home?",
+        "button": "Get Free Quote"
       }
     },
     "services": {
       "title": "Our Services",
-      "subtitle": "Complete Bitcoin Mining Solutions",
+      "subtitle": "Complete Home & Commercial Cleaning Solutions",
       "hardware": {
-        "title": "Premium Hardware",
-        "description": "Top-tier ASIC miners from trusted manufacturers, optimized for maximum hash rate and energy efficiency."
+        "title": "Residential Cleaning",
+        "description": "Top-quality home cleaning services, from deep cleaning to regular maintenance for busy families."
       },
       "setup": {
-        "title": "Professional Setup",
-        "description": "Expert installation and configuration services to get your mining operation running at peak performance."
+        "title": "Commercial Cleaning",
+        "description": "Professional office and commercial space cleaning to maintain a productive, healthy work environment."
       },
       "support": {
-        "title": "24/7 Support",
-        "description": "Round-the-clock technical assistance to ensure your mining rigs maintain optimal uptime and profitability."
+        "title": "Flexible Scheduling",
+        "description": "Book weekly, bi-weekly, or one-time services that fit your lifestyle and business needs."
       },
       "consulting": {
-        "title": "Mining Consultation",
-        "description": "Strategic guidance on hardware selection, facility planning, and ROI optimization for your mining operation."
+        "title": "Custom Solutions",
+        "description": "Personalized cleaning plans tailored to your specific requirements and preferences."
       }
     },
     "features": {
-      "title": "Why Mine with TheLuxMining",
+      "title": "Why Clean with CMK Home Services",
       "enterprise": {
-        "title": "Enterprise-Grade Equipment",
-        "description": "Access to the latest ASIC mining hardware with proven reliability and industry-leading specifications."
+        "title": "Trained Professionals",
+        "description": "Experienced, background-checked cleaning specialists committed to excellence."
       },
       "efficiency": {
-        "title": "Maximum Efficiency",
-        "description": "Achieve the best power-to-hashrate ratio with our optimized cooling solutions and energy management systems."
+        "title": "Premium Products",
+        "description": "We use professional-grade, eco-friendly cleaning products for superior results."
       },
       "roi": {
-        "title": "Proven ROI",
-        "description": "Track record of helping clients achieve profitable mining operations with transparent performance metrics."
+        "title": "Satisfaction Guaranteed",
+        "description": "Track record of delighted clients with transparent service and quality guarantees."
       },
       "security": {
-        "title": "Secure Operations",
-        "description": "Enterprise security protocols to protect your investment and ensure continuous, reliable mining operations."
+        "title": "Insured & Bonded",
+        "description": "Full insurance coverage and bonding to protect your property and provide peace of mind."
       }
     },
     "stats": {
-      "miners_deployed": "Miners Deployed Worldwide",
-      "miners_deployed_desc": "Professional mining units delivered worldwide",
+      "miners_deployed": "Homes Serviced",
+      "miners_deployed_desc": "Happy homes across Miami",
       "customer_satisfaction": "Customer Satisfaction",
       "customer_satisfaction_desc": "Verified customer happiness rating",
-      "uptime_guarantee": "Uptime Guarantee",
-      "uptime_guarantee_desc": "Industry-leading reliability standards",
+      "uptime_guarantee": "On-Time Guarantee",
+      "uptime_guarantee_desc": "Industry-leading punctuality standards",
       "years_experience": "Years of Excellence",
-      "years_experience_desc": "Years powering the Bitcoin revolution"
+      "years_experience_desc": "Years serving Miami families and businesses"
     },
     "reviews": {
-      "eyebrow": "Community Feedback",
-      "title": "Hear From Miners Who Trust TheLuxMining",
-      "subtitle": "We partner with clients around the world to deploy dependable Bitcoin mining operations. Real stories from real miners keep us accountable and help future partners feel confident.",
+      "eyebrow": "Client Testimonials",
+      "title": "Hear From Families Who Trust CMK Home Services",
+      "subtitle": "We partner with families across Miami to deliver exceptional cleaning services. Real stories from real clients keep us accountable and help future customers feel confident.",
       "average_rating": "Average rating",
       "published_reviews": "Published reviews",
       "rate_experience": "Rate your experience",
       "rate_stars": "Rate {{stars}} stars",
       "share_testimonial": "Share a short testimonial",
-      "testimonial_placeholder": "Tell other miners about your deployment, support experience, or ROI.",
-      "testimonial_help": "Minimum 10 characters. Mention specifics like product, speed, or support.",
+      "testimonial_placeholder": "Tell others about your cleaning service, our team, or your home's transformation.",
+      "testimonial_help": "Minimum 10 characters. Mention specifics like service type, quality, or our team.",
       "saving_review": "Saving your review...",
       "update_review": "Update my review",
       "publish_review": "Publish my review",
       "delete_review": "Delete my review",
       "sign_in_title": "Ready to leave a review?",
-      "sign_in_desc": "Sign in to rate your experience and help other miners choose their next hardware partner.",
+      "sign_in_desc": "Sign in to rate your experience and help other families choose their trusted cleaning partner.",
       "sign_in_button": "Sign in to share feedback",
       "no_account": "Don't have an account yet?",
       "create_account": "Create one in minutes.",
       "no_reviews_title": "Reviews will appear here once clients start sharing their experience.",
-      "no_reviews_desc": "Be the first to leave a review after your deployment!",
+      "no_reviews_desc": "Be the first to leave a review after your service!",
       "verified_purchase": "Verified Purchase"
+    },
+    "testimonials": {
+      "eyebrow": "Testimonials",
+      "title": "What our households say.",
+      "items": [
+        {
+          "quote": "Gloria and her team are amazing! They transformed our condo and now we have them come weekly. Professional and trustworthy.",
+          "author": "Maria C.",
+          "location": "Brickell"
+        },
+        {
+          "quote": "Best cleaning service in Miami! They handle our vacation rental turnovers and the place is always spotless for our guests.",
+          "author": "David & Elena R.",
+          "location": "South Beach"
+        },
+        {
+          "quote": "We use CMK for our snowbird property. They keep our place fresh while we are up north and it is always perfect when we return.",
+          "author": "Robert T.",
+          "location": "Coral Gables"
+        }
+      ]
+    },
+    "difference": {
+      "description": "Founded by Gloria, a Miami resident passionate about creating clean, healthy spaces for families and businesses. We bring professionalism, reliability, and attention to detail to every job."
+    },
+    "services_intro": {
+      "description": "From residential homes to commercial spaces, we offer comprehensive cleaning services tailored to your needs. All services include eco-friendly products and satisfaction guarantee."
+    },
+    "quick_services": {
+      "residential": {
+        "category": "Homes & condos",
+        "title": "Residential Care",
+        "description": "Weekly, bi-weekly, or monthly upkeep tailored to your lifestyle."
+      },
+      "commercial": {
+        "category": "Offices & retail",
+        "title": "Commercial Suites",
+        "description": "Boutique offices, showrooms, and retail spaces refreshed after hours."
+      },
+      "windows": {
+        "category": "Glass & detail",
+        "title": "Windows & Finishes",
+        "description": "Crystal-clear windows, mirrors, and stainless detailing throughout."
+      },
+      "deep_clean": {
+        "category": "Seasonal reset",
+        "title": "Deep Restore",
+        "description": "Move-in/out, post-renovation, and seasonal detailing for every surface."
+      }
+    },
+    "service_card": {
+      "frequency": "Frequency",
+      "duration": "Duration",
+      "team": "Team",
+      "starting_at": "Starting at",
+      "view_details": "View Service Details",
+      "view_all": "View All Services"
+    },
+    "featured_services": {
+      "premier_weekly": {
+        "name": "Premier Residence Care",
+        "description": "Weekly white-glove clean with linen service, organization touch-ups, and seasonal detailing scheduled quarterly.",
+        "badge": "Most requested",
+        "frequency": "Weekly",
+        "duration": "4-5 hrs",
+        "team": "2 housekeepers"
+      },
+      "signature_biweekly": {
+        "name": "Signature Bi-Weekly",
+        "description": "Detailed bi-weekly clean focused on kitchens, baths, and high-touch living spaces using non-toxic products.",
+        "badge": "Flexible",
+        "frequency": "Bi-weekly",
+        "duration": "3 hrs",
+        "team": "2 housekeepers"
+      },
+      "deep_restore": {
+        "name": "Seasonal Deep Restore",
+        "description": "Top-to-bottom seasonal refresh covering baseboards, fixtures, interiors of cabinetry, and outdoor living spaces.",
+        "badge": "Quarterly",
+        "frequency": "Quarterly",
+        "duration": "Full day",
+        "team": "3-4 housekeepers"
+      }
+    },
+    "about": {
+      "eyebrow": "About Gloria",
+      "title": "A Passion for Clean, Healthy Spaces",
+      "description": "Gloria founded CMK Home Services with a simple mission: to provide Miami families and businesses with reliable, professional cleaning services they can trust. With years of experience and a dedicated team, we treat every home and office like it's our own."
+    },
+    "membership": {
+      "eyebrow": "Get in Touch",
+      "title": "Ready for a spotless space?",
+      "description": "Contact us today for a free quote. We serve all of Miami and surrounding areas with flexible scheduling to fit your needs.",
+      "benefits": [
+        "Licensed, insured, and bonded professionals",
+        "Same-day service available",
+        "Eco-friendly products and equipment",
+        "100% satisfaction guarantee"
+      ],
+      "whatsapp_button": "Chat on WhatsApp",
+      "quote_button": "Request Quote Online"
+    },
+    "contact_section": {
+      "eyebrow": "Ready when you are",
+      "title": "Let's design a cleaning schedule around your life.",
+      "description": "Share your preferred cadence, square footage, and any concierge notes. We'll send a tailored proposal within one business day.",
+      "cta": "Request a concierge clean",
+      "service_areas_title": "Service areas",
+      "areas": [
+        "Miami Beach · Coral Gables · Coconut Grove",
+        "Brickell · Downtown Miami · Edgewater",
+        "Aventura · Sunny Isles · Key Biscayne"
+      ],
+      "areas_note": "Looking outside these neighborhoods? Reach out—our concierge will confirm availability."
+    }
+  },
+  "services": {
+    "ui": {
+      "hero": {
+        "eyebrow": "Signature Services",
+        "title": "Cleaning programs tailored to Miami living",
+        "description": "From boutique residences to executive suites, every service reflects the craftsmanship and flexibility you expect. Whether you need recurring weekly care or turnover coordination for seasonal rentals, our concierge approach delivers predictable pricing, responsive scheduling, and teams trained in high-end finishes.",
+        "metrics": [
+          {
+            "value": "15+",
+            "label": "Years taking care of Miami properties"
+          },
+          {
+            "value": "100%",
+            "label": "Satisfaction guarantee on every visit"
+          },
+          {
+            "value": "24h",
+            "label": "Average turnaround on tailored proposals"
+          }
+        ],
+        "promise": {
+          "eyebrow": "Our promise",
+          "items": [
+            "Dedicated concierge for scheduling and quality checks",
+            "Recurring teams familiar with your property and preferences",
+            "Transparent pricing—no hidden fees or surprise add-ons",
+            "White-glove care for delicate surfaces and luxury finishes"
+          ]
+        }
+      },
+      "sections": {
+        "what_is_included": {
+          "title": "What is included",
+          "description": "Every visit follows a documented checklist tailored to your property."
+        },
+        "our_process": {
+          "title": "Our process",
+          "description": "Transparent milestones keep the work predictable and stress-free."
+        },
+        "questions_answered": {
+          "title": "Questions answered",
+          "description_template": "Common considerations for {{service}}."
+        },
+        "what_clients_appreciate": "What clients appreciate"
+      },
+      "cta_card": {
+        "eyebrow": "Concierge booking",
+        "title_template": "Need {{service}}?",
+        "description": "We will tailor a scope, share pricing, and coordinate the first visit within 24 hours.",
+        "schedule_whatsapp": "Schedule via WhatsApp",
+        "call": "Call (786) 380-7579",
+        "request_proposal": "Request a proposal"
+      },
+      "overview": {
+        "eyebrow": "More ways we can help",
+        "title": "Explore every program at a glance",
+        "view_details": "View details"
+      },
+      "bottom_cta": {
+        "eyebrow": "Ready when you are",
+        "title": "Let's design a cleaning plan around your lifestyle.",
+        "description": "Share cadence, square footage, finishes, and any concierge notes. We'll send a tailored proposal with transparent pricing and scheduling options.",
+        "get_whatsapp_quote": "Get a WhatsApp quote",
+        "call": "Call (786) 380-7579",
+        "request_clean": "Request concierge clean"
+      }
+    },
+    "common_faqs": [
+      {
+        "question": "How do I get a quote?",
+        "answer": "Contact us via WhatsApp at (786) 380-7579, call, or submit the form on our contact page. We respond within one business day."
+      },
+      {
+        "question": "Are you licensed and insured?",
+        "answer": "Yes. CMK Home Services is fully licensed, insured, and bonded for residential and commercial work across Miami-Dade."
+      },
+      {
+        "question": "What areas do you serve?",
+        "answer": "We cover the greater Miami area including Miami Beach, Coral Gables, Coconut Grove, Brickell, Key Biscayne, Aventura, and surrounding neighborhoods."
+      }
+    ],
+    "residential": {
+      "title": "Residential Cleaning",
+      "tagline": "Boutique housekeeping for everyday living",
+      "description": "Detailed upkeep for primary and secondary residences. We care for every room with hotel-level finishing touches and concierge-style scheduling.",
+      "quick_facts": [
+        { "label": "Ideal for", "value": "Residences & pied-a-terre" },
+        { "label": "Cadence", "value": "Weekly / Bi-weekly" },
+        { "label": "Team", "value": "2 dedicated housekeepers" }
+      ],
+      "features": [
+        "Whole-home dusting, surfaces, and detailing",
+        "Kitchen care with appliance wipe-downs and polish",
+        "Bathroom sanitation with descaling and fixture buffing",
+        "Floor care for marble, hardwood, and luxury vinyl",
+        "Bed linen refresh and light laundry on request",
+        "Interior windows, mirrors, and glass accents",
+        "Pet-friendly cleaning plans",
+        "Eco-forward supplies available"
+      ],
+      "process": [
+        { "title": "Concierge intake", "description": "Share square footage, finishes, and preferences with our scheduler." },
+        { "title": "Personalized checklist", "description": "We document every room and assign a recurring team to your home." },
+        { "title": "White-glove clean", "description": "Professionals arrive in uniform with commercial-grade supplies and protection gear." },
+        { "title": "Quality assurance", "description": "Supervisors perform periodic inspections and adjust to your feedback." }
+      ],
+      "trust_badges": [
+        "Licensed, insured, and bonded professionals",
+        "Background-checked team assigned to your home",
+        "Discreet service with secured entry instructions"
+      ],
+      "faqs": [
+        {
+          "question": "Can I meet the team before service?",
+          "answer": "Yes. We can arrange an introduction or virtual walkthrough so you feel confident before the first visit."
+        },
+        {
+          "question": "Do you bring cleaning products?",
+          "answer": "We supply professional-grade products and equipment. If you prefer a specific brand, we are happy to use it."
+        },
+        {
+          "question": "What if I am not home?",
+          "answer": "Most clients provide secure access instructions. We will lock up and send photo confirmation once finished."
+        }
+      ]
+    },
+    "commercial": {
+      "title": "Commercial Cleaning",
+      "tagline": "Executive suites, boutiques, and offices",
+      "description": "Daytime or after-hours cleaning for boardrooms, boutiques, medical suites, and creative studios. We keep client-facing spaces spotless without disrupting operations.",
+      "quick_facts": [
+        { "label": "Ideal for", "value": "Offices & boutique retail" },
+        { "label": "Cadence", "value": "Nightly / Weekly" },
+        { "label": "Team", "value": "Scaled to square footage" }
+      ],
+      "features": [
+        "Day porter or after-hours service",
+        "Reception, conference, and workstation detailing",
+        "Restroom sanitizing with restock option",
+        "Breakroom + kitchenette maintenance",
+        "Floor care for carpet, tile, and polished concrete",
+        "Glass partitions, elevators, and touchpoints",
+        "Trash, recycling, and shredding coordination",
+        "Open/close checklist management"
+      ],
+      "process": [
+        { "title": "Site walk-through", "description": "We review access, security, and compliance requirements." },
+        { "title": "Proposal & schedule", "description": "Receive a transparent scope with cadence, supplies, and reporting cadence." },
+        { "title": "Dedicated crew", "description": "A trained team follows your SOPs with supervisor oversight." },
+        { "title": "Reporting & optimization", "description": "We deliver visit summaries and adjust scopes as your workplace evolves." }
+      ],
+      "trust_badges": [
+        "Certificate of insurance provided on request",
+        "HIPAA- and OSHA-aware protocols",
+        "Flexible scheduling for after-hours service"
+      ],
+      "faqs": [
+        {
+          "question": "Do you offer day porter services?",
+          "answer": "Yes. We can staff day porters for high-traffic lobbies or restrooms while a night crew handles deep cleaning."
+        },
+        {
+          "question": "Can you support inspections or audits?",
+          "answer": "We document every visit, maintain SDS sheets, and prepare compliance checklists for regulated industries."
+        }
+      ]
+    },
+    "windows": {
+      "title": "Windows & Glass Care",
+      "tagline": "Crystal-clear views of the Miami skyline",
+      "description": "Interior and exterior window cleaning for condos, estates, and storefronts. Salt air, sunscreen, and daily storms are no match for our glass specialists.",
+      "quick_facts": [
+        { "label": "Ideal for", "value": "Condos, penthouses, retail fronts" },
+        { "label": "Cadence", "value": "Every 2-4 months" },
+        { "label": "Access", "value": "Up to 4 stories (higher via partner lift)" }
+      ],
+      "features": [
+        "Interior and exterior glass detailing",
+        "Screen, track, and sill cleaning",
+        "Sliding door and balcony glass polishing",
+        "Salt and mineral deposit removal",
+        "High-access solutions with safety gear",
+        "Mirror, shower glass, and railing care",
+        "Post-renovation glass cleanup",
+        "Protective glass treatments"
+      ],
+      "process": [
+        { "title": "Assessment & access plan", "description": "We evaluate exposure, hose access, and any HOA requirements." },
+        { "title": "Protection setup", "description": "Furniture, floors, and landscaping are covered before we start." },
+        { "title": "Detail clean", "description": "Squeegee technique plus microfiber finishing for a streak-free result." },
+        { "title": "Final inspection", "description": "We inspect in daylight and invite you to review every pane." }
+      ],
+      "trust_badges": [
+        "Slip-resistant, safety-first technicians",
+        "Pure-water filtration for spotless finish",
+        "Fully insured for exterior work"
+      ],
+      "faqs": [
+        {
+          "question": "Do you clean high-rise exteriors?",
+          "answer": "Yes. We partner with certified rope-access teams for buildings above four stories and manage all permits."
+        },
+        {
+          "question": "How often should windows be cleaned in Miami?",
+          "answer": "Most clients schedule quarterly service to stay ahead of sea salt, humidity, and afternoon storms."
+        }
+      ]
+    },
+    "organization": {
+      "title": "Home Organization",
+      "tagline": "Systems that look beautiful and stay tidy",
+      "description": "Professional organizers declutter closets, pantries, garages, and home offices so every item has a place and your daily routines feel calm.",
+      "quick_facts": [
+        { "label": "Ideal for", "value": "Closets, kitchens, garages" },
+        { "label": "Timeline", "value": "Single session or multi-day" },
+        { "label": "Deliverable", "value": "Custom organization blueprint" }
+      ],
+      "features": [
+        "Space planning and zone mapping",
+        "Edit, categorize, and containerize belongings",
+        "Labeling and photo inventory",
+        "Donation and consignment coordination",
+        "Seasonal wardrobe rotation",
+        "Garage and storage reconfiguration",
+        "Home office workflow setup",
+        "Maintenance visits to keep systems on track"
+      ],
+      "process": [
+        { "title": "Discovery session", "description": "We learn how you live in the space plus your aesthetic preferences." },
+        { "title": "Design & sourcing", "description": "You receive a layout and curated product list before we begin." },
+        { "title": "Edit & implement", "description": "Our team declutters, installs solutions, and styles every shelf." },
+        { "title": "Lifestyle coaching", "description": "We show you how to maintain the system and offer follow-up support." }
+      ],
+      "trust_badges": [
+        "Confidential, judgment-free sessions",
+        "Product sourcing and installation handled for you",
+        "Donation receipts and haul-away included"
+      ],
+      "faqs": [
+        {
+          "question": "Do I need to be present?",
+          "answer": "We recommend attending the edit phase, then you can step away while we install and style the space."
+        },
+        {
+          "question": "Can you work with existing containers?",
+          "answer": "Absolutely. We repurpose what you own and supplement only when needed."
+        }
+      ]
+    },
+    "deep_clean": {
+      "title": "Deep Cleaning",
+      "tagline": "Seasonal resets for every surface",
+      "description": "Intensive detailing before special events, after renovations, or whenever you want the feeling of a brand-new home.",
+      "quick_facts": [
+        { "label": "Ideal for", "value": "Seasonal + post-reno" },
+        { "label": "Timeline", "value": "4-8 hours" },
+        { "label": "Focus", "value": "Baseboards to light fixtures" }
+      ],
+      "features": [
+        "Baseboards, trim, and crown molding hand-wiped",
+        "Inside cabinets, drawers, and built-ins",
+        "Appliance interiors including oven and fridge",
+        "Tile and grout scrubbing with steam option",
+        "Air vent and return cleaning",
+        "Upholstery vacuuming and mattress refresh",
+        "Hard-to-reach ledges, fans, and chandeliers",
+        "Move furniture to capture hidden dust"
+      ],
+      "process": [
+        { "title": "Pre-clean walkthrough", "description": "We note materials, pain points, and any no-go zones." },
+        { "title": "Detail schedule", "description": "A custom checklist with estimated timing per room." },
+        { "title": "Specialty cleaning", "description": "Technicians use pro tools such as steamers and HEPA vacuums." },
+        { "title": "Satisfaction review", "description": "We review each space together or send photos if you are away." }
+      ],
+      "trust_badges": [
+        "Hospital-grade disinfectants available",
+        "HEPA filtration for allergy relief",
+        "100% satisfaction guarantee"
+      ],
+      "faqs": [
+        {
+          "question": "Is a deep clean required before recurring service?",
+          "answer": "We recommend it for first-time clients so maintenance visits stay efficient and consistent."
+        },
+        {
+          "question": "Can you include exterior areas?",
+          "answer": "Yes. Balconies, summer kitchens, and patio furniture can be added to the scope."
+        }
+      ]
+    },
+    "move": {
+      "title": "Move-In / Move-Out",
+      "tagline": "Immaculate homes for handoffs and arrivals",
+      "description": "We prepare properties for listings, tenant turnovers, and fresh starts with photo-ready detailing and checklist documentation.",
+      "quick_facts": [
+        { "label": "Ideal for", "value": "Sellers, landlords, relocations" },
+        { "label": "Timeline", "value": "Schedule 3-5 days ahead" },
+        { "label": "Deliverable", "value": "Inspection-ready checklist" }
+      ],
+      "features": [
+        "Vacant home top-to-bottom cleaning",
+        "Cabinetry, drawers, and shelves inside/out",
+        "Appliance detail including behind units",
+        "Wall smudge removal and switch plate sanitizing",
+        "Blind, window track, and sliding door care",
+        "Garage, storage, and patio sweep-out",
+        "Photo-ready finishing touches",
+        "Trash and debris haul-away coordination"
+      ],
+      "process": [
+        { "title": "Timeline planning", "description": "We align with closing dates, listing photography, or move-in schedules." },
+        { "title": "Vacant prep", "description": "Crews arrive after movers to address every surface." },
+        { "title": "Inspection checklist", "description": "We follow lease or builder requirements and document completion." },
+        { "title": "Final approval", "description": "Walkthrough with owner/agent or video confirmation if you are remote." }
+      ],
+      "trust_badges": [
+        "Rapid response crews for tight timelines",
+        "Detailed move-out checklist provided",
+        "Preferred vendor for luxury property managers"
+      ],
+      "faqs": [
+        {
+          "question": "Do you coordinate with movers or realtors?",
+          "answer": "Yes. Share your contacts and we will manage access plus keep everyone updated."
+        },
+        {
+          "question": "Can you help stage the home?",
+          "answer": "We can lightly stage with existing furnishings or refer you to our partner stylists."
+        }
+      ]
+    },
+    "property": {
+      "title": "Rental & Airbnb Care",
+      "tagline": "Turnover services for hosts and property managers",
+      "description": "Reliable turnovers for nightly rentals, corporate housing, and furnished apartments. Guests arrive to a five-star experience every stay.",
+      "quick_facts": [
+        { "label": "Ideal for", "value": "Airbnb & luxury rentals" },
+        { "label": "Cadence", "value": "Per reservation" },
+        { "label": "Extras", "value": "Inventory + restock options" }
+      ],
+      "features": [
+        "Automated scheduling tied to your booking calendar",
+        "Hotel-style bed making and towel presentation",
+        "Full laundry and linen service",
+        "Amenity and consumable restocking",
+        "Photo documentation after every visit",
+        "Minor maintenance reporting",
+        "Smart lock and code resets",
+        "Deep clean add-ons each quarter"
+      ],
+      "process": [
+        { "title": "Onboarding & SOPs", "description": "We document brand standards, storage closets, and vendor contacts." },
+        { "title": "Calendar sync", "description": "Integrate with Airbnb, Hostfully, or direct booking tools." },
+        { "title": "Turnover execution", "description": "Crews follow your checklist, restock supplies, and stage decor." },
+        { "title": "Reporting & inventory", "description": "Receive before/after photos plus low-stock alerts in real time." }
+      ],
+      "trust_badges": [
+        "Dedicated account manager",
+        "Real-time text updates and photos",
+        "Emergency same-day cleans available"
+      ],
+      "faqs": [
+        {
+          "question": "Can you manage linens and amenities?",
+          "answer": "Yes. We launder on-site or off-site, track inventory, and restock amenities per reservation."
+        },
+        {
+          "question": "Do you integrate with booking software?",
+          "answer": "We sync with popular PMS tools or share a shared calendar to avoid missed turnovers."
+        }
+      ]
+    },
+    "snowbird": {
+      "title": "Snowbird Property Care",
+      "tagline": "Peace of mind while you are away",
+      "description": "Seasonal property care that keeps residences fresh, secure, and ready for your arrival. Ideal for clients who split time between Miami and another home.",
+      "quick_facts": [
+        { "label": "Ideal for", "value": "Seasonal residents" },
+        { "label": "Cadence", "value": "Weekly or bi-weekly checks" },
+        { "label": "Includes", "value": "Pre-arrival deep clean" }
+      ],
+      "features": [
+        "Scheduled property walkthroughs with photos",
+        "HVAC, plumbing, and appliance checks",
+        "Mail, package, and delivery management",
+        "Hurricane preparation and aftermath cleaning",
+        "Plant watering and vendor coordination",
+        "Vehicle start-ups and garage inspection",
+        "Deep clean before each arrival",
+        "Welcome-home grocery or amenity stocking"
+      ],
+      "process": [
+        { "title": "Care plan setup", "description": "We define visit cadence, vendor access, and reporting preferences." },
+        { "title": "Routine inspections", "description": "Technicians follow a 30-point checklist and send updates every visit." },
+        { "title": "Issue resolution", "description": "We coordinate trusted vendors for maintenance or repairs." },
+        { "title": "Arrival preparation", "description": "Home is detailed, stocked, and climate-controlled for your return." }
+      ],
+      "trust_badges": [
+        "Secure key management and alarm protocols",
+        "Storm readiness and post-event reporting",
+        "Discreet, multilingual concierge team"
+      ],
+      "faqs": [
+        {
+          "question": "Can you accept deliveries and coordinate vendors?",
+          "answer": "Yes. We can meet service providers, oversee projects, and keep you updated with photos and notes."
+        },
+        {
+          "question": "Will you prep the home before I arrive?",
+          "answer": "Absolutely. Expect a fresh deep clean, linens pressed, and any requested groceries or amenities stocked."
+        }
+      ]
     }
   },
   "nav": {
     "home": "Home",
-    "products": "Products",
-    "all_products": "All Products",
-    "soloMiners": "Solo Miners",
+    "products": "Services",
+    "all_products": "All Services",
+    "soloMiners": "Specialized Services",
     "gallery": "Gallery",
-    "technical": "Technical Specs",
+    "technical": "Service Areas",
     "contact": "Contact",
     "login": "Login",
     "cart": "Cart",
@@ -172,22 +846,22 @@
     "privacy": "Privacy Policy",
     "terms": "Terms and Conditions",
     "returns": "Return Policy",
-    "description": "Your premier destination for crypto mining hardware, solo miners, cold storage solutions, Bitcoin keychains, and exclusive cryptocurrency gadgets.",
+    "description": "Professional residential and commercial cleaning services in Miami. We deliver exceptional cleaning with a personal touch, treating your home or office with the care it deserves.",
     "quick_links": "Quick Links",
-    "products_title": "Products",
+    "products_title": "Cleaning Services",
     "contact_info": "Contact",
     "phone": "Phone",
     "email": "Email",
     "address": "Address",
     "business_hours": "Business Hours",
     "contact_title": "Contact",
-    "hardware_title": "Crypto Mining Hardware",
-    "hardware_description": "Premium miners, cold storage solutions & Bitcoin accessories"
+    "hardware_title": "Our Services",
+    "hardware_description": "Residential and commercial cleaning services in Miami"
   },
   "products": {
     "hero": {
-      "title": "Bitcoin Mining Hardware",
-      "subtitle": "Premium cryptocurrency mining equipment available in different configurations and performance levels to suit your mining operation needs."
+      "title": "",
+      "subtitle": ""
     },
     "filters": {
       "category": "Category",
@@ -200,173 +874,173 @@
       "filter_by_tags": "Filter by Tags"
     },
     "results": {
-      "loading": "Loading mining hardware...",
-      "showing": "Showing {{current}} of {{total}} products"
+      "loading": "Loading our services...",
+      "showing": "Showing {{current}} of {{total}} services"
     },
     "empty": {
-      "title": "No Products Found",
-      "message": "Try adjusting the filters or clearing them to see all available mining equipment.",
+      "title": "No Services Found",
+      "message": "Try adjusting the filters or clearing them to see all available services.",
       "clear_button": "Clear Filters"
     },
     "section": {
-      "title": "Mining Hardware",
-      "subtitle": "Premium cryptocurrency mining equipment"
+      "title": "Our Services",
+      "subtitle": "Professional cleaning services"
     },
-    "title": "Mining Hardware",
-    "subtitle": "Professional Equipment",
+    "title": "Our Services",
+    "subtitle": "Excellence in Every Clean",
     "specs": "Specifications",
-    "hashrate": "Hash Rate",
-    "power": "Power Consumption",
-    "efficiency": "Efficiency",
-    "add_to_cart": "Add to Cart",
+    "hashrate": "Service Type",
+    "power": "Duration",
+    "efficiency": "Coverage Area",
+    "add_to_cart": "Request Service",
     "request_quote": "Request Quote",
     "filterBy": "Filter by",
     "thickness": "Thickness"
   },
   "soloMiners": {
     "hero": {
-      "title": "Bitcoin Solo Miners & Lottery Mining Hardware",
-      "subtitle": "Capture full block rewards with specialized Bitcoin solo mining rigs engineered for low power, quiet operation, and maximum independence.",
-      "ctaPrimary": "Talk to a Solo Mining Specialist",
-      "ctaSecondary": "Compare Solo Miners",
+      "title": "",
+      "subtitle": "",
+      "ctaPrimary": "",
+      "ctaSecondary": "",
       "stats": {
-        "reward": "Full Block Reward",
-        "power": "Home-Friendly Power Draw",
-        "support": "24/7 Engineering Support"
+        "reward": "",
+        "power": "",
+        "support": ""
       }
     },
     "highlights": {
       "lottery": {
-        "title": "Win Entire Block Rewards",
-        "copy": "Solo miners take the full 3.125 BTC block reward plus fees when they strike gold."
+        "title": "",
+        "copy": ""
       },
       "home": {
-        "title": "Home & Studio Ready",
-        "copy": "Ultra-quiet, low-power miners designed for apartments, studios, or office desktops."
+        "title": "",
+        "copy": ""
       },
       "decentralization": {
-        "title": "Strengthen Bitcoin",
-        "copy": "Solo mining supports network decentralization and censorship resistance."
+        "title": "",
+        "copy": ""
       }
     },
     "catalog": {
-      "eyebrow": "Solo Mining Catalog",
-      "title": "Curated Bitcoin Solo Mining Hardware",
-      "copy": "Choose from compact USB lottery miners, desktop solo rigs, or custom-built solo mining bundles with node integration.",
-      "learnMore": "Solo Mining FAQ",
+      "eyebrow": "",
+      "title": "",
+      "copy": "",
+      "learnMore": "",
       "metrics": {
-        "hashrate": "Hashrate",
-        "power": "Power Draw",
-        "efficiency": "Efficiency",
-        "price": "Price"
+        "hashrate": "",
+        "power": "",
+        "efficiency": "",
+        "price": ""
       },
-      "notice": "Publish your first solo miner products from the admin dashboard to replace these curated examples.",
-      "noticeCta": "Open Product Management"
+      "notice": "",
+      "noticeCta": ""
     },
     "cta": {
-      "viewProduct": "View Solo Miner",
-      "requestQuote": "Request Solo Miner Quote",
-      "defaultDescription": "Solo miner hardware optimized for low-power lottery mining."
+      "viewProduct": "",
+      "requestQuote": "",
+      "defaultDescription": ""
     },
     "badges": {
-      "lottery": "Lottery Class",
-      "pro": "Pro Solo Rig",
-      "hobby": "Hobby Build",
-      "entry": "Entry Solo Miner"
+      "lottery": "",
+      "pro": "",
+      "hobby": "",
+      "entry": ""
     },
     "fallback": {
       "bitaxe": {
-        "description": "Compact open-source USB solo miner ideal for hobby lottery mining and running alongside a Bitcoin node.",
+        "description": "",
         "features": {
-          "usb": "USB powered for plug-and-play solo mining",
-          "silent": "Virtually silent operation for living spaces",
-          "openSource": "Open-source firmware with active community",
-          "easySetup": "Configures in minutes with web dashboard"
+          "usb": "",
+          "silent": "",
+          "openSource": "",
+          "easySetup": ""
         }
       },
       "apollo": {
-        "description": "Premium desktop solo miner with built-in Bitcoin node and miner management suite.",
+        "description": "",
         "features": {
-          "node": "Integrated Bitcoin node & Lightning ready",
-          "lowNoise": "Ultra quiet desktop acoustic profile",
-          "desktop": "Fits neatly on desks or studio shelves",
-          "premium": "All-in-one chassis with enterprise support"
+          "node": "",
+          "lowNoise": "",
+          "desktop": "",
+          "premium": ""
         }
       },
       "compac": {
-        "description": "USB stick solo miner for entry-level lottery mining or educational setups.",
+        "description": "",
         "features": {
-          "usb": "True USB stick miner with simple setup",
-          "lowPower": "Runs on 10 watts from any USB PD adapter",
-          "affordable": "Budget-friendly solo mining experiment",
-          "plugPlay": "Ships tuned for popular solo pools"
+          "usb": "",
+          "lowPower": "",
+          "affordable": "",
+          "plugPlay": ""
         }
       }
     },
     "comparison": {
-      "eyebrow": "Solo vs Pool Mining",
-      "title": "Solo Mining vs Pool Mining",
-      "copy": "Solo mining delivers the ultimate decentralization and jackpot potential, while pool mining yields steady payouts. Choose the blend that fits your strategy.",
+      "eyebrow": "",
+      "title": "",
+      "copy": "",
       "solo": {
-        "title": "Solo Mining",
+        "title": "",
         "items": {
-          "reward": "Keep 100% of block rewards + fees",
-          "decentralize": "Strengthens Bitcoin decentralization",
-          "lowFees": "Zero pool fees or payout delays",
-          "lottery": "Lottery-style payouts with high upside"
+          "reward": "",
+          "decentralize": "",
+          "lowFees": "",
+          "lottery": ""
         }
       },
       "pool": {
-        "title": "Pool Mining",
+        "title": "",
         "items": {
-          "steady": "Earn predictable, steady payouts",
-          "poolFees": "Pay 0.5% - 2% in pool fees",
-          "dependence": "Rely on third-party pool infrastructure",
-          "kYC": "Many pools require KYC/AML verification"
+          "steady": "",
+          "poolFees": "",
+          "dependence": "",
+          "kYC": ""
         }
       },
-      "cta": "Discuss Hybrid Mining Strategies"
+      "cta": ""
     },
     "faq": {
-      "eyebrow": "FAQ",
-      "title": "Solo Mining FAQ",
-      "copy": "Everything you need to know about Bitcoin solo mining, lottery mining odds, and how to set up your rig.",
+      "eyebrow": "",
+      "title": "",
+      "copy": "",
       "items": {
         "whatIs": {
-          "question": "What is a Bitcoin solo miner?",
-          "answer": "A solo miner is specialized hardware configured to mine Bitcoin independently rather than contributing hash power to a mining pool."
+          "question": "",
+          "answer": ""
         },
         "profitable": {
-          "question": "Is solo mining profitable in 2025?",
-          "answer": "Solo mining is a high-variance strategy. While blocks are rare, a single win returns the full 3.125 BTC reward plus fees. Many miners run solo rigs alongside pool miners for asymmetric upside."
+          "question": "",
+          "answer": ""
         },
         "bestHome": {
-          "question": "What are the best solo miners for home use?",
-          "answer": "Popular home solo miners include Bitaxe Ultra, Apollo BTC, and Compac F. These miners are quiet, energy-efficient, and simple to operate."
+          "question": "",
+          "answer": ""
         },
         "needsNode": {
-          "question": "Do I need to run a Bitcoin node for solo mining?",
-          "answer": "You can point your hardware at a solo mining pool like Solo CK, but running your own node gives full autonomy and contributes to the network."
+          "question": "",
+          "answer": ""
         },
         "lottery": {
-          "question": "What is lottery mining?",
-          "answer": "Lottery mining is another term for solo mining. Each hash is a lottery ticket; if it wins, you claim the entire block reward."
+          "question": "",
+          "answer": ""
         }
       }
     },
     "banner": {
-      "title": "Design Your Solo Mining Strategy",
-      "copy": "From USB lottery miners to desktop rigs with integrated nodes, our engineers tailor solo mining bundles for any power budget.",
-      "cta": "Book a Solo Mining Consultation"
+      "title": "",
+      "copy": "",
+      "cta": ""
     }
   },
   "grosor": {
     "breadcrumb": {
       "home": "Home",
-      "products": "Products"
+      "products": "Services"
     },
     "collection": "Collection",
-    "subtitle": "Premium Bitcoin Mining Hardware & Accessories",
+    "subtitle": "",
     "product_available": "product available",
     "products_available": "products available",
     "view_mode": "View Mode",
@@ -377,19 +1051,19 @@
     "view_all_products": "View All Products",
     "cta": {
       "title": "Need More Information?",
-      "description": "Contact our team for personalized advice on Bitcoin mining hardware.",
+      "description": "",
       "contact_us": "Contact Us",
-      "all_products": "All Products"
+      "all_products": "All Services"
     }
   },
   "detalle": {
     "breadcrumb": {
       "home": "Home",
-      "products": "Products"
+      "products": "Services"
     },
     "category": "Category:",
     "model": "Model:",
-    "premium_label": "Premium Mining Hardware",
+    "premium_label": "",
     "description_title": "Description",
     "recommended_apps": "Recommended Applications",
     "request_quote": "Request Quote",
@@ -401,18 +1075,18 @@
     "technical_support": "24/7 technical assistance",
     "enterprise_equipment": "Enterprise-grade equipment",
     "specs_title": "Technical Specifications",
-    "hash_rate": "Hash Rate",
-    "power_consumption": "Power Consumption",
-    "efficiency": "Efficiency",
-    "algorithm": "Algorithm",
-    "chip_type": "Chip Type",
-    "cooling": "Cooling System",
+    "hash_rate": "",
+    "power_consumption": "",
+    "efficiency": "Coverage Area",
+    "algorithm": "",
+    "chip_type": "",
+    "cooling": "",
     "dimensions": "Dimensions",
     "weight": "Weight",
     "noise_level": "Noise Level",
     "operating_temp": "Operating Temperature",
-    "network": "Network Connection",
-    "voltage": "Input Voltage",
+    "network": "",
+    "voltage": "",
     "warranty": "Warranty",
     "warranty_included": "Warranty Included",
     "warranty_coverage": "Factory warranty coverage",
@@ -429,7 +1103,7 @@
     "view_details": "View Details",
     "cta": {
       "title": "Need More Information?",
-      "description": "Contact our team for personalized advice on Bitcoin mining hardware.",
+      "description": "",
       "contact_us": "Contact Us"
     }
   },
@@ -442,12 +1116,12 @@
     "profile": "My Profile",
     "orders": "My Orders",
     "login": "Login",
-    "login_subtitle": "Access Your Mining Console",
+    "login_subtitle": "Access Your Account",
     "register": "Register",
-    "register_subtitle": "Join the Mining Revolution",
+    "register_subtitle": "Join CMK Home Services",
     "logout": "Logout",
     "my_account": "My Account",
-    "my_orders": "My Orders",
+    "my_orders": "My Service Requests",
     "pending": "Pending",
     "name": "Name",
     "email": "Email",
@@ -465,6 +1139,36 @@
     "save_changes": "Save Changes",
     "profile_updated": "Profile updated successfully",
     "welcome_back": "Welcome back",
+    "login_page": {
+      "welcome_title": "Welcome to",
+      "company_name": "CMK Home Services",
+      "hero_description": "Access your client portal to manage bookings, view service history, and schedule your next cleaning service.",
+      "feature_bookings_title": "Manage Bookings",
+      "feature_bookings_description": "Schedule services, track appointments, and manage your cleaning preferences all in one place.",
+      "feature_security_title": "Secure & Private",
+      "feature_security_description": "Your personal information and service history are protected with enterprise-grade security.",
+      "benefit_fast_response": "Fast Response",
+      "benefit_easy_scheduling": "Easy Scheduling",
+      "benefit_service_history": "Service History",
+      "access_label": "Access",
+      "form_subtitle": "Sign in to manage your cleaning services and bookings.",
+      "session_expired": "Your session has expired. Please log in again.",
+      "loading": "Signing in..."
+    },
+    "register_page": {
+      "hero_title_join": "Join",
+      "hero_description": "Create your account to easily book services, manage appointments, and enjoy a cleaner, healthier home with Miami's trusted cleaning professionals.",
+      "feature_scheduling_title": "Easy Scheduling",
+      "feature_scheduling_description": "Book one-time or recurring cleaning services with just a few clicks. Flexible scheduling to fit your lifestyle.",
+      "feature_history_title": "Service History",
+      "feature_history_description": "Track all your bookings, view past services, and manage your cleaning preferences in one secure place.",
+      "benefit_fast_booking": "Fast booking",
+      "benefit_service_reminders": "Service reminders",
+      "benefit_secure_private": "Secure & private",
+      "create_access_badge": "Create Access",
+      "form_instructions": "All fields marked * are required. Passwords must be at least {{minLength}} characters.",
+      "loading": "Creating account..."
+    },
     "profile_subtitle": "Keep your details current and review the activity associated with your account.",
     "profile_role": {
       "admin": "Administrator",
@@ -487,12 +1191,12 @@
       "account_overview": "Account overview",
       "account_overview_hint": "A quick snapshot of your account status and recent activity.",
       "contact_information": "Contact information",
-      "contact_information_hint": "Keep your details up to date so we can assist you with orders and hardware updates.",
+      "contact_information_hint": "Keep your details up to date so we can assist you with orders and service updates.",
       "security": "Security & access",
       "security_hint": "Review sign-in activity and the overall state of your account.",
       "support": "Need help?"
     },
-    "profile_support_description": "Contact our specialists if you need to update billing, shipping or have a mining question.",
+    "profile_support_description": "Contact our specialists if you need to update your information or have service questions.",
     "profile_actions": {
       "view_orders": "View orders",
       "edit_profile": "Edit profile",
@@ -527,7 +1231,11 @@
       "weak_password": "Password is too weak. Please use a stronger password.",
       "registration_failed": "Registration failed. Please try again.",
       "load_profile_failed": "Unable to load your profile. Try again later.",
-      "update_profile_failed": "Unable to update your profile. Please try again."
+      "update_profile_failed": "Unable to update your profile. Please try again.",
+      "user_not_found": "No account found with this email address.",
+      "wrong_password": "Incorrect password. Please try again.",
+      "invalid_credentials": "Invalid email or password. Please check your credentials and try again.",
+      "login_failed": "Login failed. Please try again."
     },
     "sign_in": "Sign in to your account",
     "dont_have_account": "Don't have an account?",
@@ -536,7 +1244,7 @@
     "sign_in_here": "Sign in here",
     "create_account": "Create your account",
     "order_history": "Order History",
-    "orders_subtitle": "Track your orders, view shipping details, and download invoices whenever you need them.",
+    "orders_subtitle": "Track your service requests, view appointment details, and access your service history.",
     "all_orders": "All orders",
     "no_orders_yet": "No orders yet",
     "order_details": "Order Details",
@@ -556,29 +1264,54 @@
     "download_invoice": "Download invoice",
     "my_profile": "My profile",
     "no_orders": "No orders found for this filter.",
-    "no_orders_description": "Once you place an order it will appear here with full tracking and invoice access.",
-    "start_shopping": "Start shopping",
+    "no_orders_description": "Once you book a service it will appear here with full details and history.",
+    "start_shopping": "Browse services",
     "processing": "Processing",
     "shipped": "Shipped",
     "delivered": "Delivered",
     "cancelled": "Cancelled"
   },
   "gallery": {
+    "featured": "Featured Work",
+    "hero_title_1": "Deep Shine Residential Cleaning",
+    "hero_subtitle_1": "Experience the sparkle and shine of a professionally cleaned home",
+    "read_more": "Read More",
+    "browse_portfolio": "Browse Our Portfolio",
+    "projects_found": "projects",
+    "our_work": "Our Work",
+    "portfolio_title": "Recent Cleaning Projects",
+    "portfolio_subtitle": "See the transformations we've delivered for homeowners and businesses across Miami",
     "project": "Project",
     "title": "Gallery",
-    "subtitle": "Explore our collection of premium crypto mining hardware, solo miners, cold storage solutions, Bitcoin keychains, and exclusive cryptocurrency gadgets",
+    "subtitle": "Explore our portfolio of completed cleaning projects, before and after transformations, and premium home services delivered across Miami",
     "projects": "Projects",
     "all_projects": "All Projects",
     "showing_all": "Showing all projects",
     "showing": "Showing",
     "description": "Description",
     "view": "View",
+    "view_project": "View Project",
     "no_projects": "No Projects Available",
     "no_projects_message": "No projects found for this category. Try selecting another category or view all projects.",
     "of": "of",
-    "mining_project": "Mining Project",
-    "mining_infrastructure": "Mining Infrastructure Project",
-    "global": "Global",
+    "mining_project": "Project",
+    "mining_infrastructure": "Cleaning Project",
+    "global": "Miami, FL",
+    "miami_fl": "Miami, FL",
+    "general": "General",
+    "default_description": "Professional home cleaning showcasing our attention to detail and commitment to excellence",
+    "location": "Location",
+    "photos": "Photos",
+    "book_service": "Book This Service",
+    "book_subtitle": "Get a free quote for similar cleaning services",
+    "untitled": "Untitled",
+    "no_description": "No description available",
+    "aria_previous_slide": "Previous slide",
+    "aria_next_slide": "Next slide",
+    "aria_close_lightbox": "Close lightbox",
+    "aria_previous_image": "Previous image",
+    "aria_next_image": "Next image",
+    "aria_close": "Close",
     "tags": {
       "kitchens": "Kitchens",
       "bathrooms": "Bathrooms",
@@ -589,18 +1322,94 @@
   },
   "contact": {
     "title": "Contact",
-    "subtitle": "Get in touch with our crypto mining experts. Whether you need help choosing the right miner, have questions about cold storage, or want to discuss bulk orders.",
+    "subtitle": "Get in touch with our cleaning experts. Whether you need residential or commercial cleaning, have questions about our services, or want a custom quote.",
+    "hero": {
+      "title": "Get Your",
+      "title_highlight": "Free Quote",
+      "description": "Professional cleaning services in Miami. Same-day service available. We respond within 1 hour.",
+      "call_now": "Call Now",
+      "whatsapp": "WhatsApp",
+      "email": "Email"
+    },
+    "form": {
+      "title": "Send Us a Message",
+      "subtitle": "Fill out the form below and we'll get back to you within 1 hour.",
+      "full_name": "Full Name",
+      "full_name_placeholder": "John Doe",
+      "email": "Email Address",
+      "email_placeholder": "john@example.com",
+      "phone": "Phone Number",
+      "phone_placeholder": "(786) 380-7579",
+      "service": "Service Needed",
+      "service_placeholder": "Select a service",
+      "address": "Service Address",
+      "address_placeholder": "Miami, FL",
+      "message": "Message",
+      "message_placeholder": "Tell us about your cleaning needs...",
+      "photos_label": "Add Photos (Optional - max 5)",
+      "photos_button": "Click to upload photos of the area",
+      "files_selected": "file(s) selected",
+      "privacy_label": "I agree to the",
+      "privacy_link": "Privacy Policy",
+      "privacy_consent": "and consent to be contacted regarding my inquiry.",
+      "required_field": "*",
+      "recaptcha_notice": "This site is protected by reCAPTCHA and the Google",
+      "privacy_policy": "Privacy Policy",
+      "terms_of_service": "Terms of Service",
+      "recaptcha_apply": "apply.",
+      "submit": "Send Message",
+      "submitting": "Sending..."
+    },
+    "services": {
+      "residential": "Residential Cleaning",
+      "commercial": "Commercial Cleaning",
+      "deep_clean": "Deep Cleaning",
+      "move_in_out": "Move In/Out Cleaning",
+      "post_construction": "Post-Construction Cleaning",
+      "windows": "Window Washing",
+      "carpet": "Carpet & Upholstery Cleaning",
+      "airbnb": "Airbnb Cleaning"
+    },
+    "validation": {
+      "name_required": "Name is required",
+      "email_required": "Email is required",
+      "phone_required": "Phone is required",
+      "message_required": "Message is required",
+      "privacy_required": "You must accept the privacy policy",
+      "email_invalid": "Enter a valid email",
+      "phone_invalid": "Enter a valid phone number",
+      "min_length": "Must have at least {{length}} characters",
+      "max_length": "Cannot exceed {{length}} characters"
+    },
+    "messages": {
+      "success_title": "Message sent successfully!",
+      "success_subtitle": "We'll get back to you within 1 hour during business hours.",
+      "error_prefix": "Please try calling us directly at"
+    },
+    "info": {
+      "title": "Contact Information",
+      "description": "Get in touch with us today for professional cleaning services. We're here to help!",
+      "location_title": "Our Location",
+      "phone_title": "Call Us",
+      "email_title": "Email Us",
+      "hours_title": "Business Hours"
+    },
+    "why_choose": {
+      "title": "Why Choose CMK?",
+      "fast_response": "Fast response - We reply within 1 hour",
+      "same_day": "Same-day service available",
+      "satisfaction": "100% satisfaction guaranteed",
+      "eco_friendly": "Eco-friendly cleaning products"
+    },
     "form_title": "Send us your inquiry",
     "success_message": "Thank you for your message! We'll contact you soon.",
     "error_message": "There was an error sending the message. Please try again.",
-    "full_name": "Full name",
     "full_name_placeholder": "John Doe",
-    "email_placeholder": "satoshi@bitcoin.com",
+    "email_placeholder": "you@example.com",
     "phone_placeholder": "+1 203 555 0123",
-    "company_placeholder": "Your mining operation or company (optional)",
-    "message": "Message",
-    "message_placeholder": "I'm interested in ASIC miners, solo mining setups, cold wallets... Tell us what you need!",
-    "accept_privacy": "I accept the processing of my personal data according to the privacy policy",
+    "company_placeholder": "Your business or property name (optional)",
+    "message_placeholder": "Tell us about your cleaning needs, property size, and preferred schedule...",
+    "accept_privacy": "I consent to be contacted regarding my inquiry according to the privacy policy",
     "privacy_required": "You must accept the privacy policy",
     "send_message": "Send message",
     "sending": "Sending...",
@@ -614,12 +1423,12 @@
     "title": "Cart",
     "your": "Your",
     "selection": "Selection",
-    "subtitle": "Review your product selection and send us your details to receive a personalized quote",
+    "subtitle": "Review your service selections and send us your details to receive a personalized quote",
     "remove": "Remove",
     "quantity": "Quantity",
     "empty_title": "Your cart is empty",
     "empty_message": "Explore our products and add the ones you like best",
-    "explore_products": "Explore products",
+    "explore_products": "Explore services",
     "clear_cart": "Clear cart",
     "contact_data": "Contact Details",
     "full_name_required": "Full name *",
@@ -631,7 +1440,7 @@
     "send_selection": "Send selection by email",
     "sending": "Sending...",
     "required_fields_note": "Fields marked with * are required",
-    "cart_items": "Cart Items",
+    "cart_items": "Selected Services",
     "item": "item",
     "items": "items",
     "subtotal": "Subtotal",
@@ -691,14 +1500,14 @@
     "title": "Page Not Found",
     "description": "Sorry, the page you are looking for does not exist. It may have been moved or deleted.",
     "go_home": "Go to Home",
-    "view_products": "View Products",
+    "view_products": "View Services",
     "looking_for": "What were you looking for?",
     "explore_sections": "Explore our main sections or use the navigation links to find what you need.",
     "links": {
       "home_title": "Home",
-      "home_desc": "Discover our featured collection and explore TheLuxMining.",
-      "products_title": "Products",
-      "products_desc": "Explore our complete catalog of premium mining hardware.",
+      "home_desc": "Discover our featured services and explore CMK Home Services.",
+      "products_title": "Services",
+      "products_desc": "Explore our complete range of professional cleaning services.",
       "contact_title": "Contact",
       "contact_desc": "Get in touch with our team of experts."
     }
@@ -727,15 +1536,15 @@
     "benefit_templates": {
       "title": "Benefit Templates Manager"
     },
-    "total_products": "Total Products",
-    "total_orders": "Total Orders",
+    "total_products": "Total Services",
+    "total_orders": "Total Requests",
     "gallery_images": "Gallery Images",
     "total_users": "Total Users",
     "quick_actions": "Quick Actions",
     "add_product": "Add Product",
     "upload_image": "Upload Image",
-    "manage_products": "Manage Products",
-    "manage_orders": "Manage Orders",
+    "manage_products": "Manage Services",
+    "manage_orders": "Manage Requests",
     "manage_gallery": "Manage Gallery",
     "manage_users": "Manage Users",
     "recent_activity": "Recent Activity",
@@ -745,7 +1554,7 @@
     "need_category": "You need to create at least one category before adding products.",
     "need_model": "You need to create at least one model before adding products.",
     "goto_catalog": "Go to Catalog Management",
-    "seed_missing": "No products found",
+    "seed_missing": "No services found",
     "seed_missing_hint": "It looks like you haven't seeded your database yet",
     "run_seed": "Run Seed Script",
     "product_image": "Image",
@@ -754,7 +1563,7 @@
     "product_thickness": "Thickness",
     "product_price": "Price",
     "actions": "Actions",
-    "no_products": "No products found",
+    "no_products": "No services found",
     "status_draft": "Draft",
     "status_published": "Published",
     "status_archived": "Archived",
@@ -877,11 +1686,11 @@
       "seeding": "Seeding...",
       "categories": "Categories",
       "categories_count": "3 grosor types",
-      "categories_list": "Mining Hardware Categories",
+      "categories_list": "",
       "email_orders": "Email Orders",
       "models": "Models",
       "models_count": "12 hardware models",
-      "models_list": "Black Gold, Saint Laurent...",
+      "models_list": "",
       "templates": "Templates",
       "templates_count": "3 global templates",
       "templates_list": "Description, SEO, Meta",
@@ -894,7 +1703,7 @@
     },
     "analytics": {
       "title": "Analytics Dashboard",
-      "subtitle": "Monitor conversion trends, customer activity, and catalog freshness",
+      "subtitle": "Monitor customer activity, gallery updates, and service requests",
       "eyebrow": "Performance Overview",
       "period": {
         "today": "Today",
@@ -903,18 +1712,18 @@
         "year": "This Year"
       },
       "metrics": {
-        "total_orders": "Orders",
+        "total_orders": "Service Requests",
         "revenue": "Revenue",
-        "average_order_value": "Avg. Order Value",
+        "average_order_value": "Avg. Request Value",
         "new_customers": "New Customers",
-        "products_updated": "Products Updated",
-        "gallery_uploads": "Gallery Uploads"
+        "products_updated": "Gallery Updates",
+        "gallery_uploads": "Photo Uploads"
       },
       "recent_activity": "Latest Activity",
       "showing_period": "Showing {{period}} insights",
       "no_activity": "No activity recorded for this period",
       "future_title": "Deeper insights coming soon",
-      "future_description": "We are building interactive dashboards with revenue trends, product performance, geographical demand, and conversion funnels. Here is how the roadmap is unfolding.",
+      "future_description": "We are building interactive dashboards with customer trends, service performance, and inquiry tracking. Here is how the roadmap is unfolding.",
       "future_status": {
         "in_discovery": "Discovery",
         "in_design": "In design",
@@ -923,23 +1732,23 @@
       },
       "future_items": {
         "charts": {
-          "title": "Interactive revenue charts",
-          "description": "Real-time revenue, profit, and ROI dashboards with miner-level filters and exportable CSV snapshots.",
+          "title": "Interactive service charts",
+          "description": "Real-time service request trends, completion rates, and revenue tracking with exportable reports.",
           "status": "admin.analytics.future_status.internal_beta"
         },
         "top_products": {
-          "title": "Top performing models",
-          "description": "Segmented performance reports to surface high-converting miners, seasonal demand shifts, and attach rates.",
+          "title": "Top performing services",
+          "description": "Segmented performance reports to identify most requested services and seasonal trends.",
           "status": "admin.analytics.future_status.in_development"
         },
         "geo": {
           "title": "Geographic breakdowns",
-          "description": "Heatmaps of quote requests and conversions to pinpoint expansion opportunities across LATAM, EU, and APAC.",
+          "description": "Maps showing service request locations to identify coverage opportunities and high-demand areas.",
           "status": "admin.analytics.future_status.in_design"
         },
         "funnels": {
           "title": "Conversion funnels",
-          "description": "Step-by-step tracking from landing view to paid order, highlighting drop-off points and messaging gaps.",
+          "description": "Track customer journey from initial contact to completed service, highlighting conversion points.",
           "status": "admin.analytics.future_status.in_discovery"
         }
       }
@@ -1034,7 +1843,7 @@
     },
     "review_title": "Review Your",
     "review_title_highlight": "Order",
-    "review_subtitle": "Confirm your mining equipment selection and shipping details",
+    "review_subtitle": "Confirm your service selection and appointment details",
     "order_items": "Order Items",
     "edit_cart": "Edit Cart",
     "shipping_address": "Shipping Address",
@@ -1105,5 +1914,124 @@
     "email_label": "Email:",
     "phone_label": "Call us:",
     "admin_link": "Admin login"
+  },
+  "about": {
+    "hero": {
+      "title": "About CMK Home Services",
+      "subtitle": "Professional cleaning with a personal touch in Miami"
+    },
+    "founder_story": {
+      "eyebrow": "Our Founder",
+      "title": "Meet Gloria",
+      "image_tag_line1": "Gloria, Founder",
+      "image_tag_line2": "15+ Years Leading Teams",
+      "paragraphs": [
+        "Gloria founded CMK Home Services with a clear vision: to provide Miami families and businesses with reliable cleaning they can trust. With years of experience and a deep understanding of what makes a space feel elevated and welcoming, she built CMK on the principles of excellence, reliability, and white-glove care.",
+        "Today, Gloria leads a dedicated team of vetted professionals who share her commitment to making Miami homes and businesses spotless, one tailored cleaning plan at a time."
+      ],
+      "quote": "I started this business because too many people were struggling to find dependable, detail-oriented cleaners. I wanted a company where quality is guaranteed on every visit.",
+      "highlights": [
+        {
+          "label": "Focus",
+          "value": "Boutique residential and select commercial"
+        },
+        {
+          "label": "Approach",
+          "value": "Concierge scheduling with quality inspections"
+        },
+        {
+          "label": "Promise",
+          "value": "Licensed, insured, and satisfaction guaranteed"
+        }
+      ]
+    },
+    "values": {
+      "eyebrow": "What We Stand For",
+      "title": "Our Core Values",
+      "subtitle": "These principles guide everything we do at CMK Home Services",
+      "items": [
+        {
+          "icon": "sparkle",
+          "title": "Excellence",
+          "description": "We hold ourselves to the highest standards in every cleaning job, no matter the size."
+        },
+        {
+          "icon": "shield",
+          "title": "Trust",
+          "description": "Licensed, insured, and background-checked professionals you can welcome into your home."
+        },
+        {
+          "icon": "heart",
+          "title": "Care",
+          "description": "We treat every home and business like our own, with attention to detail and respect."
+        },
+        {
+          "icon": "clock",
+          "title": "Reliability",
+          "description": "Consistent quality and punctuality—you can count on us to show up and deliver."
+        }
+      ]
+    },
+    "stats": [
+      {
+        "number": "500+",
+        "label": "Happy Clients"
+      },
+      {
+        "number": "10,000+",
+        "label": "Cleanings Completed"
+      },
+      {
+        "number": "100%",
+        "label": "Satisfaction Rate"
+      },
+      {
+        "number": "5.0",
+        "label": "Average Rating"
+      }
+    ],
+    "why_choose": {
+      "eyebrow": "Why CMK",
+      "title": "Why Miami Chooses Us",
+      "benefits": [
+        {
+          "icon": "shield",
+          "title": "Licensed & Insured",
+          "description": "Fully licensed, bonded, and insured for your peace of mind."
+        },
+        {
+          "icon": "clipboard",
+          "title": "Background Checked",
+          "description": "All team members undergo thorough background checks."
+        },
+        {
+          "icon": "leaf",
+          "title": "Eco-Friendly",
+          "description": "Safe, effective products that protect your family and the environment."
+        },
+        {
+          "icon": "star",
+          "title": "5-Star Service",
+          "description": "Consistently rated 5 stars by our satisfied Miami clients."
+        },
+        {
+          "icon": "guarantee",
+          "title": "Satisfaction Guaranteed",
+          "description": "Not happy? We make it right with priority follow-up cleaning."
+        },
+        {
+          "icon": "home",
+          "title": "Miami Local",
+          "description": "We understand Miami homes and the unique needs of our community."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to Experience the CMK Difference?",
+      "description": "Join hundreds of satisfied Miami clients who trust us with their homes and businesses.",
+      "chat_whatsapp": "Chat on WhatsApp",
+      "get_quote": "Get Free Quote",
+      "call": "Call (786) 380-7579"
+    }
   }
 }

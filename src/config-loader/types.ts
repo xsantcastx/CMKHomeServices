@@ -2,6 +2,7 @@ export interface NavigationLink {
   label: string;
   href: string;
   exact?: boolean;
+  fragment?: string;
 }
 
 export interface SocialLink {
@@ -85,4 +86,24 @@ export interface EmailTemplates {
       preheader?: string;
     }
   >;
+}
+
+export interface ServicePackage {
+  sku: string;
+  name: string;
+  description: string;
+  price?: number;
+  currency?: string;
+  badge?: string;
+  category?: string;
+  attributes?: Record<string, string>;
+  images?: string[];
+  seo?: {
+    title?: string;
+    metaDescription?: string;
+  };
+}
+
+export interface ServiceCatalog {
+  services: ServicePackage[];
 }

@@ -1,384 +1,244 @@
-<!-- Hero Section with Animation -->
-<app-home-hero />
+﻿<app-home-hero />
 
-<!-- Stats Section -->
-<app-home-stats />
-
-<!-- Solo Miners Featured Section - NEW FOR SEO -->
-@if (hasSoloMiners) {
-  <section class="section-gap relative overflow-hidden bg-gradient-to-b from-bitcoin-dark via-gray-900 to-bitcoin-dark">
-    <div class="absolute inset-0 opacity-5">
-      <div class="absolute top-20 left-10 w-96 h-96 bg-bitcoin-orange rounded-full blur-3xl"></div>
-      <div class="absolute bottom-20 right-10 w-96 h-96 bg-bitcoin-gold rounded-full blur-3xl"></div>
+<section id="difference" class="section-spacing bg-gradient-to-b from-[#f9f6f0] to-white">
+  <div class="page-container grid gap-10 lg:grid-cols-[1fr_1.5fr] items-center">
+    <div>
+      <p class="eyebrow">{{ 'home.why_choose.title' | translate }}</p>
+      <h2 class="section-title">{{ 'home.why_choose.subtitle' | translate }}</h2>
+      <p class="section-subtext">
+        {{ 'home.difference.description' | translate }}
+      </p>
     </div>
-    
-    <div class="page-container relative z-10">
-      <div class="text-center mb-16">
-        <span class="inline-block px-4 py-2 bg-bitcoin-orange/20 text-bitcoin-orange rounded-full text-sm font-semibold mb-4">
-          🎰 Lottery Mining
-        </span>
-        <h2 class="heading-display text-4xl lg:text-5xl mb-4 bg-gradient-to-r from-bitcoin-orange to-bitcoin-gold text-transparent bg-clip-text">
-          Bitcoin Solo Miners
-        </h2>
-        <p class="text-xl text-bitcoin-gray max-w-3xl mx-auto mb-6">
-          Win full block rewards (3.125 BTC + fees) by mining independently. Support network decentralization with specialized solo mining equipment.
-        </p>
-      </div>
+    <div class="highlight-grid">
+      @for (highlight of highlights; track highlight.title) {
+        <article class="highlight-card">
+          <div class="icon-chip" [attr.data-icon]="highlight.icon">
+            @switch (highlight.icon) {
+              @case ('users') {
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              }
+              @case ('leaf') {
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 21c0-6.075 4.925-11 11-11-3.314 0-6 2.686-6 6-6.075 0-11 4.925-11 11z"></path></svg>
+              }
+              @default {
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 7V3m8 4V3M3 11h18M5 19h14a2 2 0 0 0 2-2v-6H3v6a2 2 0 0 0 2 2Z"></path></svg>
+              }
+            }
+          </div>
+          <h3>{{ highlight.title }}</h3>
+          <p>{{ highlight.copy }}</p>
+        </article>
+      }
+    </div>
+  </div>
+</section>
 
-      <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-        @for (miner of soloMinerProducts; track miner.id) {
-          <article class="group bg-bitcoin-dark/60 border border-bitcoin-gray/20 rounded-2xl overflow-hidden shadow-bitcoin hover:shadow-bitcoin-lg hover:border-bitcoin-orange/50 transition-all duration-300 transform hover:-translate-y-2">
-            <div class="relative h-64 bg-bitcoin-dark/80 overflow-hidden">
-              @if (miner.imageUrl || miner.coverImage) {
-                <img [src]="miner.imageUrl || miner.coverImage" 
-                     [alt]="miner.name + ' - Bitcoin solo miner'"
-                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                     loading="lazy"/>
-              } @else {
-                <div class="w-full h-full flex items-center justify-center">
-                  <svg class="w-20 h-20 text-bitcoin-gray/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
-                  </svg>
-                </div>
-              }
-              <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
-                Solo Miner
-              </div>
+<section id="services" class="section-spacing bg-white">
+  <div class="page-container space-y-10">
+    <div class="section-heading">
+      <p class="eyebrow">{{ 'home.services.title' | translate }}</p>
+      <h2 class="section-title">{{ 'home.services.subtitle' | translate }}</h2>
+      <p class="section-subtext max-w-3xl">
+        {{ 'home.services_intro.description' | translate }}
+      </p>
+    </div>
+
+    <!-- Quick Service Links -->
+    <div class="service-quick-grid">
+      <a routerLink="/services/residential" class="service-quick-link">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5l9-7.5 9 7.5v9.5a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1v-9.5Z"/><path d="M9 21v-6h6v6"/></svg>
+        </div>
+        <div>
+          <p class="service-category">{{ 'home.quick_services.residential.category' | translate }}</p>
+          <h3>{{ 'home.quick_services.residential.title' | translate }}</h3>
+          <p class="service-copy">{{ 'home.quick_services.residential.description' | translate }}</p>
+        </div>
+      </a>
+      <a routerLink="/services/commercial" class="service-quick-link">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21V7a2 2 0 0 1 2-2h4v16"/><path d="M9 9h4a2 2 0 0 1 2 2v10"/><path d="M13 13h5a2 2 0 0 1 2 2v6"/><path d="M3 21h18"/></svg>
+        </div>
+        <div>
+          <p class="service-category">{{ 'home.quick_services.commercial.category' | translate }}</p>
+          <h3>{{ 'home.quick_services.commercial.title' | translate }}</h3>
+          <p class="service-copy">{{ 'home.quick_services.commercial.description' | translate }}</p>
+        </div>
+      </a>
+      <a routerLink="/services/windows" class="service-quick-link">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M12 4v16"/><path d="M3 12h18"/></svg>
+        </div>
+        <div>
+          <p class="service-category">{{ 'home.quick_services.windows.category' | translate }}</p>
+          <h3>{{ 'home.quick_services.windows.title' | translate }}</h3>
+          <p class="service-copy">{{ 'home.quick_services.windows.description' | translate }}</p>
+        </div>
+      </a>
+      <a routerLink="/services/deep-clean" class="service-quick-link">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v4"/><path d="M12 17v4"/><path d="M5.22 5.22l2.83 2.83"/><path d="M15.95 15.95l2.83 2.83"/><path d="M3 12h4"/><path d="M17 12h4"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <div>
+          <p class="service-category">{{ 'home.quick_services.deep_clean.category' | translate }}</p>
+          <h3>{{ 'home.quick_services.deep_clean.title' | translate }}</h3>
+          <p class="service-copy">{{ 'home.quick_services.deep_clean.description' | translate }}</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="service-grid">
+      @for (service of featuredServices; track service.sku) {
+        <article class="service-card">
+          @if (service.badge) {
+            <span class="service-badge">{{ service.badge }}</span>
+          }
+          <h3>{{ service.name }}</h3>
+          <p>{{ service.description }}</p>
+          <ul class="service-meta">
+            @if (service.attributes?.['frequency']) {
+              <li>
+                <span>{{ 'home.service_card.frequency' | translate }}</span>
+                <strong>{{ service.attributes?.['frequency'] }}</strong>
+              </li>
+            }
+            @if (service.attributes?.['duration']) {
+              <li>
+                <span>{{ 'home.service_card.duration' | translate }}</span>
+                <strong>{{ service.attributes?.['duration'] }}</strong>
+              </li>
+            }
+            @if (service.attributes?.['team']) {
+              <li>
+                <span>{{ 'home.service_card.team' | translate }}</span>
+                <strong>{{ service.attributes?.['team'] }}</strong>
+              </li>
+            }
+          </ul>
+          @if (service.price) {
+            <div class="service-price">
+              <span>{{ 'home.service_card.starting_at' | translate }}</span>
+              <strong>{{ service.price | currency: (service.currency ?? 'USD'):'symbol':'1.0-0' }}</strong>
             </div>
-            
-            <div class="p-6">
-              <h3 class="heading-display heading-display--accent text-2xl mb-2">{{miner.name}}</h3>
-              @if (miner.description) {
-                <p class="text-bitcoin-gray text-sm mb-4 line-clamp-2">{{miner.description}}</p>
+          }
+          <a routerLink="/services" class="service-link">{{ 'home.service_card.view_details' | translate }}</a>
+        </article>
+      }
+    </div>
+
+    <div class="text-center">
+      <a routerLink="/services" class="button button--primary">{{ 'home.service_card.view_all' | translate }}</a>
+    </div>
+  </div>
+</section>
+
+<section id="membership" class="section-spacing bg-gradient-to-br from-white via-[#f8f4ed] to-white">
+  <div class="page-container grid gap-10 lg:grid-cols-[1.2fr_1fr] items-center">
+    <div>
+      <p class="eyebrow">{{ 'home.about.eyebrow' | translate }}</p>
+      <h2 class="section-title">{{ 'home.about.title' | translate }}</h2>
+      <p class="section-subtext max-w-2xl">
+        {{ 'home.about.description' | translate }}
+      </p>
+      <div class="perk-grid">
+        @for (perk of membershipPerks; track perk.title) {
+          <article class="perk-card">
+            <div class="icon-chip" [attr.data-icon]="perk.icon">
+              @switch (perk.icon) {
+                @case ('bed') {
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12V5a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v7"></path><path d="M4 21v-9h16v9"></path><path d="M18 8h-3"></path></svg>
+                }
+                @case ('sparkles') {
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v5m0 4v9m4-13h5m-9 0H3m14 9h2m-8 0H8"></path></svg>
+                }
+                @default {
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 8H7a2 2 0 0 0-2 2v9"></path><path d="M3 6h12a2 2 0 0 1 2 2v11"></path><path d="M12 12h5"></path></svg>
+                }
               }
-              
-              <div class="flex items-center justify-between mt-6">
-                <a [routerLink]="['/products', miner.slug]" 
-                   class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-bitcoin-orange to-bitcoin-gold text-bitcoin-dark rounded-full font-semibold hover:shadow-bitcoin transition-all duration-300 transform hover:scale-105">
-                  View Details
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                  </svg>
-                </a>
-              </div>
+            </div>
+            <div>
+              <h3>{{ perk.title }}</h3>
+              <p>{{ perk.copy }}</p>
             </div>
           </article>
         }
       </div>
-
-      <!-- CTA to Products Page -->
-      <div class="text-center">
-        <div class="inline-block bg-bitcoin-dark/50 border border-bitcoin-gray/20 rounded-2xl p-8 max-w-3xl">
-          <h3 class="heading-display text-2xl mb-4">
-            Want to Learn More About Solo Mining?
-          </h3>
-          <p class="text-bitcoin-gray mb-6">
-            Discover all our solo mining equipment and find the perfect miner for your lottery mining setup.
-          </p>
-          <a routerLink="/productos" 
-             class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-bitcoin-orange to-bitcoin-gold text-bitcoin-dark rounded-full font-semibold hover:shadow-bitcoin transition-all duration-300">
-            Explore All Products
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-          </a>
-        </div>
-      </div>
     </div>
-  </section>
-}
-
-<!-- Mining Hardware Collections -->
-<section class="section-gap relative overflow-hidden">
-  <div class="luxury-overlay"></div>
-  <div class="page-container relative z-10">
-    <div class="text-center mb-16">
-      <h2 class="heading-display text-4xl lg:text-5xl mb-4">
-        {{ 'home.featured.title' | translate }}
-      </h2>
-      <p class="text-xl text-bitcoin-gray max-w-2xl mx-auto">
-        {{ 'home.featured.subtitle' | translate }}
+    <div class="membership-panel">
+      <p class="eyebrow">{{ 'home.membership.eyebrow' | translate }}</p>
+      <h3>{{ 'home.membership.title' | translate }}</h3>
+      <p>
+        {{ 'home.membership.description' | translate }}
       </p>
-    </div>
-
-    <!-- Latest Featured Products -->
-    @if (isLoading) {
-      <div class="flex justify-center items-center py-20">
-        <div class="app-spinner" style="--spinner-size: 64px;" aria-hidden="true">
-          <img src="/Logo Clear.png" alt="" width="80" height="80">
-        </div>
-      </div>
-    } @else if (hasProducts) {
-      <div class="mb-12">
-        <div class="flex items-center justify-between mb-8">
-          <h3 class="heading-display heading-display--accent text-3xl">{{ 'home.featured.latest' | translate }}</h3>
-          <a routerLink="/productos" 
-             class="text-bitcoin-gold hover:text-luxury-gold font-medium transition-colors">
-            {{ 'home.featured.view_all' | translate }} →
-          </a>
-        </div>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          @for (product of featuredProducts; track product.id) {
-            <article class="group rounded-2xl overflow-hidden bg-bitcoin-dark/40 border border-bitcoin-gray/20 shadow-bitcoin hover:shadow-bitcoin-lg hover:border-bitcoin-orange/50 transition-all duration-300">
-              <div class="aspect-[4/3] overflow-hidden bg-bitcoin-dark/60">
-                @if (product.imageUrl || product.coverImage) {
-                  <img [src]="product.imageUrl || product.coverImage" 
-                       [alt]="product.name"
-                       class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                       loading="lazy"
-                       fetchpriority="low"/>
-                } @else {
-                  <div class="w-full h-full flex items-center justify-center">
-                    <svg class="w-16 h-16 text-bitcoin-gray/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                    </svg>
-                  </div>
-                }
-              </div>
-              <div class="p-6">
-                <h4 class="heading-display heading-display--accent text-xl mb-2 line-clamp-1">{{product.name}}</h4>
-                <p class="text-bitcoin-gray text-sm mb-4">
-                  @if (product.dimensions || product.size) {
-                    {{product.dimensions || product.size}}
-                  }
-                </p>
-                <a [routerLink]="['/products', product.slug]" 
-                   class="text-bitcoin-gold hover:text-luxury-gold font-medium transition-colors">
-                  View specs →
-                </a>
-              </div>
-            </article>
-          }
-        </div>
-      </div>
-    } @else {
-      <div class="text-center py-20">
-        <svg class="w-20 h-20 mx-auto text-bitcoin-gray/40 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
-        </svg>
-        <p class="text-bitcoin-gray text-lg">No products available yet. Check back soon!</p>
-        <a routerLink="/contacto" class="inline-block mt-6 px-6 py-3 bg-bitcoin-orange text-bitcoin-dark rounded-full font-semibold hover:bg-bitcoin-gold transition-colors">
-          Contact Us
-        </a>
-      </div>
-    }
-  </div>
-</section>
-
-<!-- Gallery Preview Section -->
-@if (galleryImages.length > 0) {
-  <section class="section-gap relative overflow-hidden">
-    <div class="luxury-overlay"></div>
-    <div class="page-container relative z-10">
-      <div class="text-center mb-16">
-        <h2 class="heading-display text-4xl lg:text-5xl mb-4">
-          {{ 'home.gallery_preview.title' | translate }}
-        </h2>
-        <p class="text-xl text-bitcoin-gray max-w-2xl mx-auto">
-          {{ 'home.gallery_preview.subtitle' | translate }}
-        </p>
-      </div>
-
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-        @for (image of galleryImages; track image.id) {
-          <div class="group relative rounded-2xl overflow-hidden bg-bitcoin-dark/40 border border-bitcoin-gray/20 shadow-bitcoin hover:shadow-bitcoin-lg hover:border-bitcoin-orange/50 transition-all duration-300 aspect-[4/3]">
-            <img [src]="image.thumbnailUrl || image.imageUrl" 
-                 [alt]="image.title || 'Mining setup'"
-                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                 loading="lazy"/>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <div class="absolute bottom-0 left-0 right-0 p-6">
-                @if (image.title) {
-                  <h4 class="heading-display text-xl mb-2">{{image.title}}</h4>
-                }
-                @if (image.description) {
-                  <p class="text-sm text-bitcoin-gray">{{image.description}}</p>
-                }
-              </div>
-            </div>
-          </div>
+      <ul>
+        @for (benefit of membershipBenefits; track $index) {
+          <li>{{ benefit }}</li>
         }
-      </div>
-
-      <div class="text-center">
-        <a routerLink="/galeria" 
-           class="inline-block px-8 py-4 bg-gradient-to-r from-bitcoin-orange to-bitcoin-gold text-bitcoin-dark rounded-full font-semibold hover:shadow-bitcoin transition-all duration-300">
-          {{ 'home.gallery_preview.view_full' | translate }}
-        </a>
-      </div>
-    </div>
-  </section>
-}
-
-<!-- Why Choose This Platform -->
-<section class="section-gap relative overflow-hidden">
-  <div class="luxury-overlay"></div>
-  <div class="page-container relative z-10">
-    <div class="text-center mb-16">
-      <h2 class="heading-display text-4xl lg:text-5xl mb-4">
-        {{ 'home.why_choose.title' | translate }}
-      </h2>
-    </div>
-    
-    <div class="grid md:grid-cols-3 gap-12">
-      <!-- Hash Rate Performance -->
-      <div class="text-center">
-        <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-bitcoin-orange to-bitcoin-gold flex items-center justify-center shadow-bitcoin">
-          <svg class="w-8 h-8 text-bitcoin-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-          </svg>
-        </div>
-        <h3 class="heading-display heading-display--accent text-2xl mb-4">{{ 'home.why_choose.hashrate.title' | translate }}</h3>
-        <p class="text-bitcoin-gray leading-relaxed">
-          {{ 'home.why_choose.hashrate.description' | translate }}
-        </p>
-      </div>
-      
-      <!-- Energy Efficiency -->
-      <div class="text-center">
-        <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-bitcoin-orange to-bitcoin-gold flex items-center justify-center shadow-bitcoin">
-          <svg class="w-8 h-8 text-bitcoin-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-          </svg>
-        </div>
-        <h3 class="heading-display heading-display--accent text-2xl mb-4">{{ 'home.why_choose.efficiency.title' | translate }}</h3>
-        <p class="text-bitcoin-gray leading-relaxed">
-          {{ 'home.why_choose.efficiency.description' | translate }}
-        </p>
-      </div>
-      
-      <!-- ROI Optimization -->
-      <div class="text-center">
-        <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-bitcoin-orange to-bitcoin-gold flex items-center justify-center shadow-bitcoin">
-          <svg class="w-8 h-8 text-bitcoin-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-          </svg>
-        </div>
-        <h3 class="heading-display heading-display--accent text-2xl mb-4">{{ 'home.why_choose.roi.title' | translate }}</h3>
-        <p class="text-bitcoin-gray leading-relaxed">
-          {{ 'home.why_choose.roi.description' | translate }}
-        </p>
-      </div>
+      </ul>
+      <a
+        href="https://wa.me/17863807579?text=Hi! I'd like to get a quote"
+        target="_blank"
+        rel="noopener"
+        class="button button--whatsapp">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/></svg>
+        {{ 'home.membership.whatsapp_button' | translate }}
+      </a>
+      <a routerLink="/contact" class="button button--ghost mt-3">{{ 'home.membership.quote_button' | translate }}</a>
     </div>
   </div>
 </section>
 
-<!-- Our Services Section -->
-<section class="section-gap relative overflow-hidden bg-gradient-to-b from-transparent via-bitcoin-dark/30 to-transparent">
-  <div class="luxury-overlay"></div>
-  <div class="page-container relative z-10">
-    <div class="text-center mb-16">
-      <p class="text-sm uppercase tracking-wide text-bitcoin-gold mb-3">
-        {{ 'home.services.subtitle' | translate }}
-      </p>
-      <h2 class="heading-display text-4xl lg:text-5xl mb-4">
-        {{ 'home.services.title' | translate }}
-      </h2>
+<section id="testimonials" class="section-spacing bg-white">
+  <div class="page-container space-y-10">
+    <div class="section-heading">
+      <p class="eyebrow">{{ 'home.testimonials.eyebrow' | translate }}</p>
+      <h2 class="section-title">{{ 'home.testimonials.title' | translate }}</h2>
     </div>
-    
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-      <!-- Premium Hardware -->
-      <div class="bg-bitcoin-dark/50 border border-white/10 rounded-2xl p-8 shadow-bitcoin hover:border-bitcoin-orange/40 hover:shadow-bitcoin-lg transition-all duration-300">
-        <div class="w-14 h-14 mb-6 rounded-xl bg-bitcoin-orange/20 flex items-center justify-center">
-          <svg class="w-7 h-7 text-bitcoin-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
-          </svg>
-        </div>
-        <h3 class="heading-display heading-display--accent text-xl mb-3">{{ 'home.services.hardware.title' | translate }}</h3>
-        <p class="text-bitcoin-gray leading-relaxed">
-          {{ 'home.services.hardware.description' | translate }}
-        </p>
-      </div>
-
-      <!-- Professional Setup -->
-      <div class="bg-bitcoin-dark/50 border border-white/10 rounded-2xl p-8 shadow-bitcoin hover:border-bitcoin-orange/40 hover:shadow-bitcoin-lg transition-all duration-300">
-        <div class="w-14 h-14 mb-6 rounded-xl bg-bitcoin-gold/20 flex items-center justify-center">
-          <svg class="w-7 h-7 text-bitcoin-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-          </svg>
-        </div>
-        <h3 class="heading-display heading-display--accent text-xl mb-3">{{ 'home.services.setup.title' | translate }}</h3>
-        <p class="text-bitcoin-gray leading-relaxed">
-          {{ 'home.services.setup.description' | translate }}
-        </p>
-      </div>
-
-      <!-- 24/7 Support -->
-      <div class="bg-bitcoin-dark/50 border border-white/10 rounded-2xl p-8 shadow-bitcoin hover:border-bitcoin-orange/40 hover:shadow-bitcoin-lg transition-all duration-300">
-        <div class="w-14 h-14 mb-6 rounded-xl bg-bitcoin-orange/20 flex items-center justify-center">
-          <svg class="w-7 h-7 text-bitcoin-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
-          </svg>
-        </div>
-        <h3 class="heading-display heading-display--accent text-xl mb-3">{{ 'home.services.support.title' | translate }}</h3>
-        <p class="text-bitcoin-gray leading-relaxed">
-          {{ 'home.services.support.description' | translate }}
-        </p>
-      </div>
-
-      <!-- Mining Consultation -->
-      <div class="bg-bitcoin-dark/50 border border-white/10 rounded-2xl p-8 shadow-bitcoin hover:border-bitcoin-orange/40 hover:shadow-bitcoin-lg transition-all duration-300">
-        <div class="w-14 h-14 mb-6 rounded-xl bg-bitcoin-gold/20 flex items-center justify-center">
-          <svg class="w-7 h-7 text-bitcoin-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-          </svg>
-        </div>
-        <h3 class="heading-display heading-display--accent text-xl mb-3">{{ 'home.services.consulting.title' | translate }}</h3>
-        <p class="text-bitcoin-gray leading-relaxed">
-          {{ 'home.services.consulting.description' | translate }}
-        </p>
-      </div>
+    <div class="testimonial-grid">
+      @for (testimonial of testimonials; track testimonial.author) {
+        <article class="testimonial-card">
+          <p class="quote">&ldquo;{{ testimonial.quote }}&rdquo;</p>
+          <div class="author">
+            <span>{{ testimonial.author }}</span>
+            <small>{{ testimonial.location }}</small>
+          </div>
+        </article>
+      }
     </div>
   </div>
 </section>
 
-<!-- Client Reviews -->
 <app-home-reviews />
 
-<!-- CTA Sections -->
-<section class="section-gap relative overflow-hidden">
-  <div class="luxury-overlay"></div>
-  <div class="page-container relative z-10">
-    <div class="grid lg:grid-cols-2 gap-12 items-center">
-      <!-- CTA Gallery -->
-      <div class="relative rounded-2xl overflow-hidden group border border-bitcoin-gray/20 shadow-bitcoin hover:shadow-bitcoin-lg transition-all duration-300 h-80 bg-gradient-to-br from-bitcoin-dark via-bitcoin-dark/95 to-black">
-        <div class="absolute inset-0 luxury-overlay"></div>
-        <div class="absolute inset-0 flex items-center justify-center">
-          <div class="text-center text-white relative z-10">
-            <div class="mb-6">
-              <svg class="w-20 h-20 mx-auto text-bitcoin-orange bitcoin-glow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-              </svg>
-            </div>
-            <h3 class="heading-display heading-display--accent text-3xl mb-4">{{ 'home.cta.gallery.title' | translate }}</h3>
-            <a routerLink="/galeria" 
-               class="inline-block px-8 py-4 bg-gradient-to-r from-bitcoin-orange to-bitcoin-gold text-bitcoin-dark rounded-full font-semibold hover:shadow-bitcoin transition-all duration-300">
-              {{ 'home.cta.gallery.button' | translate }}
-            </a>
-          </div>
-        </div>
+<section id="contact" class="section-spacing contact-section">
+  <div class="page-container grid gap-8 lg:grid-cols-[1.1fr_0.9fr] items-center">
+    <div>
+      <p class="eyebrow contact-eyebrow">{{ 'home.contact_section.eyebrow' | translate }}</p>
+      <h2 class="section-title">{{ 'home.contact_section.title' | translate }}</h2>
+      <p class="section-subtext contact-subtext">
+        {{ 'home.contact_section.description' | translate }}
+      </p>
+      <div class="contact-details">
+        <a href="tel:+17863807579">+1 (786) 380-7579</a>
+        <a href="mailto:info@cmkhomeservices.com">info@cmkhomeservices.com</a>
       </div>
-      
-      <!-- CTA Contact -->
-      <div class="relative rounded-2xl overflow-hidden group border border-bitcoin-gray/20 shadow-bitcoin hover:shadow-bitcoin-lg transition-all duration-300 h-80 bg-gradient-to-br from-bitcoin-dark via-bitcoin-dark/95 to-black">
-        <div class="absolute inset-0 luxury-overlay"></div>
-        <div class="absolute inset-0 flex items-center justify-center">
-          <div class="text-center text-white relative z-10">
-            <div class="mb-6">
-              <svg class="w-20 h-20 mx-auto text-bitcoin-gold bitcoin-glow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
-              </svg>
-            </div>
-            <h3 class="heading-display heading-display--accent text-3xl mb-4">{{ 'home.cta.contact.title' | translate }}</h3>
-            <a routerLink="/contacto" 
-               class="inline-block px-8 py-4 bg-gradient-to-r from-bitcoin-gold to-luxury-gold text-bitcoin-dark rounded-full font-semibold hover:shadow-bitcoin transition-all duration-300">
-              {{ 'home.cta.contact.button' | translate }}
-            </a>
-          </div>
-        </div>
-      </div>
+      <a routerLink="/contacto" class="button button--primary">{{ 'home.contact_section.cta' | translate }}</a>
+    </div>
+    <div class="contact-panel">
+      <p class="panel-title">{{ 'home.contact_section.service_areas_title' | translate }}</p>
+      <ul>
+        @for (area of serviceAreas; track $index) {
+          <li>{{ area }}</li>
+        }
+      </ul>
+      <p class="panel-copy">
+        {{ 'home.contact_section.areas_note' | translate }}
+      </p>
     </div>
   </div>
 </section>
+
+
+
+
 

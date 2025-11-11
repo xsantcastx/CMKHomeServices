@@ -1,31 +1,14 @@
-<div class="section-stack admin-gallery-page min-h-screen bg-gradient-to-b from-[#0a0b0d] to-[#13151a]">
-  
-  <!-- Admin Header -->
-  <div class="bg-gradient-to-r from-bitcoin-dark via-[#13151a] to-bitcoin-dark border-b border-bitcoin-orange/20 shadow-bitcoin">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-      <div class="flex items-center justify-between">
-        <div class="flex items-center gap-4">
-          <a routerLink="/admin" class="hover:text-bitcoin-orange transition-colors">
-            <svg class="w-6 h-6 text-bitcoin-gray hover:text-bitcoin-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
-            </svg>
-          </a>
-          <h1 class="text-xl font-bold bitcoin-gradient-text">{{ 'admin.gallery.title' | translate }}</h1>
-        </div>
-        <div class="flex items-center gap-4">
-          <a routerLink="/admin" class="text-sm text-bitcoin-gray hover:text-bitcoin-orange transition-colors">{{ 'admin.title' | translate }}</a>
-          <button (click)="logout()" class="px-4 py-2 bg-red-500/20 hover:bg-red-500/30 border border-red-500/30 text-red-100 rounded-xl transition-all">
-            {{ 'client.logout' | translate }}
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
+<app-admin-sidebar></app-admin-sidebar>
 
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-    
-    <!-- Quick Actions -->
-    <app-admin-quick-actions currentPage="/admin/gallery"></app-admin-quick-actions>
+<div class="lg:ml-[280px] min-h-screen pt-16 lg:pt-0">
+  <div class="section-stack admin-gallery-page">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      
+      <!-- Page Header -->
+      <div class="mb-8">
+        <h1 class="text-2xl md:text-3xl font-bold text-[#0b1f3d] mb-2">{{ 'admin.gallery.title' | translate }}</h1>
+        <p class="text-[#5f6c82]">Manage portfolio images and project galleries</p>
+      </div>
     
     <!-- Success/Error Messages -->
     @if (successMessage) {
@@ -88,15 +71,15 @@
             type="text"
             [(ngModel)]="searchTerm"
             placeholder="Search media by alt text or tags..."
-            class="w-full px-4 py-3 pl-10 bg-bitcoin-dark/40 border border-bitcoin-gray/20 rounded-xl focus:ring-2 focus:ring-bitcoin-orange focus:border-bitcoin-orange placeholder:text-bitcoin-gray/50 text-bitcoin-gray">
-          <svg class="w-5 h-5 text-bitcoin-gray/50 absolute left-3 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            class="w-full px-4 py-3 pl-10 bg-white border border-[#c9a24a]/20 rounded-xl focus:ring-2 focus:ring-[#c9a24a] focus:border-[#c9a24a] placeholder:text-[#5f6c82]/60 text-[#0b1f3d]">
+          <svg class="w-5 h-5 text-[#5f6c82]/50 absolute left-3 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
           </svg>
         </div>
         
         <button
           (click)="openUploadModal()"
-          class="px-4 py-3 bg-bitcoin-orange/30 hover:bg-bitcoin-orange/40 text-bitcoin-orange border border-bitcoin-orange/30 font-semibold rounded-xl transition-all flex items-center gap-2 whitespace-nowrap">
+          class="px-4 py-3 bg-[#c9a24a]/20 hover:bg-[#c9a24a]/30 text-[#c9a24a] border border-[#c9a24a]/30 font-semibold rounded-xl transition-all flex items-center gap-2 whitespace-nowrap">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
           </svg>
@@ -119,17 +102,17 @@
       <div class="mb-10 space-y-6">
         <div class="flex items-center justify-between flex-wrap gap-3">
           <div>
-            <h2 class="text-2xl font-serif text-white font-bold">Gallery Projects</h2>
-            <p class="text-sm text-bitcoin-gray/70">Manage grouped images by project name and metadata</p>
+            <h2 class="text-2xl font-bold text-[#0b1f3d]">Gallery Projects</h2>
+            <p class="text-sm text-[#5f6c82]">Manage grouped images by project name and metadata</p>
           </div>
-          <div class="text-sm text-bitcoin-gray/70">
+          <div class="text-sm text-[#5f6c82]">
             {{ filteredProjects.length }} project{{ filteredProjects.length === 1 ? '' : 's' }}
           </div>
         </div>
 
         @if (filteredProjects.length === 0) {
-          <div class="p-10 text-center bg-bitcoin-dark/40 border border-bitcoin-gray/20 rounded-2xl backdrop-blur-sm">
-            <p class="text-bitcoin-gray">No projects found with the current filters. Try uploading new images or adjusting your search.</p>
+          <div class="p-10 text-center bg-[#fdfaf4] border border-[#c9a24a]/20 rounded-2xl">
+            <p class="text-[#5f6c82]">No projects found with the current filters. Try uploading new images or adjusting your search.</p>
           </div>
         } @else {
           <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
@@ -626,15 +609,46 @@
             <label class="block text-base font-semibold text-bitcoin-gray mb-3">
               Tags *
             </label>
+            
+            <!-- Custom Tag Input -->
+            <div class="flex flex-col sm:flex-row gap-2 sm:items-center mb-3">
+              <input
+                type="text"
+                [(ngModel)]="quickTagInputs.upload"
+                [ngModelOptions]="{ standalone: true }"
+                placeholder="Add custom tags separated by commas e.g. kitchen, bathroom, living-room"
+                [disabled]="isUploading"
+                class="flex-1 px-4 py-3 bg-bitcoin-dark/40 border-2 border-bitcoin-gray/20 rounded-xl focus:ring-2 focus:ring-bitcoin-orange focus:border-bitcoin-orange placeholder:text-bitcoin-gray/50 text-bitcoin-gray text-base disabled:opacity-50">
+              <button
+                type="button"
+                (click)="addQuickTags('upload')"
+                [disabled]="isAddingQuickTags || isUploading || !(quickTagInputs.upload.trim())"
+                class="px-4 py-3 bg-bitcoin-orange/30 hover:bg-bitcoin-orange/40 text-bitcoin-orange border-2 border-bitcoin-orange/30 font-semibold rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 whitespace-nowrap">
+                @if (isAddingQuickTags) {
+                  <div class="app-spinner" style="--spinner-size: 24px;"><img src="/Logo Clear.png" alt="Adding tags" width="32" height="32"></div>
+                  <span>Adding…</span>
+                } @else {
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                  </svg>
+                  <span>Add Tags</span>
+                }
+              </button>
+            </div>
+            
+            <p class="text-sm text-bitcoin-gray mb-3">Or select from predefined tags below:</p>
+            
             <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
               @for (tag of availableTags; track tag.id) {
                 <label class="flex items-center gap-2 p-3 bg-bitcoin-dark/40 border-2 border-bitcoin-gray/20 rounded-xl hover:bg-bitcoin-dark/60 hover:border-bitcoin-orange/30 cursor-pointer transition-all"
+                       [class.border-bitcoin-orange]="isTagSelected(tag.slug, 'upload')"
                        [style.border-color]="isTagSelected(tag.slug, 'upload') ? tag.color : ''">
                   <input
                     type="checkbox"
                     [checked]="isTagSelected(tag.slug, 'upload')"
                     (change)="toggleTag(tag.slug, $any($event.target).checked, 'upload')"
-                    class="w-5 h-5 rounded border-bitcoin-gray/30 text-bitcoin-orange focus:ring-bitcoin-orange bg-bitcoin-dark/60">
+                    [disabled]="isUploading"
+                    class="w-5 h-5 rounded border-bitcoin-gray/30 text-bitcoin-orange focus:ring-bitcoin-orange bg-bitcoin-dark/60 disabled:opacity-50">
                   @if (tag.icon) {
                     <span class="text-lg">{{ tag.icon }}</span>
                   }
@@ -642,7 +656,19 @@
                 </label>
               }
             </div>
-            <p class="mt-2 text-sm text-bitcoin-gray">Select at least one tag to categorize the media</p>
+            <p class="mt-2 text-sm text-bitcoin-gray">
+              Selected tags: 
+              @if (uploadForm.value.tags && uploadForm.value.tags.length > 0) {
+                <span class="font-semibold text-bitcoin-orange">{{ uploadForm.value.tags.length }}</span>
+                <span class="ml-2">
+                  @for (tag of uploadForm.value.tags; track tag; let last = $last) {
+                    <span class="text-bitcoin-orange">{{ tag }}{{ !last ? ', ' : '' }}</span>
+                  }
+                </span>
+              } @else {
+                <span class="text-red-400">None (select at least one)</span>
+              }
+            </p>
           </div>
 
           <!-- Related Products -->

@@ -2,70 +2,518 @@
   display: block;
 }
 
-// Hero section parallax effect
-.hero-image {
-  transition: transform 0.6s ease-out;
-  will-change: transform;
+.text-navy {
+  color: var(--ts-ink) !important;
 }
 
-// Enhanced product card hover effects
-.product-card {
-  transition: all 0.3s ease-out;
-  transform: translateY(0);
-  
+.service-quick-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.service-quick-link {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.75rem;
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #0b1f3d;
+  transition: all 0.3s ease;
+  text-align: left;
+  min-height: 100%;
+
   &:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15);
+    border-color: #d4af37;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(212, 175, 55, 0.2);
   }
-  
-  .product-image {
-    transition: transform 0.5s ease-out;
-    will-change: transform;
+
+  h3 {
+    font-size: 1.25rem;
+    margin: 0 0 0.35rem;
+    color: #0b1f3d;
   }
-  
-  &:hover .product-image {
-    transform: scale(1.05);
+
+  .service-category {
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.75rem;
+    color: #5f6c82;
+    margin-bottom: 0.2rem;
+  }
+
+  .service-copy {
+    margin: 0;
+    color: #2b3a54;
+    font-size: 0.95rem;
+    line-height: 1.5;
   }
 }
 
-// CTA section overlay effects
-.cta-overlay {
-  transition: all 0.3s ease-out;
-  
-  &:hover {
-    background: rgba(0, 0, 0, 0.5);
+.service-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: rgba(201, 162, 74, 0.12);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #c38c41;
+
+  svg {
+    width: 28px;
+    height: 28px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.6;
   }
 }
 
-// Value proposition icons animation
-.value-icon {
-  transition: all 0.3s ease-out;
-  
-  &:hover {
-    transform: scale(1.1);
-    background: var(--ts-accent);
-    
-    svg {
-      color: var(--ts-bg);
+@media (min-width: 768px) {
+  .service-quick-link {
+    flex-direction: row;
+  }
+}
+
+.highlight-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.highlight-card {
+  background: white;
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(31, 42, 55, 0.08);
+  box-shadow: 0 20px 45px -32px rgba(31, 42, 55, 0.45);
+
+  h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.35rem;
+    color: #0b1f3d;
+  }
+
+  p {
+    color: #2b3a54;
+    font-size: 0.95rem;
+  }
+}
+
+.icon-chip {
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  background: rgba(201, 162, 74, 0.15);
+  color: #c9a24a;
+
+  svg {
+    width: 22px;
+    height: 22px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.75;
+  }
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.75rem;
+}
+
+.service-card {
+  background: #fdfcf9;
+  border-radius: 1.75rem;
+  padding: 3.25rem 2rem 2rem;
+  border: 1px solid rgba(31, 42, 55, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-height: 100%;
+  position: relative;
+
+  h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    margin: 0;
+    color: #0b1f3d;
+  }
+
+  p {
+    color: #2b3a54;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .service-badge {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: rgba(194, 140, 65, 0.15);
+    color: #c38c41;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+  }
+
+  .service-meta {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.5rem;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+
+    span {
+      font-size: 0.85rem;
+      color: #5f6c82;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    strong {
+      font-size: 1rem;
+      color: #0b1f3d;
+    }
+  }
+
+  .service-price {
+    margin-top: auto;
+    display: flex;
+    align-items: baseline;
+    gap: 0.45rem;
+
+    span {
+      font-size: 0.9rem;
+      color: #5f6c82;
+    }
+
+    strong {
+      font-size: 1.6rem;
+      color: #0b1f3d;
+      font-family: 'Cormorant Garamond', serif;
+    }
+  }
+
+  .service-link {
+    margin-top: 1rem;
+    align-self: flex-start;
+    text-decoration: none;
+    font-weight: 600;
+    color: #0b1f3d;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding-bottom: 0.15rem;
+    border-bottom: 1px solid rgba(11, 31, 61, 0.2);
+
+    &:hover {
+      border-color: #c38c41;
+      color: #c38c41;
     }
   }
 }
 
-// Section spacing consistency
-.section-spacing {
-  padding: 5rem 0;
-  
-  @media (min-width: 1024px) {
-    padding: 7rem 0;
+.attribute-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid rgba(31, 42, 55, 0.08);
+  padding-top: 1rem;
+  display: grid;
+  gap: 0.5rem;
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95rem;
+    color: #2b3a54;
   }
 }
 
-// Typography enhancements
-.hero-title {
-  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  letter-spacing: -0.02em;
+.attribute-label {
+  font-weight: 600;
 }
 
-.section-title {
-  letter-spacing: -0.01em;
+.price-line {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #5f6c82;
+
+  strong {
+    font-size: 1.6rem;
+    font-family: 'Cormorant Garamond', serif;
+    color: #0b1f3d;
+  }
+}
+
+.badge {
+  align-self: flex-start;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  background: rgba(201, 162, 74, 0.15);
+  color: #8a6a2b;
+}
+
+.perk-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.perk-card {
+  display: flex;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: 1.25rem;
+  background: #fff;
+  border: 1px solid rgba(31, 42, 55, 0.08);
+
+  h3 {
+    margin: 0 0 0.35rem;
+    font-size: 1.05rem;
+  }
+
+  p {
+    margin: 0;
+    color: #2b3a54;
+  }
+}
+
+.membership-panel {
+  background: linear-gradient(135deg, #0b1f3d 0%, #1a2f4d 100%);
+  color: white;
+  padding: 2.25rem;
+  border-radius: 1.75rem;
+  box-shadow: 0 45px 80px -50px rgba(11, 31, 61, 0.9);
+
+  .eyebrow {
+    color: rgba(201, 162, 74, 0.9);
+    font-weight: 700;
+  }
+
+  h3 {
+    color: white;
+    margin: 0.5rem 0 1rem;
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  ul {
+    margin: 1rem 0 1.75rem;
+    padding-left: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.testimonial-card {
+  background: #fdfcf9;
+  border-radius: 1.5rem;
+  padding: 1.75rem;
+  border: 1px solid rgba(31, 42, 55, 0.08);
+  box-shadow: 0 30px 60px -45px rgba(31, 42, 55, 0.6);
+
+  .quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    color: #0b1f3d;
+    margin-bottom: 1.5rem;
+  }
+
+  .author {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    color: #0b1f3d;
+
+    small {
+      font-weight: 400;
+      color: #5f6c82;
+    }
+  }
+}
+
+.contact-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1.5rem 0;
+
+  a {
+    color: #0f1d2c;
+    font-weight: 600;
+    text-decoration: none;
+  }
+}
+
+.contact-panel {
+  background: white;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  border: 1px solid rgba(31, 42, 55, 0.08);
+  box-shadow: 0 25px 50px -35px rgba(49, 57, 72, 0.2);
+
+  .panel-title {
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-size: 0.7rem;
+    color: #5f6c82;
+    margin-bottom: 0.75rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+    color: #0b1f3d;
+    line-height: 1.6;
+  }
+
+  .panel-copy {
+    color: #2b3a54;
+  }
+}
+
+.contact-section {
+  position: relative;
+  background:
+    radial-gradient(circle at 15% 15%, rgba(255, 255, 255, 0.9), transparent 55%),
+    radial-gradient(circle at 85% 0%, rgba(202, 160, 76, 0.18), transparent 45%),
+    linear-gradient(135deg, #fffaf3 0%, #f3ebdd 100%);
+  color: var(--ts-ink);
+}
+
+.contact-eyebrow {
+  color: #5f6c82;
+}
+
+.contact-subtext {
+  color: #2b3a54;
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    width: min(100%, 100% - 1.5rem);
+  }
+
+  .membership-panel {
+    padding: 1.75rem;
+  }
+}
+
+#services .button--primary {
+  background: linear-gradient(135deg, #c9a24a, #f5d79b);
+  color: var(--ts-ink);
+  border-color: transparent;
+  box-shadow: 0 18px 35px -20px rgba(201, 162, 74, 0.8);
+
+  &:hover {
+    box-shadow: 0 22px 45px -25px rgba(201, 162, 74, 0.95);
+  }
+}
+#difference,
+#services,
+#membership,
+#testimonials {
+  position: relative;
+  color: #0b1f3d;
+  background:
+    radial-gradient(circle at 25% 15%, rgba(255, 255, 255, 0.9), transparent 55%),
+    radial-gradient(circle at 80% 0%, rgba(248, 243, 230, 0.8), transparent 45%),
+    linear-gradient(180deg, #fdfbf6, #f4efe7);
+}
+
+#difference .section-subtext,
+#services .section-subtext,
+#membership .section-subtext,
+#testimonials .section-subtext {
+  color: #2b3a54;
+}
+
+#difference .icon-chip,
+#services .icon-chip,
+#membership .icon-chip {
+  background: rgba(252, 231, 195, 0.6);
+  color: #c38c41;
+}
+
+.section-heading .section-title {
+  color: #0b1f3d;
+}
+
+.highlight-card h3,
+.highlight-card h3 a,
+.service-card h3,
+.service-card h3 a,
+.perk-card h3,
+.perk-card h3 a,
+.testimonial-card .quote,
+.testimonial-card .author,
+.testimonial-card .author small {
+  color: #0b1f3d;
+}
+
+.highlight-card p,
+.highlight-card p a,
+.service-card p,
+.perk-card p,
+.testimonial-card .quote,
+.testimonial-card .author small {
+  color: #2b3a54;
+}
+
+.section-heading .section-title {
+  color: #0b1f3d !important;
+}
+
+.highlight-card h3,
+.service-card h3,
+.perk-card h3,
+.testimonial-card .quote,
+.testimonial-card .author {
+  color: #0b1f3d !important;
+}
+
+.highlight-card p,
+.service-card p,
+.perk-card p,
+.testimonial-card .author small {
+  color: #2b3a54 !important;
 }

@@ -1,0 +1,213 @@
+﻿<!-- About Hero Section -->
+<section class="about-hero">
+  <div class="hero-content">
+    <h1>{{ 'about.hero.title' | translate }}</h1>
+    <p class="hero-subtitle">{{ 'about.hero.subtitle' | translate }}</p>
+  </div>
+</section>
+
+<!-- Gloria's Story -->
+<section class="founder-story">
+  <div class="page-container">
+    <div class="story-grid">
+      <div class="story-image">
+        <div class="image-frame">
+          <picture>
+            <source srcset="/About_me.webp" type="image/webp" />
+            <img
+              src="/About_me.webp"
+              width="640"
+              height="800"
+              alt="Gloria, founder of CMK Home Services"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
+          <div class="image-tag">
+            <span>{{ 'about.founder_story.image_tag_line1' | translate }}</span>
+            <span>{{ 'about.founder_story.image_tag_line2' | translate }}</span>
+          </div>
+        </div>
+      </div>
+      <div class="story-content">
+        <p class="eyebrow">{{ 'about.founder_story.eyebrow' | translate }}</p>
+        <h2>{{ 'about.founder_story.title' | translate }}</h2>
+        <div class="story-text">
+          @for (paragraph of founderParagraphs; track $index; let first = $first; let last = $last) {
+            @if (first) {
+              <p>{{ paragraph }}</p>
+              <blockquote class="founder-quote">
+                {{ 'about.founder_story.quote' | translate }}
+              </blockquote>
+            } @else {
+              <p>{{ paragraph }}</p>
+            }
+          }
+        </div>
+        <ul class="story-highlights">
+          @for (highlight of founderHighlights; track $index) {
+            <li>
+              <span class="label">{{ highlight.label }}</span>
+              <span class="value">{{ highlight.value }}</span>
+            </li>
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Our Values -->
+<section class="our-values">
+  <div class="page-container">
+    <div class="section-heading">
+      <p class="eyebrow">{{ 'about.values.eyebrow' | translate }}</p>
+      <h2>{{ 'about.values.title' | translate }}</h2>
+      <p class="section-subtext">
+        {{ 'about.values.subtitle' | translate }}
+      </p>
+    </div>
+    
+      <div class="values-grid">
+        @for (value of values; track $index) {
+          <div class="value-card">
+            <div class="value-icon" aria-hidden="true">
+              @switch (value.icon) {
+                @case ('sparkle') {
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h3.513c.969 0 1.371 1.24.588 1.81l-2.845 2.068a1 1 0 00-.364 1.118l1.25 3.853c.3.922-.755 1.688-1.54 1.118l-3.097-2.251a1 1 0 00-1.175 0l-3.097 2.25c-.784.57-1.838-.195-1.54-1.117l1.25-3.853a1 1 0 00-.364-1.118L6.16 9.394c-.783-.57-.38-1.81.588-1.81h3.513a1 1 0 00.95-.69l1.838-3.967z" />
+                  </svg>
+                }
+                @case ('shield') {
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 3l8 3v5c0 5.25-3.438 9.875-8 11-4.562-1.125-8-5.75-8-11V6z" />
+                    <path d="M9 12l2 2 4-4" />
+                  </svg>
+                }
+                @case ('heart') {
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.682l-7.682-8.682a4.5 4.5 0 010-6.364z" />
+                  </svg>
+                }
+                @case ('clock') {
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M12 7v5l3 2" />
+                  </svg>
+                }
+                @default {
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="9" />
+                  </svg>
+                }
+              }
+            </div>
+            <h3>{{ value.title }}</h3>
+            <p>{{ value.description }}</p>
+          </div>
+        }
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section">
+  <div class="page-container">
+    <div class="stats-grid">
+      @for (stat of stats; track $index) {
+        <div class="stat-card">
+          <div class="stat-number">{{ stat.number }}</div>
+          <div class="stat-label">{{ stat.label }}</div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="why-choose">
+  <div class="page-container">
+    <div class="section-heading">
+      <p class="eyebrow">{{ 'about.why_choose.eyebrow' | translate }}</p>
+      <h2>{{ 'about.why_choose.title' | translate }}</h2>
+    </div>
+    
+      <div class="benefits-grid">
+        @for (benefit of benefits; track $index) {
+          <div class="benefit-card">
+            <div class="benefit-icon" aria-hidden="true">
+              @switch (benefit.icon) {
+                @case ('shield') {
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 3l8 3v5c0 5.25-3.438 9.875-8 11-4.562-1.125-8-5.75-8-11V6z" />
+                    <path d="M9 12l2 2 4-4" />
+                  </svg>
+                }
+                @case ('clipboard') {
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="4" y="4" width="16" height="18" rx="2" />
+                    <path d="M8 8h8" />
+                    <path d="M8 12h5" />
+                    <path d="M10 16h6" />
+                  </svg>
+                }
+                @case ('leaf') {
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 21V11" />
+                    <path d="M12 11c4.5 0 6-5 6-8 0 0-5.5 0-6 4" />
+                    <path d="M12 11c-4.5 0-6-5-6-8 0 0 5.5 0 6 4" />
+                  </svg>
+                }
+                @case ('star') {
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h3.763c.969 0 1.371 1.24.588 1.81l-3.031 2.202a1 1 0 00-.364 1.118l1.205 3.725c.3.922-.755 1.688-1.54 1.118l-3.1-2.274a1 1 0 00-1.175 0l-3.1 2.274c-.784.57-1.838-.196-1.54-1.118l1.205-3.725a1 1 0 00-.364-1.118L4.362 9.394c-.783-.57-.38-1.81.588-1.81h3.763a1 1 0 00.95-.69l1.386-3.967z" />
+                  </svg>
+                }
+                @case ('guarantee') {
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 9v6" />
+                    <path d="M9 9a3 3 0 100 6" />
+                    <path d="M15 9l-2 6" />
+                    <path d="M17 9l-2 6" />
+                    <path d="M19 9l-2 6" />
+                  </svg>
+                }
+                @case ('home') {
+                  <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                    <path d="M3 11.5l9-8 9 8" />
+                    <path d="M5 10v10h14V10" />
+                    <path d="M9 21v-6h6v6" />
+                  </svg>
+                }
+              }
+            </div>
+            <h3>{{ benefit.title }}</h3>
+            <p>{{ benefit.description }}</p>
+          </div>
+        }
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="page-container">
+    <h2>{{ 'about.cta.title' | translate }}</h2>
+    <p>{{ 'about.cta.description' | translate }}</p>
+    <div class="cta-buttons">
+      <a href="https://wa.me/17863807579?text=Hi! I'd like to learn more about your services" 
+         target="_blank" 
+         rel="noopener"
+         class="button button--whatsapp">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/></svg>
+        {{ 'about.cta.chat_whatsapp' | translate }}
+      </a>
+      <a routerLink="/contact" class="button button--light">
+        {{ 'about.cta.get_quote' | translate }}
+      </a>
+      <a href="tel:+17863807579" class="button button--ghost">
+        {{ 'about.cta.call' | translate }}
+      </a>
+    </div>
+  </div>
+</section>

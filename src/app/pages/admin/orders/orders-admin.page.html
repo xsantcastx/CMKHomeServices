@@ -1,31 +1,14 @@
-<div class="section-stack min-h-screen bg-gradient-to-b from-[#0a0b0d] to-[#13151a]">
-  
-  <!-- Admin Header -->
-  <div class="bg-bitcoin-dark/95 backdrop-blur-md text-white shadow-bitcoin-lg border-b border-bitcoin-orange/20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-      <div class="flex items-center justify-between">
-        <div class="flex items-center gap-4">
-          <a routerLink="/admin" class="text-bitcoin-gray hover:text-bitcoin-orange transition-colors">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
-            </svg>
-          </a>
-          <h1 class="text-xl font-bold bitcoin-gradient-text">{{ 'admin.orders.title' | translate }}</h1>
-        </div>
-        <div class="flex items-center gap-4">
-          <a routerLink="/admin" class="text-sm text-bitcoin-gray hover:text-bitcoin-orange transition-colors">{{ 'admin.title' | translate }}</a>
-          <button (click)="logout()" class="px-4 py-2 bg-red-500/20 hover:bg-red-500/30 text-red-100 rounded-xl border border-red-500/30 transition-all">
-            {{ 'client.logout' | translate }}
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
+<app-admin-sidebar></app-admin-sidebar>
 
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-    
-    <!-- Quick Actions -->
-    <app-admin-quick-actions currentPage="/admin/orders"></app-admin-quick-actions>
+<div class="lg:ml-[280px] min-h-screen pt-16 lg:pt-0">
+  <div class="section-stack">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      
+      <!-- Page Header -->
+      <div class="mb-8">
+        <h1 class="text-2xl md:text-3xl font-bold text-[#0b1f3d] mb-2">{{ 'admin.orders.title' | translate }}</h1>
+        <p class="text-[#5f6c82]">Manage service bookings and customer orders</p>
+      </div>
     
     <!-- Success/Error Messages -->
     @if (successMessage()) {

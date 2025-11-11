@@ -1,708 +1,413 @@
 {
   "page_titles": {
-    "home": "Matériel de Minage Bitcoin Premium",
-    "products": "Produits de Minage",
-    "product_details": "Détails du Produit",
+    "home": "Services de Nettoyage Professionnels à Miami",
+    "products": "Nos Services",
+    "product_details": "Détails du Service",
     "gallery": "Galerie",
     "contact": "Contact",
-    "cart": "Panier d'Achat",
-    "checkout_review": "Révision de Paiement",
+    "cart": "Demande de Service",
+    "checkout_review": "Révision de la Demande",
     "payment": "Paiement",
-    "order_confirmation": "Confirmation de Commande",
+    "order_confirmation": "Confirmation de Demande",
     "login": "Connexion",
     "register": "S'inscrire",
     "profile": "Mon Profil",
-    "orders": "Mes Commandes",
-    "solo_miners": "Mineurs Solo Bitcoin",
+    "orders": "Mes Demandes",
+    "solo_miners": "Services Spécialisés",
     "admin_dashboard": "Tableau de Bord Admin",
-    "product_management": "Gestion des Produits",
-    "quick_add_product": "Ajout Rapide de Produit",
-    "gallery_management": "Gestion de Galerie",
-    "order_management": "Gestion des Commandes",
+    "product_management": "Gestion des Services",
+    "quick_add_product": "Ajout Rapide de Service",
+    "gallery_management": "Gestion de la Galerie",
+    "order_management": "Gestion des Demandes",
     "user_management": "Gestion des Utilisateurs",
-    "benefit_templates": "Modèles d'Avantages",
+    "benefit_templates": "Modèles de Services",
     "analytics": "Tableau de Bord Analytique",
     "settings": "Paramètres",
     "email_templates": "Modèles d'Email",
-    "size_groups": "Gestion des Groupes de Taille",
+    "size_groups": "Gestion des Groupes de Services",
+    "reviews": "Gestion des Avis",
     "not_found": "Page Non Trouvée"
+  },
+  "not_found_page": {
+    "error_number": "404",
+    "title": "Page Non Trouvée",
+    "message": "Oups ! La page que vous recherchez semble avoir été déplacée ou n'existe pas. Mais ne vous inquiétez pas, nous pouvons vous aider à trouver ce dont vous avez besoin !",
+    "quick_links_title": "Liens Rapides",
+    "popular_services_title": "Services Populaires",
+    "need_help_title": "Besoin d'Aide ?",
+    "need_help_subtitle": "Notre équipe est là pour vous aider",
+    "links": {
+      "home": "Accueil",
+      "all_services": "Tous les Services",
+      "about": "À Propos",
+      "service_areas": "Zones de Service",
+      "contact": "Contactez-nous"
+    },
+    "services": {
+      "residential": "Nettoyage Résidentiel",
+      "commercial": "Nettoyage Commercial",
+      "deep_clean": "Nettoyage en Profondeur",
+      "windows": "Lavage de Vitres"
+    },
+    "cta": {
+      "whatsapp": "Chatter sur WhatsApp",
+      "call": "Appeler (786) 380-7579",
+      "email": "Envoyer un Email"
+    }
+  },
+  "service_areas": {
+    "hero": {
+      "title": "Où Nous Intervenons",
+      "subtitle": "Services de nettoyage professionnels dans tout le Grand Miami"
+    },
+    "intro": {
+      "title": "Au Service de Tout le Comté de Miami-Dade",
+      "description": "CMK Home Services est fier de servir des clients résidentiels et commerciaux dans tout Miami et les zones environnantes. Que vous soyez dans un gratte-ciel du centre-ville, un condo en bord de mer ou une maison de banlieue, notre équipe professionnelle de nettoyage est prête à vous aider.",
+      "highlights": {
+        "areas_served": "12+ Zones Desservies",
+        "same_day": "Service le Jour Même Disponible",
+        "eco_friendly": "Produits Écologiques"
+      }
+    },
+    "areas": {
+      "miami": {
+        "name": "Miami",
+        "description": "Centre-ville de Miami, Brickell et zones environnantes",
+        "neighborhoods": ["Centre-ville de Miami", "Brickell", "Edgewater", "Wynwood", "Midtown"]
+      },
+      "miami_beach": {
+        "name": "Miami Beach",
+        "description": "South Beach, Mid-Beach et zones de North Beach",
+        "neighborhoods": ["South Beach", "Mid-Beach", "North Beach", "Sunset Islands"]
+      },
+      "coral_gables": {
+        "name": "Coral Gables",
+        "description": "La Ville Belle - maisons élégantes et rues arborées",
+        "neighborhoods": ["Old Cutler Road", "Gables Estates", "Cocoplum"]
+      },
+      "coconut_grove": {
+        "name": "Coconut Grove",
+        "description": "Le plus ancien quartier de Miami avec des paysages luxuriants",
+        "neighborhoods": ["The Village", "Silver Bluff", "Brickell Grove"]
+      },
+      "aventura": {
+        "name": "Aventura",
+        "description": "District résidentiel et commercial haut de gamme",
+        "neighborhoods": ["Williams Island", "Porto Vita", "Aventura Isles"]
+      },
+      "sunny_isles": {
+        "name": "Sunny Isles Beach",
+        "description": "La Riviera de Floride - vie de luxe en bord de mer",
+        "neighborhoods": ["Golden Beach", "Sunny Isles", "North Beach"]
+      },
+      "kendall": {
+        "name": "Kendall",
+        "description": "Quartiers de banlieue adaptés aux familles",
+        "neighborhoods": ["The Hammocks", "Pinecrest", "Palmetto Bay"]
+      },
+      "doral": {
+        "name": "Doral",
+        "description": "Ville moderne avec terrains de golf et centres commerciaux",
+        "neighborhoods": ["Downtown Doral", "Doral Isles", "Costa Del Sol"]
+      },
+      "hialeah": {
+        "name": "Hialeah",
+        "description": "Communauté résidentielle dynamique",
+        "neighborhoods": ["Hialeah Gardens", "Palm Springs North", "Country Club"]
+      },
+      "key_biscayne": {
+        "name": "Key Biscayne",
+        "description": "Paradis insulaire avec des plages immaculées",
+        "neighborhoods": ["Cape Florida", "Crandon Park"]
+      },
+      "homestead": {
+        "name": "Homestead",
+        "description": "Porte d'entrée des Keys de Floride",
+        "neighborhoods": ["Naranja", "Florida City", "Leisure City"]
+      },
+      "miami_lakes": {
+        "name": "Miami Lakes",
+        "description": "Communauté planifiée avec de beaux lacs",
+        "neighborhoods": ["Main Street", "Royal Oaks", "Shenandoah"]
+      }
+    },
+    "card": {
+      "neighborhoods_label": "Quartiers :",
+      "services_label": "Services Disponibles :"
+    },
+    "services": {
+      "residential": "Nettoyage Résidentiel",
+      "commercial": "Nettoyage Commercial",
+      "deep_clean": "Nettoyage en Profondeur",
+      "move": "Déménagement (Entrée/Sortie)"
+    },
+    "not_listed": {
+      "title": "Vous Ne Voyez Pas Votre Zone ?",
+      "description": "Nous élargissons constamment nos zones de service dans tout le sud de la Floride. Si votre quartier n'est pas répertorié, ne vous inquiétez pas, nous pouvons peut-être encore vous aider !",
+      "cta_ask": "💬 Renseignez-vous sur Votre Zone",
+      "cta_call": "📞 Appeler (786) 380-7579"
+    },
+    "why_choose": {
+      "title": "Pourquoi Choisir CMK dans Votre Zone ?",
+      "local_expertise": {
+        "title": "Expertise Locale",
+        "description": "Nous comprenons les maisons de Miami, de la préparation aux ouragans aux défis d'humidité."
+      },
+      "fast_response": {
+        "title": "Réponse Rapide",
+        "description": "Rendez-vous le jour même et le lendemain disponibles dans la plupart des zones."
+      },
+      "licensed": {
+        "title": "Licenciés et Assurés",
+        "description": "Entièrement licenciés, cautionnés et assurés pour votre protection."
+      },
+      "five_star": {
+        "title": "Note 5 Étoiles",
+        "description": "Constamment mieux notés par les propriétaires et entreprises de Miami."
+      }
+    },
+    "bottom_cta": {
+      "title": "Prêt à Commencer ?",
+      "subtitle": "Réservez votre service de nettoyage aujourd'hui et découvrez la différence CMK",
+      "cta_quote": "Obtenir un Devis Gratuit",
+      "cta_services": "Voir Tous les Services"
+    }
   },
   "home": {
     "hero": {
-      "title": "Minez Votre Avenir",
-      "subtitle": " Où la technologie crypto devient un style de vie.\nExplorez équipement de minage, stockage sécurisé et gadgets qui montrent votre passion pour l'avenir décentralisé.\nInnovation, sécurité et design sans limites.",
-      "description": "Rejoignez la r\u00c3\u00a9volution. Maximisez vos profits avec des mineurs ASIC de pointe con\u00c3\u00a7us pour des performances optimales et une efficacit\u00c3\u00a9 in\u00c3\u00a9gal\u00c3\u00a9e.",
-      "cta_primary": "Explorer les Mineurs",
-      "cta_secondary": "Demander un Devis"
+      "eyebrow": "PROFESSIONNELS DU NETTOYAGE DE CONFIANCE À MIAMI",
+      "title": "Votre Maison, Impeccable et Sans Stress",
+      "subtitle": "Services de nettoyage professionnels pour maisons et entreprises dans tout Miami. Licencié, assuré et dévoué à l'excellence dès le premier jour.",
+      "badge": "Licencié et Assuré • Note 5 Étoiles",
+      "cta_primary": "Obtenir un Devis Gratuit",
+      "cta_secondary": "Voir Nos Services"
     },
     "featured": {
-      "title": "Mat\u00c3\u00a9riel de Minage en Vedette",
-      "subtitle": "D\u00c3\u00a9couvrez nos derni\u00c3\u00a8res solutions de minage Bitcoin",
-      "latest": "Derniers Produits",
-      "flagship": "Mineurs Phares",
-      "professional": "S\u00c3\u00a9rie Professionnelle",
-      "enterprise": "Solutions d'Entreprise",
-      "view_all": "Tout Voir"
+      "title": "Services en Vedette",
+      "subtitle": "Découvrez nos solutions de nettoyage les plus populaires",
+      "latest": "Projets Récents",
+      "flagship": "Services Premium",
+      "professional": "Nettoyage Professionnel",
+      "enterprise": "Solutions Commerciales",
+      "view_all": "Voir Tout"
     },
     "gallery_preview": {
-      "title": "Galerie de Ferme de Minage",
-      "subtitle": "Explorez nos installations et configurations de minage professionnelles",
-      "view_full": "Voir la Galerie Compl\u00c3\u00a8te \u00e2\u2020\u2019"
+      "title": "Galerie de Notre Travail",
+      "subtitle": "Explorez notre portfolio de projets de transformation à Miami",
+      "view_full": "Voir la Galerie Complète →"
     },
     "why_choose": {
-      "title": "Pourquoi Choisir TheLuxMining?",
-      "subtitle": "Votre Succ\u00c3\u00a8s Est Notre Mission",
+      "title": "Pourquoi Choisir CMK Home Services ?",
+      "subtitle": "Votre Succès Est Notre Mission",
       "hashrate": {
-        "title": "Taux de Hachage Maximal",
-        "description": "Performance de taux de hachage leader de l'industrie avec la technologie ASIC de pointe, maximisant votre rentabilit\u00c3\u00a9 mini\u00c3\u00a8re Bitcoin."
+        "title": "Excellence Professionnelle",
+        "description": "Standards de nettoyage leaders de l'industrie avec des professionnels formés, garantissant que votre maison ou bureau brille."
       },
       "efficiency": {
-        "title": "Efficacit\u00c3\u00a9 Sup\u00c3\u00a9rieure",
-        "description": "Consommation d'\u00c3\u00a9nergie optimis\u00c3\u00a9e avec des syst\u00c3\u00a8mes de refroidissement avanc\u00c3\u00a9s, offrant le meilleur rapport J/TH du march\u00c3\u00a9."
+        "title": "Produits Écologiques",
+        "description": "Solutions de nettoyage sûres et efficaces qui protègent votre famille, vos animaux et l'environnement."
       },
       "roi": {
-        "title": "ROI Maximum",
-        "description": "Fiabilit\u00c3\u00a9 de niveau entreprise et garanties de disponibilit\u00c3\u00a9, assurant des rendements constants sur votre investissement minier."
+        "title": "Service Fiable",
+        "description": "Garanties de qualité constante et de ponctualité, assurant la tranquillité d'esprit à chaque rendez-vous."
       }
     },
     "cta": {
       "gallery": {
-        "title": "Explorer les Configurations de Minage",
+        "title": "Explorez Nos Projets",
         "button": "Voir la Galerie"
       },
       "contact": {
-        "title": "Pr\u00c3\u00aat \u00c3\u00a0 Commencer le Minage?",
-        "button": "Obtenir un Devis Personnalis\u00c3\u00a9"
+        "title": "Prêt pour une Maison Impeccable ?",
+        "button": "Obtenir un Devis Gratuit"
+      }
+    },
+    "services": {
+      "title": "Nos Services",
+      "subtitle": "Solutions Complètes de Nettoyage pour Maison et Commerce",
+      "hardware": {
+        "title": "Nettoyage Résidentiel",
+        "description": "Services de nettoyage de maison de haute qualité, du nettoyage en profondeur à l'entretien régulier pour familles occupées."
+      },
+      "setup": {
+        "title": "Nettoyage Commercial",
+        "description": "Nettoyage professionnel de bureaux et d'espaces commerciaux pour maintenir un environnement de travail productif et sain."
+      },
+      "support": {
+        "title": "Horaires Flexibles",
+        "description": "Réservez des services hebdomadaires, bihebdomadaires ou ponctuels qui s'adaptent à votre style de vie et besoins professionnels."
+      },
+      "consulting": {
+        "title": "Solutions Personnalisées",
+        "description": "Plans de nettoyage personnalisés adaptés à vos exigences et préférences spécifiques."
+      }
+    },
+    "features": {
+      "title": "Pourquoi Nettoyer avec CMK Home Services",
+      "enterprise": {
+        "title": "Professionnels Formés",
+        "description": "Spécialistes du nettoyage expérimentés, vérifiés, engagés dans l'excellence."
+      },
+      "efficiency": {
+        "title": "Produits Premium",
+        "description": "Nous utilisons des produits de nettoyage professionnels et écologiques pour des résultats supérieurs."
+      },
+      "roi": {
+        "title": "Satisfaction Garantie",
+        "description": "Historique de clients satisfaits avec service transparent et garanties de qualité."
+      },
+      "security": {
+        "title": "Assurés et Cautionnés",
+        "description": "Couverture d'assurance complète et caution pour protéger votre propriété et vous offrir la tranquillité d'esprit."
       }
     },
     "stats": {
-      "miners_deployed": "Mineurs D\u00c3\u00a9ploy\u00c3\u00a9s dans le Monde",
+      "miners_deployed": "Maisons Servies",
+      "miners_deployed_desc": "Maisons heureuses dans tout Miami",
       "customer_satisfaction": "Satisfaction Client",
-      "uptime_guarantee": "Garantie de Disponibilit\u00c3\u00a9",
-      "years_experience": "Ann\u00c3\u00a9es d'Excellence"
-    }
-  },
-  "soloMiners": {
-    "hero": {
-      "title": "Mineurs Bitcoin Solo & Matériel de Loterie",
-      "subtitle": "Gagnez 100 % des récompenses de bloc avec des mineurs solo silencieux et efficaces conçus pour une indépendance totale.",
-      "ctaPrimary": "Parler à un spécialiste",
-      "ctaSecondary": "Comparer les mineurs solo",
-      "stats": {
-        "reward": "Récompense complète du bloc",
-        "power": "Consommation adaptée au domicile",
-        "support": "Support 24/7"
+      "customer_satisfaction_desc": "Note de satisfaction client vérifiée",
+      "uptime_guarantee": "Garantie de Ponctualité",
+      "uptime_guarantee_desc": "Standards de ponctualité leaders de l'industrie",
+      "years_experience": "Années d'Excellence",
+      "years_experience_desc": "Années au service des familles et entreprises de Miami"
+    },
+    "reviews": {
+      "eyebrow": "Témoignages Clients",
+      "title": "Écoutez les Familles qui Font Confiance à CMK Home Services",
+      "subtitle": "Nous nous associons avec des familles dans tout Miami pour offrir des services de nettoyage exceptionnels. Des histoires réelles de vrais clients nous tiennent responsables et aident les futurs clients à se sentir en confiance.",
+      "average_rating": "Note moyenne",
+      "published_reviews": "Avis publiés",
+      "rate_experience": "Notez votre expérience",
+      "rate_stars": "Noter {{stars}} étoiles",
+      "share_testimonial": "Partagez un bref témoignage",
+      "testimonial_placeholder": "Parlez aux autres de votre service de nettoyage, notre équipe ou la transformation de votre maison.",
+      "testimonial_help": "Minimum 10 caractères. Mentionnez des détails comme le type de service, la qualité ou notre équipe.",
+      "saving_review": "Enregistrement de votre avis...",
+      "update_review": "Mettre à jour mon avis",
+      "publish_review": "Publier mon avis",
+      "delete_review": "Supprimer mon avis",
+      "sign_in_title": "Prêt à laisser un avis ?",
+      "sign_in_desc": "Connectez-vous pour noter votre expérience et aider d'autres familles à choisir leur partenaire de nettoyage de confiance.",
+      "sign_in_button": "Se connecter pour partager des commentaires",
+      "no_account": "Vous n'avez pas encore de compte ?",
+      "create_account": "Créez-en un en quelques minutes.",
+      "no_reviews_title": "Les avis apparaîtront ici une fois que les clients commenceront à partager leur expérience.",
+      "no_reviews_desc": "Soyez le premier à laisser un avis après votre service !",
+      "verified_purchase": "Achat Vérifié"
+    },
+    "testimonials": {
+      "eyebrow": "Témoignages",
+      "title": "Ce que disent nos clients.",
+      "items": [
+        {
+          "quote": "Gloria et son équipe sont incroyables ! Ils ont transformé notre condo et maintenant ils viennent chaque semaine. Professionnels et dignes de confiance.",
+          "author": "Maria C.",
+          "location": "Brickell"
+        },
+        {
+          "quote": "Le meilleur service de nettoyage à Miami ! Ils gèrent nos locations de vacances et l'endroit est toujours impeccable pour nos invités.",
+          "author": "David & Elena R.",
+          "location": "South Beach"
+        },
+        {
+          "quote": "Nous utilisons CMK pour notre propriété saisonnière. Ils gardent notre place fraîche pendant que nous sommes au nord et c'est toujours parfait à notre retour.",
+          "author": "Robert T.",
+          "location": "Coral Gables"
+        }
+      ]
+    },
+    "difference": {
+      "description": "Fondée par Gloria, résidente de Miami passionnée par la création d'espaces propres et sains pour les familles et les entreprises. Nous apportons professionnalisme, fiabilité et attention aux détails dans chaque travail."
+    },
+    "services_intro": {
+      "description": "Des maisons résidentielles aux espaces commerciaux, nous offrons des services de nettoyage complets adaptés à vos besoins. Tous les services incluent des produits écologiques et une garantie de satisfaction."
+    },
+    "quick_services": {
+      "residential": {
+        "category": "Maisons et condos",
+        "title": "Soins Résidentiels",
+        "description": "Entretien hebdomadaire, bihebdomadaire ou mensuel adapté à votre style de vie."
+      },
+      "commercial": {
+        "category": "Bureaux et commerces",
+        "title": "Suites Commerciales",
+        "description": "Bureaux boutique, salles d'exposition et espaces commerciaux rafraîchis en dehors des heures de travail."
+      },
+      "windows": {
+        "category": "Verre et détails",
+        "title": "Vitres et Finitions",
+        "description": "Fenêtres, miroirs et détails en acier inoxydable cristallins partout."
+      },
+      "deep_clean": {
+        "category": "Remise à neuf saisonnière",
+        "title": "Restauration en Profondeur",
+        "description": "Déménagements, post-rénovation et détails saisonniers pour chaque surface."
       }
     },
-    "highlights": {
-      "lottery": {
-        "title": "Récompenses intégrales",
-        "copy": "Les mineurs solo gardent les 3,125 BTC plus les frais lorsqu'ils trouvent un bloc."
+    "service_card": {
+      "frequency": "Fréquence",
+      "duration": "Durée",
+      "team": "Équipe",
+      "starting_at": "À partir de",
+      "view_details": "Voir Détails du Service",
+      "view_all": "Voir Tous les Services"
+    },
+    "featured_services": {
+      "premier_weekly": {
+        "name": "Soins Premier de Résidence",
+        "description": "Nettoyage hebdomadaire de gants blancs avec service de linge, retouches d'organisation et détails saisonniers programmés trimestriellement.",
+        "badge": "Le plus demandé",
+        "frequency": "Hebdomadaire",
+        "duration": "4-5 hrs",
+        "team": "2 femmes de ménage"
       },
-      "home": {
-        "title": "Prêt pour la maison",
-        "copy": "Matériel silencieux basse consommation pour appartements, studios ou bureaux."
+      "signature_biweekly": {
+        "name": "Signature Bihebdomadaire",
+        "description": "Nettoyage bihebdomadaire détaillé axé sur cuisines, salles de bains et espaces de vie à fort contact utilisant des produits non toxiques.",
+        "badge": "Flexible",
+        "frequency": "Bihebdomadaire",
+        "duration": "3 hrs",
+        "team": "2 femmes de ménage"
       },
-      "decentralization": {
-        "title": "Renforcez Bitcoin",
-        "copy": "La minage solo favorise la décentralisation du réseau."
+      "deep_restore": {
+        "name": "Restauration Profonde Saisonnière",
+        "description": "Rafraîchissement saisonnier de haut en bas couvrant plinthes, accessoires, intérieurs d'armoires et espaces de vie extérieurs.",
+        "badge": "Trimestriel",
+        "frequency": "Trimestriel",
+        "duration": "Journée complète",
+        "team": "3-4 femmes de ménage"
       }
     },
-    "catalog": {
-      "eyebrow": "Catalogue Solo Mining",
-      "title": "Matériel sélectionné pour la minage solo",
-      "copy": "Choisissez des mineurs USB, des rigs de bureau ou des packs personnalisés avec nœud intégré.",
-      "learnMore": "FAQ sur la minage solo",
-      "metrics": {
-        "hashrate": "Hashrate",
-        "power": "Puissance",
-        "efficiency": "Efficacité",
-        "price": "Prix"
-      },
-      "notice": "Publiez vos premiers produits de mineurs solo depuis le panneau admin pour remplacer ces exemples.",
-      "noticeCta": "Ouvrir la gestion des produits"
+    "about": {
+      "eyebrow": "À Propos de Gloria",
+      "title": "Passion pour les Espaces Propres et Sains",
+      "description": "Gloria a fondé CMK Home Services avec une mission simple : fournir aux familles et entreprises de Miami des services de nettoyage fiables et professionnels auxquels ils peuvent faire confiance. Avec des années d'expérience et une équipe dévouée, nous traitons chaque maison et bureau comme si c'était le nôtre."
     },
-    "cta": {
-      "viewProduct": "Voir le mineur solo",
-      "requestQuote": "Demander un devis",
-      "defaultDescription": "Matériel optimisé pour la minage solo et les stratégies de loterie."
+    "membership": {
+      "eyebrow": "Contactez-nous",
+      "title": "Prêt pour un espace impeccable ?",
+      "description": "Contactez-nous aujourd'hui pour un devis gratuit. Nous servons tout Miami et les zones environnantes avec une planification flexible pour répondre à vos besoins.",
+      "benefits": [
+        "Professionnels licenciés, assurés et cautionnés",
+        "Service le jour même disponible",
+        "Produits et équipements écologiques",
+        "Garantie de satisfaction 100%"
+      ],
+      "whatsapp_button": "Chatter sur WhatsApp",
+      "quote_button": "Demander un Devis en Ligne"
     },
-    "badges": {
-      "lottery": "Classe Loterie",
-      "pro": "Solo Pro",
-      "hobby": "Hobby",
-      "entry": "Entrée"
-    },
-    "fallback": {
-      "bitaxe": {
-        "description": "Mineur USB open-source idéal pour la loterie à domicile et les nœuds Bitcoin.",
-        "features": {
-          "usb": "Alimentation USB plug-and-play",
-          "silent": "Fonctionnement quasi silencieux",
-          "openSource": "Firmware open-source avec communauté active",
-          "easySetup": "Configuration en quelques minutes"
-        }
-      },
-      "apollo": {
-        "description": "Mineur de bureau premium avec nœud Bitcoin intégré et interface professionnelle.",
-        "features": {
-          "node": "Nœud Bitcoin & Lightning intégré",
-          "lowNoise": "Profil acoustique très faible",
-          "desktop": "Format bureau élégant",
-          "premium": "Châssis tout-en-un avec support pro"
-        }
-      },
-      "compac": {
-        "description": "Mineur USB stick accessible pour découvrir la minage solo.",
-        "features": {
-          "usb": "Format clé USB simple",
-          "lowPower": "10 W seulement",
-          "affordable": "Solution économique",
-          "plugPlay": "Préconfiguré pour les pools solo"
-        }
-      }
-    },
-    "comparison": {
-      "eyebrow": "Solo vs Pool",
-      "title": "Minage solo vs minage en pool",
-      "copy": "Le solo offre indépendance et gains exceptionnels, le pool des paiements réguliers. Combinez selon votre stratégie.",
-      "solo": {
-        "title": "Minage solo",
-        "items": {
-          "reward": "Conservez 100 % de la récompense + frais",
-          "decentralize": "Renforce la décentralisation",
-          "lowFees": "Aucuns frais de pool",
-          "lottery": "Payouts de type loterie"
-        }
-      },
-      "pool": {
-        "title": "Minage en pool",
-        "items": {
-          "steady": "Paiements stables et prévisibles",
-          "poolFees": "Frais de 0,5 % à 2 %",
-          "dependence": "Dépendance à un tiers",
-          "kYC": "Pools souvent soumis au KYC"
-        }
-      },
-      "cta": "Construire une stratégie hybride"
-    },
-    "faq": {
-      "eyebrow": "FAQ",
-      "title": "Questions fréquentes",
-      "copy": "Tout savoir sur la minage solo, les probabilités et la configuration idéale.",
-      "items": {
-        "whatIs": {
-          "question": "Qu'est-ce qu'un mineur solo Bitcoin ?",
-          "answer": "Un matériel configuré pour miner sans pool. Si un bloc est trouvé, la récompense revient entièrement au mineur."
-        },
-        "profitable": {
-          "question": "La minage solo est-elle rentable en 2025 ?",
-          "answer": "Stratégie à forte variance : les blocs sont rares mais la récompense (3,125 BTC + frais) est intégrale."
-        },
-        "bestHome": {
-          "question": "Quels sont les meilleurs mineurs solo pour la maison ?",
-          "answer": "Bitaxe Ultra, Apollo BTC et Compac F sont populaires pour leur silence et leur efficacité."
-        },
-        "needsNode": {
-          "question": "Dois-je exécuter un nœud Bitcoin ?",
-          "answer": "Vous pouvez utiliser un pool solo, mais un nœud personnel offre pleine autonomie et soutient le réseau."
-        },
-        "lottery": {
-          "question": "Qu'est-ce que la minage loterie ?",
-          "answer": "C'est la minage solo : chaque hash est un ticket donnant droit à la récompense complète du bloc."
-        }
-      }
-    },
-    "banner": {
-      "title": "Construisez votre stratégie solo",
-      "copy": "Des mineurs USB aux rigs avec nœud intégré, nos ingénieurs créent des bundles adaptés à votre budget énergétique.",
-      "cta": "Planifier une consultation"
+    "contact_section": {
+      "eyebrow": "Prêts quand vous l'êtes",
+      "title": "Concevons un programme de nettoyage autour de votre vie.",
+      "description": "Partagez votre fréquence préférée, la superficie et toute note de conciergerie. Nous vous enverrons une proposition personnalisée dans un jour ouvrable.",
+      "cta": "Demander un nettoyage de conciergerie",
+      "service_areas_title": "Zones de service",
+      "areas": [
+        "Miami Beach · Coral Gables · Coconut Grove",
+        "Brickell · Centre-ville de Miami · Edgewater",
+        "Aventura · Sunny Isles · Key Biscayne"
+      ],
+      "areas_note": "Vous cherchez en dehors de ces quartiers ? Contactez-nous—notre conciergerie confirmera la disponibilité."
     }
-  },
-  "nav": {
-    "home": "Accueil",
-    "products": "Produits",
-    "all_products": "Tous les Produits",
-    "soloMiners": "Mineurs Solo",
-    "gallery": "Galerie",
-    "technical": "Sp\u00c3\u00a9cifications Techniques",
-    "contact": "Contact",
-    "login": "Connexion",
-    "cart": "Panier"
-  },
-  "footer": {
-    "rights": "Tous droits r\u00c3\u00a9serv\u00c3\u00a9s",
-    "privacy": "Politique de Confidentialit\u00c3\u00a9",
-    "terms": "Termes et Conditions",
-    "returns": "Politique de Retour",
-    "description": "Votre destination de choix pour le mat\u00c3\u00a9riel de minage crypto, les mineurs solo, les solutions de stockage \u00c3\u00a0 froid, les porte-cl\u00c3\u00a9s Bitcoin et les gadgets exclusifs de cryptomonnaies.",
-    "quick_links": "Liens Rapides",
-    "products_title": "Produits",
-    "contact_info": "Contact",
-    "phone": "T\u00c3\u00a9l\u00c3\u00a9phone",
-    "email": "Email",
-    "address": "Adresse",
-    "business_hours": "Heures d'Ouverture"
-  },
-  "products": {
-    "hero": {
-      "title": "Mat\u00c3\u00a9riel de Minage Bitcoin",
-      "subtitle": "\u00c3\u2030quipement de minage de cryptomonnaies premium disponible dans diff\u00c3\u00a9rentes configurations et niveaux de performance pour r\u00c3\u00a9pondre aux besoins de votre op\u00c3\u00a9ration de minage."
-    },
-    "filters": {
-      "category": "Cat\u00c3\u00a9gorie",
-      "all_categories": "Toutes les Cat\u00c3\u00a9gories",
-      "model": "Mod\u00c3\u00a8le",
-      "all_models": "Tous les Mod\u00c3\u00a8les",
-      "search": "Rechercher",
-      "search_placeholder": "Nom du produit...",
-      "clear_filters": "Effacer les Filtres",
-      "filter_by_tags": "Filtrer par \u00c3\u2030tiquettes"
-    },
-    "results": {
-      "loading": "Chargement du mat\u00c3\u00a9riel de minage...",
-      "showing": "Affichage de {{current}} sur {{total}} produits"
-    },
-    "empty": {
-      "title": "Aucun Produit Trouv\u00c3\u00a9",
-      "message": "Essayez d'ajuster les filtres ou de les effacer pour voir tout l'\u00c3\u00a9quipement de minage disponible.",
-      "clear_button": "Effacer les Filtres"
-    },
-    "section": {
-      "title": "Mat\u00c3\u00a9riel de Minage",
-      "subtitle": "\u00c3\u2030quipement de minage de cryptomonnaies premium"
-    },
-    "title": "Mat\u00c3\u00a9riel de Minage",
-    "subtitle": "\u00c3\u2030quipement Professionnel",
-    "specs": "Sp\u00c3\u00a9cifications",
-    "hashrate": "Taux de Hachage",
-    "power": "Consommation d'\u00c3\u2030nergie",
-    "efficiency": "Efficacit\u00c3\u00a9",
-    "add_to_cart": "Ajouter au Panier",
-    "request_quote": "Demander un Devis",
-    "filterBy": "Filtrer par",
-    "thickness": "\u00c3\u2030paisseur"
-  },
-  "grosor": {
-    "breadcrumb": {
-      "home": "Accueil",
-      "products": "Produits"
-    },
-    "collection": "Collection",
-    "subtitle": "Mat\u00c3\u00a9riel de Minage Bitcoin Premium et Accessoires",
-    "product_available": "produit disponible",
-    "products_available": "produits disponibles",
-    "view_mode": "Mode d'Affichage",
-    "grid": "Grille",
-    "list": "Liste",
-    "no_products": "Aucun Produit Disponible",
-    "no_products_desc": "Actuellement aucun produit disponible dans la cat\u00c3\u00a9gorie {{category}}.",
-    "view_all_products": "Voir Tous les Produits",
-    "cta": {
-      "title": "Besoin de Plus d'Informations ?",
-      "description": "Contactez notre \u00c3\u00a9quipe pour des conseils personnalis\u00c3\u00a9s sur le mat\u00c3\u00a9riel de minage Bitcoin.",
-      "contact_us": "Nous Contacter",
-      "all_products": "Tous les Produits"
-    }
-  },
-  "detalle": {
-    "breadcrumb": {
-      "home": "Accueil",
-      "products": "Produits"
-    },
-    "category": "Cat\u00c3\u00a9gorie :",
-    "model": "Mod\u00c3\u00a8le :",
-    "premium_label": "Mat\u00c3\u00a9riel de Minage Premium",
-    "recommended_apps": "Applications Recommand\u00c3\u00a9es",
-    "request_quote": "Demander un Devis",
-    "in_stock": "En Stock",
-    "units_available": "{{count}} unit\u00c3\u00a9s disponibles",
-    "pre_order": "Pr\u00c3\u00a9commande Disponible",
-    "back_to_products": "Retour aux Produits",
-    "technical_support": "Assistance technique 24/7",
-    "specs_title": "Sp\u00c3\u00a9cifications Techniques",
-    "hash_rate": "Taux de Hachage",
-    "power_consumption": "Consommation d'\u00c3\u2030nergie",
-    "efficiency": "Efficacit\u00c3\u00a9",
-    "cooling": "Refroidissement",
-    "dimensions": "Dimensions",
-    "weight": "Poids",
-    "noise_level": "Niveau de Bruit",
-    "operating_temp": "Temp\u00c3\u00a9rature de Fonctionnement",
-    "network": "Connexion R\u00c3\u00a9seau",
-    "warranty": "Garantie",
-    "benefits_title": "Avantages du Produit",
-    "related_products": "Produits Connexes",
-    "view_all_products": "Voir Tous les Produits",
-    "cta": {
-      "title": "Besoin de Plus d'Informations ?",
-      "description": "Contactez notre \u00c3\u00a9quipe pour des conseils personnalis\u00c3\u00a9s sur le mat\u00c3\u00a9riel de minage Bitcoin.",
-      "contact_us": "Nous Contacter"
-    }
-  },
-  "common": {
-    "loading": "Chargement...",
-    "search": "Rechercher..."
-  },
-  "client": {
-    "login": "Connexion",
-    "register": "S'inscrire",
-    "logout": "D\u00c3\u00a9connexion",
-    "my_account": "Mon Compte",
-    "my_orders": "Mes Commandes",
-    "pending": "En Attente",
-    "name": "Nom",
-    "email": "Email",
-    "phone": "T\u00c3\u00a9l\u00c3\u00a9phone",
-    "password": "Mot de Passe",
-    "confirm_password": "Confirmer le Mot de Passe",
-    "display_name": "Nom d'Affichage",
-    "company": "Entreprise",
-    "address": "Adresse",
-    "city": "Ville",
-    "postal_code": "Code Postal",
-    "country": "Pays",
-    "save_changes": "Enregistrer les Modifications",
-    "profile_updated": "Profil mis \u00c3\u00a0 jour avec succ\u00c3\u00a8s",
-    "welcome_back": "Bon retour",
-    "sign_in": "Connectez-vous \u00c3\u00a0 votre compte",
-    "dont_have_account": "Vous n'avez pas de compte?",
-    "sign_up_here": "Inscrivez-vous ici",
-    "already_have_account": "Vous avez d\u00c3\u00a9j\u00c3\u00a0 un compte?",
-    "sign_in_here": "Connectez-vous ici",
-    "create_account": "Cr\u00c3\u00a9ez votre compte",
-    "order_history": "Historique des Commandes",
-    "no_orders_yet": "Aucune commande pour le moment",
-    "order_details": "D\u00c3\u00a9tails de la Commande",
-    "order_date": "Date de Commande",
-    "order_status": "Statut",
-    "order_total": "Total",
-    "shipping_address": "Adresse de Livraison",
-    "items": "Articles",
-    "processing": "En Traitement",
-    "shipped": "Exp\u00c3\u00a9di\u00c3\u00a9",
-    "delivered": "Livr\u00c3\u00a9",
-    "cancelled": "Annul\u00c3\u00a9"
-  },
-  "gallery": {
-    "project": "Projet",
-    "title": "Galerie",
-    "subtitle": "Explorez notre collection de mat\u00c3\u00a9riel de minage crypto premium, mineurs solo, solutions de stockage \u00c3\u00a0 froid, porte-cl\u00c3\u00a9s Bitcoin et gadgets exclusifs de cryptomonnaies",
-    "projects": "Projets",
-    "all_projects": "Tous les Projets",
-    "showing_all": "Affichage de tous les projets",
-    "showing": "Affichage",
-    "description": "Description",
-    "view": "Voir",
-    "no_projects": "Aucun Projet Disponible",
-    "no_projects_message": "Aucun projet trouv\u00c3\u00a9 pour cette cat\u00c3\u00a9gorie. Essayez de s\u00c3\u00a9lectionner une autre cat\u00c3\u00a9gorie ou de voir tous les projets.",
-    "of": "de",
-    "tags": {
-      "kitchens": "Cuisines",
-      "bathrooms": "Salles de Bain",
-      "modern": "Moderne",
-      "classic": "Classique",
-      "luxury": "Luxe"
-    }
-  },
-  "contact": {
-    "title": "Contact",
-    "subtitle": "Contactez nos experts en minage crypto. Que vous ayez besoin d'aide pour choisir le bon mineur, des questions sur le stockage \u00c3\u00a0 froid, ou souhaitiez discuter de commandes en gros.",
-    "form_title": "Envoyez-nous votre demande",
-    "success_message": "Merci pour votre message ! Nous vous contacterons bient\u00c3\u00b4t.",
-    "error_message": "Une erreur s'est produite lors de l'envoi du message. Veuillez r\u00c3\u00a9essayer.",
-    "full_name": "Nom complet",
-    "full_name_placeholder": "Jean Dupont",
-    "email_placeholder": "satoshi@bitcoin.com",
-    "phone_placeholder": "+1 203 555 0123",
-    "company_placeholder": "Votre op\u00c3\u00a9ration de minage ou entreprise (facultatif)",
-    "message": "Message",
-    "message_placeholder": "Je suis int\u00c3\u00a9ress\u00c3\u00a9 par les mineurs ASIC, les configurations de minage solo, les portefeuilles froids... Dites-nous ce dont vous avez besoin!",
-    "accept_privacy": "J'accepte le traitement de mes donn\u00c3\u00a9es personnelles selon la politique de confidentialit\u00c3\u00a9",
-    "privacy_required": "Vous devez accepter la politique de confidentialit\u00c3\u00a9",
-    "send_message": "Envoyer le message",
-    "sending": "Envoi en cours...",
-    "info_title": "Informations de Contact",
-    "address_label": "Adresse",
-    "address_line1": "100 Greyrock Pl F119",
-    "address_line2": "Stamford, CT 06901",
-    "email_label": "Email"
-  },
-  "cart": {
-    "title": "Panier",
-    "your": "Votre",
-    "selection": "S\u00c3\u00a9lection",
-    "subtitle": "Consultez votre s\u00c3\u00a9lection de produits et envoyez-nous vos coordonn\u00c3\u00a9es pour recevoir un devis personnalis\u00c3\u00a9",
-    "remove": "Retirer",
-    "quantity": "Quantit\u00c3\u00a9",
-    "empty_title": "Votre panier est vide",
-    "empty_message": "Explorez nos produits et ajoutez ceux que vous pr\u00c3\u00a9f\u00c3\u00a9rez",
-    "explore_products": "Explorer les produits",
-    "clear_cart": "Vider le panier",
-    "contact_data": "Coordonn\u00c3\u00a9es",
-    "full_name_required": "Nom complet *",
-    "name_error": "Le nom est requis (minimum 2 caract\u00c3\u00a8res)",
-    "email_required": "Email *",
-    "email_error": "Entrez un email valide",
-    "phone_optional": "T\u00c3\u00a9l\u00c3\u00a9phone (facultatif)",
-    "message_optional": "Message suppl\u00c3\u00a9mentaire (facultatif)",
-    "send_selection": "Envoyer la s\u00c3\u00a9lection par email",
-    "sending": "Envoi en cours...",
-    "required_fields_note": "Les champs marqu\u00c3\u00a9s d'un * sont obligatoires",
-    "shipping": {
-      "flat_rate": "Livraison \u00e0 tarif fixe",
-      "estimate_default": "Exp\u00e9di\u00e9 sous 3 \u00e0 5 jours ouvrables"
-    },
-    "summary": {
-      "shipping_dynamic": "Livraison et taxes calcul\u00e9es au moment du paiement",
-      "shipping_flat": "Livraison calcul\u00e9e automatiquement. {{estimate}}",
-      "free_shipping": "Livraison gratuite"
-    }
-  },
-  "notfound": {
-    "title": "Page non trouv\u00c3\u00a9e",
-    "description": "D\u00c3\u00a9sol\u00c3\u00a9, la page que vous recherchez n'existe pas. Elle a peut-\u00c3\u00aatre \u00c3\u00a9t\u00c3\u00a9 d\u00c3\u00a9plac\u00c3\u00a9e ou supprim\u00c3\u00a9e.",
-    "go_home": "Retour \u00c3\u00a0 l'accueil",
-    "view_products": "Voir les produits",
-    "looking_for": "Que cherchiez-vous ?",
-    "explore_sections": "Explorez nos sections principales ou utilisez les liens de navigation pour trouver ce dont vous avez besoin.",
-    "links": {
-      "home_title": "Accueil",
-      "home_desc": "D\u00c3\u00a9couvrez notre collection phare et explorez TheLuxMining.",
-      "products_title": "Produits",
-      "products_desc": "Explorez notre catalogue complet de mat\u00c3\u00a9riel de minage premium.",
-      "contact_title": "Contact",
-      "contact_desc": "Contactez notre \u00c3\u00a9quipe d'experts."
-    }
-  },
-  "admin": {
-    "title": "Panneau d'Administration",
-    "welcome": "Bienvenue",
-    "dashboard": {
-      "title": "Tableau de Bord"
-    },
-    "products": {
-      "title": "Produits"
-    },
-    "orders": {
-      "title": "Commandes"
-    },
-    "gallery": {
-      "title": "Galerie"
-    },
-    "users": {
-      "title": "Utilisateurs"
-    },
-    "benefit_templates": {
-      "title": "Gestionnaire de Mod\u00c3\u00a8les d'Avantages"
-    },
-    "total_products": "Total des Produits",
-    "total_orders": "Total de Commandes",
-    "gallery_images": "Images de Galerie",
-    "total_users": "Total d'Utilisateurs",
-    "quick_actions": "Actions Rapides",
-    "add_product": "Ajouter un Produit",
-    "upload_image": "T\u00c3\u00a9l\u00c3\u00a9charger une Image",
-    "manage_products": "G\u00c3\u00a9rer les Produits",
-    "manage_orders": "G\u00c3\u00a9rer les Commandes",
-    "manage_gallery": "G\u00c3\u00a9rer la Galerie",
-    "manage_users": "G\u00c3\u00a9rer les Utilisateurs",
-    "recent_activity": "Activit\u00c3\u00a9 R\u00c3\u00a9cente",
-    "no_recent_activity": "Aucune activit\u00c3\u00a9 r\u00c3\u00a9cente",
-    "setup_required": "Configuration Requise",
-    "need_categories_and_models": "Vous devez cr\u00c3\u00a9er des cat\u00c3\u00a9gories et des mod\u00c3\u00a8les avant d'ajouter des produits.",
-    "need_category": "Vous devez cr\u00c3\u00a9er au moins une cat\u00c3\u00a9gorie avant d'ajouter des produits.",
-    "need_model": "Vous devez cr\u00c3\u00a9er au moins un mod\u00c3\u00a8le avant d'ajouter des produits.",
-    "goto_catalog": "Aller \u00c3\u00a0 la Gestion du Catalogue",
-    "new_status": "Nouveau Statut",
-    "users_description": "G\u00c3\u00a9rer les comptes utilisateurs et les permissions",
-    "search_users": "Rechercher des Utilisateurs",
-    "search_users_placeholder": "Rechercher par nom ou email...",
-    "filter_by_role": "Filtrer par R\u00c3\u00b4le",
-    "all_roles": "Tous les R\u00c3\u00b4les",
-    "role_admin": "Administrateur",
-    "role_client": "Client",
-    "user": "Utilisateur",
-    "company": "Soci\u00c3\u00a9t\u00c3\u00a9",
-    "role": "R\u00c3\u00b4le",
-    "status": "Statut",
-    "actions": "Actions",
-    "created_at": "Cr\u00c3\u00a9\u00c3\u00a9 le",
-    "loading_users": "Chargement des utilisateurs...",
-    "disabled": "D\u00c3\u00a9sactiv\u00c3\u00a9",
-    "active": "Actif",
-    "change_role": "Changer le R\u00c3\u00b4le",
-    "enable_user": "Activer l'Utilisateur",
-    "disable_user": "D\u00c3\u00a9sactiver l'Utilisateur",
-    "no_users_found": "Aucun utilisateur trouv\u00c3\u00a9",
-    "change_role_for": "Changer le r\u00c3\u00b4le pour",
-    "new_role": "Nouveau R\u00c3\u00b4le",
-    "cancel": "Annuler",
-    "confirm": "Confirmer",
-    "catalog": {
-      "title": "Gestion du Catalogue"
-    },
-    "seed": {
-      "title": "Initialisation de Base de Donn\u00c3\u00a9es",
-      "subtitle": "Initialiser Firestore avec des cat\u00c3\u00a9gories, mod\u00c3\u00a8les et mod\u00c3\u00a8les",
-      "operations": "Op\u00c3\u00a9rations d'Initialisation",
-      "operations_hint": "Cela cr\u00c3\u00a9era des donn\u00c3\u00a9es initiales dans Firestore",
-      "run_seed": "Lancer l'Initialisation",
-      "seeding": "Initialisation en cours...",
-      "categories": "Cat\u00c3\u00a9gories",
-      "categories_count": "3 types d'\u00c3\u00a9paisseur",
-      "categories_list": "12mm, 15mm, 20mm",
-      "models": "Mod\u00c3\u00a8les",
-      "models_count": "12 mod\u00c3\u00a8les de mat\u00c3\u00a9riel",
-      "models_list": "Black Gold, Saint Laurent...",
-      "templates": "Mod\u00c3\u00a8les",
-      "templates_count": "3 mod\u00c3\u00a8les globaux",
-      "templates_list": "Description, SEO, M\u00c3\u00a9ta",
-      "success_title": "Initialisation Termin\u00c3\u00a9e avec Succ\u00c3\u00a8s!",
-      "success_message": "Votre base de donn\u00c3\u00a9es Firestore a \u00c3\u00a9t\u00c3\u00a9 initialis\u00c3\u00a9e avec des donn\u00c3\u00a9es de d\u00c3\u00a9part.",
-      "error_title": "\u00c3\u2030chec de l'Initialisation",
-      "console_output": "Sortie Console",
-      "clear": "Effacer",
-      "back_to_products": "Retour aux Produits Admin"
-    },
-    "analytics": {
-      "title": "Tableau danalyse",
-      "subtitle": "Suivez les tendances de conversion, lactivite clients et la fraicheur du catalogue",
-      "eyebrow": "Vue densemble",
-      "period": {
-        "today": "Aujourdhui",
-        "week": "7 derniers jours",
-        "month": "Ce mois",
-        "year": "Cette annee"
-      },
-      "metrics": {
-        "total_orders": "Commandes",
-        "revenue": "Revenus",
-        "average_order_value": "Panier moyen",
-        "new_customers": "Nouveaux clients",
-        "products_updated": "Modeles mis a jour",
-        "gallery_uploads": "Ajouts galerie"
-      },
-      "recent_activity": "Activite recente",
-      "showing_period": "Affichage des indicateurs pour {{period}}",
-      "no_activity": "Aucune activite enregistree pour cette periode",
-      "future_title": "De nouveaux rapports arrivent",
-      "future_description": "Nous preparons des tableaux de bord interactifs avec revenus, performance produit, demande geographique et tunnels de conversion. Voici lavancement du roadmap.",
-      "future_status": {
-        "in_discovery": "En exploration",
-        "in_design": "En conception",
-        "in_development": "En developpement",
-        "internal_beta": "Beta interne"
-      },
-      "future_items": {
-        "charts": {
-          "title": "Graphiques de revenus interactifs",
-          "description": "Tableaux en temps reel sur revenus, marge et ROI avec filtres par mineur et export CSV.",
-          "status": "admin.analytics.future_status.internal_beta"
-        },
-        "top_products": {
-          "title": "Modeles les plus performants",
-          "description": "Rapports segmentes pour identifier les mineurs qui convertissent le mieux et suivre les tendances saisonnieres.",
-          "status": "admin.analytics.future_status.in_development"
-        },
-        "geo": {
-          "title": "Repartition geographique",
-          "description": "Cartes thermiques des demandes et conversions pour cibler LATAM, UE et APAC.",
-          "status": "admin.analytics.future_status.in_design"
-        },
-        "funnels": {
-          "title": "Tunnels de conversion",
-          "description": "Analyse etape par etape du parcours visiteur jusqua la commande payee pour detecter les points de friction.",
-          "status": "admin.analytics.future_status.in_discovery"
-        }
-      }
-    },
-    "models": {
-      "title": "Bibliotheque de modeles",
-      "subtitle": "Gerer les modeles, valeurs par defaut et organisation du catalogue",
-      "actions": {
-        "add": "Ajouter un modele",
-        "edit": "Editer",
-        "delete": "Supprimer",
-        "create": "Creer le modele",
-        "update": "Mettre a jour",
-        "cancel": "Annuler",
-        "create_first": "Creer le premier modele"
-      },
-      "filters": {
-        "search_placeholder": "Rechercher un modele...",
-        "status_label": "Statut",
-        "status_all": "Tous",
-        "status_active": "Actifs",
-        "status_inactive": "Inactifs"
-      },
-      "table": {
-        "name": "Nom",
-        "slug": "Slug",
-        "category": "Categorie",
-        "status": "Statut",
-        "actions": "Actions",
-        "active": "Actif",
-        "inactive": "Inactif",
-        "unassigned": "Non assigne"
-      },
-      "empty": "Aucun modele ne correspond aux filtres",
-      "messages": {
-        "name_required": "Le nom est obligatoire",
-        "slug_exists": "Le slug \"{{slug}}\" existe deja",
-        "created": "Modele cree avec succes",
-        "updated": "Modele mis a jour",
-        "deleted": "Modele supprime",
-        "save_failed": "Impossible denregistrer le modele. Reessayez.",
-        "delete_failed": "Impossible de supprimer le modele. Reessayez.",
-        "confirm_delete": "Supprimer le modele \"{{name}}\" ? Action definitive."
-      },
-      "modal": {
-        "new_title": "Nouveau modele",
-        "edit_title": "Modifier le modele"
-      },
-      "fields": {
-        "name": "Nom du modele",
-        "name_placeholder": "Saisir le nom",
-        "slug": "Slug",
-        "slug_help": "Identifiant en minuscules sans espaces.",
-        "category": "Categorie",
-        "texture_hints": "Pistes de texture",
-        "texture_hints_placeholder": "ex. finition satinee\npierre polie",
-        "texture_hints_help": "Une ligne par piste. Exemples de finition ou alias.",
-        "default_tags": "Etiquettes par defaut",
-        "default_tags_placeholder": "ex. premium, flagship, hashpower",
-        "default_tags_help": "Separer par des virgules. Ajoutees aux nouveaux produits.",
-        "active": "Actif"
-      }
-    },
-    "settings": {
-      "title": "Parametres et configuration",
-      "subtitle": "Gerer les parametres du site, les integrations et les reglages principaux.",
-      "actions": {
-        "save": "Enregistrer tous les parametres",
-        "saving": "Enregistrement...",
-        "lock": "Verrouiller",
-        "unlock": "D\u00e9verrouiller",
-        "show": "Afficher",
-        "hide": "Masquer"
-      },
-      "states": {
-        "enabled": "Active",
-        "disabled": "Desactive"
-      },
-      "feedback": {
-        "success": "Param\u00e8tres enregistr\u00e9s avec succ\u00e8s.",
-        "error_details": "Impossible d'enregistrer les param\u00e8tres : {{message}}"
-      }
-    },
-    "total_revenue": "Revenus totaux"
-  },
-  "maintenance": {
-    "title": "Nous revenons tr\u00e8s vite",
-    "support": "Besoin d'aide imm\u00e9diatement ? Contactez notre \u00e9quipe :",
-    "email_label": "Email :",
-    "phone_label": "T\u00e9l\u00e9phone :",
-    "admin_link": "Connexion administrateur"
   }
 }

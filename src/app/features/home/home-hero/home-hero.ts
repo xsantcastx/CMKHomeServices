@@ -1,101 +1,72 @@
-import { Component, OnInit, OnDestroy, PLATFORM_ID, inject } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, OnDestroy, OnInit, PLATFORM_ID, ChangeDetectorRef, inject } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { RouterLink } from '@angular/router';
 import { SettingsService, HeroImage } from '../../../services/settings.service';
+import { BrandConfigService } from '../../../core/services/brand-config.service';
 
 @Component({
   selector: 'app-home-hero',
   standalone: true,
-  imports: [RouterLink, CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './home-hero.html',
-  styleUrl: './home-hero.scss'
+  styleUrls: ['./home-hero.scss']
 })
 export class HomeHeroComponent implements OnInit, OnDestroy {
-  private settingsService = inject(SettingsService);
   private platformId = inject(PLATFORM_ID);
-  
-  currentImageIndex = 0;
-  autoPlay = true;
-  private intervalId: any;
-  
-  rotatingImages: HeroImage[] = [];
+  private settingsService = inject(SettingsService);
+  private cdr = inject(ChangeDetectorRef);
+  private brandConfig = inject(BrandConfigService);
 
-  async ngOnInit() {
-    console.log('🚀 HomeHero ngOnInit CALLED');
+  heroImages: HeroImage[] = [];
+  currentImageIndex = 0;
+  private interval: any;
+
+  readonly heroContent = this.brandConfig.site.hero;
+  readonly brandName = this.brandConfig.siteName;
+  readonly brandLogo = this.brandConfig.site.brand.logo;
+
+  async ngOnInit(): Promise<void> {
     await this.loadHeroImages();
+
     if (isPlatformBrowser(this.platformId)) {
-      this.startAutoPlay();
+      setTimeout(() => this.startImageRotation(), 0);
     }
   }
 
-  ngOnDestroy() {
-    this.stopAutoPlay();
+  ngOnDestroy(): void {
+    if (this.interval) {
+      clearInterval(this.interval);
+    }
   }
 
-  /**
-   * Load hero images from settings
-   */
-  async loadHeroImages() {
+  async loadHeroImages(): Promise<void> {
     try {
-      const settings = await this.settingsService.getSettings(true);
-      this.rotatingImages = this.settingsService.getHeroImages();
-      
-      console.log('✅ Loaded', this.rotatingImages.length, 'hero images');
+      await this.settingsService.getSettings(true);
+      this.heroImages = this.settingsService.getHeroImages();
     } catch (error) {
       console.error('Error loading hero images:', error);
-      this.rotatingImages = [];
+      this.heroImages = [];
     }
   }
 
-  startAutoPlay() {
-    if (this.autoPlay) {
-      this.intervalId = setInterval(() => {
-        this.nextImage();
-      }, 5000); // Change image every 5 seconds
-    }
-  }
-
-  stopAutoPlay() {
-    if (this.intervalId) {
-      clearInterval(this.intervalId);
-    }
-  }
-
-  toggleAutoPlay() {
-    this.autoPlay = !this.autoPlay;
-    if (this.autoPlay) {
-      this.startAutoPlay();
-    } else {
-      this.stopAutoPlay();
-    }
-  }
-
-  nextImage() {
-    this.currentImageIndex = (this.currentImageIndex + 1) % this.rotatingImages.length;
-  }
-
-  previousImage() {
-    this.currentImageIndex = this.currentImageIndex === 0 
-      ? this.rotatingImages.length - 1 
-      : this.currentImageIndex - 1;
-  }
-
-  goToImage(index: number) {
+  setCurrentImage(index: number): void {
     this.currentImageIndex = index;
-    // Reset autoplay timer
-    if (this.autoPlay) {
-      this.stopAutoPlay();
-      this.startAutoPlay();
+    this.cdr.detectChanges();
+
+    if (this.interval) {
+      clearInterval(this.interval);
+      this.startImageRotation();
     }
   }
 
-  getPrevIndex(): number {
-    return this.currentImageIndex === 0 
-      ? this.rotatingImages.length - 1 
-      : this.currentImageIndex - 1;
-  }
+  private startImageRotation(): void {
+    if (!this.heroImages.length) {
+      return;
+    }
 
-  getNextIndex(): number {
-    return (this.currentImageIndex + 1) % this.rotatingImages.length;
+    this.interval = setInterval(() => {
+      this.currentImageIndex = (this.currentImageIndex + 1) % this.heroImages.length;
+      this.cdr.detectChanges();
+    }, 6000);
   }
 }

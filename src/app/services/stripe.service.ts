@@ -77,8 +77,8 @@ export class StripeService {
       appearance: {
         theme: 'night', // Dark theme to match Bitcoin aesthetic
         variables: {
-          colorPrimary: '#f7931a', // Bitcoin orange
-          colorBackground: '#0a0b0d',
+          colorPrimary: '#c9a24a',
+          colorBackground: '#021024',
           colorText: '#ffffff',
           colorDanger: '#ef4444',
           fontFamily: 'system-ui, sans-serif',
@@ -87,13 +87,13 @@ export class StripeService {
         },
         rules: {
           '.Input': {
-            backgroundColor: '#13151a',
-            border: '1px solid rgba(247, 147, 26, 0.2)',
+            backgroundColor: '#052659',
+            border: '1px solid rgba(84, 131, 179, 0.25)',
             padding: '12px',
           },
           '.Input:focus': {
-            border: '2px solid rgba(247, 147, 26, 0.5)',
-            boxShadow: '0 0 0 3px rgba(247, 147, 26, 0.1)',
+            border: '2px solid rgba(84, 131, 179, 0.5)',
+            boxShadow: '0 0 0 3px rgba(84, 131, 179, 0.18)',
           },
           '.Label': {
             color: '#9ca3af',
@@ -110,7 +110,7 @@ export class StripeService {
     const cardElement = elements.create('card', {
       style: {
         base: {
-          iconColor: '#f7931a',
+          iconColor: '#f5d79b',
           color: '#fff',
           fontWeight: '500',
           fontFamily: 'system-ui, sans-serif',

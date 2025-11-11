@@ -1,18 +1,16 @@
-<div class="section-stack min-h-screen bg-ts-bg">
-  <!-- Header -->
-  <div class="bg-gradient-to-r from-ts-bg via-gray-900 to-ts-bg border-b border-white/10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <h1 class="text-3xl font-bold bitcoin-gradient-text mb-2">
-        {{ 'admin.settings.title' | translate }}
-      </h1>
-      <p class="text-white/70">{{ 'admin.settings.subtitle' | translate }}</p>
-    </div>
-  </div>
+<app-admin-sidebar></app-admin-sidebar>
 
-  <!-- Quick Actions -->
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
-    <app-admin-quick-actions [currentPage]="'/admin/settings'"></app-admin-quick-actions>
-  </div>
+<div class="lg:ml-[280px] min-h-screen pt-16 lg:pt-0">
+  <div class="section-stack">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      
+      <!-- Page Header -->
+      <div class="mb-8">
+        <h1 class="text-2xl md:text-3xl font-bold text-[#0b1f3d] mb-2">
+          {{ 'admin.settings.title' | translate }}
+        </h1>
+        <p class="text-[#5f6c82]">{{ 'admin.settings.subtitle' | translate }}</p>
+      </div>
 
   <!-- Message -->
   @if (messageKey) {
@@ -37,21 +35,21 @@
     
     <div class="space-y-6">
       @for (section of sections; track section.title) {
-        <div class="bg-gray-800/50 border border-white/10 rounded-xl overflow-hidden">
+        <div class="bg-white border border-[#c9a24a]/20 rounded-xl overflow-hidden">
           <!-- Section Header (Clickable) -->
           <button 
             type="button"
             (click)="toggleSection(section, $event)"
-            class="w-full px-6 py-4 border-b border-white/10 flex items-center gap-3 hover:bg-white/5 transition-colors">
+            class="w-full px-6 py-4 border-b border-[#c9a24a]/20 flex items-center gap-3 hover:bg-[#c9a24a]/10 transition-colors">
             <div [class]="getSectionColorClasses(section.color) + ' p-2 rounded-lg border'">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" [attr.d]="section.icon"></path>
               </svg>
             </div>
-            <h2 class="text-xl font-bold text-white flex-1 text-left">{{ section.title }}</h2>
+            <h2 class="text-xl font-bold text-[#0b1f3d] flex-1 text-left">{{ section.title }}</h2>
             <!-- Chevron Icon -->
             <svg 
-              class="w-5 h-5 text-white/70 transition-transform duration-200"
+              class="w-5 h-5 text-[#5f6c82] transition-transform duration-200"
               [class.rotate-180]="section.expanded"
               fill="none" 
               stroke="currentColor" 
@@ -69,23 +67,23 @@
               @for (setting of section.settings; track setting.key) {
               <div>
                 <div class="flex items-center justify-between gap-3 mb-2">
-                  <label class="block text-sm font-medium text-white/70" [attr.for]="setting.type === 'boolean' ? null : getFieldId(section.title, setting.key)">
+                  <label class="block text-sm font-medium text-[#5f6c82]" [attr.for]="setting.type === 'boolean' ? null : getFieldId(section.title, setting.key)">
                     {{ setting.label }}
                     @if (setting.description) {
-                      <span class="text-xs text-white/60 font-normal ml-2">{{ setting.description }}</span>
+                      <span class="text-xs text-[#5f6c82] font-normal ml-2">{{ setting.description }}</span>
                     }
                   </label>
 
                   <div class="flex items-center gap-2">
                     @if (setting.sensitive) {
                       <button type="button"
-                              class="px-2 py-1 text-xs rounded-lg border border-white/20 text-white/70 hover:text-white hover:border-white/50 transition-colors"
+                              class="px-2 py-1 text-xs rounded-lg border border-[#c9a24a]/30 text-[#5f6c82] hover:text-[#0b1f3d] hover:border-[#c9a24a]/50 transition-colors"
                               (click)="toggleVisibility(setting, $event)">
                         {{ setting.showValue ? ('admin.settings.actions.hide' | translate) : ('admin.settings.actions.show' | translate) }}
                       </button>
                     }
                     <button type="button"
-                            class="px-2 py-1 text-xs rounded-lg border border-white/20 text-white/70 hover:text-white hover:border-white/50 transition-colors"
+                            class="px-2 py-1 text-xs rounded-lg border border-[#c9a24a]/30 text-[#5f6c82] hover:text-[#0b1f3d] hover:border-[#c9a24a]/50 transition-colors"
                             (click)="toggleLock(setting, $event)">
                       {{ setting.locked ? ('admin.settings.actions.unlock' | translate) : ('admin.settings.actions.lock' | translate) }}
                     </button>
@@ -100,7 +98,7 @@
                         type="password"
                         [value]="getDisplayValue(setting)"
                         readonly
-                        class="w-full px-4 py-2 bg-gray-900/50 border border-white/10 rounded-lg text-white placeholder-white/60 opacity-60 cursor-not-allowed">
+                        class="w-full px-4 py-2 bg-[#fdfaf4] border border-[#c9a24a]/20 rounded-lg text-[#0b1f3d] placeholder-white/60 opacity-60 cursor-not-allowed">
                     } @else {
                       <input
                         type="text"
@@ -111,7 +109,7 @@
                         [attr.name]="getFieldId(section.title, setting.key)"
                         [disabled]="isDisabled(setting)"
                         [placeholder]="setting.placeholder || ''"
-                        class="w-full px-4 py-2 bg-gray-900/50 border border-white/10 rounded-lg text-white placeholder-white/60 focus:border-bitcoin-orange focus:ring-1 focus:ring-bitcoin-orange transition-all disabled:opacity-60 disabled:cursor-not-allowed"
+                        class="w-full px-4 py-2 bg-[#fdfaf4] border border-[#c9a24a]/20 rounded-lg text-[#0b1f3d] placeholder-white/60 focus:border-[#c9a24a] focus:ring-1 focus:ring-[#c9a24a] transition-all disabled:opacity-60 disabled:cursor-not-allowed"
                         (input)="setting.sensitive ? onSensitiveInput(setting, $event) : null">
                     }
                   }
@@ -125,7 +123,7 @@
                       [disabled]="isDisabled(setting)"
                       [placeholder]="setting.placeholder || ''"
                       rows="3"
-                      class="w-full px-4 py-2 bg-gray-900/50 border border-white/10 rounded-lg text-white placeholder-white/60 focus:border-bitcoin-orange focus:ring-1 focus:ring-bitcoin-orange transition-all disabled:opacity-60 disabled:cursor-not-allowed"></textarea>
+                      class="w-full px-4 py-2 bg-[#fdfaf4] border border-[#c9a24a]/20 rounded-lg text-[#0b1f3d] placeholder-white/60 focus:border-[#c9a24a] focus:ring-1 focus:ring-[#c9a24a] transition-all disabled:opacity-60 disabled:cursor-not-allowed"></textarea>
                   }
                   @case ('number') {
                     <input
@@ -137,7 +135,7 @@
                       [attr.name]="getFieldId(section.title, setting.key)"
                       [disabled]="isDisabled(setting)"
                       [placeholder]="setting.placeholder || ''"
-                      class="w-full px-4 py-2 bg-gray-900/50 border border-white/10 rounded-lg text-white placeholder-white/60 focus:border-bitcoin-orange focus:ring-1 focus:ring-bitcoin-orange transition-all disabled:opacity-60 disabled:cursor-not-allowed">
+                      class="w-full px-4 py-2 bg-[#fdfaf4] border border-[#c9a24a]/20 rounded-lg text-[#0b1f3d] placeholder-white/60 focus:border-[#c9a24a] focus:ring-1 focus:ring-[#c9a24a] transition-all disabled:opacity-60 disabled:cursor-not-allowed">
                   }
                   @case ('boolean') {
                     <label class="relative inline-flex items-center cursor-pointer">
@@ -150,8 +148,8 @@
                         [attr.name]="getFieldId(section.title, setting.key)"
                         [disabled]="isDisabled(setting)"
                         class="sr-only peer">
-                      <div class="w-11 h-6 bg-gray-700 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-bitcoin-orange rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-bitcoin-orange"></div>
-                      <span class="ml-3 text-sm font-medium text-white/70">
+                      <div class="w-11 h-6 bg-[#5f6c82] peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-[#c9a24a] rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-[#c9a24a] after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-[#c9a24a]/30 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#c9a24a]"></div>
+                      <span class="ml-3 text-sm font-medium text-[#5f6c82]">
                         {{ setting.value ? ('admin.settings.states.enabled' | translate) : ('admin.settings.states.disabled' | translate) }}
                       </span>
                     </label>
@@ -164,7 +162,7 @@
                       [attr.id]="getFieldId(section.title, setting.key)"
                       [attr.name]="getFieldId(section.title, setting.key)"
                       [disabled]="isDisabled(setting)"
-                      class="w-full px-4 py-2 bg-gray-900/50 border border-white/10 rounded-lg text-white focus:border-bitcoin-orange focus:ring-1 focus:ring-bitcoin-orange transition-all">
+                      class="w-full px-4 py-2 bg-[#fdfaf4] border border-[#c9a24a]/20 rounded-lg text-[#0b1f3d] focus:border-[#c9a24a] focus:ring-1 focus:ring-[#c9a24a] transition-all">
                       @for (option of setting.options; track option.value) {
                         <option [value]="option.value">{{ option.label }}</option>
                       }
@@ -190,22 +188,22 @@
     </div>
 
         <div class="grid grid-cols-1 xl:grid-cols-3 gap-6 mb-8">
-      <section class="xl:col-span-2 bg-gray-800/50 border border-white/10 rounded-2xl p-6 space-y-6">
+      <section class="xl:col-span-2 bg-white border border-[#c9a24a]/20 rounded-2xl p-6 space-y-6">
         <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>
-            <h3 class="text-lg font-semibold bitcoin-gradient-text">Notification center</h3>
-            <p class="text-sm text-white/60">Review automated alerts and customer-facing emails.</p>
+            <h3 class="text-lg font-semibold text-[#0b1f3d] font-semibold">Notification center</h3>
+            <p class="text-sm text-[#5f6c82]">Manage automated alerts for customer inquiries and service requests.</p>
           </div>
           <div class="text-sm text-right md:text-left">
-            <div class="text-white/70">Primary email</div>
-            <div class="font-semibold text-white">
+            <div class="text-[#5f6c82]">Primary email</div>
+            <div class="font-semibold text-[#0b1f3d]">
               @if (notificationEmail) {
                 {{ notificationEmail }}
               } @else {
-                <span class="text-white/40">Not configured</span>
+                <span class="text-[#0b1f3d]/40">Not configured</span>
               }
             </div>
-            <div class="text-xs text-white/50 mt-1">
+            <div class="text-xs text-[#0b1f3d]/50 mt-1">
               @switch (notificationEmailSource) {
                 @case ('custom') { Uses dedicated notification address. }
                 @case ('contact') { Falling back to the contact email until a notification email is provided. }
@@ -217,25 +215,25 @@
 
         <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-4">
           @for (card of notificationCards; track card.key) {
-            <div class="bg-gray-900/60 border border-white/10 rounded-xl p-4 h-full flex flex-col gap-3">
+            <div class="bg-[#f6efe3] border border-[#c9a24a]/20 rounded-xl p-4 h-full flex flex-col gap-3">
               <div class="flex items-start gap-3">
                 <div class="w-10 h-10 flex items-center justify-center rounded-lg border"
-                     [ngClass]="card.enabled ? card.accentClass : 'bg-gray-800/70 border-white/10 text-white/40'">
+                     [ngClass]="card.enabled ? card.accentClass : 'bg-white border-[#c9a24a]/20 text-[#0b1f3d]/40'">
                   <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" [attr.d]="card.iconPath"></path>
                   </svg>
                 </div>
                 <div class="flex-1 min-w-0">
                   <div class="flex items-center gap-2 flex-wrap">
-                    <h4 class="text-white font-semibold">{{ card.title }}</h4>
+                    <h4 class="text-[#0b1f3d] font-semibold">{{ card.title }}</h4>
                     <span class="px-2 py-0.5 text-xs rounded-full border"
-                          [ngClass]="card.enabled ? 'border-green-500/40 bg-green-500/10 text-green-300' : 'border-white/20 text-white/50'">
+                          [ngClass]="card.enabled ? 'border-green-500/40 bg-green-500/10 text-green-300' : 'border-[#c9a24a]/30 text-[#0b1f3d]/50'">
                       {{ card.enabled ? 'Enabled' : 'Disabled' }}
                     </span>
                   </div>
-                  <p class="text-sm text-white/60 mt-1 leading-snug">{{ card.description }}</p>
+                  <p class="text-sm text-[#5f6c82] mt-1 leading-snug">{{ card.description }}</p>
                   @if (card.meta) {
-                    <div class="text-xs text-white/40 mt-2">
+                    <div class="text-xs text-[#0b1f3d]/40 mt-2">
                       {{ card.meta }}
                     </div>
                   }
@@ -246,14 +244,14 @@
         </div>
       </section>
 
-      <section class="bg-gray-800/50 border border-white/10 rounded-2xl p-6 flex flex-col gap-4">
+      <section class="bg-white border border-[#c9a24a]/20 rounded-2xl p-6 flex flex-col gap-4">
         <div class="flex items-center justify-between">
           <div>
-            <h3 class="text-lg font-semibold text-white">Recent activity</h3>
-            <p class="text-sm text-white/60">Latest customer and catalog updates.</p>
+            <h3 class="text-lg font-semibold text-[#0b1f3d]">Recent activity</h3>
+            <p class="text-sm text-[#5f6c82]">Latest customer and catalog updates.</p>
           </div>
           <button type="button"
-                  class="px-3 py-1.5 text-xs font-medium rounded-lg border border-white/20 text-white/70 hover:text-white hover:border-white/40 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  class="px-3 py-1.5 text-xs font-medium rounded-lg border border-[#c9a24a]/30 text-[#5f6c82] hover:text-[#0b1f3d] hover:border-[#c9a24a]/40 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   (click)="loadRecentActivity()"
                   [disabled]="isLoadingActivity">
             @if (isLoadingActivity) { Refreshing... } @else { Refresh }
@@ -261,7 +259,7 @@
         </div>
 
         @if (isLoadingActivity) {
-          <div class="flex items-center justify-center py-6 text-white/60 text-sm">
+          <div class="flex items-center justify-center py-6 text-[#5f6c82] text-sm">
             <div class="app-spinner" style="--spinner-size: 72px;"><img src="/Logo Clear.png" alt="Loading" width="96" height="96"></div>
             Loading activity...
           </div>
@@ -270,7 +268,7 @@
             {{ activityError }}
           </div>
         } @else if (!recentActivity.length) {
-          <div class="text-sm text-white/50">
+          <div class="text-sm text-[#0b1f3d]/50">
             No recent events detected in the last few days.
           </div>
         } @else {
@@ -284,8 +282,8 @@
                   </svg>
                 </div>
                 <div class="flex-1 min-w-0">
-                  <div class="text-sm text-white leading-snug">{{ activity.description }}</div>
-                  <div class="text-xs text-white/50 mt-1">
+                  <div class="text-sm text-[#0b1f3d] leading-snug">{{ activity.description }}</div>
+                  <div class="text-xs text-[#0b1f3d]/50 mt-1">
                     {{ activity.timestamp | date:'medium' }}
                   </div>
                 </div>
@@ -295,137 +293,13 @@
         }
       </section>
     </div>
-    <!-- Site Statistics Management -->
-    <div class="mb-8 p-6 bg-bitcoin-dark/30 rounded-xl border border-bitcoin-orange/20">
-      <div class="flex flex-col xl:flex-row xl:items-center xl:justify-between gap-4 mb-6">
-        <div>
-          <h3 class="text-lg font-semibold bitcoin-gradient-text flex items-center gap-2">
-            Site Statistics
-          </h3>
-          <p class="text-sm text-bitcoin-gray mt-1">Adjust the metrics displayed on the homepage.</p>
-        </div>
-        <div class="flex flex-wrap gap-3">
-          <button
-            type="button"
-            (click)="resetStatsForm()"
-            [disabled]="!currentStats || isSavingStats || isUpdatingStats"
-            class="px-4 py-2 bg-gray-800/60 text-white/80 rounded-lg border border-white/10 hover:border-white/40 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
-            Reset to current
-          </button>
-          <button
-            type="button"
-            (click)="updateSiteStats()"
-            [disabled]="isUpdatingStats"
-            class="px-6 py-2 bg-bitcoin-gold/20 text-bitcoin-gold rounded-lg font-semibold hover:bg-bitcoin-gold/30 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2">
-            @if (isUpdatingStats) {
-              <div class="app-spinner" style="--spinner-size: 72px;"><img src="/Logo Clear.png" alt="Loading" width="96" height="96"></div>
-              Refreshing...
-            } @else {
-              Refresh from data
-            }
-          </button>
-        </div>
-      </div>
-
-      @if (!currentStats) {
-        <div class="text-sm text-bitcoin-gray">
-          Statistics will be available once the current values load.
-        </div>
-      } @else {
-        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
-          <div class="p-4 bg-bitcoin-dark/50 rounded-lg border border-bitcoin-orange/10">
-            <label class="block text-sm font-medium text-white/70 mb-2" for="stats-total-sales">
-              Total Deployments
-            </label>
-            <input
-              id="stats-total-sales"
-              name="stats-total-sales"
-              type="number"
-              min="0"
-              step="1"
-              [(ngModel)]="statsForm.totalSales"
-              [ngModelOptions]="{ standalone: true }"
-              [disabled]="isSavingStats"
-              class="w-full px-4 py-2 bg-gray-900/50 border border-white/10 rounded-lg text-white focus:border-bitcoin-orange focus:ring-1 focus:ring-bitcoin-orange transition-all">
-          </div>
-
-          <div class="p-4 bg-bitcoin-dark/50 rounded-lg border border-bitcoin-orange/10">
-            <label class="block text-sm font-medium text-white/70 mb-2" for="stats-satisfaction">
-              Customer Satisfaction (%)
-            </label>
-            <input
-              id="stats-satisfaction"
-              name="stats-satisfaction"
-              type="number"
-              min="0"
-              max="100"
-              step="1"
-              [(ngModel)]="statsForm.customerSatisfaction"
-              [ngModelOptions]="{ standalone: true }"
-              [disabled]="isSavingStats"
-              class="w-full px-4 py-2 bg-gray-900/50 border border-white/10 rounded-lg text-white focus:border-bitcoin-orange focus:ring-1 focus:ring-bitcoin-orange transition-all">
-          </div>
-
-          <div class="p-4 bg-bitcoin-dark/50 rounded-lg border border-bitcoin-orange/10">
-            <label class="block text-sm font-medium text-white/70 mb-2" for="stats-uptime">
-              Uptime Guarantee (%)
-            </label>
-            <input
-              id="stats-uptime"
-              name="stats-uptime"
-              type="number"
-              min="0"
-              max="100"
-              step="0.1"
-              [(ngModel)]="statsForm.uptimeGuarantee"
-              [ngModelOptions]="{ standalone: true }"
-              [disabled]="isSavingStats"
-              class="w-full px-4 py-2 bg-gray-900/50 border border-white/10 rounded-lg text-white focus:border-bitcoin-orange focus:ring-1 focus:ring-bitcoin-orange transition-all">
-          </div>
-
-          <div class="p-4 bg-bitcoin-dark/50 rounded-lg border border-bitcoin-orange/10">
-            <label class="block text-sm font-medium text-white/70 mb-2" for="stats-experience">
-              Years of Experience
-            </label>
-            <input
-              id="stats-experience"
-              name="stats-experience"
-              type="number"
-              min="0"
-              step="0.1"
-              [(ngModel)]="statsForm.yearsExperience"
-              [ngModelOptions]="{ standalone: true }"
-              [disabled]="isSavingStats"
-              class="w-full px-4 py-2 bg-gray-900/50 border border-white/10 rounded-lg text-white focus:border-bitcoin-orange focus:ring-1 focus:ring-bitcoin-orange transition-all">
-          </div>
-        </div>
-
-        <div class="mt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-          <div class="text-xs text-bitcoin-gray">
-            Last updated: {{ statsLastUpdated || 'Never' }}
-          </div>
-          <button
-            type="button"
-            (click)="saveSiteStats()"
-            [disabled]="isSavingStats"
-            class="px-6 py-2 bg-bitcoin-orange text-white rounded-lg font-semibold hover:bg-bitcoin-orange/90 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2">
-            @if (isSavingStats) {
-              <div class="app-spinner" style="--spinner-size: 72px;"><img src="/Logo Clear.png" alt="Loading" width="96" height="96"></div>
-              Saving stats...
-            } @else {
-              Save statistics
-            }
-          </button>
-        </div>
-      }
-    </div>
 
     <!-- Save Button -->
     <div class="mt-8 flex justify-end">
       <button
         (click)="saveSettings()"
         [disabled]="isSaving"
-        class="px-8 py-3 bg-bitcoin-orange text-white rounded-xl font-semibold hover:bg-bitcoin-orange/90 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2">
+        class="px-8 py-3 bg-[#c9a24a] text-[#0b1f3d] rounded-xl font-semibold hover:bg-[#c9a24a]/90 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2">
         @if (isSaving) {
           <div class="app-spinner" style="--spinner-size: 72px;"><img src="/Logo Clear.png" alt="Loading" width="96" height="96"></div>
           {{ 'admin.settings.actions.saving' | translate }}
@@ -436,5 +310,10 @@
     </div>
   </div>
 </div>
+
+
+
+
+
 
 

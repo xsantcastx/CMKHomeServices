@@ -1,28 +1,22 @@
-import { Component, HostListener, inject, PLATFORM_ID, EventEmitter, Output, OnInit, signal } from '@angular/core';
+import { Component, HostListener, inject, PLATFORM_ID, OnInit, signal } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { toSignal } from '@angular/core/rxjs-interop';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { CartService } from '../../../services/cart.service';
 import { AuthService } from '../../../services/auth.service';
 import { SettingsService, AppSettings } from '../../../services/settings.service';
 import { LanguageSelectorComponent } from '../../../shared/components/language-selector/language-selector.component';
-import { CartButtonComponent } from '../../../shared/components/cart-button/cart-button.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { BrandConfigService } from '../../services/brand-config.service';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule, RouterLink, RouterLinkActive, LanguageSelectorComponent, CartButtonComponent, TranslateModule],
+  imports: [CommonModule, RouterLink, RouterLinkActive, LanguageSelectorComponent, TranslateModule],
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  @Output() toggleCart = new EventEmitter<void>();
-
   private platformId = inject(PLATFORM_ID);
-  private readonly cartService = inject(CartService);
   private readonly authService = inject(AuthService);
   private readonly settingsService = inject(SettingsService);
   private readonly brandConfig = inject(BrandConfigService);
@@ -31,9 +25,12 @@ export class NavbarComponent implements OnInit {
   mobileOpen = false;
   showUserMenu = false;
   
-  // Social media URLs from settings
+  // Social media URLs - will be populated from settings or brand config
+  facebookUrl = '';
   linkedinUrl = '';
   instagramUrl = '';
+  twitterUrl = '';
+  youtubeUrl = '';
   
   // Auth state
   user$ = this.authService.user$;
@@ -46,11 +43,6 @@ export class NavbarComponent implements OnInit {
   readonly exactMatchOption = { exact: true };
   readonly partialMatchOption = { exact: false };
   private readonly socialLinks = this.brandConfig.nav.social as Array<{ platform: string; href: string }>;
-
-  readonly totalItems = toSignal(
-    this.cartService.count$,
-    { initialValue: 0 }
-  ) as () => number;
 
   constructor() {
     // Subscribe to settings in constructor (injection context)
@@ -70,8 +62,11 @@ export class NavbarComponent implements OnInit {
   }
 
   private applySettings(settings: AppSettings): void {
+    this.facebookUrl = settings.facebookUrl || this.getSocialUrl('facebook');
     this.linkedinUrl = settings.linkedinUrl || this.getSocialUrl('linkedin');
     this.instagramUrl = settings.instagramUrl || this.getSocialUrl('instagram');
+    this.twitterUrl = settings.twitterUrl || this.getSocialUrl('twitter');
+    this.youtubeUrl = settings.youtubeUrl || this.getSocialUrl('youtube');
   }
 
   @HostListener('window:scroll')
@@ -95,10 +90,6 @@ export class NavbarComponent implements OnInit {
       this.showUserMenu = false;
       this.mobileOpen = false;
     }
-  }
-
-  activarCarrito(): void {
-    this.toggleCart.emit();
   }
 
   closeMobile() {

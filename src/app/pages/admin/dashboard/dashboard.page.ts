@@ -8,13 +8,13 @@ import {
   AdminDashboardService,
   AdminDashboardSnapshot
 } from '../../../services/admin-dashboard.service';
-import { AdminQuickActionsComponent } from '../../../shared/components/admin-quick-actions/admin-quick-actions.component';
+import { AdminSidebarComponent } from '../../../shared/components/admin-sidebar/admin-sidebar.component';
 import { LoadingComponentBase } from '../../../core/classes/loading-component.base';
 
 @Component({
   selector: 'app-admin-dashboard',
   standalone: true,
-  imports: [CommonModule, RouterLink, TranslateModule, AdminQuickActionsComponent],
+  imports: [CommonModule, RouterLink, TranslateModule, AdminSidebarComponent],
   templateUrl: './dashboard.page.html',
   styleUrl: './dashboard.page.scss'
 })
@@ -75,10 +75,10 @@ export class AdminDashboardComponent extends LoadingComponentBase implements OnI
 
   getActivityColor(type: AdminActivityItem['type']): string {
     const colors: Record<AdminActivityItem['type'], string> = {
-      order: 'bg-bitcoin-orange/20 text-bitcoin-orange border border-bitcoin-orange/30',
-      product: 'bg-bitcoin-gold/20 text-bitcoin-gold border border-bitcoin-gold/30',
-      gallery: 'bg-luxury-gold/20 text-luxury-gold border border-luxury-gold/30',
-      user: 'bg-bitcoin-orange/20 text-bitcoin-orange border border-bitcoin-orange/30'
+      order: 'bg-[#c9a24a]/20 text-[#c9a24a] border border-[#c9a24a]/30',
+      product: 'bg-emerald-500/20 text-emerald-600 border border-emerald-500/30',
+      gallery: 'bg-blue-500/20 text-blue-600 border border-blue-500/30',
+      user: 'bg-pink-500/20 text-pink-600 border border-pink-500/30'
     };
     return colors[type];
   }

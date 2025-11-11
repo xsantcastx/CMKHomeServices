@@ -1,4 +1,4 @@
-import { Component, OnInit, inject, PLATFORM_ID } from '@angular/core';
+import { Component, OnInit, OnDestroy, inject, PLATFORM_ID } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { CategoriaGaleria, GaleriaItem } from '../../core/services/data.service';
@@ -27,11 +27,11 @@ interface GalleryProject {
 @Component({
   selector: 'app-galeria-page',
   standalone: true,
-  imports: [CommonModule, TranslateModule, PageHeaderComponent],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './galeria.page.html',
   styleUrl: './galeria.page.scss'
 })
-export class GaleriaPageComponent extends LoadingComponentBase implements OnInit {
+export class GaleriaPageComponent extends LoadingComponentBase implements OnInit, OnDestroy {
   categorias: CategoriaGaleria[] = [];
   categoriaActiva = 'todos';
   itemsVisible: GaleriaItem[] = [];
@@ -41,6 +41,13 @@ export class GaleriaPageComponent extends LoadingComponentBase implements OnInit
   filteredProjects: GalleryProject[] = [];
   selectedProject: GalleryProject | null = null;
   currentImageIndex = 0;
+  
+  // Hero carousel properties
+  heroSlides: Media[] = [];
+  currentSlideIndex = 0;
+  private carouselInterval: any;
+  isSlideDetailsOpen = false;
+  selectedSlide: Media | null = null;
   
   modalItem: GaleriaItem | null = null;
   modalIndex = 0;
@@ -116,6 +123,9 @@ export class GaleriaPageComponent extends LoadingComponentBase implements OnInit
       console.log('[Gallery] Loaded from Firestore:', mediaItems.length, 'images');
       
       if (mediaItems.length > 0) {
+        // Setup hero carousel with random images
+        this.setupHeroCarousel(mediaItems);
+        
         // Group media by project name (altText)
         this.allProjects = this.groupMediaByProjects(mediaItems);
         this.filtrarPorCategoria(this.categoriaActiva);
@@ -123,8 +133,80 @@ export class GaleriaPageComponent extends LoadingComponentBase implements OnInit
         console.log('[Gallery] No gallery images found in Firestore');
         this.allProjects = [];
         this.filteredProjects = [];
+        this.heroSlides = [];
       }
     });
+  }
+
+  // Setup hero carousel with 5-8 random images from gallery
+  private setupHeroCarousel(mediaItems: Media[]): void {
+    // Get 5-8 random images for the carousel
+    const slideCount = Math.min(8, Math.max(5, mediaItems.length));
+    const shuffled = [...mediaItems].sort(() => 0.5 - Math.random());
+    this.heroSlides = shuffled.slice(0, slideCount);
+    
+    console.log('[Gallery] Hero carousel setup with', this.heroSlides.length, 'slides');
+    
+    // Start auto-play if in browser
+    if (this.isBrowser) {
+      this.startCarousel();
+    }
+  }
+
+  // Start auto-play carousel
+  private startCarousel(): void {
+    if (this.carouselInterval) {
+      clearInterval(this.carouselInterval);
+    }
+    
+    this.carouselInterval = setInterval(() => {
+      this.nextSlide();
+    }, 5000); // Change slide every 5 seconds
+  }
+
+  // Stop carousel
+  private stopCarousel(): void {
+    if (this.carouselInterval) {
+      clearInterval(this.carouselInterval);
+      this.carouselInterval = null;
+    }
+  }
+
+  // Navigate to next slide
+  nextSlide(): void {
+    if (this.heroSlides.length === 0) return;
+    this.currentSlideIndex = (this.currentSlideIndex + 1) % this.heroSlides.length;
+  }
+
+  // Navigate to previous slide
+  prevSlide(): void {
+    if (this.heroSlides.length === 0) return;
+    this.currentSlideIndex = this.currentSlideIndex === 0 
+      ? this.heroSlides.length - 1 
+      : this.currentSlideIndex - 1;
+  }
+
+  // Go to specific slide
+  goToSlide(index: number): void {
+    if (index >= 0 && index < this.heroSlides.length) {
+      this.currentSlideIndex = index;
+      // Restart auto-play timer
+      this.startCarousel();
+    }
+  }
+
+  // Open slide details modal
+  openSlideDetails(slide: Media): void {
+    this.selectedSlide = slide;
+    this.isSlideDetailsOpen = true;
+    this.stopCarousel(); // Pause carousel while modal is open
+  }
+
+  // Close slide details modal
+  closeSlideDetails(): void {
+    this.isSlideDetailsOpen = false;
+    this.selectedSlide = null;
+    this.startCarousel(); // Resume carousel
   }
 
   // Group media by project name - Create project objects from media items
@@ -361,5 +443,26 @@ export class GaleriaPageComponent extends LoadingComponentBase implements OnInit
 
   toggleFilters() {
     this.showFilters = !this.showFilters;
+  }
+
+  // Book service from lightbox CTA
+  bookThisService() {
+    this.cerrarModal();
+    // Scroll to contact form or navigate to contact page
+    if (this.isBrowser) {
+      // Try to find contact section on current page
+      const contactSection = document.querySelector('#contact-section, #contacto');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        // Navigate to contact page
+        window.location.href = '/contacto';
+      }
+    }
+  }
+
+  // Cleanup on component destroy
+  ngOnDestroy() {
+    this.stopCarousel();
   }
 }

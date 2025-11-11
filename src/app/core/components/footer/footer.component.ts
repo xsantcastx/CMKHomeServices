@@ -21,7 +21,7 @@ interface Category {
   standalone: true,
   imports: [CommonModule, RouterModule, TranslateModule],
   template: `
-    <footer class="bg-gradient-to-b from-[#13151a] to-[#0a0b0d] py-16 border-t border-bitcoin-orange/20">
+    <footer class="bg-gradient-to-b from-[#052659] to-[#021024] py-16 border-t border-bitcoin-orange/20">
       <div class="page-container">
         <div class="grid md:grid-cols-4 gap-8 mb-12">
           <div class="md:col-span-2">
@@ -172,14 +172,14 @@ export class FooterComponent implements OnInit {
   instagramUrl = this.getSocialUrl('instagram');
   linkedinUrl = this.getSocialUrl('linkedin');
   youtubeUrl = this.getSocialUrl('youtube');
-  whatsappNumber = '';
+  whatsappNumber = (this.brandConfig.site.contact as any).whatsapp || '';
 
   // Business Info
-  businessName = '';
-  supportHours = '';
-  returnPolicyUrl = '';
-  privacyPolicyUrl = '';
-  termsOfServiceUrl = '';
+  businessName = this.brandConfig.legalName;
+  supportHours = this.brandConfig.site.contact.supportHours || '';
+  returnPolicyUrl = this.brandConfig.site.legal?.returnPolicyUrl || '/return-policy';
+  privacyPolicyUrl = this.brandConfig.site.legal?.privacyPolicyUrl || '/privacy-policy';
+  termsOfServiceUrl = this.brandConfig.site.legal?.termsUrl || '/terms';
 
   constructor() {
     // Subscribe to settings in constructor (injection context)
@@ -190,7 +190,8 @@ export class FooterComponent implements OnInit {
 
   ngOnInit() {
     this.loadCategories();
-    this.settingsService.getSettings().then(settings => this.applySettings(settings));
+    // Don't load settings - use brand config as source of truth
+    // this.settingsService.getSettings().then(settings => this.applySettings(settings));
   }
 
   private applySettings(settings: AppSettings) {
@@ -198,26 +199,27 @@ export class FooterComponent implements OnInit {
       return;
     }
 
-    // General Settings
-    this.siteName = settings.siteName || this.siteName;
-    this.contactEmail = settings.contactEmail || this.contactEmail;
-    this.contactPhone = settings.contactPhone || this.contactPhone;
-    this.contactAddress = settings.contactAddress || this.contactAddress;
+    // Only override if settings exist in Firestore AND are different from brand config
+    // Prioritize brand config for contact info
+    // this.siteName = settings.siteName || this.siteName;
+    // this.contactEmail = settings.contactEmail || this.contactEmail;
+    // this.contactPhone = settings.contactPhone || this.contactPhone;
+    // this.contactAddress = settings.contactAddress || this.contactAddress;
 
-    // Social Media
+    // Social Media - can still be overridden by Firestore
     this.facebookUrl = settings.facebookUrl || this.facebookUrl;
     this.twitterUrl = settings.twitterUrl || this.twitterUrl;
     this.instagramUrl = settings.instagramUrl || this.instagramUrl;
     this.linkedinUrl = settings.linkedinUrl || this.linkedinUrl;
     this.youtubeUrl = settings.youtubeUrl || this.youtubeUrl;
-    this.whatsappNumber = settings.whatsappNumber || '';
+    this.whatsappNumber = settings.whatsappNumber || this.whatsappNumber;
 
     // Business Info
-    this.businessName = settings.businessName || settings.siteName;
-    this.supportHours = settings.supportHours || '';
-    this.returnPolicyUrl = settings.returnPolicy || '/return-policy';
-    this.privacyPolicyUrl = settings.privacyPolicy || '/privacy-policy';
-    this.termsOfServiceUrl = settings.termsOfService || '/terms';
+    // this.businessName = settings.businessName || this.businessName;
+    // this.supportHours = settings.supportHours || this.supportHours;
+    this.returnPolicyUrl = settings.returnPolicy || this.returnPolicyUrl;
+    this.privacyPolicyUrl = settings.privacyPolicy || this.privacyPolicyUrl;
+    this.termsOfServiceUrl = settings.termsOfService || this.termsOfServiceUrl;
   }
 
   loadCategories() {

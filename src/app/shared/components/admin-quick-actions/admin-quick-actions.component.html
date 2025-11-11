@@ -95,7 +95,7 @@
           @if (isCategoryExpanded(group.category)) {
             <div class="quick-actions__panel" [attr.id]="panelId">
               <div class="quick-actions__list">
-                @for (action of group.actions; track action.route) {
+                @for (action of group.actions; track $index) {
                   <a
                     class="quick-actions__card"
                     [routerLink]="action.route"

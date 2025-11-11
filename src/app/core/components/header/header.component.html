@@ -7,17 +7,18 @@
   
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
     <!-- Logo -->
-    <a routerLink="/" class="flex items-center gap-3 group">
-      <span class="font-serif text-xl font-semibold text-ts-ink group-hover:text-ts-accent transition-colors">{{ brandName }}</span>
-    </a>
+        <a routerLink="/" class="flex items-center gap-3 group">
+          <span class="font-serif text-xl font-semibold text-ts-ink group-hover:text-ts-accent transition-colors">{{ brandName }}</span>
+        </a>
 
     <!-- Desktop Navigation -->
     <nav class="hidden md:flex items-center gap-8 font-sans text-sm text-ts-ink">
-      @for (link of headerLinks; track link.href) {
+      @for (link of headerLinks; track link.fragment || link.href) {
         <a
           [routerLink]="link.href"
+          [fragment]="link.fragment"
           routerLinkActive="nav-link-active"
-            [routerLinkActiveOptions]="link.exact ? exactMatchOption : partialMatchOption"
+          [routerLinkActiveOptions]="link.exact ? exactMatchOption : partialMatchOption"
           class="nav-link">
           {{ link.label | translate }}
         </a>
@@ -45,9 +46,10 @@
     [class.opacity-100]="mobileMenuOpen">
     
     <nav class="px-4 py-4 space-y-4">
-      @for (link of headerLinks; track link.href) {
+      @for (link of headerLinks; track link.fragment || link.href) {
         <a
           [routerLink]="link.href"
+          [fragment]="link.fragment"
           class="block text-ts-ink hover:text-ts-accent transition-colors py-2"
           (click)="mobileMenuOpen = false">
           {{ link.label | translate }}

@@ -7,19 +7,22 @@ import { filter } from 'rxjs/operators';
 import { NavbarComponent } from './core/components/navbar/navbar.component';
 import { FooterComponent } from './core/components/footer/footer.component';
 import { CookieBannerComponent } from './shared/components/cookie-banner/cookie-banner.component';
+import { WhatsappButtonComponent } from './shared/components/whatsapp-button/whatsapp-button.component';
 import { AnalyticsService } from './services/analytics.service';
 import { SettingsService, AppSettings } from './services/settings.service';
 import { AuthService } from './services/auth.service';
+import { SchemaService } from './services/schema.service';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, FooterComponent, CookieBannerComponent, TranslateModule],
+  imports: [RouterOutlet, NavbarComponent, FooterComponent, CookieBannerComponent, WhatsappButtonComponent, TranslateModule],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
 export class AppComponent implements OnInit {
   private analyticsService = inject(AnalyticsService);
+  private schemaService = inject(SchemaService);
   private translate = inject(TranslateService);
   private platformId = inject(PLATFORM_ID);
   private settingsService = inject(SettingsService);
@@ -86,6 +89,9 @@ export class AppComponent implements OnInit {
     
     // Initialize page view tracking on route changes
     this.analyticsService.initPageViewTracking();
+
+    // Add LocalBusiness schema for SEO
+    this.schemaService.addLocalBusinessSchema();
 
     // Prime cache on bootstrap
     this.settingsService.getSettings().then(settings => this.applySettings(settings));

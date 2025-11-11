@@ -1,102 +1,108 @@
 {
   "brand": {
     "key": "default",
-    "name": "The Lux Mining",
-    "shortName": "TheLuxMining",
-    "tagline": "Premium Bitcoin Mining Equipment",
-    "description": "Specialized e-commerce storefront for high-performance Bitcoin miners, accessories, and white-glove fulfillment.",
-    "domain": "theluxmining.com",
+    "name": "CMK Home Services",
+    "shortName": "CMK",
+    "tagline": "Professional Home Cleaning & Organization in Miami",
+    "description": "Reliable, detailed, and stress-free cleaning and organization services. Licensed & Insured professional home cleaning serving Miami, FL.",
+    "domain": "cmkhomeservices.com",
     "logo": "/Logo Clear.png",
-    "logoAlt": "The Lux Mining mark",
-    "favicon": "/assets/brand/favicon.png"
+    "logoAlt": "CMK Home Services",
+    "favicon": "/Logo Clear.png"
   },
   "contact": {
-    "email": "support@theluxmining.com",
-    "phone": "+1 (800) 555 0199",
-    "address": "100 Greyrock Pl F119\nStamford, CT 06901",
-    "supportHours": "Mon-Fri 9AM-5PM EST"
+    "email": "info@cmkhomeservices.com",
+    "phone": "+1 (786) 380-7579",
+    "address": "7950 NW 53rd St Suite 337\nMiami, FL 33166",
+    "supportHours": "Mon-Sat 8:00 AM - 7:00 PM EST",
+    "whatsapp": "+17863807579"
   },
   "theme": {
     "tokens": {
-      "ts-bg": "#0b0d10",
-      "ts-bg-soft": "#111316",
-      "ts-paper": "#13151a",
-      "ts-ink": "#f5f6f8",
-      "ts-ink-soft": "#caced4",
-      "ts-accent": "#f7931a",
-      "ts-accent-soft": "#ffb81c",
-      "ts-line": "#272a31",
-      "surface-glass": "rgba(255,255,255,0.04)",
-      "surface-border": "rgba(255,255,255,0.12)"
+      "ts-bg": "#fdfaf4",
+      "ts-bg-soft": "#f6efe3",
+      "ts-paper": "#ffffff",
+      "ts-ink": "#0b1f3d",
+      "ts-ink-soft": "#5f6c82",
+      "ts-accent": "#c9a24a",
+      "ts-accent-soft": "#f4d8a4",
+      "ts-line": "rgba(9,33,58,0.1)",
+      "surface-glass": "rgba(255,255,255,0.85)",
+      "surface-border": "rgba(9,33,58,0.08)"
     },
     "fonts": {
-      "sans": "Inter, 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif",
-      "display": "'Space Grotesk', 'Clash Display', Inter, 'Segoe UI', system-ui, sans-serif",
+      "sans": "'Source Sans 3', 'Inter', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif",
+      "display": "'Cormorant Garamond', 'Playfair Display', 'Times New Roman', serif",
       "mono": "'JetBrains Mono', Menlo, Monaco, Consolas, 'Liberation Mono', monospace"
     }
   },
   "hero": {
-    "eyebrow": "Flagship Bitcoin hardware studio",
-    "title": "Hand-built Bitcoin miners & premium crypto gear",
-    "subtitle": "Numbered, signed, and battle-tested. Built by humans with obsessive QA.",
+    "eyebrow": "MIAMI'S TRUSTED CLEANING PROFESSIONALS",
+    "title": "Your Home, Spotless & Stress-Free",
+    "subtitle": "Professional cleaning services for homes and businesses throughout Miami. Licensed, insured, and dedicated to excellence since day one.",
     "primaryCta": {
-      "label": "Shop miners",
-      "href": "/productos"
+      "label": "Get Free Quote",
+      "href": "/contact"
     },
     "secondaryCta": {
-      "label": "Talk to a specialist",
-      "href": "/contacto"
+      "label": "View Our Services",
+      "href": "/services"
     },
-    "badge": "2,400+ ASICs deployed"
+    "badge": "Licensed & Insured • 5-Star Rated"
   },
   "navigation": {
     "header": [
-      { "label": "nav.home", "href": "/", "exact": true },
-      { "label": "nav.products", "href": "/productos" },
-      { "label": "nav.gallery", "href": "/galeria" },
-      { "label": "nav.contact", "href": "/contacto" }
+      { "label": "Home", "href": "/", "exact": true },
+      { "label": "Services", "href": "/services" },
+      { "label": "About", "href": "/about" },
+      { "label": "Gallery", "href": "/galeria" },
+      { "label": "Contact", "href": "/contacto" }
     ],
     "footer": [
-      { "label": "Products", "href": "/productos" },
-      { "label": "About", "href": "/about" },
-      { "label": "FAQ", "href": "/faq" },
-      { "label": "Terms", "href": "/legal/terms" },
-      { "label": "Privacy", "href": "/legal/privacy" },
-      { "label": "Refunds", "href": "/legal/refund" }
+      { "label": "Residential Cleaning", "href": "/services/residential" },
+      { "label": "Commercial Cleaning", "href": "/services/commercial" },
+      { "label": "Window Washing", "href": "/services/windows" },
+      { "label": "Home Organization", "href": "/services/organization" },
+      { "label": "Deep Cleaning", "href": "/services/deep-clean" },
+      { "label": "Move-In/Move-Out", "href": "/services/move" },
+      { "label": "Rental Unit Management", "href": "/services/property" },
+      { "label": "Snowbird Property Care", "href": "/services/snowbird" }
     ],
     "social": [
-      { "platform": "instagram", "href": "https://instagram.com/theluxmining" },
-      { "platform": "linkedin", "href": "https://linkedin.com/company/theluxmining" }
+      { "platform": "facebook", "href": "https://www.facebook.com/112350068504738" },
+      { "platform": "instagram", "href": "https://www.instagram.com/cmkhomeservices/" }
     ]
   },
   "seo": {
-    "siteName": "The Lux Mining",
-    "titleTemplate": "%s • The Lux Mining",
-    "defaultTitle": "Bitcoin Solo Miners & Mining Equipment",
-    "defaultDescription": "Buy premium ASIC miners, immersion-ready rigs, and curated solo mining bundles with concierge support.",
+    "siteName": "CMK Home Services",
+    "titleTemplate": "%s | CMK Home Services",
+    "defaultTitle": "Professional Home Cleaning & Organization in Miami",
+    "defaultDescription": "CMK Home Services delivers reliable, detailed, and stress-free cleaning and organization services in Miami, FL. Licensed & Insured. Experienced, trusted professionals.",
     "defaultKeywords": [
-      "bitcoin mining hardware",
-      "solo miners",
-      "asic miners",
-      "immersion mining",
-      "luxury mining gear"
+      "home cleaning Miami",
+      "residential cleaning Miami",
+      "commercial cleaning Miami",
+      "house cleaning service",
+      "deep cleaning Miami",
+      "move-in move-out cleaning",
+      "CMK Home Services"
     ],
-    "socialImage": "/assets/brand/og-default.jpg"
+    "socialImage": "/Logo Clear.png"
   },
   "legal": {
-    "businessName": "TheLuxMining LLC",
+    "businessName": "CMK Home Services LLC",
     "taxId": "",
-    "supportEmail": "support@theluxmining.com",
-    "returnPolicyUrl": "/return-policy",
-    "privacyPolicyUrl": "/privacy-policy",
-    "termsUrl": "/terms"
+    "supportEmail": "info@cmkhomeservices.com",
+    "returnPolicyUrl": "/policies/satisfaction",
+    "privacyPolicyUrl": "/legal/privacy",
+    "termsUrl": "/legal/terms"
   },
   "maintenance": {
-    "title": "Scheduled maintenance",
-    "description": "We are upgrading the storefront and will return shortly. Reach us at support@theluxmining.com for urgent orders."
+    "title": "Freshening things up",
+    "description": "We are polishing the site right now. Email info@cmkhomeservices.com for immediate booking support."
   },
   "notifications": {
-    "emailFromName": "The Lux Mining",
-    "emailFrom": "noreply@theluxmining.com"
+    "emailFromName": "CMK Home Services",
+    "emailFrom": "info@cmkhomeservices.com"
   }
 }

@@ -2,7 +2,7 @@ import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
-import { AdminQuickActionsComponent } from '../../../shared/components/admin-quick-actions/admin-quick-actions.component';
+import { AdminSidebarComponent } from '../../../shared/components/admin-sidebar/admin-sidebar.component';
 import { ImagePickerComponent } from '../../../shared/components/image-picker/image-picker.component';
 import { HeroImagesManagerComponent } from '../../../shared/components/hero-images-manager/hero-images-manager.component';
 import { LoadingComponentBase } from '../../../core/classes/loading-component.base';
@@ -50,7 +50,7 @@ interface NotificationSummaryCard {
 @Component({
   selector: 'app-settings-admin-page',
   standalone: true,
-  imports: [CommonModule, FormsModule, TranslateModule, AdminQuickActionsComponent, ImagePickerComponent, HeroImagesManagerComponent],
+  imports: [CommonModule, FormsModule, TranslateModule, AdminSidebarComponent, ImagePickerComponent, HeroImagesManagerComponent],
   templateUrl: './settings-admin.page.html',
   styleUrl: './settings-admin.page.scss'
 })
@@ -92,38 +92,24 @@ export class SettingsAdminComponent extends LoadingComponentBase implements OnIn
   private readonly notificationDefinitions: Array<Omit<NotificationSummaryCard, 'enabled' | 'meta'>> = [
     {
       key: 'orderEmailEnabled',
-      title: 'Order confirmations',
-      description: 'Send customers an email immediately after checkout is completed.',
+      title: 'Service request confirmations',
+      description: 'Send customers an email confirmation when they submit a service request.',
       iconPath: 'M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z',
-      accentClass: 'bg-bitcoin-gold/10 border-bitcoin-gold/30 text-bitcoin-gold'
-    },
-    {
-      key: 'lowStockAlerts',
-      title: 'Low stock alerts',
-      description: 'Notify the operations team when inventory drops below the configured threshold.',
-      iconPath: 'M12 9v2m0 4h.01M5.64 17h12.72c.89 0 1.45-.95.99-1.73L13.99 4.27c-.44-.76-1.54-.76-1.98 0L4.65 15.27C4.19 16.05 4.75 17 5.64 17z',
-      accentClass: 'bg-red-500/10 border-red-500/30 text-red-300'
-    },
-    {
-      key: 'dailyReportEnabled',
-      title: 'Daily sales report',
-      description: "Receive a morning summary with yesterday's sales performance.",
-      iconPath: 'M9 17v-6h6v6m-7 4h8a2 2 0 002-2V9.5l-6-4-6 4V19a2 2 0 002 2z',
-      accentClass: 'bg-green-500/10 border-green-500/30 text-green-300'
+      accentClass: 'bg-[#c9a24a]/10 border-[#c9a24a]/30 text-[#c9a24a]'
     },
     {
       key: 'newUserNotifications',
-      title: 'New user alerts',
-      description: 'Send an internal notification whenever a customer registers.',
+      title: 'New customer alerts',
+      description: 'Send an internal notification when a new customer registers on the website.',
       iconPath: 'M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z',
       accentClass: 'bg-indigo-500/10 border-indigo-500/30 text-indigo-300'
     },
     {
-      key: 'autoRestockEnabled',
-      title: 'Auto restock notifications',
-      description: 'Alert the team when inventory replenishment is triggered.',
-      iconPath: 'M4 4v5h.582l2.873-2.872a7 7 0 119.46 9.46l1.415 1.415A9 9 0 004.582 4H4zm15.418 11H20v5h-5v-.582l2.872-2.873A7 7 0 015.46 7.085L4.045 5.67A9 9 0 0019.418 15z',
-      accentClass: 'bg-bitcoin-orange/10 border-bitcoin-orange/30 text-bitcoin-orange'
+      key: 'dailyReportEnabled',
+      title: 'Daily activity report',
+      description: "Receive a morning summary of customer inquiries and service requests from the previous day.",
+      iconPath: 'M9 17v-6h6v6m-7 4h8a2 2 0 002-2V9.5l-6-4-6 4V19a2 2 0 002 2z',
+      accentClass: 'bg-green-500/10 border-green-500/30 text-green-300'
     }
   ];
   private readonly activityIconMap: Record<AdminActivityItem['type'], string> = {
@@ -265,23 +251,24 @@ export class SettingsAdminComponent extends LoadingComponentBase implements OnIn
         settings: [],
         isCustomComponent: true
       },
-      {
-        title: 'Stripe Configuration',
-        icon: 'M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z',
-        color: 'purple',
-        expanded: false,
-        settings: [
-          { key: 'stripePublicKey', label: 'Stripe Publishable Key', type: 'text', value: this.currentSettings.stripePublicKey, placeholder: 'pk_live_...', sensitive: true, locked: true, showValue: false },
-          { key: 'stripeSecretKey', label: 'Stripe Secret Key', type: 'text', value: this.currentSettings.stripeSecretKey, placeholder: 'sk_live_...', sensitive: true, locked: true, showValue: false },
-          { key: 'stripeWebhookSecret', label: 'Stripe Webhook Secret', type: 'text', value: this.currentSettings.stripeWebhookSecret, placeholder: 'whsec_...', sensitive: true, locked: true, showValue: false, description: 'Webhook signing secret from Stripe Dashboard' },
-          { key: 'stripeCurrency', label: 'Currency', type: 'select', value: this.currentSettings.stripeCurrency, options: [
-            { label: 'USD ($)', value: 'usd' },
-            { label: 'EUR (€)', value: 'eur' },
-            { label: 'GBP (£)', value: 'gbp' }
-          ]},
-          { key: 'stripeTestMode', label: 'Test Mode', type: 'boolean', value: this.currentSettings.stripeTestMode, description: 'Use Stripe test keys instead of live keys' }
-        ]
-      },
+      // Stripe Configuration - Hidden (not used)
+      // {
+      //   title: 'Stripe Configuration',
+      //   icon: 'M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z',
+      //   color: 'purple',
+      //   expanded: false,
+      //   settings: [
+      //     { key: 'stripePublicKey', label: 'Stripe Publishable Key', type: 'text', value: this.currentSettings.stripePublicKey, placeholder: 'pk_live_...', sensitive: true, locked: true, showValue: false },
+      //     { key: 'stripeSecretKey', label: 'Stripe Secret Key', type: 'text', value: this.currentSettings.stripeSecretKey, placeholder: 'sk_live_...', sensitive: true, locked: true, showValue: false },
+      //     { key: 'stripeWebhookSecret', label: 'Stripe Webhook Secret', type: 'text', value: this.currentSettings.stripeWebhookSecret, placeholder: 'whsec_...', sensitive: true, locked: true, showValue: false, description: 'Webhook signing secret from Stripe Dashboard' },
+      //     { key: 'stripeCurrency', label: 'Currency', type: 'select', value: this.currentSettings.stripeCurrency, options: [
+      //       { label: 'USD ($)', value: 'usd' },
+      //       { label: 'EUR (€)', value: 'eur' },
+      //       { label: 'GBP (£)', value: 'gbp' }
+      //     ]},
+      //     { key: 'stripeTestMode', label: 'Test Mode', type: 'boolean', value: this.currentSettings.stripeTestMode, description: 'Use Stripe test keys instead of live keys' }
+      //   ]
+      // },
       {
         title: 'Email Configuration',
         icon: 'M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z',
@@ -298,18 +285,19 @@ export class SettingsAdminComponent extends LoadingComponentBase implements OnIn
           { key: 'emailFromName', label: 'From Name', type: 'text', value: this.currentSettings.emailFromName, placeholder: 'Your Company Name' }
         ]
       },
-      {
-        title: 'Shipping Settings',
-        icon: 'M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4',
-        color: 'orange',
-        expanded: false,
-        settings: [
-          { key: 'shippingEnabled', label: 'Enable Shipping', type: 'boolean', value: this.currentSettings.shippingEnabled },
-          { key: 'freeShippingThreshold', label: 'Free Shipping Threshold', type: 'number', value: this.currentSettings.freeShippingThreshold, placeholder: '0', description: 'Minimum order value for free shipping' },
-          { key: 'defaultShippingCost', label: 'Default Shipping Cost', type: 'number', value: this.currentSettings.defaultShippingCost, placeholder: '0' },
-          { key: 'shippingEstimate', label: 'Shipping Estimate (days)', type: 'text', value: this.currentSettings.shippingEstimate, placeholder: 'e.g., 3-5 business days' }
-        ]
-      },
+      // Shipping Settings - Hidden (not used for services business)
+      // {
+      //   title: 'Shipping Settings',
+      //   icon: 'M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4',
+      //   color: 'orange',
+      //   expanded: false,
+      //   settings: [
+      //     { key: 'shippingEnabled', label: 'Enable Shipping', type: 'boolean', value: this.currentSettings.shippingEnabled },
+      //     { key: 'freeShippingThreshold', label: 'Free Shipping Threshold', type: 'number', value: this.currentSettings.freeShippingThreshold, placeholder: '0', description: 'Minimum order value for free shipping' },
+      //     { key: 'defaultShippingCost', label: 'Default Shipping Cost', type: 'number', value: this.currentSettings.defaultShippingCost, placeholder: '0' },
+      //     { key: 'shippingEstimate', label: 'Shipping Estimate (days)', type: 'text', value: this.currentSettings.shippingEstimate, placeholder: 'e.g., 3-5 business days' }
+      //   ]
+      // },
       {
         title: 'Analytics & Tracking',
         icon: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z',
@@ -373,12 +361,10 @@ export class SettingsAdminComponent extends LoadingComponentBase implements OnIn
         color: 'yellow',
         expanded: false,
         settings: [
-          { key: 'orderEmailEnabled', label: 'Send Order Confirmation Emails', type: 'boolean', value: this.currentSettings.orderEmailEnabled },
-          { key: 'lowStockAlerts', label: 'Low Stock Alerts', type: 'boolean', value: this.currentSettings.lowStockAlerts, description: 'Email admin when inventory is low' },
-          { key: 'lowStockThreshold', label: 'Low Stock Threshold', type: 'number', value: this.currentSettings.lowStockThreshold, placeholder: '10' },
-          { key: 'newUserNotifications', label: 'New User Registration Alerts', type: 'boolean', value: this.currentSettings.newUserNotifications },
-          { key: 'dailyReportEnabled', label: 'Daily Sales Report', type: 'boolean', value: this.currentSettings.dailyReportEnabled, description: 'Send daily sales summary email' },
-          { key: 'notificationEmail', label: 'Notification Email', type: 'text', value: this.currentSettings.notificationEmail, placeholder: 'admin@example.com' }
+          { key: 'orderEmailEnabled', label: 'Send Service Request Confirmations', type: 'boolean', value: this.currentSettings.orderEmailEnabled, description: 'Automatically email customers when they submit a service request' },
+          { key: 'newUserNotifications', label: 'New Customer Registration Alerts', type: 'boolean', value: this.currentSettings.newUserNotifications, description: 'Notify team when a new customer registers' },
+          { key: 'dailyReportEnabled', label: 'Daily Activity Report', type: 'boolean', value: this.currentSettings.dailyReportEnabled, description: 'Send daily summary of customer inquiries and requests' },
+          { key: 'notificationEmail', label: 'Notification Email', type: 'text', value: this.currentSettings.notificationEmail, placeholder: 'info@cmkhomeservices.com' }
         ]
       },
       {
@@ -415,19 +401,20 @@ export class SettingsAdminComponent extends LoadingComponentBase implements OnIn
           { key: 'cdnUrl', label: 'CDN URL', type: 'text', value: this.currentSettings.cdnUrl, placeholder: 'https://cdn.example.com' }
         ]
       },
-      {
-        title: 'Inventory',
-        icon: 'M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4',
-        color: 'emerald',
-        expanded: false,
-        settings: [
-          { key: 'trackInventory', label: 'Track Inventory', type: 'boolean', value: this.currentSettings.trackInventory, description: 'Enable stock tracking' },
-          { key: 'allowBackorders', label: 'Allow Backorders', type: 'boolean', value: this.currentSettings.allowBackorders, description: 'Accept orders when out of stock' },
-          { key: 'autoRestockEnabled', label: 'Auto Restock Notifications', type: 'boolean', value: this.currentSettings.autoRestockEnabled },
-          { key: 'hideOutOfStock', label: 'Hide Out of Stock Products', type: 'boolean', value: this.currentSettings.hideOutOfStock },
-          { key: 'stockReserveTime', label: 'Cart Stock Reserve Time (min)', type: 'number', value: this.currentSettings.stockReserveTime, placeholder: '15' }
-        ]
-      }
+      // Inventory - Hidden (not used)
+      // {
+      //   title: 'Inventory',
+      //   icon: 'M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4',
+      //   color: 'emerald',
+      //   expanded: false,
+      //   settings: [
+      //     { key: 'trackInventory', label: 'Track Inventory', type: 'boolean', value: this.currentSettings.trackInventory, description: 'Enable stock tracking' },
+      //     { key: 'allowBackorders', label: 'Allow Backorders', type: 'boolean', value: this.currentSettings.allowBackorders, description: 'Accept orders when out of stock' },
+      //     { key: 'autoRestockEnabled', label: 'Auto Restock Notifications', type: 'boolean', value: this.currentSettings.autoRestockEnabled },
+      //     { key: 'hideOutOfStock', label: 'Hide Out of Stock Products', type: 'boolean', value: this.currentSettings.hideOutOfStock },
+      //     { key: 'stockReserveTime', label: 'Cart Stock Reserve Time (min)', type: 'number', value: this.currentSettings.stockReserveTime, placeholder: '15' }
+      //   ]
+      // }
     ];
   }
 
@@ -722,12 +709,10 @@ export class SettingsAdminComponent extends LoadingComponentBase implements OnIn
       const enabled = Boolean(this.getSettingValueFromSections(def.key));
       let meta: string | null = null;
 
-      if (def.key === 'lowStockAlerts' && enabled) {
-        meta = `Threshold: ${lowStockThreshold || 0} units`;
-      } else if (def.key === 'dailyReportEnabled' && enabled) {
-        meta = 'Sent daily at 08:00 server time';
-      } else if (def.key === 'autoRestockEnabled' && enabled) {
-        meta = 'Monitors product stock levels automatically';
+      if (def.key === 'dailyReportEnabled' && enabled) {
+        meta = 'Summary sent daily at 08:00 server time';
+      } else if (def.key === 'orderEmailEnabled' && enabled) {
+        meta = 'Automatic confirmation upon form submission';
       }
 
       return {

@@ -19,6 +19,16 @@ export const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'about',
+    loadComponent: () => import('./pages/about/about.page').then(m => m.AboutPage),
+    title: 'About Us - CMK Home Services | Miami'
+  },
+  {
+    path: 'service-areas',
+    loadComponent: () => import('./pages/service-areas/service-areas.page').then(m => m.ServiceAreasPage),
+    title: 'Service Areas in Miami | CMK Home Services'
+  },
+  {
     path: 'productos',
     loadComponent: () => import('./pages/productos/productos.page').then(m => m.ProductosPageComponent),
     title: routeTitle('page_titles.products')
@@ -34,33 +44,52 @@ export const routes: Routes = [
     title: routeTitle('page_titles.gallery')
   },
   {
+    path: 'gallery',
+    redirectTo: 'galeria',
+    pathMatch: 'full'
+  },
+  {
     path: 'contacto',
     loadComponent: () => import('./pages/contacto/contacto.page').then(m => m.ContactoPageComponent),
     title: routeTitle('page_titles.contact')
   },
   {
+    path: 'contact',
+    redirectTo: 'contacto',
+    pathMatch: 'full'
+  },
+  // Service Pages - Unified
+  {
+    path: 'services',
+    loadComponent: () => import('./pages/services/services.page').then(m => m.ServicesPage),
+    title: 'Our Cleaning Services in Miami | CMK Home Services'
+  },
+  {
+    path: 'services/:serviceId',
+    loadComponent: () => import('./pages/services/services.page').then(m => m.ServicesPage),
+    title: 'Cleaning Services in Miami | CMK Home Services'
+  },
+  {
+    path: 'residential-cleaning',
+    redirectTo: 'services/residential',
+    pathMatch: 'full'
+  },
+  {
     path: 'cart',
-    loadComponent: () => import('./pages/cart/cart.page').then(m => m.CartPage),
-    title: routeTitle('page_titles.cart')
+    redirectTo: '404'
   },
   // Checkout Routes
   {
     path: 'checkout/review',
-    loadComponent: () => import('./pages/checkout/checkout-review.page').then(m => m.CheckoutReviewPage),
-    canActivate: [authGuard],
-    title: routeTitle('page_titles.checkout_review')
+    redirectTo: '404'
   },
   {
     path: 'checkout/payment',
-    loadComponent: () => import('./pages/checkout/payment.page').then(m => m.PaymentPage),
-    canActivate: [authGuard],
-    title: routeTitle('page_titles.payment')
+    redirectTo: '404'
   },
   {
     path: 'checkout/confirmation',
-    loadComponent: () => import('./pages/checkout/confirmation.page').then(m => m.ConfirmationPage),
-    canActivate: [authGuard],
-    title: routeTitle('page_titles.order_confirmation')
+    redirectTo: '404'
   },
   // Client Area Routes
   {

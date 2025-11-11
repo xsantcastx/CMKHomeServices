@@ -35,7 +35,7 @@ export class LoginPageComponent {
     // Check if redirected due to session expiration
     this.route.queryParams.subscribe(params => {
       if (params['sessionExpired'] === 'true') {
-        this.sessionExpiredMessage = 'Your session has expired. Please log in again.';
+        this.sessionExpiredMessage = 'client.login_page.session_expired';
       }
     });
   }

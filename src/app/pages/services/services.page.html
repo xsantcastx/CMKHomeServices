@@ -1,0 +1,291 @@
+<section class="services-hero">
+  <div class="page-container hero-grid">
+    @for (service of services(); track service.id) {
+      @if (activeService() === service.id) {
+        <div class="hero-copy">
+          <p class="eyebrow">{{ service.tagline }}</p>
+          <h1>{{ service.title }}</h1>
+          <p class="hero-lede">
+            {{ service.description }}
+          </p>
+          @if (service.quickFacts.length) {
+            <div class="hero-metrics">
+              @for (fact of service.quickFacts; track $index) {
+                <div>
+                  <span>{{ fact.value }}</span>
+                  <p>{{ fact.label }}</p>
+                </div>
+              }
+            </div>
+          }
+        </div>
+        <div class="hero-panel">
+          <p class="eyebrow">{{ 'services.ui.hero.promise.eyebrow' | translate }}</p>
+          <ul>
+            @for (item of ('services.ui.hero.promise.items' | translate); track $index) {
+              <li>{{ item }}</li>
+            }
+          </ul>
+        </div>
+      }
+    }
+  </div>
+</section>
+
+<section class="services-tabs" aria-label="Service navigation">
+  <div class="page-container">
+    <div class="tab-strip" role="tablist">
+      @for (service of services(); track service.id) {
+        <button
+          type="button"
+          role="tab"
+          class="service-tab"
+          [class.active]="activeService() === service.id"
+          (click)="setActiveService(service.id)">
+          <ng-container *ngTemplateOutlet="iconTemplate; context: { icon: service.icon }"></ng-container>
+          <div class="tab-copy">
+            <span>{{ service.title }}</span>
+            <small>{{ service.tagline }}</small>
+          </div>
+        </button>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="service-detail" aria-live="polite">
+  <div class="page-container">
+    @for (service of services(); track service.id) {
+      @if (activeService() === service.id) {
+        <div class="service-layout">
+          <div class="service-main">
+            <div class="service-header">
+              <div class="service-icon-large">
+                <ng-container *ngTemplateOutlet="iconTemplate; context: { icon: service.icon, variant: 'lg' }"></ng-container>
+              </div>
+              <div>
+                <p class="eyebrow">{{ service.tagline }}</p>
+                <h2>{{ service.title }}</h2>
+                <p class="service-description">{{ service.description }}</p>
+              </div>
+            </div>
+
+            @if (service.quickFacts.length) {
+              <div class="quick-facts">
+                @for (fact of service.quickFacts; track $index) {
+                  <article>
+                    <span>{{ fact.label }}</span>
+                    <strong>{{ fact.value }}</strong>
+                  </article>
+                }
+              </div>
+            }
+
+            <div class="features-section">
+              <div class="section-heading">
+                <h3>{{ 'services.ui.sections.what_is_included.title' | translate }}</h3>
+                <p>{{ 'services.ui.sections.what_is_included.description' | translate }}</p>
+              </div>
+              <div class="features-grid">
+                @for (feature of service.features; track $index) {
+                  <article>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <p>{{ feature }}</p>
+                  </article>
+                }
+              </div>
+            </div>
+
+            <div class="process-section">
+              <div class="section-heading">
+                <h3>{{ 'services.ui.sections.our_process.title' | translate }}</h3>
+                <p>{{ 'services.ui.sections.our_process.description' | translate }}</p>
+              </div>
+              <div class="process-timeline">
+                @for (step of service.process; track $index; let i = $index) {
+                  <article class="process-card">
+                    <span class="step-number">0{{ i + 1 }}</span>
+                    <h4>{{ step.title }}</h4>
+                    <p>{{ step.description }}</p>
+                  </article>
+                }
+              </div>
+            </div>
+
+            @if (service.faqs.length) {
+              <div class="faq-section">
+                <div class="section-heading">
+                  <h3>{{ 'services.ui.sections.questions_answered.title' | translate }}</h3>
+                  <p>{{ 'services.ui.sections.questions_answered.description_template' | translate: {service: service.title | lowercase} }}</p>
+                </div>
+                <div class="faq-accordion">
+                  @for (faq of service.faqs; track $index) {
+                    <details>
+                      <summary>{{ faq.question }}</summary>
+                      <p>{{ faq.answer }}</p>
+                    </details>
+                  }
+                </div>
+              </div>
+            }
+          </div>
+
+          <aside class="service-aside">
+            <div class="trust-card">
+              <p class="eyebrow">{{ 'services.ui.sections.what_clients_appreciate' | translate }}</p>
+              <ul>
+                @for (item of service.trustBadges; track $index) {
+                  <li>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M4 12l4 12-10"></path>
+                    </svg>
+                    <span>{{ item }}</span>
+                  </li>
+                }
+              </ul>
+            </div>
+            <div class="cta-card">
+              <p class="cta-eyebrow">{{ 'services.ui.cta_card.eyebrow' | translate }}</p>
+              <h4>{{ 'services.ui.cta_card.title_template' | translate: {service: service.title} }}</h4>
+              <p>{{ 'services.ui.cta_card.description' | translate }}</p>
+              <a
+                class="button button--whatsapp"
+                rel="noopener"
+                target="_blank"
+                [href]="whatsAppLink(service.title)">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/></svg>
+                {{ 'services.ui.cta_card.schedule_whatsapp' | translate }}
+              </a>
+              <a class="button button--ghost" href="tel:+17863807579">{{ 'services.ui.cta_card.call' | translate }}</a>
+              <a class="button button--link" routerLink="/contact">{{ 'services.ui.cta_card.request_proposal' | translate }}</a>
+            </div>
+          </aside>
+        </div>
+      }
+    }
+  </div>
+</section>
+
+<section class="service-overview">
+  <div class="page-container">
+    <div class="section-heading">
+      <p class="eyebrow">{{ 'services.ui.overview.eyebrow' | translate }}</p>
+      <h3>{{ 'services.ui.overview.title' | translate }}</h3>
+    </div>
+    <div class="overview-grid">
+      @for (service of services(); track service.id) {
+        <article class="overview-card" [class.active]="activeService() === service.id" (click)="setActiveService(service.id)">
+          <div class="card-icon">
+            <ng-container *ngTemplateOutlet="iconTemplate; context: { icon: service.icon }"></ng-container>
+          </div>
+          <div>
+            <h4>{{ service.title }}</h4>
+            <p>{{ service.tagline }}</p>
+          </div>
+          <span class="card-link">{{ 'services.ui.overview.view_details' | translate }}</span>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="bottom-cta">
+  <div class="page-container cta-grid">
+    <div>
+      <p class="eyebrow">{{ 'services.ui.bottom_cta.eyebrow' | translate }}</p>
+      <h3>{{ 'services.ui.bottom_cta.title' | translate }}</h3>
+      <p>
+        {{ 'services.ui.bottom_cta.description' | translate }}
+      </p>
+    </div>
+    <div class="cta-actions">
+      <a class="button button--whatsapp" rel="noopener" target="_blank" [href]="whatsAppLink('your cleaning needs')">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/></svg>
+        {{ 'services.ui.bottom_cta.get_whatsapp_quote' | translate }}
+      </a>
+      <a class="button button--ghost" href="tel:+17863807579">{{ 'services.ui.bottom_cta.call' | translate }}</a>
+      <a class="button button--link" routerLink="/contact">{{ 'services.ui.bottom_cta.request_clean' | translate }}</a>
+    </div>
+  </div>
+</section>
+
+<ng-template #iconTemplate let-icon="icon" let-variant="variant">
+  <span class="icon-circle" [class.icon-circle--lg]="variant === 'lg'">
+    @switch (icon) {
+      @case ('home') {
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 11.5l9-7.5 9 7.5v8.5a1 1 0 0 1-1 1h-5.5v-5.5h-5V21H4a1 1 0 0 1-1-1z"></path>
+        </svg>
+      }
+      @case ('office') {
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 21V5a2 2 0 0 1 2-2h5v18"></path>
+          <path d="M11 9h4a2 2 0 0 1 2 2v10"></path>
+          <path d="M15 13h5v8"></path>
+        </svg>
+      }
+      @case ('windows') {
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+          <path d="M12 4v16"></path>
+          <path d="M3 12h18"></path>
+        </svg>
+      }
+      @case ('organize') {
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 7h18"></path>
+          <path d="M5 4h14v6H5z"></path>
+          <path d="M5 13h7v7H5z"></path>
+          <path d="M14 13h5v7h-5z"></path>
+        </svg>
+      }
+      @case ('sparkles') {
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 3v4"></path>
+          <path d="M12 17v4"></path>
+          <path d="M5.2 5.2l2.8 2.8"></path>
+          <path d="M16 16l2.8 2.8"></path>
+          <path d="M3 12h4"></path>
+          <path d="M17 12h4"></path>
+          <circle cx="12" cy="12" r="3"></circle>
+        </svg>
+      }
+      @case ('keys') {
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="7" cy="7" r="3"></circle>
+          <path d="M9.5 9.5L20 20"></path>
+          <path d="M15 15l4-4"></path>
+        </svg>
+      }
+      @case ('building') {
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 21V7l8-4 8 4v14"></path>
+          <path d="M9 21V12h6v9"></path>
+          <path d="M9 16h6"></path>
+        </svg>
+      }
+      @case ('sun') {
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2"></path>
+          <path d="M12 20v2"></path>
+          <path d="M4.93 4.93l1.41 1.41"></path>
+          <path d="M17.66 17.66l1.41 1.41"></path>
+          <path d="M2 12h2"></path>
+          <path d="M20 12h2"></path>
+          <path d="M4.93 19.07l1.41-1.41"></path>
+          <path d="M17.66 6.34l1.41-1.41"></path>
+        </svg>
+      }
+      @default {
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"></circle>
+        </svg>
+      }
+    }
+  </span>
+</ng-template>
+
+

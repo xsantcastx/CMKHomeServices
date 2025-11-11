@@ -1,7 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
-import { AdminQuickActionsComponent } from '../../../shared/components/admin-quick-actions/admin-quick-actions.component';
+import { AdminSidebarComponent } from '../../../shared/components/admin-sidebar/admin-sidebar.component';
 import {
   AdminDashboardService,
   AdminActivityItem,
@@ -33,7 +33,7 @@ interface FutureInitiative {
 @Component({
   selector: 'app-analytics-admin',
   standalone: true,
-  imports: [CommonModule, TranslateModule, AdminQuickActionsComponent],
+  imports: [CommonModule, TranslateModule, AdminSidebarComponent],
   templateUrl: './analytics-admin.page.html',
   styleUrls: ['./analytics-admin.page.scss']
 })
@@ -104,30 +104,30 @@ export class AnalyticsAdminComponent extends LoadingComponentBase implements OnI
 
   getChangeClasses(change: number | null): string {
     if (change === null) {
-      return 'text-bitcoin-gray';
+      return 'text-[#5f6c82]';
     }
     if (change > 0) {
-      return 'text-green-400';
+      return 'text-green-600';
     }
     if (change < 0) {
-      return 'text-red-400';
+      return 'text-red-600';
     }
-    return 'text-bitcoin-gray';
+    return 'text-[#5f6c82]';
   }
 
   getStatusBadgeClasses(tone: InitiativeTone): string {
     const base = 'px-2 py-1 text-xs font-semibold rounded-full border';
     switch (tone) {
       case 'discovery':
-        return `${base} bg-blue-500/10 border-blue-500/30 text-blue-300`;
+        return `${base} bg-blue-500/10 border-blue-500/30 text-blue-600`;
       case 'design':
-        return `${base} bg-purple-500/10 border-purple-500/30 text-purple-200`;
+        return `${base} bg-purple-500/10 border-purple-500/30 text-purple-600`;
       case 'development':
-        return `${base} bg-bitcoin-orange/10 border-bitcoin-orange/30 text-bitcoin-orange`;
+        return `${base} bg-[#c9a24a]/10 border-[#c9a24a]/30 text-[#c9a24a]`;
       case 'beta':
-        return `${base} bg-green-500/10 border-green-500/30 text-green-300`;
+        return `${base} bg-green-500/10 border-green-500/30 text-green-600`;
       default:
-        return `${base} bg-white/10 border-white/20 text-white/70`;
+        return `${base} bg-[#5f6c82]/10 border-[#5f6c82]/20 text-[#5f6c82]`;
     }
   }
 
@@ -169,28 +169,28 @@ export class AnalyticsAdminComponent extends LoadingComponentBase implements OnI
   private getMetricDisplay(key: AnalyticsMetricKey): { iconPath: string; colorClass: string } {
     const map: Record<AnalyticsMetricKey, { iconPath: string; colorClass: string }> = {
       totalOrders: {
-        iconPath: 'M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z',
-        colorClass: 'bg-green-500/10 border-green-500/30 text-green-400'
+        iconPath: 'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2',
+        colorClass: 'bg-green-500/10 border-green-500/30 text-green-600'
       },
       revenue: {
         iconPath: 'M12 8c-1.657 0-3-.895-3-2s1.343-2 3-2 3 .895 3 2m-3 4c-1.657 0-3-.895-3-2s1.343-2 3-2 3 .895 3 2m-6 0v8c0 1.105 1.343 2 3 2s3-.895 3-2v-8m6 0c0 3.866-3.582 7-8 7s-8-3.134-8-7',
-        colorClass: 'bg-bitcoin-gold/10 border-bitcoin-gold/30 text-bitcoin-gold'
+        colorClass: 'bg-[#c9a24a]/10 border-[#c9a24a]/30 text-[#c9a24a]'
       },
       averageOrderValue: {
-        iconPath: 'M12 8c-2.21 0-4-1.343-4-3s1.79-3 4-3 4 1.343 4 3m-4 6c-2.21 0-4-1.343-4-3s1.79-3 4-3 4 1.343 4 3m-8 0v8c0 1.657 1.79 3 4 3s4-1.343 4-3v-8',
-        colorClass: 'bg-bitcoin-orange/10 border-bitcoin-orange/30 text-bitcoin-orange'
+        iconPath: 'M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z',
+        colorClass: 'bg-emerald-500/10 border-emerald-500/30 text-emerald-600'
       },
       newCustomers: {
         iconPath: 'M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197',
-        colorClass: 'bg-indigo-500/10 border-indigo-500/30 text-indigo-400'
+        colorClass: 'bg-blue-500/10 border-blue-500/30 text-blue-600'
       },
       productsUpdated: {
-        iconPath: 'M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4',
-        colorClass: 'bg-blue-500/10 border-blue-500/30 text-blue-400'
+        iconPath: 'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z',
+        colorClass: 'bg-indigo-500/10 border-indigo-500/30 text-indigo-600'
       },
       galleryUploads: {
         iconPath: 'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z',
-        colorClass: 'bg-purple-500/10 border-purple-500/30 text-purple-400'
+        colorClass: 'bg-pink-500/10 border-pink-500/30 text-pink-600'
       }
     };
 
@@ -209,10 +209,10 @@ export class AnalyticsAdminComponent extends LoadingComponentBase implements OnI
 
   getActivityColor(type: AdminActivityItem['type']): string {
     const colors: Record<AdminActivityItem['type'], string> = {
-      order: 'bg-bitcoin-orange/20 text-bitcoin-orange border border-bitcoin-orange/30',
-      product: 'bg-bitcoin-gold/20 text-bitcoin-gold border border-bitcoin-gold/30',
-      gallery: 'bg-luxury-gold/20 text-luxury-gold border border-luxury-gold/30',
-      user: 'bg-bitcoin-orange/20 text-bitcoin-orange border border-bitcoin-orange/30'
+      order: 'bg-[#c9a24a]/20 text-[#c9a24a] border border-[#c9a24a]/30',
+      product: 'bg-indigo-500/20 text-indigo-600 border border-indigo-500/30',
+      gallery: 'bg-pink-500/20 text-pink-600 border border-pink-500/30',
+      user: 'bg-blue-500/20 text-blue-600 border border-blue-500/30'
     };
     return colors[type];
   }
