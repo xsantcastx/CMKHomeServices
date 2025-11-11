@@ -53,8 +53,8 @@ jobs:
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT }}'
-          projectId: theluxmining-91ab1
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CMKHOMESERVICES_9EB2F }}'
+          projectId: cmkhomeservices-9eb2f
           channelId: preview
 
   deploy-production:
@@ -76,6 +76,6 @@ jobs:
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT }}'
-          projectId: theluxmining-91ab1
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CMKHOMESERVICES_9EB2F }}'
+          projectId: cmkhomeservices-9eb2f
           channelId: live
