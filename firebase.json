@@ -13,14 +13,11 @@
     "rules": "storage.rules"
   },
   "hosting": {
-    "public": "dist/tstone-web/browser",
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ],
-    "predeploy": [
-      "npm run build"
     ],
     "rewrites": [
       {
