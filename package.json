@@ -1,6 +1,6 @@
 {
   "name": "cmk-home-services",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "scripts": {
     "ng": "ng",
     "start": "npm run template:sync && ng serve",
