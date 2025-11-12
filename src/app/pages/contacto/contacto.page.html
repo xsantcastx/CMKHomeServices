@@ -264,6 +264,7 @@
           <!-- Contact Cards -->
           <div class="space-y-4">
             <!-- Address -->
+            @if (brandConfig.site.contact.address) {
             <div class="contact-card">
               <div class="flex items-start gap-4">
                 <div class="contact-card__icon">
@@ -280,6 +281,7 @@
                 </div>
               </div>
             </div>
+            }
 
             <!-- Phone -->
             <div class="contact-card">
@@ -342,12 +344,6 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
                 <span class="text-navy-900">{{ 'contact.why_choose.fast_response' | translate }}</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-6 h-6 text-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
-                <span class="text-navy-900">{{ 'contact.why_choose.same_day' | translate }}</span>
               </li>
               <li class="flex items-start gap-3">
                 <svg class="w-6 h-6 text-gold flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

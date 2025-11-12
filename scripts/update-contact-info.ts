@@ -38,7 +38,7 @@ async function updateContactInfo() {
     await updateDoc(settingsRef, {
       contactEmail: 'info@cmkhomeservices.com',
       contactPhone: '+1 (786) 380-7579',
-      contactAddress: '7950 NW 53rd St Suite 337\nMiami, FL 33166',
+      contactAddress: '',
       businessName: 'CMK Home Services LLC',
       supportHours: 'Mon-Sat 8:00 AM - 7:00 PM EST',
       emailFrom: 'info@cmkhomeservices.com',
@@ -50,7 +50,7 @@ async function updateContactInfo() {
     console.log('\nNew contact info:');
     console.log('  Email: info@cmkhomeservices.com');
     console.log('  Phone: +1 (786) 380-7579');
-    console.log('  Address: 7950 NW 53rd St Suite 337, Miami, FL 33166');
+    console.log('  Address: (removed)');
     console.log('  Business Hours: Mon-Sat 8:00 AM - 7:00 PM EST');
 
   } catch (error) {

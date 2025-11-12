@@ -1,10 +1,10 @@
-{
+﻿{
   "page_titles": {
-    "home": "Servizi di Pulizia Professionale a Miami",
+    "home": "Servizi Professionali di Pulizia a Miami",
     "products": "I Nostri Servizi",
     "product_details": "Dettagli del Servizio",
     "gallery": "Galleria",
-    "contact": "Contatti",
+    "contact": "Contatto",
     "cart": "Richiesta di Servizio",
     "checkout_review": "Revisione Richiesta",
     "payment": "Pagamento",
@@ -14,14 +14,14 @@
     "profile": "Il Mio Profilo",
     "orders": "Le Mie Richieste",
     "solo_miners": "Servizi Specializzati",
-    "admin_dashboard": "Dashboard Admin",
+    "admin_dashboard": "Pannello di Amministrazione",
     "product_management": "Gestione Servizi",
-    "quick_add_product": "Aggiunta Rapida Servizio",
+    "quick_add_product": "Aggiungi Servizio Rapido",
     "gallery_management": "Gestione Galleria",
     "order_management": "Gestione Richieste",
     "user_management": "Gestione Utenti",
-    "benefit_templates": "Modelli di Servizio",
-    "analytics": "Dashboard Analitica",
+    "benefit_templates": "Modelli di Servizi",
+    "analytics": "Pannello Analitico",
     "settings": "Impostazioni",
     "email_templates": "Modelli Email",
     "size_groups": "Gestione Gruppi di Servizi",
@@ -31,7 +31,7 @@
   "not_found_page": {
     "error_number": "404",
     "title": "Pagina Non Trovata",
-    "message": "Ops! La pagina che stai cercando sembra essere stata spostata o non esiste. Ma non preoccuparti—possiamo aiutarti a trovare ciò di cui hai bisogno!",
+    "message": "Ops! La pagina che stai cercando sembra essere stata spostata o non esiste. Ma non preoccuparti, possiamo aiutarti a trovare quello che ti serve!",
     "quick_links_title": "Link Rapidi",
     "popular_services_title": "Servizi Popolari",
     "need_help_title": "Hai Bisogno di Aiuto?",
@@ -47,7 +47,7 @@
       "residential": "Pulizia Residenziale",
       "commercial": "Pulizia Commerciale",
       "deep_clean": "Pulizia Profonda",
-      "windows": "Lavaggio Vetri"
+      "windows": "Lavaggio Finestre"
     },
     "cta": {
       "whatsapp": "Chatta su WhatsApp",
@@ -58,13 +58,13 @@
   "service_areas": {
     "hero": {
       "title": "Dove Operiamo",
-      "subtitle": "Servizi di pulizia professionali in tutta la Greater Miami"
+      "subtitle": "Servizi professionali di pulizia in tutta la Grande Miami"
     },
     "intro": {
       "title": "Serviamo Tutta la Contea di Miami-Dade",
-      "description": "CMK Home Services è orgogliosa di servire clienti residenziali e commerciali in tutta Miami e le aree circostanti. Che tu sia in un grattacielo del centro, un condominio fronte mare o una casa suburbana, il nostro team professionale di pulizia è pronto ad aiutarti.",
+      "description": "CMK Home Services è orgogliosa di servire clienti residenziali e commerciali in tutta Miami e aree circostanti. Che tu sia in un grattacielo del centro, un condominio fronte mare o una casa di periferia, il nostro team professionale di pulizia è pronto ad aiutare.",
       "highlights": {
-        "areas_served": "Oltre 12 Aree Servite",
+        "areas_served": "12+ Zone Servite",
         "same_day": "Servizio in Giornata Disponibile",
         "eco_friendly": "Prodotti Ecologici"
       }
@@ -72,8 +72,8 @@
     "areas": {
       "miami": {
         "name": "Miami",
-        "description": "Downtown Miami, Brickell e aree circostanti",
-        "neighborhoods": ["Downtown Miami", "Brickell", "Edgewater", "Wynwood", "Midtown"]
+        "description": "Centro di Miami, Brickell e aree circostanti",
+        "neighborhoods": ["Centro di Miami", "Brickell", "Edgewater", "Wynwood", "Midtown"]
       },
       "miami_beach": {
         "name": "Miami Beach",
@@ -82,7 +82,7 @@
       },
       "coral_gables": {
         "name": "Coral Gables",
-        "description": "The City Beautiful - case eleganti e strade alberate",
+        "description": "La Città Bella - case eleganti e strade alberate",
         "neighborhoods": ["Old Cutler Road", "Gables Estates", "Cocoplum"]
       },
       "coconut_grove": {
@@ -92,7 +92,7 @@
       },
       "aventura": {
         "name": "Aventura",
-        "description": "Quartiere residenziale e commerciale di lusso",
+        "description": "Distretto residenziale e commerciale di lusso",
         "neighborhoods": ["Williams Island", "Porto Vita", "Aventura Isles"]
       },
       "sunny_isles": {
@@ -102,7 +102,7 @@
       },
       "kendall": {
         "name": "Kendall",
-        "description": "Quartieri suburbani adatti alle famiglie",
+        "description": "Quartieri suburbani ideali per famiglie",
         "neighborhoods": ["The Hammocks", "Pinecrest", "Palmetto Bay"]
       },
       "doral": {
@@ -112,7 +112,7 @@
       },
       "hialeah": {
         "name": "Hialeah",
-        "description": "Comunità residenziale vivace",
+        "description": "Comunità residenziale vibrante",
         "neighborhoods": ["Hialeah Gardens", "Palm Springs North", "Country Club"]
       },
       "key_biscayne": {
@@ -122,12 +122,12 @@
       },
       "homestead": {
         "name": "Homestead",
-        "description": "Porta d'accesso alle Florida Keys",
+        "description": "Porta d'accesso ai Keys della Florida",
         "neighborhoods": ["Naranja", "Florida City", "Leisure City"]
       },
       "miami_lakes": {
         "name": "Miami Lakes",
-        "description": "Comunità pianificata con bei laghi",
+        "description": "Comunità pianificata con bellissimi laghi",
         "neighborhoods": ["Main Street", "Royal Oaks", "Shenandoah"]
       }
     },
@@ -139,23 +139,23 @@
       "residential": "Pulizia Residenziale",
       "commercial": "Pulizia Commerciale",
       "deep_clean": "Pulizia Profonda",
-      "move": "Trasloco (Ingresso/Uscita)"
+      "move": "Trasloco (Entrata/Uscita)"
     },
     "not_listed": {
-      "title": "Non Vedi la Tua Area?",
-      "description": "Stiamo costantemente espandendo le nostre aree di servizio in tutto il sud della Florida. Se il tuo quartiere non è elencato, non preoccuparti, potremmo comunque aiutarti!",
-      "cta_ask": "💬 Chiedi Informazioni sulla Tua Area",
+      "title": "Non Vedi la Tua Zona?",
+      "description": "Stiamo espandendo costantemente le nostre aree di servizio in tutto il Sud della Florida. Se il tuo quartiere non è nell'elenco, non preoccuparti, potremmo comunque aiutarti!",
+      "cta_ask": "💬 Chiedi per la Tua Zona",
       "cta_call": "📞 Chiama (786) 380-7579"
     },
     "why_choose": {
-      "title": "Perché Scegliere CMK nella Tua Area?",
+      "title": "Perché Scegliere CMK nella Tua Zona?",
       "local_expertise": {
         "title": "Esperienza Locale",
         "description": "Comprendiamo le case di Miami, dalla preparazione agli uragani alle sfide dell'umidità."
       },
       "fast_response": {
         "title": "Risposta Rapida",
-        "description": "Appuntamenti in giornata e il giorno successivo disponibili nella maggior parte delle aree."
+        "description": "Appuntamenti in giornata e il giorno successivo disponibili nella maggior parte delle zone."
       },
       "licensed": {
         "title": "Licenziati e Assicurati",
@@ -163,13 +163,13 @@
       },
       "five_star": {
         "title": "Valutazione 5 Stelle",
-        "description": "Costantemente valutati al massimo dai proprietari di case e aziende di Miami."
+        "description": "Costantemente valutati al top dai proprietari di case e aziende di Miami."
       }
     },
     "bottom_cta": {
-      "title": "Pronti a Iniziare?",
-      "subtitle": "Prenota il tuo servizio di pulizia oggi e scopri la differenza CMK",
-      "cta_quote": "Ottieni un Preventivo Gratuito",
+      "title": "Pronto per Iniziare?",
+      "subtitle": "Prenota il tuo servizio di pulizia oggi e sperimenta la differenza CMK",
+      "cta_quote": "Ottieni Preventivo Gratuito",
       "cta_services": "Vedi Tutti i Servizi"
     }
   },
@@ -177,9 +177,9 @@
     "hero": {
       "eyebrow": "PROFESSIONISTI DELLA PULIZIA DI FIDUCIA A MIAMI",
       "title": "La Tua Casa, Impeccabile e Senza Stress",
-      "subtitle": "Servizi di pulizia professionali per case e aziende in tutta Miami. Licenziati, assicurati e dedicati all'eccellenza dal primo giorno.",
-      "badge": "Licenziati e Assicurati • Valutazione 5 Stelle",
-      "cta_primary": "Ottieni un Preventivo Gratuito",
+      "subtitle": "Servizi professionali di pulizia per case e aziende in tutta Miami. Con licenza, assicurati, e dedicati all'eccellenza dal primo giorno.",
+      "badge": "Con Licenza e Assicurati • Valutazione 5 Stelle",
+      "cta_primary": "Ottieni Preventivo Gratuito",
       "cta_secondary": "Vedi i Nostri Servizi"
     },
     "featured": {
@@ -189,7 +189,7 @@
       "flagship": "Servizi Premium",
       "professional": "Pulizia Professionale",
       "enterprise": "Soluzioni Commerciali",
-      "view_all": "Vedi Tutto"
+      "view_all": "Vedi Tutti"
     },
     "gallery_preview": {
       "title": "Galleria del Nostro Lavoro",
@@ -198,10 +198,10 @@
     },
     "why_choose": {
       "title": "Perché Scegliere CMK Home Services?",
-      "subtitle": "Il Tuo Successo È la Nostra Missione",
+      "subtitle": "Il Tuo Successo È La Nostra Missione",
       "hashrate": {
         "title": "Eccellenza Professionale",
-        "description": "Standard di pulizia leader del settore con professionisti formati, garantendo che la tua casa o ufficio brilli."
+        "description": "Standard di pulizia leader del settore con professionisti formati, garantendo che la tua casa o ufficio risplenda."
       },
       "efficiency": {
         "title": "Prodotti Ecologici",
@@ -219,12 +219,12 @@
       },
       "contact": {
         "title": "Pronto per una Casa Impeccabile?",
-        "button": "Ottieni un Preventivo Gratuito"
+        "button": "Ottieni Preventivo Gratuito"
       }
     },
     "services": {
       "title": "I Nostri Servizi",
-      "subtitle": "Soluzioni Complete di Pulizia per Casa e Azienda",
+      "subtitle": "Soluzioni Complete di Pulizia per Casa e Commercio",
       "hardware": {
         "title": "Pulizia Residenziale",
         "description": "Servizi di pulizia domestica di alta qualità, dalla pulizia profonda alla manutenzione regolare per famiglie impegnate."
@@ -235,18 +235,18 @@
       },
       "support": {
         "title": "Orari Flessibili",
-        "description": "Prenota servizi settimanali, bisettimanali o una tantum che si adattano al tuo stile di vita e alle esigenze aziendali."
+        "description": "Prenota servizi settimanali, bisettimanali o singoli che si adattano al tuo stile di vita e esigenze aziendali."
       },
       "consulting": {
         "title": "Soluzioni Personalizzate",
-        "description": "Piani di pulizia personalizzati su misura per le tue esigenze e preferenze specifiche."
+        "description": "Piani di pulizia personalizzati adattati ai tuoi requisiti e preferenze specifiche."
       }
     },
     "features": {
       "title": "Perché Pulire con CMK Home Services",
       "enterprise": {
         "title": "Professionisti Formati",
-        "description": "Specialisti della pulizia esperti e controllati, impegnati per l'eccellenza."
+        "description": "Specialisti della pulizia esperti, con verifica dei precedenti, impegnati nell'eccellenza."
       },
       "efficiency": {
         "title": "Prodotti Premium",
@@ -254,34 +254,34 @@
       },
       "roi": {
         "title": "Soddisfazione Garantita",
-        "description": "Track record di clienti soddisfatti con servizio trasparente e garanzie di qualità."
+        "description": "Storia di clienti soddisfatti con servizio trasparente e garanzie di qualità."
       },
       "security": {
         "title": "Assicurati e Garantiti",
-        "description": "Copertura assicurativa completa e garanzia per proteggere la tua proprietà e offrirti tranquillità."
+        "description": "Copertura assicurativa completa e garanzia per proteggere la tua proprietà e darti tranquillità."
       }
     },
     "stats": {
       "miners_deployed": "Case Servite",
       "miners_deployed_desc": "Case felici in tutta Miami",
-      "customer_satisfaction": "Soddisfazione Cliente",
-      "customer_satisfaction_desc": "Valutazione soddisfazione cliente verificata",
+      "customer_satisfaction": "Soddisfazione del Cliente",
+      "customer_satisfaction_desc": "Valutazione di soddisfazione del cliente verificata",
       "uptime_guarantee": "Garanzia di Puntualità",
       "uptime_guarantee_desc": "Standard di puntualità leader del settore",
       "years_experience": "Anni di Eccellenza",
       "years_experience_desc": "Anni al servizio di famiglie e aziende di Miami"
     },
     "reviews": {
-      "eyebrow": "Testimonianze Clienti",
-      "title": "Ascolta le Famiglie che si Fidano di CMK Home Services",
-      "subtitle": "Collaboriamo con famiglie in tutta Miami per fornire servizi di pulizia eccezionali. Storie reali di clienti reali ci rendono responsabili e aiutano i futuri clienti a sentirsi sicuri.",
+      "eyebrow": "Testimonianze dei Clienti",
+      "title": "Ascolta dalle Famiglie che si Fidano di CMK Home Services",
+      "subtitle": "Collaboriamo con famiglie in tutta Miami per fornire servizi di pulizia eccezionali. Storie reali da clienti reali ci mantengono responsabili e aiutano i futuri clienti a sentirsi sicuri.",
       "average_rating": "Valutazione media",
       "published_reviews": "Recensioni pubblicate",
       "rate_experience": "Valuta la tua esperienza",
       "rate_stars": "Valuta {{stars}} stelle",
       "share_testimonial": "Condividi una breve testimonianza",
-      "testimonial_placeholder": "Racconta agli altri del tuo servizio di pulizia, del nostro team o della trasformazione della tua casa.",
-      "testimonial_help": "Minimo 10 caratteri. Menziona dettagli come il tipo di servizio, la qualità o il nostro team.",
+      "testimonial_placeholder": "Racconta agli altri del tuo servizio di pulizia, il nostro team o la trasformazione della tua casa.",
+      "testimonial_help": "Minimo 10 caratteri. Menziona dettagli come tipo di servizio, qualità o il nostro team.",
       "saving_review": "Salvataggio della tua recensione...",
       "update_review": "Aggiorna la mia recensione",
       "publish_review": "Pubblica la mia recensione",
@@ -300,12 +300,12 @@
       "title": "Cosa dicono i nostri clienti.",
       "items": [
         {
-          "quote": "Gloria e il suo team sono incredibili! Hanno trasformato il nostro condominio e ora vengono ogni settimana. Professionali e affidabili.",
+          "quote": "Gloria e il suo team sono incredibili! Hanno trasformato il nostro condominio e ora vengono settimanalmente. Professionali e affidabili.",
           "author": "Maria C.",
           "location": "Brickell"
         },
         {
-          "quote": "Il miglior servizio di pulizia a Miami! Gestiscono le nostre case vacanza e il posto è sempre impeccabile per i nostri ospiti.",
+          "quote": "Il miglior servizio di pulizia a Miami! Gestiscono i nostri affitti vacanza e il posto è sempre impeccabile per i nostri ospiti.",
           "author": "David & Elena R.",
           "location": "South Beach"
         },
@@ -317,26 +317,26 @@
       ]
     },
     "difference": {
-      "description": "Fondata da Gloria, residente di Miami appassionata di creare spazi puliti e sani per famiglie e aziende. Portiamo professionalità, affidabilità e attenzione ai dettagli in ogni lavoro."
+      "description": "Fondata da Gloria, residente di Miami appassionata nel creare spazi puliti e sani per famiglie e aziende. Portiamo professionalità, affidabilità e attenzione ai dettagli in ogni lavoro."
     },
     "services_intro": {
-      "description": "Dalle case residenziali agli spazi commerciali, offriamo servizi di pulizia completi su misura per le tue esigenze. Tutti i servizi includono prodotti ecologici e garanzia di soddisfazione."
+      "description": "Dalle case residenziali agli spazi commerciali, offriamo servizi di pulizia completi adattati alle tue esigenze. Tutti i servizi includono prodotti ecologici e garanzia di soddisfazione."
     },
     "quick_services": {
       "residential": {
         "category": "Case e condomini",
         "title": "Cura Residenziale",
-        "description": "Manutenzione settimanale, bisettimanale o mensile su misura per il tuo stile di vita."
+        "description": "Manutenzione settimanale, bisettimanale o mensile adattata al tuo stile di vita."
       },
       "commercial": {
-        "category": "Uffici e negozi",
+        "category": "Uffici e commerci",
         "title": "Suite Commerciali",
-        "description": "Uffici boutique, showroom e spazi commerciali rinfrescati fuori orario."
+        "description": "Uffici boutique, showroom e spazi commerciali rinnovati fuori orario."
       },
       "windows": {
         "category": "Vetro e dettagli",
-        "title": "Vetri e Rifiniture",
-        "description": "Finestre cristalline, specchi e dettagli in acciaio inossidabile ovunque."
+        "title": "Finestre e Finiture",
+        "description": "Finestre, specchi e dettagli in acciaio inossidabile cristallini ovunque."
       },
       "deep_clean": {
         "category": "Ripristino stagionale",
@@ -349,46 +349,46 @@
       "duration": "Durata",
       "team": "Team",
       "starting_at": "A partire da",
-      "view_details": "Vedi Dettagli Servizio",
+      "view_details": "Vedi Dettagli del Servizio",
       "view_all": "Vedi Tutti i Servizi"
     },
     "featured_services": {
       "premier_weekly": {
-        "name": "Cura Premier di Residenza",
-        "description": "Pulizia settimanale con guanti bianchi con servizio biancheria, ritocchi organizzativi e dettagli stagionali programmati trimestralmente.",
-        "badge": "Più Richiesto",
+        "name": "Cura Premier delle Residenze",
+        "description": "Pulizia settimanale con servizio guanti bianchi, servizio biancheria, ritocchi di organizzazione e dettagli stagionali programmati trimestralmente.",
+        "badge": "Più richiesto",
         "frequency": "Settimanale",
         "duration": "4-5 ore",
-        "team": "2 addetti"
+        "team": "2 addette"
       },
       "signature_biweekly": {
         "name": "Firma Bisettimanale",
-        "description": "Pulizia bisettimanale dettagliata focalizzata su cucine, bagni e spazi abitativi ad alto contatto utilizzando prodotti non tossici.",
+        "description": "Pulizia bisettimanale dettagliata focalizzata su cucine, bagni e spazi abitativi ad alto contatto usando prodotti non tossici.",
         "badge": "Flessibile",
         "frequency": "Bisettimanale",
         "duration": "3 ore",
-        "team": "2 addetti"
+        "team": "2 addette"
       },
       "deep_restore": {
         "name": "Restauro Profondo Stagionale",
-        "description": "Rinfresco stagionale dall'alto al basso coprendo battiscopa, infissi, interni degli armadi e spazi abitativi esterni.",
+        "description": "Rinnovamento stagionale dall'alto al basso coprendo battiscopa, accessori, interni di armadi e spazi abitativi all'aperto.",
         "badge": "Trimestrale",
         "frequency": "Trimestrale",
         "duration": "Giornata intera",
-        "team": "3-4 addetti"
+        "team": "3-4 addette"
       }
     },
     "about": {
       "eyebrow": "Su Gloria",
       "title": "Passione per Spazi Puliti e Sani",
-      "description": "Gloria ha fondato CMK Home Services con una missione semplice: fornire alle famiglie e alle aziende di Miami servizi di pulizia affidabili e professionali di cui possono fidarsi. Con anni di esperienza e un team dedicato, trattiamo ogni casa e ufficio come se fosse il nostro."
+      "description": "Gloria ha fondato CMK Home Services con una missione semplice: fornire alle famiglie e alle aziende di Miami servizi di pulizia affidabili e professionali di cui possano fidarsi. Con anni di esperienza e un team dedicato, trattiamo ogni casa e ufficio come se fosse nostro."
     },
     "membership": {
       "eyebrow": "Contattaci",
       "title": "Pronto per uno spazio impeccabile?",
       "description": "Contattaci oggi per un preventivo gratuito. Serviamo tutta Miami e le aree circostanti con programmazione flessibile per soddisfare le tue esigenze.",
       "benefits": [
-        "Professionisti licenziati, assicurati e garantiti",
+        "Professionisti con licenza, assicurati e garantiti",
         "Servizio in giornata disponibile",
         "Prodotti e attrezzature ecologici",
         "Garanzia di soddisfazione 100%"
@@ -399,7 +399,7 @@
     "contact_section": {
       "eyebrow": "Pronti quando lo sei tu",
       "title": "Progettiamo un programma di pulizia intorno alla tua vita.",
-      "description": "Condividi la tua frequenza preferita, la metratura e qualsiasi nota di concierge. Ti invieremo una proposta personalizzata entro un giorno lavorativo.",
+      "description": "Condividi la tua frequenza preferita, metratura e qualsiasi nota di concierge. Ti invieremo una proposta personalizzata entro un giorno lavorativo.",
       "cta": "Richiedi pulizia concierge",
       "service_areas_title": "Aree di servizio",
       "areas": [
@@ -411,1085 +411,1497 @@
     }
   },
   "services": {
-    "residential": {
-      "title": "Servizi di Pulizia Residenziale",
-      "tagline": "Mantieni la tua casa fresca",
-      "description": "I nostri servizi di pulizia domestica offrono ai proprietari di casa impegnati di Miami la tranquillità con manutenzione regolare o rinfreschi una tantum. Trattiamo la tua casa con la stessa cura e attenzione che ci aspetteremmo per la nostra.",
-      "quick_facts": {
-        "title": "Dettagli del Servizio",
-        "frequency": "Settimanale, Bisettimanale o Mensile",
-        "duration": "2-6 ore a seconda delle dimensioni",
-        "team": "Team di 2-3 Professionisti della Pulizia",
-        "products": "Prodotti Ecologici Non Tossici Forniti"
+    "ui": {
+      "hero": {
+        "eyebrow": "Servizi Principali",
+        "title": "Programmi di pulizia adattati alla vita di Miami",
+        "description": "Dalle residenze boutique alle suite esecutive, ogni servizio riflette l'artigianalità e la flessibilità che ti aspetti. Che tu abbia bisogno di cure settimanali ricorrenti o coordinamento di rotazione per affitti stagionali, il nostro approccio concierge offre prezzi prevedibili, programmazione reattiva e team formati su finiture di alta gamma.",
+        "metrics": [
+          {
+            "value": "15+",
+            "label": "Anni prendendosi cura di proprietà a Miami"
+          },
+          {
+            "value": "100%",
+            "label": "Garanzia di soddisfazione ad ogni visita"
+          },
+          {
+            "value": "24h",
+            "label": "Tempo medio di risposta per proposte personalizzate"
+          }
+        ],
+        "promise": {
+          "eyebrow": "La nostra promessa",
+          "items": [
+            "Concierge dedicato per programmazione e controlli di qualità",
+            "Team ricorrenti familiarizzati con la tua proprietà e preferenze",
+            "Prezzi trasparenti—nessun costo nascosto o addebito a sorpresa",
+            "Cura con guanti bianchi per superfici delicate e finiture di lusso"
+          ]
+        }
       },
-      "features": {
-        "title": "Cosa è incluso",
-        "dust_vacuum": "Spolveratura e Aspirazione Complete",
-        "kitchen": "Superfici Cucina, Elettrodomestici e Pavimenti",
-        "bathrooms": "Pulizia e Sanificazione Bagni",
-        "floors": "Spazzare e Lavare Tutti i Pavimenti",
-        "bedrooms": "Camere da Letto, Rifare i Letti, Cambio Lenzuola (su richiesta)",
-        "living": "Spazi Abitativi e Sala da Pranzo",
-        "baseboards": "Pulizia Battiscopa e Modanature",
-        "trash": "Svuotamento Spazzatura e Riciclaggio",
-        "mirrors": "Pulizia Specchi e Vetri",
-        "organization": "Organizzazione Leggera (riordino)",
-        "details": "Tocchi Finali (cuscini gonfiati, ecc.)",
-        "laundry": "Servizio Biancheria (costo aggiuntivo)"
+      "sections": {
+        "what_is_included": {
+          "title": "Cosa è incluso",
+          "description": "Ogni visita segue una checklist documentata adattata alla tua proprietà."
+        },
+        "our_process": {
+          "title": "Il nostro processo",
+          "description": "Milestone trasparenti mantengono il lavoro prevedibile e senza stress."
+        },
+        "questions_answered": {
+          "title": "Domande con risposta",
+          "description_template": "Considerazioni comuni per {{service}}."
+        },
+        "what_clients_appreciate": "Cosa apprezzano i clienti"
       },
-      "process": {
-        "title": "Come Funziona",
-        "step_1_title": "Programma il Tuo Servizio",
-        "step_1_desc": "Scegli la tua frequenza preferita e prenota online o per telefono.",
-        "step_2_title": "Personalizza il Tuo Piano",
-        "step_2_desc": "Dicci le tue priorità e qualsiasi area speciale o preoccupazione.",
-        "step_3_title": "Puliamo, Tu Ti Rilassi",
-        "step_3_desc": "Il nostro team arriva puntuale con tutte le forniture e si mette al lavoro.",
-        "step_4_title": "Goditi il Tuo Spazio Fresco",
-        "step_4_desc": "Torna a casa in uno spazio impeccabile, profumato e rinfrescante."
+      "cta_card": {
+        "eyebrow": "Prenotazione concierge",
+        "title_template": "Hai bisogno di {{service}}?",
+        "description": "Adatteremo un ambito, condivideremo i prezzi e coordineremo la prima visita entro 24 ore.",
+        "schedule_whatsapp": "Programma via WhatsApp",
+        "call": "Chiama (786) 380-7579",
+        "request_proposal": "Richiedi una proposta"
       },
-      "trust_badges": {
-        "licensed": "Licenziati e Assicurati",
-        "eco": "Prodotti 100% Ecologici",
-        "guarantee": "Garanzia di Soddisfazione"
+      "overview": {
+        "eyebrow": "Altri modi in cui possiamo aiutare",
+        "title": "Esplora ogni programma a colpo d'occhio",
+        "view_details": "Vedi dettagli"
       },
-      "faqs": {
-        "q1": "Devo fornire prodotti o attrezzature per la pulizia?",
-        "a1": "No! Portiamo tutti i nostri prodotti e attrezzature per la pulizia professionali di qualità. Utilizziamo solo prodotti ecologici non tossici sicuri per la tua famiglia e gli animali domestici.",
-        "q2": "Devo essere a casa durante la pulizia?",
-        "a2": "No, non è necessario. Molti clienti ci danno accesso (codice garage, serratura elettronica o chiave sicura) in modo che possiamo pulire mentre sono al lavoro. Il nostro team è completamente controllato, assicurato e affidabile.",
-        "q3": "E se non sono soddisfatto della pulizia?",
-        "a3": "Offriamo una garanzia di soddisfazione al 100%. Se qualcosa non è di tuo gradimento, faccelo sapere entro 24 ore e torneremo gratuitamente per sistemarlo."
+      "bottom_cta": {
+        "eyebrow": "Pronti quando lo sei tu",
+        "title": "Progettiamo un piano di pulizia intorno al tuo stile di vita.",
+        "description": "Condividi frequenza, metratura, finiture e qualsiasi nota concierge. Ti invieremo una proposta personalizzata con prezzi trasparenti e opzioni di programmazione.",
+        "get_whatsapp_quote": "Ottieni preventivo via WhatsApp",
+        "call": "Chiama (786) 380-7579",
+        "request_clean": "Richiedi pulizia concierge"
       }
+    },
+    "common_faqs": [
+      {
+        "question": "Come ottengo un preventivo?",
+        "answer": "Contattaci su WhatsApp al (786) 380-7579, chiama o invia il modulo sulla nostra pagina contatti. Rispondiamo entro un giorno lavorativo."
+      },
+      {
+        "question": "Siete autorizzati e assicurati?",
+        "answer": "Sì. CMK Home Services è completamente autorizzata, assicurata e garantita per lavori residenziali e commerciali in tutta Miami-Dade."
+      },
+      {
+        "question": "Quali aree servite?",
+        "answer": "Copriamo l'area metropolitana di Miami inclusi Miami Beach, Bal Harbour, Aventura, Sunny Isles, Broward e quartieri circostanti."
+      }
+    ],
+    "residential": {
+      "title": "Pulizia Residenziale",
+      "tagline": "Servizio boutique di pulizia per la vita quotidiana",
+      "description": "Manutenzione dettagliata per residenze primarie e secondarie. Curiamo ogni stanza con tocchi di finitura di livello alberghiero e programmazione in stile concierge.",
+      "quick_facts": [
+        { "label": "Ideale per", "value": "Residenze e case vacanza" },
+        { "label": "Cadenza", "value": "Settimanale / Bisettimanale" },
+        { "label": "Team", "value": "2 addette dedicate" }
+      ],
+      "features": [
+        "Spolveratura di tutta la casa, superfici e dettagli",
+        "Cura della cucina con pulizia e lucidatura degli elettrodomestici",
+        "Sanificazione dei bagni con rimozione calcare e lucidatura degli accessori",
+        "Cura dei pavimenti per marmo, legno e vinile di lusso",
+        "Rinnovo della biancheria da letto e lavanderia leggera su richiesta",
+        "Finestre interne, specchi e accenti in vetro",
+        "Piani di pulizia adatti agli animali domestici",
+        "Forniture ecologiche disponibili"
+      ],
+      "process": [
+        { "title": "Ammissione concierge", "description": "Condividi metratura, finiture e preferenze con il nostro programmatore." },
+        { "title": "Checklist personalizzata", "description": "Documentiamo ogni stanza e assegniamo un team ricorrente alla tua casa." },
+        { "title": "Pulizia con guanti bianchi", "description": "I professionisti arrivano in uniforme con forniture di grado commerciale e dispositivi di protezione." },
+        { "title": "Garanzia di qualità", "description": "I supervisori effettuano ispezioni periodiche e si adattano in base ai tuoi feedback." }
+      ],
+      "trust_badges": [
+        "Professionisti autorizzati, assicurati e garantiti",
+        "Team con verifica dei precedenti assegnato alla tua casa",
+        "Servizio discreto con istruzioni di accesso sicuro"
+      ],
+      "faqs": [
+        {
+          "question": "Posso conoscere il team prima del servizio?",
+          "answer": "Sì. Possiamo organizzare un'introduzione o un tour virtuale per farti sentire sicuro prima della prima visita."
+        },
+        {
+          "question": "Portate prodotti per la pulizia?",
+          "answer": "Forniamo prodotti e attrezzature di grado professionale. Se preferisci un marchio specifico, saremo felici di usarlo."
+        },
+        {
+          "question": "Cosa succede se non sono a casa?",
+          "answer": "La maggior parte dei clienti fornisce istruzioni di accesso sicuro. Chiuderemo a chiave e invieremo conferma con foto una volta terminato."
+        }
+      ]
     },
     "commercial": {
-      "title": "Servizi di Pulizia Commerciale",
-      "tagline": "Spazi di Lavoro Professionali, Puliti",
-      "description": "Aiutiamo le aziende di Miami a mantenere un ambiente di lavoro pulito e professionale che impressiona i clienti e supporta la produttività del team. Dalle piccole suite d'ufficio agli spazi commerciali più grandi, ci adattiamo al tuo programma.",
-      "quick_facts": {
-        "title": "Dettagli Servizio Commerciale",
-        "frequency": "Giornaliero, Settimanale o Personalizzato",
-        "duration": "Varia a seconda della metratura (preventivi disponibili)",
-        "team": "Personale Professionale Scalabile",
-        "products": "Disinfettanti di Qualità Commerciale, Ecologici"
-      },
-      "features": {
-        "title": "Cosa è incluso",
-        "reception": "Aree Reception e Atri",
-        "workspaces": "Uffici e Postazioni di Lavoro",
-        "conference": "Sale Conferenze e Sale Riunioni",
-        "break_rooms": "Cucine e Sale Pausa",
-        "restrooms": "Servizi Igienici e Strutture",
-        "floors": "Pulizia di Tutti i Rivestimenti per Pavimenti",
-        "trash": "Servizio Svuotamento Rifiuti e Riciclaggio",
-        "windows": "Lavaggio Vetri Interni",
-        "dusting": "Spolveratura Superfici e Scaffali",
-        "disinfection": "Disinfezione Punti ad Alto Contatto",
-        "stocking": "Rifornimento Servizi Igienici (il cliente fornisce le forniture)",
-        "janitorial": "Servizio di Custode Completo Disponibile"
-      },
-      "process": {
-        "title": "Come Funziona",
-        "step_1_title": "Ispezione del Sito",
-        "step_1_desc": "Visitiamo il tuo ufficio per valutare le tue esigenze e creare un piano personalizzato.",
-        "step_2_title": "Preventivo Personalizzato",
-        "step_2_desc": "Ricevi un prezzo competitivo e trasparente basato sulla tua metratura e esigenze.",
-        "step_3_title": "Programma Flessibile",
-        "step_3_desc": "Scegli servizio notturno, weekend o durante l'orario d'ufficio—a tua comodità.",
-        "step_4_title": "Qualità Costante",
-        "step_4_desc": "Lo stesso team affidabile serve la tua azienda ad ogni visita per coerenza."
-      },
-      "trust_badges": {
-        "licensed": "Completamente Licenziati e Garantiti",
-        "insured": "Assicurazione Responsabilità Civile",
-        "flexible": "Orari Flessibili (Sera/Weekend)"
-      },
-      "faqs": {
-        "q1": "Potete pulire fuori orario per non disturbare le nostre operazioni?",
-        "a1": "Assolutamente! Offriamo servizi notturni e weekend per adattarci al tuo programma aziendale e mantenere il tuo ufficio fresco senza interruzioni.",
-        "q2": "Usate prodotti sicuri per uffici con dipendenti presenti?",
-        "a2": "Sì. Tutti i nostri prodotti sono ecologici, non tossici e sicuri per ambienti di lavoro. Utilizziamo anche attrezzature silenziose se necessario per ridurre al minimo le interruzioni."
-      }
+      "title": "Pulizia Commerciale",
+      "tagline": "Suite esecutive, boutique e uffici",
+      "description": "Pulizia diurna o fuori orario per sale riunioni, boutique, suite mediche e studi creativi. Manteniamo gli spazi rivolti al cliente impeccabili senza interrompere le operazioni.",
+      "quick_facts": [
+        { "label": "Ideale per", "value": "Uffici e commercio boutique" },
+        { "label": "Cadenza", "value": "Notturna / Settimanale" },
+        { "label": "Team", "value": "Scalato in base alla metratura" }
+      ],
+      "features": [
+        "Servizio portiere diurno o fuori orario",
+        "Dettaglio reception, sale conferenze e postazioni di lavoro",
+        "Sanificazione bagni con opzione rifornimento",
+        "Manutenzione sala pausa e angolo cottura",
+        "Cura pavimenti per moquette, piastrelle e cemento lucidato",
+        "Pareti divisorie in vetro, ascensori e punti di contatto",
+        "Coordinamento rifiuti, riciclaggio e distruzione documenti",
+        "Gestione checklist apertura/chiusura"
+      ],
+      "process": [
+        { "title": "Tour del sito", "description": "Esaminiamo accesso, sicurezza e requisiti di conformità." },
+        { "title": "Proposta e cronogramma", "description": "Ricevi un ambito trasparente con cadenza, forniture e frequenza di reportistica." },
+        { "title": "Team dedicato", "description": "Un team formato segue le tue SOP con supervisione del responsabile." },
+        { "title": "Reportistica e ottimizzazione", "description": "Forniamo riepiloghi delle visite e adattiamo gli ambiti man mano che evolve il tuo ambiente di lavoro." }
+      ],
+      "trust_badges": [
+        "Certificato di assicurazione fornito su richiesta",
+        "Protocolli consapevoli di HIPAA e OSHA",
+        "Programmazione flessibile per servizio fuori orario"
+      ],
+      "faqs": [
+        {
+          "question": "Offrite servizi portiere diurni?",
+          "answer": "Sì. Possiamo assegnare portieri diurni per lobby o bagni ad alto traffico mentre un team notturno gestisce la pulizia profonda."
+        },
+        {
+          "question": "Potete supportare ispezioni o audit?",
+          "answer": "Documentiamo ogni visita, manteniamo schede SDS e prepariamo checklist di conformità per settori regolamentati."
+        }
+      ]
     },
     "windows": {
-      "title": "Servizio Lavaggio Vetri",
-      "tagline": "Viste Cristalline, Ovunque",
-      "description": "Le finestre impeccabili fanno una grande differenza nell'aspetto e nella sensazione della tua casa o ufficio. Il nostro team professionale di lavaggio vetri fornisce un servizio senza striature per finestre scintillanti che lasciano entrare la luce e la vita di Miami.",
-      "quick_facts": {
-        "title": "Dettagli Servizio Vetri",
-        "frequency": "Mensile, Bimestrale o Una Tantum",
-        "duration": "1-4 ore a seconda del numero di finestre",
-        "team": "Specialisti Vetri Esperti",
-        "products": "Soluzioni per Vetri di Qualità Professionale"
-      },
-      "features": {
-        "title": "Cosa è incluso",
-        "interior": "Pulizia Interna di Tutte le Finestre",
-        "exterior": "Pulizia Esterna (livello terra, accessibile in sicurezza)",
-        "screens": "Rimozione e Lavaggio Zanzariere",
-        "tracks": "Pulizia Telai e Guide Finestre",
-        "sills": "Pulizia Davanzali",
-        "glass_doors": "Porte Scorrevoli in Vetro e Porte-Finestre",
-        "mirrors": "Pulizia Grandi Specchi",
-        "skylights": "Pulizia Lucernari (se accessibili)",
-        "streak_free": "Finitura Senza Striature con Tergipavimenti Professionali",
-        "spot_treatment": "Trattamento Macchie per Depositi Minerali",
-        "high_windows": "Finestre Alte (con scala)",
-        "pressure_wash": "Lavaggio a Pressione Esterno (costo aggiuntivo)"
-      },
-      "process": {
-        "title": "Come Funziona",
-        "step_1_title": "Conta le Tue Finestre",
-        "step_1_desc": "Conta le tue finestre e contattaci per un preventivo personalizzato.",
-        "step_2_title": "Prenota il Tuo Servizio",
-        "step_2_desc": "Programma una data che ti va bene. Spesso possiamo fare servizi in giornata.",
-        "step_3_title": "Preparazione Professionale",
-        "step_3_desc": "Arriviamo con tutti i tergipavimenti, scale e soluzioni necessari.",
-        "step_4_title": "Vetro Scintillante",
-        "step_4_desc": "Goditi finestre cristalline che lasciano entrare più luce e migliorano le tue viste."
-      },
-      "trust_badges": {
-        "licensed": "Licenziati e Assicurati",
-        "safe": "Attrezzatura di Sicurezza per Finestre Alte",
-        "eco": "Soluzioni Ecologiche"
-      },
-      "faqs": {
-        "q1": "Pulite entrambi i lati della finestra?",
-        "a1": "Sì! Il nostro servizio standard include la pulizia interna ed esterna (accessibile a livello terra). Per finestre alte o che richiedono accesso speciale, faccelo sapere al momento della prenotazione.",
-        "q2": "Quanto spesso dovrei far pulire le mie finestre a Miami?",
-        "a2": "Raccomandiamo ogni 1-3 mesi per case residenziali a causa del sale aereo, dell'umidità e delle condizioni meteorologiche di Miami. Le proprietà commerciali spesso beneficiano di una pulizia mensile per mantenere un aspetto professionale.",
-        "q3": "Potete rimuovere macchie d'acqua dura o spruzzi salini?",
-        "a3": "Sì. Utilizziamo soluzioni di trattamento specializzate per depositi minerali e accumuli di spruzzi salini che sono comuni nelle aree costiere di Miami."
-      }
+      "title": "Cura di Finestre e Vetri",
+      "tagline": "Viste cristalline dello skyline di Miami",
+      "description": "Pulizia finestre interna ed esterna per condomini, proprietà e vetrine. Aria salata, protezione solare e temporali quotidiani non sono rivali per i nostri specialisti del vetro.",
+      "quick_facts": [
+        { "label": "Ideale per", "value": "Condomini, attici, vetrine commerciali" },
+        { "label": "Cadenza", "value": "Ogni 2-4 mesi" },
+        { "label": "Accesso", "value": "Fino a 4 piani (più alto tramite partner di sollevamento)" }
+      ],
+      "features": [
+        "Dettaglio vetro interno ed esterno",
+        "Pulizia schermo, binario e davanzale",
+        "Lucidatura porte scorrevoli e vetro del balcone",
+        "Rimozione depositi di sale e minerali",
+        "Soluzioni di accesso in alto con equipaggiamento di sicurezza",
+        "Cura di specchi, vetro doccia e ringhiera",
+        "Pulizia vetro post-ristrutturazione",
+        "Trattamenti protettivi per vetro"
+      ],
+      "process": [
+        { "title": "Valutazione e piano di accesso", "description": "Valutiamo esposizione, accesso tubo e eventuali requisiti HOA." },
+        { "title": "Configurazione protezione", "description": "Mobili, pavimenti e paesaggistica vengono coperti prima di iniziare." },
+        { "title": "Pulizia dettagliata", "description": "Tecnica tergivetro più finitura in microfibra per un risultato senza striature." },
+        { "title": "Ispezione finale", "description": "Ispezionamo con luce diurna e ti invitiamo a rivedere ogni pannello." }
+      ],
+      "trust_badges": [
+        "Tecnici antiscivolo, sicurezza prima di tutto",
+        "Filtrazione acqua pura per finitura impeccabile",
+        "Completamente assicurati per lavori esterni"
+      ],
+      "faqs": [
+        {
+          "question": "Pulite esterni di edifici alti?",
+          "answer": "Sì. Collaboriamo con team certificati di accesso con corde per edifici oltre i quattro piani e gestiamo tutti i permessi."
+        },
+        {
+          "question": "Con quale frequenza dovrebbero essere pulite le finestre a Miami?",
+          "answer": "La maggior parte dei clienti programma servizio trimestrale per stare avanti a sale marino, umidità e temporali pomeridiani."
+        }
+      ]
     },
     "organization": {
-      "title": "Servizi di Organizzazione Domestica",
-      "tagline": "Declutter, Organizza, Semplifica",
-      "description": "Ti senti sopraffatto dal disordine o dalla mancanza di sistemi a casa? I nostri servizi di organizzazione ti aiutano a creare spazi funzionali e belli che semplificano la vita quotidiana e riducono lo stress.",
-      "quick_facts": {
-        "title": "Dettagli Organizzazione",
-        "frequency": "Progetti Una Tantum o Supporto Continuo",
-        "duration": "Mezza Giornata a Progetti di Più Giorni",
-        "team": "Organizzatori Professionali",
-        "products": "Soluzioni di Archiviazione Disponibili (Costo Aggiuntivo)"
-      },
-      "features": {
-        "title": "Cosa è incluso",
-        "closets": "Organizzazione Armadi e Guardaroba",
-        "kitchen": "Ottimizzazione Dispensa e Cucina",
-        "garage": "Organizzazione Garage e Archiviazione",
-        "declutter": "Assistenza Decluttering e Smistamento",
-        "systems": "Sistemi di Archiviazione Personalizzati",
-        "labeling": "Etichettatura e Categorizzazione",
-        "seasonal": "Archiviazione Stagionale e Rotazione",
-        "home_office": "Configurazione Ufficio Domestico",
-        "kids": "Camere Bambini e Sale Giochi",
-        "move": "Assistenza Disimballaggio Trasloco",
-        "donations": "Coordinamento Donazioni (consegniamo gli articoli)",
-        "maintenance": "Visite di Supporto Manutenzione"
-      },
-      "process": {
-        "title": "Come Funziona",
-        "step_1_title": "Consultazione",
-        "step_1_desc": "Parliamo dei tuoi obiettivi, spazi problematici e visione per la tua casa organizzata.",
-        "step_2_title": "Pianifica il Progetto",
-        "step_2_desc": "Creiamo un piano di progetto con tempistica e esigenze di forniture.",
-        "step_3_title": "Smista e Organizza",
-        "step_3_desc": "Lavoriamo insieme per declutterare, categorizzare e creare sistemi funzionali.",
-        "step_4_title": "Goditi lo Spazio",
-        "step_4_desc": "Goditi una casa più organizzata e funzionale con sistemi facili da mantenere."
-      },
-      "trust_badges": {
-        "certified": "Organizzatori Formati",
-        "custom": "Soluzioni Personalizzate",
-        "support": "Supporto Continuo Disponibile"
-      },
-      "faqs": {
-        "q1": "Devo declutterare prima che veniate?",
-        "a1": "No! Essere parte del processo insieme è effettivamente utile. Ti guidiamo nelle decisioni e rendiamo il decluttering meno travolgente.",
-        "q2": "Fornite contenitori e organizzatori?",
-        "a2": "Possiamo acquistare e fornire soluzioni di archiviazione a costo aggiuntivo, o lavorare con quello che hai già. Ti consiglieremo su cosa funzionerà meglio per il tuo spazio e budget."
-      }
+      "title": "Organizzazione della Casa",
+      "tagline": "Sistemi che appaiono belli e rimangono ordinati",
+      "description": "Organizzatori professionisti riordinano armadi, dispense, garage e uffici domestici in modo che ogni articolo abbia un posto e le tue routine quotidiane sembrino calme.",
+      "quick_facts": [
+        { "label": "Ideale per", "value": "Armadi, cucine, garage" },
+        { "label": "Cronogramma", "value": "Sessione singola o multi-giorno" },
+        { "label": "Deliverable", "value": "Piano organizzativo personalizzato" }
+      ],
+      "features": [
+        "Pianificazione spazi e mappatura zone",
+        "Modificare, categorizzare e contenere i beni",
+        "Etichettatura e inventario fotografico",
+        "Coordinamento donazione e consegna",
+        "Rotazione guardaroba stagionale",
+        "Riconfigurazione garage e deposito",
+        "Configurazione flusso di lavoro ufficio domestico",
+        "Visite di manutenzione per mantenere i sistemi funzionanti"
+      ],
+      "process": [
+        { "title": "Sessione di scoperta", "description": "Impariamo come vivi nello spazio più le tue preferenze estetiche." },
+        { "title": "Design e approvvigionamento", "description": "Ricevi un design e lista prodotti curati prima di iniziare." },
+        { "title": "Modificare e implementare", "description": "Il nostro team riordina, installa soluzioni e stilizza ogni scaffale." },
+        { "title": "Coaching stile di vita", "description": "Ti mostriamo come mantenere il sistema e offriamo supporto di follow-up." }
+      ],
+      "trust_badges": [
+        "Sessioni confidenziali, senza giudizi",
+        "Approvvigionamento e installazione prodotti gestiti per te",
+        "Ricevute donazione e ritiro inclusi"
+      ],
+      "faqs": [
+        {
+          "question": "Devo essere presente?",
+          "answer": "Raccomandiamo di partecipare alla fase di modifica, poi puoi ritirarti mentre installiamo e stilizziamo lo spazio."
+        },
+        {
+          "question": "Potete lavorare con contenitori esistenti?",
+          "answer": "Assolutamente. Riutilizziamo ciò che possiedi e integriamo solo quando necessario."
+        }
+      ]
     },
     "deep_clean": {
-      "title": "Servizi di Pulizia Profonda",
-      "tagline": "Ripristino Dall'Alto al Basso",
-      "description": "Il nostro servizio di pulizia profonda va oltre la manutenzione regolare per affrontare ogni angolo, fessura e superficie spesso trascurata. Perfetto per pulizie di primavera, post-ristrutturazione o semplicemente per rinfrescare una casa che ha bisogno di un po' di amore extra.",
-      "quick_facts": {
-        "title": "Dettagli Pulizia Profonda",
-        "frequency": "Stagionale, Annuale o Secondo Necessità",
-        "duration": "Giornata Intera o Più Giorni",
-        "team": "Team Completo di Professionisti",
-        "products": "Attrezzature per Pulizia Industriali Fornite"
-      },
-      "features": {
-        "title": "Cosa è incluso",
-        "baseboards": "Battiscopa e Modanature",
-        "ceiling_fans": "Ventilatori a Soffitto e Lampadari",
-        "appliances": "Dentro/Dietro Tutti gli Elettrodomestici",
-        "cabinets": "Interni Armadi e Cassetti",
-        "windows": "Telai Finestre, Guide e Davanzali",
-        "walls": "Lavaggio Pareti e Interruttori",
-        "grout": "Pulizia e Sigillatura Fughe",
-        "carpets": "Pulizia Profonda Tappeti (se richiesto)",
-        "upholstery": "Pulizia Tappezzeria (se richiesto)",
-        "blinds": "Tende e Trattamenti Finestre",
-        "hvac": "Spolveratura Griglie e Bocchette d'Aria",
-        "detailed": "Dettagliatura di Ogni Superficie e Angolo"
-      },
-      "process": {
-        "title": "Come Funziona",
-        "step_1_title": "Valutazione",
-        "step_1_desc": "Valutiamo la tua casa e discutiamo le aree che necessitano di attenzione particolare.",
-        "step_2_title": "Piano Personalizzato",
-        "step_2_desc": "Ricevi un piano dettagliato e preventivo per il tuo progetto di pulizia profonda.",
-        "step_3_title": "Giorno di Pulizia",
-        "step_3_desc": "Il nostro team arriva con tutte le attrezzature e forniture industriali.",
-        "step_4_title": "Risultato Impeccabile",
-        "step_4_desc": "Ogni superficie, angolo e area è dettagliata e rinfrescata dall'alto al basso."
-      },
-      "trust_badges": {
-        "thorough": "Pulizia Stanza per Stanza",
-        "eco": "Soluzioni Ecologiche",
-        "guarantee": "Garanzia di Soddisfazione"
-      },
-      "faqs": {
-        "q1": "Qual è la differenza tra pulizia regolare e pulizia profonda?",
-        "a1": "La pulizia regolare copre le attività di manutenzione settimanale/bisettimanale. La pulizia profonda affronta tutte le aree trascurate: battiscopa, interni armadi, dietro elettrodomestici, lavaggio pareti, ecc. È una pulizia molto più intensiva e che richiede tempo.",
-        "q2": "Quanto tempo richiede una pulizia profonda?",
-        "a2": "Dipende dalle dimensioni e dalle condizioni della tua casa. Una tipica casa di 3 camere richiede 6-10 ore con un team di 2-3 addetti. Case più grandi o quelle che necessitano di più lavoro possono richiedere più giorni.",
-        "q3": "Devo fare una pulizia profonda prima di iniziare un servizio regolare?",
-        "a3": "Lo raccomandiamo! Una pulizia profonda stabilisce una base di riferimento pulita, rendendo la manutenzione regolare molto più efficiente e facile da mantenere."
-      }
+      "title": "Pulizia Profonda",
+      "tagline": "Ripristini stagionali per ogni superficie",
+      "description": "Dettagli intensivi prima di eventi speciali, dopo ristrutturazioni, o quando vuoi la sensazione di una casa completamente nuova.",
+      "quick_facts": [
+        { "label": "Ideale per", "value": "Stagionale + post-ristrutturazione" },
+        { "label": "Cronogramma", "value": "4-8 ore" },
+        { "label": "Focus", "value": "Battiscopa fino agli accessori luce" }
+      ],
+      "features": [
+        "Battiscopa, modanature e cornici puliti a mano",
+        "Interno di armadi, cassetti e incorporati",
+        "Interni di elettrodomestici inclusi forno e frigorifero",
+        "Lavaggio piastrelle e stucco con opzione vapore",
+        "Pulizia griglie aria e ritorni",
+        "Aspirazione tappezzeria e rinnovo materassi",
+        "Mensole difficili da raggiungere, ventilatori e lampadari",
+        "Spostare mobili per catturare polvere nascosta"
+      ],
+      "process": [
+        { "title": "Tour pre-pulizia", "description": "Notiamo materiali, punti problematici e qualsiasi zona vietata." },
+        { "title": "Cronogramma dettagliato", "description": "Una checklist personalizzata con tempo stimato per stanza." },
+        { "title": "Pulizia specializzata", "description": "I tecnici usano strumenti professionali come vaporizzatori e aspirapolvere HEPA." },
+        { "title": "Revisione soddisfazione", "description": "Esaminiamo ogni spazio insieme o inviamo foto se sei fuori." }
+      ],
+      "trust_badges": [
+        "Disinfettanti di grado ospedaliero disponibili",
+        "Filtrazione HEPA per sollievo allergie",
+        "Garanzia soddisfazione 100%"
+      ],
+      "faqs": [
+        {
+          "question": "È richiesta una pulizia profonda prima del servizio ricorrente?",
+          "answer": "Lo raccomandiamo per i nuovi clienti in modo che le visite di manutenzione rimangano efficienti e coerenti."
+        },
+        {
+          "question": "Potete includere aree esterne?",
+          "answer": "Sì. Balconi, cucine estive e mobili da patio possono essere aggiunti all'ambito."
+        }
+      ]
     },
     "move": {
-      "title": "Pulizia Trasloco (Ingresso/Uscita)",
-      "tagline": "Traslochi Senza Stress",
-      "description": "Traslocare è abbastanza stressante senza dover pulire il tuo vecchio o nuovo posto. Il nostro servizio di pulizia trasloco garantisce che lasci il tuo vecchio posto impeccabile e ti trasferisca in un nuovo posto fresco e pulito.",
-      "quick_facts": {
-        "title": "Dettagli Trasloco",
-        "frequency": "Servizio Una Tantum",
-        "duration": "Mezza a Giornata Intera",
-        "team": "Team Completo di Addetti",
-        "products": "Tutte le Forniture per Pulizia Incluse"
-      },
-      "features": {
-        "title": "Cosa è incluso",
-        "empty_home": "Pulizia Casa Intera Vuota",
-        "deep_scrub": "Pulizia Profonda di Tutte le Superfici",
-        "kitchen_full": "Cucina Completa (Elettrodomestici, Armadi, Pavimenti)",
-        "bathrooms_full": "Bagni Completi (Docce, WC, Lavandini)",
-        "floors": "Tutti i Pavimenti Aspirati e Lavati",
-        "baseboards": "Battiscopa e Modanature",
-        "windows": "Telai Finestre e Davanzali",
-        "closets": "Interni Armadi e Scaffali",
-        "walls": "Lavaggio Pareti e Macchie se Necessario",
-        "garage": "Spazzamento Garage (se applicabile)",
-        "final_inspection": "Ispezione Finale e Ritocchi",
-        "landlord_ready": "Preparazione per Proprietario/Nuovi Proprietari"
-      },
-      "process": {
-        "title": "Come Funziona",
-        "step_1_title": "Programma in Anticipo",
-        "step_1_desc": "Prenota non appena conosci la tua data di trasloco per garantire la disponibilità.",
-        "step_2_title": "Trasloco Completato Prima",
-        "step_2_desc": "Puliamo dopo che tutti i mobili e gli oggetti personali sono stati portati fuori.",
-        "step_3_title": "Pulizia Profonda Completa",
-        "step_3_desc": "Il nostro team pulisce accuratamente ogni area, superficie e angolo.",
-        "step_4_title": "Ispezione Finale",
-        "step_4_desc": "Passa in rassegna o gestiamo la lista del proprietario e garantiamo l'approvazione."
-      },
-      "trust_badges": {
-        "landlord": "Approvato dai Proprietari",
-        "deposit": "Massimo Recupero Deposito",
-        "flexible": "Programmazione Flessibile"
-      },
-      "faqs": {
-        "q1": "Devo essere presente durante la pulizia del trasloco?",
-        "a1": "No, finché abbiamo accesso alla proprietà vuota. Molti clienti ci danno il codice o lasciano una chiave e inviamo foto una volta completato.",
-        "q2": "Garantite che recupererò il mio deposito cauzionale?",
-        "a2": "Anche se non possiamo garantire la decisione del proprietario, la nostra pulizia profonda soddisfa o supera gli standard di pulizia standard richiesti per la restituzione del deposito. Lavoriamo anche da liste di controllo dei proprietari se fornite.",
-        "q3": "Potete pulire il mio nuovo posto prima che mi trasferisca?",
-        "a3": "Assolutamente! Molti clienti prenotano pulizie sia in uscita che in ingresso. Possiamo pulire la tua nuova casa prima che arrivino i traslocatori."
-      }
+      "title": "Trasloco Entrata / Uscita",
+      "tagline": "Case impeccabili per consegne e arrivi",
+      "description": "Prepariamo proprietà per inserzioni, rotazioni inquilini e nuovi inizi con dettagli pronti per foto e documentazione checklist.",
+      "quick_facts": [
+        { "label": "Ideale per", "value": "Venditori, proprietari, ricollocazioni" },
+        { "label": "Cronogramma", "value": "Programma con 3-5 giorni di anticipo" },
+        { "label": "Deliverable", "value": "Checklist pronta per ispezione" }
+      ],
+      "features": [
+        "Pulizia dall'alto al basso di casa vuota",
+        "Armadi, cassetti e scaffali interno/esterno",
+        "Dettaglio elettrodomestici incluso dietro le unità",
+        "Rimozione macchie muro e sanificazione placche interruttore",
+        "Cura di persiane, binari finestre e porte scorrevoli",
+        "Spazzamento garage, deposito e patio",
+        "Tocchi finali pronti per foto",
+        "Coordinamento ritiro rifiuti e detriti"
+      ],
+      "process": [
+        { "title": "Pianificazione cronogramma", "description": "Allineiamo con date di chiusura, fotografia inserzione o cronogrammi trasloco." },
+        { "title": "Preparazione vuota", "description": "I team arrivano dopo i trasportatori per affrontare ogni superficie." },
+        { "title": "Checklist ispezione", "description": "Seguiamo requisiti affitto o costruttore e documentiamo completezza." },
+        { "title": "Approvazione finale", "description": "Tour con proprietario/agente o conferma video se sei remoto." }
+      ],
+      "trust_badges": [
+        "Team di risposta rapida per cronogrammi stretti",
+        "Checklist dettagliata trasloco fornita",
+        "Fornitore preferito per gestori di proprietà di lusso"
+      ],
+      "faqs": [
+        {
+          "question": "Coordinate con trasportatori o agenti immobiliari?",
+          "answer": "Sì. Condividi i tuoi contatti e gestiremo l'accesso oltre a mantenere tutti aggiornati."
+        },
+        {
+          "question": "Potete aiutare a mettere in scena la casa?",
+          "answer": "Possiamo mettere in scena leggermente con mobili esistenti o riferirti ai nostri stilisti partner."
+        }
+      ]
     },
     "property": {
-      "title": "Pulizia Proprietà Airbnb/Vacanze",
-      "tagline": "Ospiti Felici, Recensioni 5 Stelle",
-      "description": "Gestire una casa vacanze richiede pulizia rapida e costante tra gli ospiti. Il nostro servizio specializzato Airbnb/casa vacanze garantisce che la tua proprietà sia impeccabile, ben fornita e pronta per ogni arrivo ospite.",
-      "quick_facts": {
-        "title": "Dettagli Proprietà Vacanze",
-        "frequency": "Ricambi Tra Ospiti (Secondo Necessità)",
-        "duration": "2-4 Ore per Ricambio",
-        "team": "Team Dedicato Airbnb",
-        "products": "Tutte le Forniture per Pulizia Incluse"
-      },
-      "features": {
-        "title": "Cosa è incluso",
-        "turnover": "Servizio Completo di Ricambio",
-        "linens": "Cambio di Tutte le Lenzuola e Asciugamani",
-        "laundry": "Servizio Biancheria (Lavare/Asciugare/Piegare)",
-        "kitchen_reset": "Ripristino Cucina (Piatti, Pulizia, Rifornimento)",
-        "bathrooms": "Bagni Completi (Pulire, Disinfettare, Rifornire)",
-        "trash": "Tutte le Spazzature Portate Fuori e Bidoni Puliti",
-        "floors": "Aspirazione e Lavaggio di Tutti i Pavimenti",
-        "dusting": "Spolveratura di Tutte le Superfici",
-        "restocking": "Rifornimento Articoli da Toilette",
-        "inspection": "Ispezione Proprietà e Rapporto",
-        "photos": "Foto Opzionali Dopo Pulizia",
-        "damage_report": "Segnalazione Danni o Articoli Mancanti"
-      },
-      "process": {
-        "title": "Come Funziona",
-        "step_1_title": "Onboarding",
-        "step_1_desc": "Impostiamo le preferenze della tua proprietà, posizione chiave e protocolli di rifornimento.",
-        "step_2_title": "Sincronizzazione Calendario",
-        "step_2_desc": "Sincronizziamo con il tuo calendario Airbnb/VRBO per automatizzare la programmazione.",
-        "step_3_title": "Ricambio Rapido",
-        "step_3_desc": "Puliamo tra check-out e check-in—di solito una finestra di 4-5 ore.",
-        "step_4_title": "Conferma e Rapporto",
-        "step_4_desc": "Ricevi conferma, foto e qualsiasi rapporto danni immediatamente."
-      },
-      "trust_badges": {
-        "airbnb": "Specialista Ricambio Airbnb",
-        "fast": "Ricambio in Giornata",
-        "reliable": "Servizio Affidabile 365 Giorni"
-      },
-      "faqs": {
-        "q1": "Come gestite la programmazione per ricambi ospiti dell'ultimo minuto?",
-        "a1": "Sincronizziamo con il tuo calendario di prenotazione e abbiamo un team dedicato disponibile per ricambi in giornata. Finché abbiamo almeno 4-5 ore tra check-out e check-in, garantiamo che la tua proprietà sarà pronta.",
-        "q2": "Fornite biancheria o devo comprare la mia?",
-        "a2": "Fornisci la biancheria (lenzuola, asciugamani), e noi laviamo, asciughiamo e rifacciamo i letti ad ogni ricambio. Questo garantisce che tu mantenga il controllo sulla qualità e possa abbinare il tuo brand/stile.",
-        "q3": "Cosa succede se gli ospiti lasciano un grande disordine o causano danni?",
-        "a3": "Documentiamo qualsiasi problema con foto e ti avvisiamo immediatamente in modo che tu possa affrontare reclami danni con la piattaforma. Per disordini eccessivi, forniamo un preventivo per la pulizia profonda aggiuntiva necessaria."
-      }
+      "title": "Cura di Affitti e Airbnb",
+      "tagline": "Servizi di rotazione per host e gestori di proprietà",
+      "description": "Rotazioni affidabili per affitti notturni, alloggi aziendali e appartamenti arredati. Gli ospiti arrivano a un'esperienza cinque stelle ad ogni soggiorno.",
+      "quick_facts": [
+        { "label": "Ideale per", "value": "Airbnb e affitti di lusso" },
+        { "label": "Cadenza", "value": "Per prenotazione" },
+        { "label": "Extra", "value": "Opzioni inventario + rifornimento" }
+      ],
+      "features": [
+        "Programmazione automatizzata collegata al tuo calendario prenotazioni",
+        "Rifacimento letti e presentazione asciugamani stile hotel",
+        "Servizio completo lavanderia e biancheria",
+        "Rifornimento servizi e consumabili",
+        "Documentazione fotografica dopo ogni visita",
+        "Segnalazione manutenzione minore",
+        "Ripristino serrature intelligenti e codici",
+        "Aggiunte pulizia profonda ogni trimestre"
+      ],
+      "process": [
+        { "title": "Onboarding e SOP", "description": "Documentiamo standard brand, armadi stoccaggio e contatti fornitori." },
+        { "title": "Sincronizzazione calendario", "description": "Integra con Airbnb, Hostfully o strumenti prenotazione diretta." },
+        { "title": "Esecuzione rotazione", "description": "I team seguono la tua checklist, riforniscono forniture e mettono in scena decor." },
+        { "title": "Reportistica e inventario", "description": "Ricevi foto prima/dopo più avvisi scorte basse in tempo reale." }
+      ],
+      "trust_badges": [
+        "Account manager dedicato",
+        "Aggiornamenti di testo in tempo reale e foto",
+        "Pulizie di emergenza in giornata disponibili"
+      ],
+      "faqs": [
+        {
+          "question": "Potete gestire biancheria e servizi?",
+          "answer": "Sì. Laviamo in loco o fuori sede, tracciamo inventario e riforniamo servizi per prenotazione."
+        },
+        {
+          "question": "Integrate con software prenotazioni?",
+          "answer": "Sincronizziamo con strumenti PMS popolari o condividiamo un calendario condiviso per evitare rotazioni mancate."
+        }
+      ]
     },
     "snowbird": {
-      "title": "Servizi Proprietà Stagionale (Snowbird)",
-      "tagline": "La Tua Casa, Pronta Quando Lo Sei Tu",
-      "description": "Passi parte dell'anno al nord? Il nostro servizio specializzato Snowbird mantiene la tua casa di Miami fresca, sicura e ben curata mentre sei via, e la fa brillare prima del tuo ritorno.",
-      "quick_facts": {
-        "title": "Dettagli Servizio Snowbird",
-        "frequency": "Visite Bisettimanali o Mensili",
-        "duration": "1-2 Ore per Visita",
-        "team": "Gestori Proprietà di Fiducia",
-        "products": "Forniture per Pulizia e Manutenzione Incluse"
-      },
-      "features": {
-        "title": "Cosa è incluso",
-        "regular_visits": "Visite di Controllo Regolari Programmate",
-        "dust_clean": "Leggera Spolveratura e Pulizia Superfici",
-        "air_circulation": "Far Funzionare Ventilatori a Soffitto e AC",
-        "water_run": "Far Scorrere Rubinetti e Scaricare WC",
-        "mail_packages": "Ritirare Posta e Pacchi",
-        "plant_care": "Annaffiare Piante (se richiesto)",
-        "trash_bins": "Gestire Bidoni Spazzatura (Portare Fuori/Dentro)",
-        "inspection": "Controllare Perdite, Danni o Problemi",
-        "storm_prep": "Preparazione Tempeste (Chiudere Imposte, Mettere in Sicurezza Mobili)",
-        "arrival_clean": "Pulizia Profonda Prima del Tuo Ritorno",
-        "restocking": "Rifornimento Frigo/Dispensa (Lista Spesa Fornita)",
-        "reporting": "Foto e Rapporti Inviati Dopo Ogni Visita"
-      },
-      "process": {
-        "title": "Come Funziona",
-        "step_1_title": "Consultazione Partenza",
-        "step_1_desc": "Creiamo un piano personalizzato per la tua proprietà e raccogliamo chiavi/codici d'accesso.",
-        "step_2_title": "Visite Regolari",
-        "step_2_desc": "Visitiamo la tua casa secondo il tuo programma (bisettimanale o mensile) per manutenzione.",
-        "step_3_title": "Rapporti e Foto",
-        "step_3_desc": "Dopo ogni visita, inviamo foto e avvisiamo di qualsiasi problema.",
-        "step_4_title": "Preparazione Ritorno",
-        "step_4_desc": "Prima del tuo ritorno, puliamo a fondo e riforriamo in modo che tutto sia pronto."
-      },
-      "trust_badges": {
-        "trusted": "Personale Controllato e Affidabile",
-        "insured": "Completamente Assicurati",
-        "reporting": "Rapporto Dopo Ogni Visita"
-      },
-      "faqs": {
-        "q1": "Quanto spesso dovreste visitare la mia casa mentre sono via?",
-        "a1": "Raccomandiamo visite bisettimanali per assenze di 3+ mesi, specialmente durante la stagione degli uragani. Per assenze più brevi o climi stabili, visite mensili possono essere sufficienti.",
-        "q2": "Cosa fate se scoprite un problema come una perdita o una finestra rotta?",
-        "a2": "Ti contattiamo immediatamente con foto e dettagli. Se è un'emergenza (grande perdita, finestra rotta), possiamo coordinarci con i tuoi fornitori fidati o appaltatori per affrontare le riparazioni con la tua approvazione.",
-        "q3": "Potete preparare la mia casa per il mio ritorno con biancheria fresca e generi alimentari?",
-        "a3": "Assolutamente! Fornisci semplicemente una lista della spesa e qualsiasi richiesta speciale. Faremo la spesa, riforneremo il tuo frigo, cambieremo la biancheria e faremo una pulizia profonda in modo che tu torni in una casa fresca e accogliente."
-      }
+      "title": "Cura Proprietà Snowbird",
+      "tagline": "Tranquillità mentre sei via",
+      "description": "Cura proprietà stagionale che mantiene le residenze fresche, sicure e pronte per il tuo arrivo. Ideale per clienti che dividono il tempo tra Miami e un'altra casa.",
+      "quick_facts": [
+        { "label": "Ideale per", "value": "Residenti stagionali" },
+        { "label": "Cadenza", "value": "Controlli settimanali o bisettimanali" },
+        { "label": "Incluso", "value": "Pulizia profonda pre-arrivo" }
+      ],
+      "features": [
+        "Tour programmati della proprietà con foto",
+        "Controlli HVAC, impianti idraulici e elettrodomestici",
+        "Gestione posta, pacchi e consegne",
+        "Preparazione e pulizia post-uragano",
+        "Annaffiatura piante e coordinamento fornitori",
+        "Avviamenti veicoli e ispezione garage",
+        "Pulizia profonda prima di ogni arrivo",
+        "Rifornimento alimentari o servizi di benvenuto"
+      ],
+      "process": [
+        { "title": "Configurazione piano cura", "description": "Definiamo cadenza visite, accesso fornitori e preferenze reportistica." },
+        { "title": "Ispezioni di routine", "description": "I tecnici seguono una checklist di 30 punti e inviano aggiornamenti ad ogni visita." },
+        { "title": "Risoluzione problemi", "description": "Coordiniamo fornitori fidati per manutenzione o riparazioni." },
+        { "title": "Preparazione arrivo", "description": "La casa è dettagliata, rifornita e climatizzata per il tuo ritorno." }
+      ],
+      "trust_badges": [
+        "Gestione sicura chiavi e protocolli allarme",
+        "Preparazione tempeste e reportistica post-evento",
+        "Team concierge discreto e multilingue"
+      ],
+      "faqs": [
+        {
+          "question": "Potete accettare consegne e coordinare fornitori?",
+          "answer": "Sì. Possiamo incontrare fornitori di servizi, supervisionare progetti e tenerti aggiornato con foto e note."
+        },
+        {
+          "question": "Preparerete la casa prima che io arrivi?",
+          "answer": "Assolutamente. Aspettati una pulizia profonda fresca, biancheria stirata e qualsiasi alimentare o servizio richiesto rifornito."
+        }
+      ]
     }
   },
   "soloMiners": {
-    "title": "",
-    "subtitle": "",
-    "intro": "",
-    "featured": "",
-    "comparison": {
-      "traditional_title": "",
-      "solo_title": "",
-      "feature_energy": "",
-      "feature_noise": "",
-      "feature_heat": "",
-      "feature_maintenance": "",
-      "feature_ROI": "",
-      "feature_setup": ""
+    "hero": {
+      "title": "",
+      "subtitle": "",
+      "ctaPrimary": "",
+      "ctaSecondary": "",
+      "stats": {
+        "reward": "",
+        "power": "",
+        "support": ""
+      }
     },
-    "cta_button": "",
-    "view_all_button": ""
+    "highlights": {
+      "lottery": {
+        "title": "",
+        "copy": ""
+      },
+      "home": {
+        "title": "",
+        "copy": ""
+      },
+      "decentralization": {
+        "title": "",
+        "copy": ""
+      }
+    },
+    "catalog": {
+      "eyebrow": "",
+      "title": "",
+      "copy": "",
+      "learnMore": "",
+      "metrics": {
+        "hashrate": "",
+        "power": "",
+        "efficiency": "",
+        "price": ""
+      },
+      "notice": "",
+      "noticeCta": ""
+    },
+    "cta": {
+      "viewProduct": "",
+      "requestQuote": "",
+      "defaultDescription": ""
+    },
+    "badges": {
+      "lottery": "",
+      "pro": "",
+      "hobby": "",
+      "entry": ""
+    },
+    "fallback": {
+      "bitaxe": {
+        "description": "",
+        "features": {
+          "usb": "",
+          "silent": "",
+          "openSource": "",
+          "easySetup": ""
+        }
+      },
+      "apollo": {
+        "description": "",
+        "features": {
+          "node": "",
+          "lowNoise": "",
+          "desktop": "",
+          "premium": ""
+        }
+      },
+      "compac": {
+        "description": "",
+        "features": {
+          "usb": "",
+          "lowPower": "",
+          "affordable": "",
+          "plugPlay": ""
+        }
+      }
+    },
+    "comparison": {
+      "eyebrow": "",
+      "title": "",
+      "copy": "",
+      "solo": {
+        "title": "",
+        "items": {
+          "reward": "",
+          "decentralize": "",
+          "lowFees": "",
+          "lottery": ""
+        }
+      },
+      "pool": {
+        "title": "",
+        "items": {
+          "steady": "",
+          "poolFees": "",
+          "dependence": "",
+          "kYC": ""
+        }
+      },
+      "cta": ""
+    },
+    "faq": {
+      "eyebrow": "",
+      "title": "",
+      "copy": "",
+      "items": {
+        "whatIs": {
+          "question": "",
+          "answer": ""
+        },
+        "profitable": {
+          "question": "",
+          "answer": ""
+        },
+        "bestHome": {
+          "question": "",
+          "answer": ""
+        },
+        "needsNode": {
+          "question": "",
+          "answer": ""
+        },
+        "lottery": {
+          "question": "",
+          "answer": ""
+        }
+      }
+    },
+    "banner": {
+      "title": "",
+      "copy": "",
+      "cta": ""
+    }
   },
   "nav": {
     "home": "Home",
-    "services": "Servizi",
+    "products": "Servizi",
+    "all_products": "Tutti i Servizi",
+    "soloMiners": "Servizi Specializzati",
     "gallery": "Galleria",
-    "about": "Chi Siamo",
-    "service_areas": "Zone di Servizio",
-    "contact": "Contatti",
+    "technical": "Aree di Servizio",
+    "contact": "Contatto",
     "login": "Accedi",
-    "my_account": "Il Mio Account",
-    "logout": "Esci",
-    "admin": "Admin",
-    "solo_miners": "Servizi Specializzati",
+    "cart": "Carrello",
+    "profile": "Il Mio Profilo",
+    "orders": "Le Mie Richieste",
+    "follow_us": "Seguici",
     "language": "Lingua",
-    "booking": "Richiesta Servizio",
-    "quote_button": "Ottieni un Preventivo Gratuito"
+    "account": "Account",
+    "get_started": "Inizia"
   },
   "footer": {
-    "tagline": "Servizi di pulizia professionali per case e aziende in tutta Miami",
-    "services_title": "Servizi",
-    "services": {
-      "residential": "Pulizia Residenziale",
-      "commercial": "Pulizia Commerciale",
-      "windows": "Lavaggio Vetri",
-      "deep_clean": "Pulizia Profonda",
-      "move": "Trasloco",
-      "property": "Proprietà Vacanze",
-      "organization": "Organizzazione Domestica",
-      "snowbird": "Servizi Snowbird"
-    },
-    "company_title": "Azienda",
-    "company": {
-      "about": "Chi Siamo",
-      "service_areas": "Zone di Servizio",
-      "gallery": "Galleria",
-      "reviews": "Recensioni Clienti",
-      "contact": "Contattaci"
-    },
-    "legal_title": "Legale",
-    "legal": {
-      "privacy": "Informativa Privacy",
-      "terms": "Termini di Servizio",
-      "disclaimer": "Dichiarazione di non responsabilità"
-    },
-    "contact_title": "Contatti",
-    "contact": {
-      "phone": "(786) 380-7579",
-      "email": "info@cmkhomeservices.com",
-      "hours": "Lun-Sab: 8:00-18:00",
-      "address": "Al servizio di tutta la Greater Miami"
-    },
-    "social_title": "Seguici",
-    "newsletter_title": "Rimani Aggiornato",
-    "newsletter_placeholder": "La tua email",
-    "newsletter_button": "Iscriviti",
-    "newsletter_success": "Grazie per l'iscrizione!",
-    "copyright": "© {{year}} CMK Home Services. Tutti i diritti riservati.",
-    "made_with": "Fatto con",
-    "made_in": "a Miami, FL"
+    "rights": "Tutti i diritti riservati",
+    "privacy": "Informativa sulla Privacy",
+    "terms": "Termini e Condizioni",
+    "returns": "Politica di Reso",
+    "description": "Servizi professionali di pulizia residenziale e commerciale a Miami. Offriamo pulizia eccezionale con un tocco personale, trattando la tua casa o ufficio con la cura che merita.",
+    "quick_links": "Link Rapidi",
+    "products_title": "Servizi di Pulizia",
+    "contact_info": "Contatto",
+    "phone": "Telefono",
+    "email": "Email",
+    "address": "Indirizzo",
+    "business_hours": "Orari di Apertura",
+    "contact_title": "Contatto",
+    "hardware_title": "I Nostri Servizi",
+    "hardware_description": "Servizi di pulizia residenziale e commerciale a Miami"
   },
   "products": {
-    "title": "I Nostri Servizi di Pulizia",
-    "subtitle": "Soluzioni professionali su misura per case e aziende di Miami",
-    "filter": {
-      "all": "Tutti i Servizi",
-      "residential": "Residenziale",
-      "commercial": "Commerciale",
-      "specialized": "Specializzato",
-      "seasonal": "Stagionale"
+    "hero": {
+      "title": "",
+      "subtitle": ""
     },
-    "sort": {
-      "featured": "In Evidenza",
-      "price_low": "Prezzo: Basso a Alto",
-      "price_high": "Prezzo: Alto a Basso",
-      "newest": "Più Recente"
+    "filters": {
+      "category": "Categoria",
+      "all_categories": "Tutte le Categorie",
+      "model": "Modello",
+      "all_models": "Tutti i Modelli",
+      "search": "Cerca",
+      "search_placeholder": "Nome del servizio...",
+      "clear_filters": "Cancella Filtri",
+      "filter_by_tags": "Filtra per Tag"
     },
-    "results_count": "{{count}} servizi disponibili",
-    "no_results": "Nessun servizio trovato",
-    "no_results_desc": "Prova ad aggiustare i tuoi filtri o contattaci per un servizio personalizzato.",
-    "view_details": "Vedi Dettagli",
-    "book_now": "Prenota Ora",
-    "from": "Da"
+    "results": {
+      "loading": "Caricamento dei nostri servizi...",
+      "showing": "Mostrando {{current}} di {{total}} servizi"
+    },
+    "empty": {
+      "title": "Nessun Servizio Trovato",
+      "message": "Prova ad aggiustare i filtri o rimuovili per vedere tutti i servizi disponibili.",
+      "clear_button": "Cancella Filtri"
+    },
+    "section": {
+      "title": "I Nostri Servizi",
+      "subtitle": "Servizi di pulizia professionale"
+    },
+    "title": "I Nostri Servizi",
+    "subtitle": "Eccellenza in Ogni Pulizia",
+    "specs": "Specifiche",
+    "hashrate": "Tipo di Servizio",
+    "power": "Durata",
+    "efficiency": "Area di Copertura",
+    "add_to_cart": "Richiedi Servizio",
+    "request_quote": "Richiedi Preventivo",
+    "filterBy": "Filtra per",
+    "thickness": "Spessore"
   },
   "grosor": {
-    "title": "Dettagli Servizio",
-    "description": "Scegli il livello di servizio e la frequenza che si adattano alle tue esigenze",
-    "options": {
-      "basic": "Base",
-      "standard": "Standard",
-      "premium": "Premium",
-      "custom": "Personalizzato"
+    "breadcrumb": {
+      "home": "Home",
+      "products": "Servizi"
     },
-    "frequency": {
-      "title": "Frequenza",
-      "once": "Una Volta",
-      "weekly": "Settimanale",
-      "biweekly": "Bisettimanale",
-      "monthly": "Mensile"
-    },
-    "add_to_cart": "Aggiungi alla Richiesta",
-    "customize": "Personalizza Servizio"
+    "collection": "Collezione",
+    "subtitle": "",
+    "product_available": "servizio disponibile",
+    "products_available": "servizi disponibili",
+    "view_mode": "Modalità Vista",
+    "grid": "Griglia",
+    "list": "Lista",
+    "no_products": "Nessun Servizio Disponibile",
+    "no_products_desc": "Attualmente non ci sono servizi disponibili nella categoria {{category}}.",
+    "view_all_products": "Vedi Tutti i Servizi",
+    "cta": {
+      "title": "Hai Bisogno di Più Informazioni?",
+      "description": "",
+      "contact_us": "Contattaci",
+      "all_products": "Tutti i Servizi"
+    }
   },
   "detalle": {
-    "overview": "Panoramica",
-    "features": "Caratteristiche",
-    "process": "Processo",
-    "faqs": "FAQ",
-    "reviews": "Recensioni",
-    "book_service": "Prenota questo Servizio",
+    "breadcrumb": {
+      "home": "Home",
+      "products": "Servizi"
+    },
+    "category": "Categoria:",
+    "model": "Modello:",
+    "premium_label": "",
+    "description_title": "Descrizione",
+    "recommended_apps": "Applicazioni Raccomandate",
     "request_quote": "Richiedi Preventivo",
-    "whats_included": "Cosa è incluso",
-    "service_details": "Dettagli Servizio",
-    "duration": "Durata",
-    "team_size": "Dimensione Team",
-    "frequency_options": "Opzioni Frequenza",
-    "products_used": "Prodotti Utilizzati",
-    "related_services": "Servizi Correlati",
-    "popular_combinations": "Combinazioni Popolari"
+    "request_consultation": "Richiedi Consulenza Esperta",
+    "in_stock": "Disponibile",
+    "units_available": "{{count}} unità disponibili",
+    "pre_order": "Pre-Ordine Disponibile",
+    "back_to_products": "Torna ai Servizi",
+    "technical_support": "Assistenza tecnica 24/7",
+    "enterprise_equipment": "Attrezzatura di livello aziendale",
+    "specs_title": "Specifiche Tecniche",
+    "hash_rate": "",
+    "power_consumption": "",
+    "efficiency": "Area di Copertura",
+    "algorithm": "",
+    "chip_type": "",
+    "cooling": "",
+    "dimensions": "Dimensioni",
+    "weight": "Peso",
+    "noise_level": "Livello di Rumore",
+    "operating_temp": "Temperatura di Funzionamento",
+    "network": "",
+    "voltage": "",
+    "warranty": "Garanzia",
+    "warranty_included": "Garanzia Inclusa",
+    "warranty_coverage": "Copertura garanzia",
+    "high_performance": "Alte Prestazioni",
+    "expert_support": "Supporto Esperto",
+    "secure_payment": "Pagamento Sicuro",
+    "multiple_payment": "Opzioni di pagamento multiple",
+    "product_not_found": "Servizio Non Trovato",
+    "product_not_found_message": "Il servizio che cerchi non è disponibile o è stato discontinuato.",
+    "view_all_products": "Vedi Tutti i Servizi",
+    "loading_product": "Caricamento servizio...",
+    "benefits_title": "Perché Scegliere Questo Servizio",
+    "related_products": "Potrebbe Anche Interessarti",
+    "view_details": "Vedi Dettagli",
+    "cta": {
+      "title": "Hai Bisogno di Più Informazioni?",
+      "description": "",
+      "contact_us": "Contattaci"
+    }
   },
   "common": {
     "loading": "Caricamento...",
-    "error": "Si è verificato un errore",
-    "success": "Successo!",
-    "save": "Salva",
-    "cancel": "Annulla",
-    "delete": "Elimina",
-    "edit": "Modifica",
-    "close": "Chiudi",
-    "back": "Indietro",
-    "next": "Avanti",
-    "previous": "Precedente",
-    "submit": "Invia",
-    "confirm": "Conferma",
-    "yes": "Sì",
-    "no": "No",
-    "select": "Seleziona",
-    "search": "Cerca",
-    "filter": "Filtra",
-    "sort": "Ordina",
-    "view_more": "Vedi Altro",
-    "view_less": "Vedi Meno",
-    "read_more": "Leggi Altro",
-    "show_all": "Mostra Tutto",
-    "hide": "Nascondi",
-    "required": "Obbligatorio",
-    "optional": "Opzionale",
-    "email": "Email",
-    "phone": "Telefono",
-    "address": "Indirizzo",
-    "city": "Città",
-    "state": "Stato",
-    "zip": "CAP",
-    "country": "Paese",
-    "name": "Nome",
-    "message": "Messaggio",
-    "date": "Data",
-    "time": "Ora",
-    "price": "Prezzo",
-    "total": "Totale",
-    "subtotal": "Subtotale",
-    "discount": "Sconto",
-    "tax": "Tassa",
-    "quantity": "Quantità",
-    "add": "Aggiungi",
-    "remove": "Rimuovi",
-    "update": "Aggiorna",
-    "clear": "Cancella",
-    "reset": "Ripristina",
-    "apply": "Applica"
+    "search": "Cerca...",
+    "back": "Indietro"
   },
   "client": {
+    "profile": "Il Mio Profilo",
+    "orders": "Le Mie Richieste",
+    "login": "Accedi",
+    "login_subtitle": "Accedi al Tuo Account",
+    "register": "Registrati",
+    "register_subtitle": "Unisciti a CMK Home Services",
+    "logout": "Esci",
+    "my_account": "Il Mio Account",
+    "my_orders": "Le Mie Richieste di Servizio",
+    "pending": "In Sospeso",
+    "name": "Nome",
+    "email": "Email",
+    "phone": "Telefono",
+    "password": "Password",
+    "confirm_password": "Conferma Password",
+    "display_name": "Nome Visualizzato",
+    "company": "Azienda",
+    "or": "o",
+    "no_account": "Non hai un account?",
+    "address": "Indirizzo",
+    "city": "Città",
+    "postal_code": "Codice Postale",
+    "country": "Paese",
+    "save_changes": "Salva Modifiche",
+    "profile_updated": "Profilo aggiornato con successo",
+    "welcome_back": "Bentornato",
     "login_page": {
-      "title": "Accedi al Tuo Account",
-      "subtitle": "Accedi alla tua dashboard per gestire servizi e visualizzare la cronologia",
-      "email_label": "Indirizzo Email",
-      "email_placeholder": "tu@esempio.com",
-      "password_label": "Password",
-      "password_placeholder": "Inserisci la tua password",
-      "remember_me": "Ricordami",
-      "forgot_password": "Password dimenticata?",
-      "login_button": "Accedi",
-      "logging_in": "Accesso in corso...",
-      "no_account": "Non hai un account?",
-      "sign_up": "Crea un account",
-      "or_continue": "O continua con",
-      "google_login": "Accedi con Google",
-      "demo_credentials": "Credenziali Demo",
-      "demo_email": "demo@cmkhomeservices.com",
-      "demo_password": "demo123"
+      "welcome_title": "Benvenuto a",
+      "company_name": "CMK Home Services",
+      "hero_description": "Accedi al tuo portale cliente per gestire prenotazioni, visualizzare lo storico servizi e programmare il tuo prossimo servizio di pulizia.",
+      "feature_bookings_title": "Gestisci Prenotazioni",
+      "feature_bookings_description": "Programma servizi, traccia appuntamenti e gestisci le tue preferenze di pulizia in un unico posto.",
+      "feature_security_title": "Sicuro e Privato",
+      "feature_security_description": "Le tue informazioni personali e lo storico servizi sono protetti con sicurezza di livello aziendale.",
+      "benefit_fast_response": "Risposta Rapida",
+      "benefit_easy_scheduling": "Programmazione Facile",
+      "benefit_service_history": "Storico Servizi",
+      "access_label": "Accesso",
+      "form_subtitle": "Accedi per gestire i tuoi servizi di pulizia e prenotazioni.",
+      "session_expired": "La tua sessione è scaduta. Per favore, accedi di nuovo.",
+      "loading": "Accesso in corso..."
     },
     "register_page": {
-      "title": "Crea il Tuo Account",
-      "subtitle": "Unisciti a noi per iniziare a prenotare servizi di pulizia professionali",
-      "first_name_label": "Nome",
-      "first_name_placeholder": "Mario",
-      "last_name_label": "Cognome",
-      "last_name_placeholder": "Rossi",
-      "email_label": "Indirizzo Email",
-      "email_placeholder": "tu@esempio.com",
-      "phone_label": "Numero di Telefono",
-      "phone_placeholder": "(786) 123-4567",
-      "password_label": "Password",
-      "password_placeholder": "Crea una password sicura",
-      "confirm_password_label": "Conferma Password",
-      "confirm_password_placeholder": "Reinserisci la password",
-      "address_label": "Indirizzo Servizio",
-      "address_placeholder": "Indirizzo via",
-      "city_label": "Città",
-      "city_placeholder": "Miami",
-      "zip_label": "CAP",
-      "zip_placeholder": "33101",
-      "terms_agreement": "Accetto i",
-      "terms_link": "Termini di Servizio",
-      "and": "e",
-      "privacy_link": "Informativa Privacy",
-      "register_button": "Crea Account",
-      "registering": "Creazione account...",
-      "have_account": "Hai già un account?",
-      "sign_in": "Accedi",
-      "or_continue": "O continua con",
-      "google_signup": "Registrati con Google"
+      "hero_title_join": "Unisciti a",
+      "hero_description": "Crea il tuo account per prenotare servizi facilmente, gestire appuntamenti e goderti una casa più pulita e sana con i professionisti della pulizia fidati di Miami.",
+      "feature_scheduling_title": "Programmazione Facile",
+      "feature_scheduling_description": "Prenota servizi di pulizia singoli o ricorrenti con pochi clic. Programmazione flessibile per adattarsi al tuo stile di vita.",
+      "feature_history_title": "Storico Servizi",
+      "feature_history_description": "Traccia tutte le tue prenotazioni, consulta servizi passati e gestisci le tue preferenze di pulizia in un luogo sicuro.",
+      "benefit_fast_booking": "Prenotazione rapida",
+      "benefit_service_reminders": "Promemoria servizio",
+      "benefit_secure_private": "Sicuro e privato",
+      "create_access_badge": "Crea Accesso",
+      "form_instructions": "Tutti i campi contrassegnati con * sono obbligatori. Le password devono avere almeno {{minLength}} caratteri.",
+      "loading": "Creazione account..."
     },
-    "profile": {
-      "title": "Il Mio Profilo",
-      "subtitle": "Gestisci le tue informazioni personali e preferenze",
-      "personal_info": {
-        "title": "Informazioni Personali",
-        "first_name": "Nome",
-        "last_name": "Cognome",
-        "email": "Email",
-        "phone": "Telefono",
-        "update_button": "Aggiorna Informazioni",
-        "updating": "Aggiornamento..."
-      },
-      "service_address": {
-        "title": "Indirizzo Servizio",
-        "address": "Indirizzo",
-        "city": "Città",
-        "state": "Stato",
-        "zip": "CAP",
-        "update_button": "Aggiorna Indirizzo",
-        "add_another": "Aggiungi un Altro Indirizzo"
-      },
-      "preferences": {
-        "title": "Preferenze",
-        "language": "Lingua",
-        "notifications": "Notifiche Email",
-        "marketing": "Email Marketing",
-        "save_button": "Salva Preferenze"
-      },
-      "security": {
-        "title": "Sicurezza",
-        "change_password": "Cambia Password",
-        "current_password": "Password Attuale",
-        "new_password": "Nuova Password",
-        "confirm_password": "Conferma Nuova Password",
-        "update_password": "Aggiorna Password"
-      }
+    "profile_subtitle": "Mantieni le tue informazioni aggiornate e rivedi l'attività associata al tuo account.",
+    "profile_role": {
+      "admin": "Amministratore",
+      "client": "Cliente"
     },
-    "orders": {
-      "title": "Le Mie Richieste di Servizio",
-      "subtitle": "Visualizza e gestisci tutte le tue prenotazioni di servizio",
-      "no_orders": "Nessuna richiesta di servizio per ora",
-      "no_orders_desc": "Quando prenoti un servizio, apparirà qui.",
-      "browse_services": "Sfoglia Servizi",
-      "status": {
-        "pending": "In attesa",
-        "confirmed": "Confermato",
-        "in_progress": "In corso",
-        "completed": "Completato",
-        "cancelled": "Annullato"
-      },
-      "order_number": "Richiesta #",
-      "service_date": "Data Servizio",
-      "service_type": "Tipo Servizio",
-      "total_amount": "Importo Totale",
-      "view_details": "Vedi Dettagli",
-      "cancel_order": "Annulla Richiesta",
-      "reschedule": "Riprogramma",
-      "leave_review": "Lascia Recensione",
-      "order_details": {
-        "title": "Dettagli Richiesta",
-        "service_info": "Informazioni Servizio",
-        "service_address": "Indirizzo Servizio",
-        "special_instructions": "Istruzioni Speciali",
-        "payment_info": "Informazioni Pagamento",
-        "payment_method": "Metodo di Pagamento",
-        "subtotal": "Subtotale",
-        "tax": "Tassa",
-        "total": "Totale",
-        "status_history": "Cronologia Stato"
-      }
+    "profile_metrics": {
+      "member_since": "Membro da",
+      "last_login": "Ultimo accesso",
+      "last_login_never": "Non abbiamo ancora registrato un accesso",
+      "account_status": "Stato account",
+      "account_type": "Tipo account",
+      "not_available": "Non disponibile"
     },
-    "dashboard": {
-      "welcome": "Benvenuto, {{name}}!",
-      "upcoming_services": "Servizi Imminenti",
-      "no_upcoming": "Nessun servizio imminente",
-      "recent_orders": "Richieste Recenti",
-      "quick_actions": "Azioni Rapide",
-      "book_service": "Prenota un Servizio",
-      "view_all_orders": "Vedi Tutte le Richieste",
-      "update_profile": "Aggiorna Profilo",
-      "contact_support": "Contatta Supporto"
+    "profile_status": {
+      "active": "Attivo",
+      "disabled": "Disabilitato",
+      "locked_until": "Bloccato fino a {{date}}"
+    },
+    "profile_sections": {
+      "account_overview": "Riepilogo account",
+      "account_overview_hint": "Una rapida occhiata allo stato del tuo account e all'attività recente.",
+      "contact_information": "Informazioni di contatto",
+      "contact_information_hint": "Mantieni aggiornati i tuoi dati così possiamo aiutarti con richieste e aggiornamenti di servizio.",
+      "security": "Sicurezza e accesso",
+      "security_hint": "Rivedi l'attività di accesso e lo stato generale del tuo account.",
+      "support": "Hai bisogno di aiuto?"
+    },
+    "profile_support_description": "Contatta i nostri specialisti se hai bisogno di aggiornare le tue informazioni o hai domande sui servizi.",
+    "profile_actions": {
+      "view_orders": "Vedi richieste",
+      "edit_profile": "Modifica profilo",
+      "save_changes": "Salva modifiche",
+      "cancel": "Annulla",
+      "contact_support": "Contatta supporto"
+    },
+    "profile_messages": {
+      "updated": "Il tuo profilo è stato aggiornato correttamente.",
+      "load_error": "Non siamo riusciti a caricare il tuo profilo. Ricarica la pagina o riprova più tardi.",
+      "update_error": "Non siamo riusciti a salvare le modifiche. Controlla il modulo o riprova."
+    },
+    "email_cannot_change": "Gli indirizzi email sono gestiti dal nostro team di supporto. Contattaci se hai bisogno di richiedere una modifica.",
+    "not_provided": "Non fornito",
+    "security": {
+      "email_verified": "Verifica email",
+      "verified": "Verificato",
+      "not_verified": "Non verificato",
+      "login_attempts": "Tentativi di accesso (ultimi 30 giorni)",
+      "last_failed_login": "Ultimo tentativo fallito",
+      "session_status": "Stato sessione"
     },
     "errors": {
-      "login_failed": "Accesso fallito. Controlla le tue credenziali.",
-      "registration_failed": "Registrazione fallita. Riprova.",
-      "update_failed": "Aggiornamento fallito. Riprova.",
-      "required_field": "Questo campo è obbligatorio",
-      "invalid_email": "Inserisci un indirizzo email valido",
-      "invalid_phone": "Inserisci un numero di telefono valido",
-      "password_mismatch": "Le password non corrispondono",
-      "password_weak": "La password deve contenere almeno 8 caratteri",
-      "generic_error": "Si è verificato un errore. Riprova."
+      "name_required": "Per favore inserisci il tuo nome.",
+      "name_min_length": "Il nome deve avere almeno 3 caratteri.",
+      "email_required": "Per favore inserisci il tuo indirizzo email.",
+      "email_invalid": "Per favore inserisci un indirizzo email valido.",
+      "password_required": "Per favore inserisci una password.",
+      "password_min_length": "La password deve avere almeno 6 caratteri.",
+      "passwords_dont_match": "Le password non corrispondono.",
+      "email_in_use": "Questa email è già registrata. Per favore usa un'email diversa o accedi.",
+      "weak_password": "La password è troppo debole. Per favore usa una password più forte.",
+      "registration_failed": "Registrazione fallita. Per favore, riprova.",
+      "load_profile_failed": "Impossibile caricare il tuo profilo. Riprova più tardi.",
+      "update_profile_failed": "Impossibile aggiornare il tuo profilo. Per favore, riprova.",
+      "user_not_found": "Nessun account trovato con questo indirizzo email.",
+      "wrong_password": "Password errata. Per favore, riprova.",
+      "invalid_credentials": "Email o password non validi. Per favore verifica le tue credenziali e riprova.",
+      "login_failed": "Accesso fallito. Per favore, riprova."
     },
-    "success": {
-      "login": "Accesso effettuato con successo!",
-      "registration": "Account creato con successo!",
-      "profile_updated": "Profilo aggiornato con successo",
-      "password_changed": "Password cambiata con successo",
-      "order_placed": "Servizio prenotato con successo!",
-      "order_cancelled": "Richiesta annullata con successo"
-    },
-    "security": {
-      "password_requirements": "La password deve contenere almeno 8 caratteri, includendo maiuscole, minuscole e numeri.",
-      "email_verification": "Verifica la tua email per attivare il tuo account.",
-      "two_factor": "Autenticazione a Due Fattori",
-      "enable_2fa": "Abilita 2FA",
-      "disable_2fa": "Disabilita 2FA"
-    }
+    "sign_in": "Accedi al tuo account",
+    "dont_have_account": "Non hai un account?",
+    "sign_up_here": "Registrati qui",
+    "already_have_account": "Hai già un account?",
+    "sign_in_here": "Accedi qui",
+    "create_account": "Crea il tuo account",
+    "order_history": "Storico Richieste",
+    "orders_subtitle": "Traccia le tue richieste di servizio, consulta i dettagli degli appuntamenti e accedi al tuo storico servizi.",
+    "all_orders": "Tutte le richieste",
+    "no_orders_yet": "Ancora nessuna richiesta",
+    "order_details": "Dettagli Richiesta",
+    "order_date": "Data Richiesta",
+    "order_status": "Stato",
+    "order_total": "Totale",
+    "shipping_address": "Indirizzo Servizio",
+    "items": "Articoli",
+    "order": "Richiesta",
+    "tracking": "Tracciamento",
+    "quantity": "Quantità",
+    "reorder": "Richiedi di Nuovo",
+    "leave_review": "Lascia recensione",
+    "track_shipment": "Traccia servizio",
+    "cancel_order": "Annulla richiesta",
+    "contact_support": "Contatta supporto",
+    "download_invoice": "Scarica fattura",
+    "my_profile": "Il mio profilo",
+    "no_orders": "Nessuna richiesta trovata per questo filtro.",
+    "no_orders_description": "Una volta prenotato un servizio apparirà qui con dettagli completi e storico.",
+    "start_shopping": "Esplora servizi",
+    "processing": "In elaborazione",
+    "shipped": "Inviato",
+    "delivered": "Entregado",
+    "cancelled": "Annullato"
   },
   "gallery": {
-    "title": "Galleria dei Nostri Progetti",
-    "subtitle": "Esplora il nostro portfolio di trasformazioni di pulizia in tutta Miami",
-    "filter_all": "Tutti i Progetti",
-    "filter_residential": "Residenziale",
-    "filter_commercial": "Commerciale",
-    "filter_deep_clean": "Pulizia Profonda",
-    "filter_move": "Trasloco",
-    "filter_property": "Proprietà Vacanze",
-    "view_before_after": "Vedi Prima/Dopo",
-    "close_modal": "Chiudi vista dettagliata",
-    "before": "Prima",
-    "after": "Dopo",
-    "project_details": "Dettagli Progetto",
-    "service_type": "Tipo Servizio",
+    "featured": "Lavoro in Evidenza",
+    "hero_title_1": "Pulizia Residenziale Profonda",
+    "hero_subtitle_1": "Sperimenta la luminosità e lo splendore di una casa pulita professionalmente",
+    "read_more": "Leggi di Più",
+    "browse_portfolio": "Esplora il Nostro Portfolio",
+    "projects_found": "progetti",
+    "our_work": "Il Nostro Lavoro",
+    "portfolio_title": "Progetti di Pulizia Recenti",
+    "portfolio_subtitle": "Guarda le trasformazioni che abbiamo consegnato per proprietari e aziende a Miami",
+    "project": "Progetto",
+    "title": "Galleria",
+    "subtitle": "Esplora il nostro portfolio di progetti di pulizia completati, trasformazioni prima e dopo, e servizi premium per la casa consegnati a Miami",
+    "projects": "Progetti",
+    "all_projects": "Tutti i Progetti",
+    "showing_all": "Mostrando tutti i progetti",
+    "showing": "Mostrando",
+    "description": "Descrizione",
+    "view": "Vedi",
+    "view_project": "Vedi Progetto",
+    "no_projects": "Nessun Progetto Disponibile",
+    "no_projects_message": "Nessun progetto trovato per questa categoria. Prova a selezionare un'altra categoria o vedere tutti i progetti.",
+    "of": "di",
+    "mining_project": "Progetto",
+    "mining_infrastructure": "Progetto di Pulizia",
+    "global": "Miami, FL",
+    "miami_fl": "Miami, FL",
+    "general": "Generale",
+    "default_description": "Pulizia professionale della casa che mostra la nostra attenzione ai dettagli e impegno per l'eccellenza",
     "location": "Posizione",
-    "duration": "Durata",
-    "team_size": "Dimensione Team",
-    "no_images": "Nessuna immagine galleria disponibile al momento.",
-    "coming_soon": "Nuove foto progetti in arrivo!",
-    "aria_open_image": "Apri immagine a dimensione intera",
-    "aria_close_modal": "Chiudi finestra modale",
-    "aria_previous": "Immagine precedente",
-    "aria_next": "Immagine successiva",
-    "load_more": "Carica Altri Progetti"
+    "photos": "Foto",
+    "book_service": "Prenota Questo Servizio",
+    "book_subtitle": "Ottieni un preventivo gratuito per servizi di pulizia simili",
+    "untitled": "Senza Titolo",
+    "no_description": "Nessuna descrizione disponibile",
+    "aria_previous_slide": "Diapositiva precedente",
+    "aria_next_slide": "Diapositiva successiva",
+    "aria_close_lightbox": "Chiudi galleria",
+    "aria_previous_image": "Immagine precedente",
+    "aria_next_image": "Immagine successiva",
+    "aria_close": "Chiudi",
+    "tags": {
+      "kitchens": "Cucine",
+      "bathrooms": "Bagni",
+      "modern": "Moderno",
+      "classic": "Classico",
+      "luxury": "Lusso"
+    }
   },
   "contact": {
+    "title": "Contatto",
+    "subtitle": "Mettiti in contatto con i nostri esperti di pulizia. Che tu abbia bisogno di pulizia residenziale o commerciale, hai domande sui nostri servizi, o vuoi un preventivo personalizzato.",
     "hero": {
-      "title": "Mettiamoci in Contatto",
-      "subtitle": "Pronto per una casa o ufficio impeccabile? Contattaci per un preventivo gratuito o prenota il tuo servizio oggi."
+      "title": "Ottieni il Tuo",
+      "title_highlight": "Preventivo Gratuito",
+      "description": "Servizi di pulizia professionale a Miami. Servizio in giornata disponibile. Rispondiamo in 1 ora.",
+      "call_now": "Chiama Ora",
+      "whatsapp": "WhatsApp",
+      "email": "Email"
     },
     "form": {
-      "title": "Invia un Messaggio",
-      "name_label": "Il Tuo Nome",
-      "name_placeholder": "Mario Rossi",
-      "email_label": "Indirizzo Email",
-      "email_placeholder": "tu@esempio.com",
-      "phone_label": "Numero di Telefono",
-      "phone_placeholder": "(786) 123-4567",
-      "service_label": "Servizio Interessato",
+      "title": "Inviaci un Messaggio",
+      "subtitle": "Compila il modulo qui sotto e ti risponderemo in 1 ora.",
+      "full_name": "Nome Completo",
+      "full_name_placeholder": "Mario Rossi",
+      "email": "Indirizzo Email",
+      "email_placeholder": "mario@esempio.com",
+      "phone": "Numero di Telefono",
+      "phone_placeholder": "(786) 380-7579",
+      "service": "Servizio Richiesto",
       "service_placeholder": "Seleziona un servizio",
-      "message_label": "Messaggio",
+      "address": "Indirizzo del Servizio",
+      "address_placeholder": "Miami, FL",
+      "message": "Messaggio",
       "message_placeholder": "Raccontaci delle tue esigenze di pulizia...",
-      "submit_button": "Invia Messaggio",
-      "sending": "Invio...",
-      "success_title": "Messaggio Inviato!",
-      "success_message": "Grazie per averci contattato. Ti risponderemo presto.",
-      "error_title": "Invio Fallito",
-      "error_message": "Si è verificato un errore. Riprova o chiamaci direttamente."
-    },
-    "info": {
-      "title": "Informazioni Contatto",
-      "phone": {
-        "label": "Telefono",
-        "value": "(786) 380-7579",
-        "hours": "Lun-Sab: 8:00-18:00"
-      },
-      "email": {
-        "label": "Email",
-        "value": "info@cmkhomeservices.com",
-        "response": "Risposta in 24 ore"
-      },
-      "whatsapp": {
-        "label": "WhatsApp",
-        "value": "Chatta Ora",
-        "available": "Risposta rapida disponibile"
-      },
-      "address": {
-        "label": "Zone di Servizio",
-        "value": "Tutta la Greater Miami",
-        "areas": "Miami Beach, Coral Gables, Brickell e altro"
-      }
+      "photos_label": "Aggiungi Foto (Opzionale - max 5)",
+      "photos_button": "Clicca per caricare foto dell'area",
+      "files_selected": "file selezionato/i",
+      "privacy_label": "Accetto l'",
+      "privacy_link": "Informativa sulla Privacy",
+      "privacy_consent": "e acconsento ad essere contattato riguardo alla mia richiesta.",
+      "required_field": "*",
+      "recaptcha_notice": "Questo sito è protetto da reCAPTCHA e si applicano l'",
+      "privacy_policy": "Informativa sulla Privacy",
+      "terms_of_service": "Termini di Servizio",
+      "recaptcha_apply": "di Google.",
+      "submit": "Invia Messaggio",
+      "submitting": "Invio in corso..."
     },
     "services": {
-      "title": "Servizi Disponibili",
       "residential": "Pulizia Residenziale",
       "commercial": "Pulizia Commerciale",
-      "windows": "Lavaggio Vetri",
       "deep_clean": "Pulizia Profonda",
-      "move": "Trasloco (Ingresso/Uscita)",
-      "property": "Proprietà Vacanze",
-      "organization": "Organizzazione Domestica",
-      "snowbird": "Servizi Snowbird"
+      "move_in_out": "Pulizia Trasloco",
+      "post_construction": "Pulizia Post-Costruzione",
+      "windows": "Lavaggio Finestre",
+      "carpet": "Pulizia Tappeti e Tappezzeria",
+      "airbnb": "Pulizia Airbnb"
+    },
+    "validation": {
+      "name_required": "Il nome è richiesto",
+      "email_required": "L'email è richiesta",
+      "phone_required": "Il telefono è richiesto",
+      "message_required": "Il messaggio è richiesto",
+      "privacy_required": "Devi accettare l'informativa sulla privacy",
+      "email_invalid": "Inserisci un'email valida",
+      "phone_invalid": "Inserisci un telefono valido",
+      "min_length": "Deve contenere almeno {{length}} caratteri",
+      "max_length": "Non può superare {{length}} caratteri"
+    },
+    "messages": {
+      "success_title": "Messaggio inviato con successo!",
+      "success_subtitle": "Ti risponderemo entro 1 ora durante l'orario d'ufficio.",
+      "error_prefix": "Per favore chiamaci direttamente al"
+    },
+    "info": {
+      "title": "Informazioni di Contatto",
+      "description": "Contattaci oggi per servizi di pulizia professionale. Siamo qui per aiutarti!",
+      "location_title": "La Nostra Posizione",
+      "phone_title": "Chiamaci",
+      "email_title": "Inviaci un'Email",
+      "hours_title": "Orari di Servizio"
     },
     "why_choose": {
       "title": "Perché Scegliere CMK?",
-      "licensed": {
-        "title": "Licenziati e Assicurati",
-        "desc": "Completamente licenziati, garantiti e assicurati per la tua protezione"
-      },
-      "experienced": {
-        "title": "Team Esperto",
-        "desc": "Professionisti della pulizia formati e controllati"
-      },
-      "eco": {
-        "title": "Prodotti Ecologici",
-        "desc": "Soluzioni di pulizia sicure e non tossiche"
-      },
-      "guarantee": {
-        "title": "Soddisfazione Garantita",
-        "desc": "Garanzia di soddisfazione 100% su tutti i servizi"
-      }
+      "fast_response": "Risposta rapida - Rispondiamo in 1 ora",
+      "same_day": "Servizio in giornata disponibile",
+      "satisfaction": "100% soddisfazione garantita",
+      "eco_friendly": "Prodotti di pulizia ecologici"
     },
-    "cta": {
-      "title": "Pronto a Iniziare?",
-      "subtitle": "Prenota il tuo servizio di pulizia oggi",
-      "button_quote": "Ottieni un Preventivo Gratuito",
-      "button_call": "Chiamaci Ora"
-    },
-    "validation": {
-      "name_required": "Il nome è obbligatorio",
-      "email_required": "L'email è obbligatoria",
-      "email_invalid": "Inserisci un indirizzo email valido",
-      "phone_required": "Il telefono è obbligatorio",
-      "phone_invalid": "Inserisci un numero di telefono valido",
-      "service_required": "Seleziona un servizio",
-      "message_required": "Il messaggio è obbligatorio",
-      "message_min": "Il messaggio deve contenere almeno 10 caratteri"
-    }
+    "form_title": "Inviaci la tua richiesta",
+    "success_message": "Grazie per il tuo messaggio! Ti contatteremo presto.",
+    "error_message": "Si è verificato un errore durante l'invio del messaggio. Per favore riprova.",
+    "full_name_placeholder": "Mario Rossi",
+    "email_placeholder": "tuo@esempio.com",
+    "phone_placeholder": "+1 203 555 0123",
+    "company_placeholder": "La tua attività o nome proprietà (opzionale)",
+    "message_placeholder": "Raccontaci delle tue esigenze di pulizia, dimensione della proprietà e orario preferito...",
+    "accept_privacy": "Acconsento ad essere contattato riguardo alla mia richiesta secondo l'informativa sulla privacy",
+    "privacy_required": "Devi accettare l'informativa sulla privacy",
+    "send_message": "Invia messaggio",
+    "sending": "Invio in corso...",
+    "info_title": "Informazioni di contatto",
+    "address_label": "Indirizzo",
+    "address_line1": "100 Greyrock Pl F119",
+    "address_line2": "Stamford, CT 06901",
+    "email_label": "Email"
   },
   "cart": {
-    "title": "Richiesta Servizio",
-    "empty": "La tua richiesta di servizio è vuota",
-    "empty_message": "Aggiungi servizi per iniziare a pianificare la tua pulizia.",
-    "browse_services": "Sfoglia Servizi",
-    "item_count": "{{count}} servizio nella richiesta",
-    "item_count_plural": "{{count}} servizi nella richiesta",
-    "service_name": "Servizio",
-    "frequency": "Frequenza",
-    "price": "Prezzo",
-    "subtotal": "Subtotale",
-    "tax": "Tassa Stimata",
-    "total": "Totale",
+    "title": "Carrello",
+    "your": "Il Tuo",
+    "selection": "Selezione",
+    "subtitle": "Rivedi la tua selezione di servizi e inviaci i tuoi dettagli per ricevere un preventivo personalizzato",
     "remove": "Rimuovi",
-    "update_quantity": "Aggiorna",
-    "continue_shopping": "Continua Acquisti",
-    "proceed_checkout": "Procedi alla Prenotazione",
-    "apply_coupon": "Applica Coupon",
-    "coupon_placeholder": "Inserisci codice coupon",
-    "coupon_apply": "Applica",
-    "coupon_success": "Coupon applicato!",
-    "coupon_invalid": "Codice coupon non valido",
-    "shipping_address": {
-      "title": "Indirizzo Servizio",
-      "add_new": "Aggiungi Nuovo Indirizzo",
-      "edit": "Modifica",
-      "use_this": "Usa Questo Indirizzo",
-      "address_line1": "Riga Indirizzo 1",
-      "address_line2": "Riga Indirizzo 2 (opzionale)",
-      "city": "Città",
-      "state": "Stato",
-      "zip": "CAP",
-      "save_address": "Salva Indirizzo",
-      "cancel": "Annulla"
+    "quantity": "Quantità",
+    "empty_title": "Il tuo carrello è vuoto",
+    "empty_message": "Esplora i nostri servizi e aggiungi quelli che preferisci",
+    "explore_products": "Esplora servizi",
+    "clear_cart": "Svuota carrello",
+    "contact_data": "Dati di contatto",
+    "full_name_required": "Nome completo *",
+    "name_error": "Il nome è richiesto (minimo 2 caratteri)",
+    "email_required": "Email *",
+    "email_error": "Inserisci un'email valida",
+    "phone_optional": "Telefono (opzionale)",
+    "message_optional": "Messaggio aggiuntivo (opzionale)",
+    "send_selection": "Invia selezione via email",
+    "sending": "Invio in corso...",
+    "required_fields_note": "I campi contrassegnati con * sono obbligatori",
+    "cart_items": "Servizi Selezionati",
+    "item": "articolo",
+    "items": "articoli",
+    "subtotal": "Subtotale",
+    "shipping_address": "Indirizzo di Servizio",
+    "no_addresses": "Nessun indirizzo trovato",
+    "add_shipping_address": "Aggiungi Indirizzo",
+    "add_new_address": "Aggiungi Nuovo Indirizzo",
+    "new_shipping_address": "Nuovo Indirizzo",
+    "first_name": "Nome",
+    "first_name_required": "Il nome è richiesto (min 2 caratteri)",
+    "last_name": "Cognome",
+    "last_name_required": "Il cognome è richiesto (min 2 caratteri)",
+    "email": "Email",
+    "email_validation": "Per favore inserisci un'email valida",
+    "phone": "Telefono",
+    "phone_format": "Formato: +1 (codice paese) seguito dal numero",
+    "phone_validation": "Per favore inserisci un numero valido con codice paese (es: +14155551234)",
+    "address": "Indirizzo",
+    "address_placeholder": "Via Principale 123",
+    "address_validation": "Per favore inserisci un indirizzo valido",
+    "city": "Città",
+    "city_validation": "Per favore inserisci una città",
+    "state": "Stato",
+    "state_placeholder": "Seleziona uno stato...",
+    "state_validation": "Per favore seleziona uno stato",
+    "zip_code": "Codice Postale",
+    "zip_placeholder": "12345 o 12345-6789",
+    "zip_validation": "Per favore inserisci un codice postale valido di 5 cifre",
+    "country": "Paese",
+    "us_only_shipping": "Attualmente serviamo solo indirizzi negli Stati Uniti.",
+    "save_address": "Salva Indirizzo",
+    "saving_address": "Salvataggio...",
+    "cancel": "Annulla",
+    "default": "Predefinito",
+    "shipping_method": "Metodo di Programmazione",
+    "calculating_shipping": "Calcolo disponibilità...",
+    "order_summary": "Riepilogo Richiesta",
+    "shipping_label": "Programmazione",
+    "tax": "Tasse",
+    "total": "Totale",
+    "proceed_to_checkout": "Procedi alla Prenotazione",
+    "secure": "Sicuro",
+    "ssl": "SSL",
+    "fast_shipping": "Servizio Rapido",
+    "continue_shopping": "Continua a Esplorare",
+    "shipping": {
+      "flat_rate": "Tariffa standard",
+      "estimate_default": "Servizio in 1-3 giorni lavorativi"
     },
-    "special_instructions": {
-      "title": "Istruzioni Speciali",
-      "placeholder": "Qualsiasi richiesta o nota speciale per il nostro team di pulizia..."
-    },
-    "errors": {
-      "remove_failed": "Rimozione articolo fallita",
-      "update_failed": "Aggiornamento articolo fallito",
-      "coupon_failed": "Applicazione coupon fallita"
+    "summary": {
+      "shipping_dynamic": "Programmazione e dettagli calcolati alla prenotazione",
+      "shipping_flat": "Programmazione calcolata automaticamente. {{estimate}}",
+      "free_shipping": "Programmazione flessibile"
     }
   },
   "notfound": {
-    "title": "404 - Pagina Non Trovata",
-    "message": "Spiacenti, la pagina che stai cercando non esiste.",
-    "home_button": "Torna alla Home"
-  },
-  "admin": {
-    "dashboard": {
-      "title": "Dashboard Admin",
-      "welcome": "Benvenuto, {{name}}",
-      "stats": {
-        "total_orders": "Richieste Totali",
-        "pending_orders": "Richieste in Attesa",
-        "total_revenue": "Entrate Totali",
-        "active_services": "Servizi Attivi",
-        "total_customers": "Clienti Totali",
-        "new_customers": "Nuovi Questo Mese"
-      },
-      "recent_orders": "Richieste Recenti",
-      "quick_actions": "Azioni Rapide",
-      "add_service": "Aggiungi Servizio",
-      "view_orders": "Vedi Tutte le Richieste",
-      "manage_gallery": "Gestisci Galleria",
-      "view_customers": "Vedi Clienti"
-    },
-    "products": {
-      "title": "Gestione Servizi",
-      "add_new": "Aggiungi Nuovo Servizio",
-      "edit": "Modifica Servizio",
-      "delete": "Elimina Servizio",
-      "delete_confirm": "Sei sicuro di voler eliminare questo servizio?",
-      "name": "Nome Servizio",
-      "category": "Categoria",
-      "price": "Prezzo",
-      "description": "Descrizione",
-      "features": "Caratteristiche",
-      "duration": "Durata",
-      "team_size": "Dimensione Team",
-      "status": "Stato",
-      "active": "Attivo",
-      "inactive": "Inattivo",
-      "save": "Salva Servizio",
-      "cancel": "Annulla"
-    },
-    "orders": {
-      "title": "Gestione Richieste",
-      "order_number": "N. Richiesta",
-      "customer": "Cliente",
-      "service": "Servizio",
-      "date": "Data",
-      "status": "Stato",
-      "amount": "Importo",
-      "actions": "Azioni",
-      "view": "Vedi",
-      "edit": "Modifica",
-      "delete": "Elimina",
-      "update_status": "Aggiorna Stato",
-      "pending": "In attesa",
-      "confirmed": "Confermato",
-      "in_progress": "In corso",
-      "completed": "Completato",
-      "cancelled": "Annullato"
-    },
-    "gallery": {
-      "title": "Gestione Galleria",
-      "upload": "Carica Immagini",
-      "edit": "Modifica Immagine",
-      "delete": "Elimina Immagine",
-      "delete_confirm": "Sei sicuro di voler eliminare questa immagine?",
-      "title_label": "Titolo",
-      "description_label": "Descrizione",
-      "category_label": "Categoria",
-      "before_image": "Immagine Prima",
-      "after_image": "Immagine Dopo",
-      "save": "Salva",
-      "cancel": "Annulla"
-    },
-    "users": {
-      "title": "Gestione Utenti",
-      "add_user": "Aggiungi Utente",
-      "edit": "Modifica Utente",
-      "delete": "Elimina Utente",
-      "delete_confirm": "Sei sicuro di voler eliminare questo utente?",
-      "name": "Nome",
-      "email": "Email",
-      "role": "Ruolo",
-      "status": "Stato",
-      "actions": "Azioni",
-      "admin": "Admin",
-      "customer": "Cliente",
-      "active": "Attivo",
-      "inactive": "Inattivo"
-    },
-    "catalog": {
-      "title": "Catalogo",
-      "manage": "Gestisci Catalogo"
-    },
-    "seed": {
-      "title": "Dati Iniziali",
-      "description": "Inizializza database con dati di esempio"
-    },
-    "analytics": {
-      "title": "Analitiche",
-      "overview": "Panoramica",
-      "revenue": "Entrate",
-      "customers": "Clienti",
-      "services": "Servizi"
-    },
-    "models": {
-      "title": "Modelli",
-      "manage": "Gestisci Modelli"
-    },
-    "settings": {
-      "title": "Impostazioni",
-      "general": "Generale",
-      "email": "Modelli Email",
-      "payment": "Pagamento",
-      "notifications": "Notifiche"
+    "title": "Pagina non trovata",
+    "description": "Ci dispiace, la pagina che cerchi non esiste. Potrebbe essere stata spostata o eliminata.",
+    "go_home": "Vai alla home",
+    "view_products": "Vedi servizi",
+    "looking_for": "Cosa stavi cercando?",
+    "explore_sections": "Esplora le nostre sezioni principali o usa i link di navigazione per trovare ciò di cui hai bisogno.",
+    "links": {
+      "home_title": "Home",
+      "home_desc": "Scopri i nostri servizi in evidenza ed esplora CMK Home Services.",
+      "products_title": "Servizi",
+      "products_desc": "Esplora il nostro catalogo completo di servizi di pulizia professionale.",
+      "contact_title": "Contatto",
+      "contact_desc": "Contatta il nostro team di esperti."
     }
   },
-  "checkout": {
-    "title": "Revisione Prenotazione",
-    "review_order": "Rivedi il Tuo Servizio",
-    "service_details": "Dettagli Servizio",
-    "service_address": "Indirizzo Servizio",
-    "service_date": "Data Servizio",
-    "select_date": "Seleziona Data",
-    "select_time": "Seleziona Ora",
-    "contact_info": "Informazioni Contatto",
-    "special_instructions": "Istruzioni Speciali",
-    "payment_method": "Metodo di Pagamento",
-    "credit_card": "Carta di Credito",
-    "pay_on_service": "Paga al Servizio",
-    "order_summary": "Riepilogo Ordine",
-    "subtotal": "Subtotale",
-    "tax": "Tassa",
+  "admin": {
+    "title": "Pannello di Amministrazione",
+    "welcome": "Benvenuto",
+    "dashboard": {
+      "title": "Pannello di Controllo"
+    },
+    "products": {
+      "title": "Servizi"
+    },
+    "orders": {
+      "title": "Richieste"
+    },
+    "gallery": {
+      "title": "Galleria"
+    },
+    "users": {
+      "title": "Utenti"
+    },
+    "reviews": {
+      "title": "Recensioni"
+    },
+    "benefit_templates": {
+      "title": "Gestore Template Servizi"
+    },
+    "total_products": "Totale Servizi",
+    "total_orders": "Totale Richieste",
+    "gallery_images": "Immagini Galleria",
+    "total_users": "Totale Utenti",
+    "quick_actions": "Azioni Rapide",
+    "add_product": "Aggiungi Servizio",
+    "upload_image": "Carica Immagine",
+    "manage_products": "Gestisci Servizi",
+    "manage_orders": "Gestisci Richieste",
+    "manage_gallery": "Gestisci Galleria",
+    "manage_users": "Gestisci Utenti",
+    "recent_activity": "Attività Recente",
+    "no_recent_activity": "Nessuna attività recente",
+    "setup_required": "Configurazione Richiesta",
+    "need_categories_and_models": "Devi creare categorie e modelli prima di aggiungere servizi.",
+    "need_category": "Devi creare almeno una categoria prima di aggiungere servizi.",
+    "need_model": "Devi creare almeno un modello prima di aggiungere servizi.",
+    "goto_catalog": "Vai a Gestione Catalogo",
+    "seed_missing": "Nessun servizio trovato",
+    "seed_missing_hint": "Sembra che tu non abbia ancora inizializzato il database",
+    "run_seed": "Esegui Script di Inizializzazione",
+    "product_image": "Immagine",
+    "product_name": "Nome",
+    "product_category": "Categoria",
+    "product_thickness": "Tipo",
+    "product_price": "Prezzo",
+    "actions": "Azioni",
+    "no_products": "Nessun servizio trovato",
+    "status_draft": "Bozza",
+    "status_published": "Pubblicato",
+    "status_archived": "Archiviato",
+    "edit": "Modifica",
+    "delete": "Elimina",
+    "edit_product": "Modifica Servizio",
+    "product_wizard_hint": "Completa i dettagli del servizio qui sotto",
+    "catalog_title": "Seleziona dal Catalogo",
+    "catalog_hint": "Cerca e seleziona un modello esistente dal nostro catalogo",
+    "catalog_search_placeholder": "Cerca nel catalogo...",
+    "catalog_empty": "Nessun elemento trovato nel catalogo",
+    "manual_selection": "Selezione Manuale",
+    "manual_selection_hint": "Oppure seleziona modello e categoria manualmente",
+    "product_model": "Modello",
+    "select_model": "Seleziona modello...",
+    "select_category": "Seleziona categoria...",
+    "size": "Dimensione",
+    "refresh_autofill": "Aggiorna Compilazione Automatica",
+    "auto_fill_hint": "La compilazione automatica riempirà i campi in base alla tua selezione",
+    "template_warnings": "Avvisi Template",
+    "template_warning_hint": "Rivedi questi avvisi prima di pubblicare",
+    "product_description": "Descrizione",
+    "unlock": "Sblocca",
+    "lock": "Blocca",
+    "description_locked": "La descrizione è bloccata e non verrà compilata automaticamente",
+    "seo_settings": "Impostazioni SEO",
+    "seo_title": "Titolo SEO",
+    "seo_description": "Descrizione SEO",
+    "finish": "Finitura",
+    "usage": "Uso",
+    "price": "Prezzo",
+    "stock": "Disponibilità",
+    "cover_image": "Immagine di Copertina",
+    "cover_required_notice": "Un'immagine di copertina è richiesta per pubblicare",
+    "cover_required": "Immagine di Copertina Richiesta",
+    "cover_placeholder": "Carica immagine di copertina",
+    "cancel": "Annulla",
+    "back": "Indietro",
+    "next": "Avanti",
+    "save_draft": "Salva come Bozza",
+    "publish": "Pubblica",
+    "delete_product": "Elimina Servizio",
+    "confirm_delete": "Sei sicuro di voler eliminare questo elemento?",
+    "save": "Salva",
+    "no_images": "Nessuna immagine trovata",
+    "upload_first_image": "Carica la tua prima immagine",
+    "image_file": "File Immagine",
+    "delete_image": "Elimina Immagine",
+    "search_orders": "Cerca richieste...",
+    "all_orders": "Tutte le Richieste",
+    "pending": "In attesa",
+    "processing": "In elaborazione",
+    "shipped": "Spedito",
+    "delivered": "Consegnato",
+    "cancelled": "Annullato",
+    "no_orders": "Nessuna richiesta trovata",
+    "order_number": "Richiesta #",
+    "date": "Data",
+    "customer": "Cliente",
+    "status": "Stato",
     "total": "Totale",
-    "place_order": "Conferma Prenotazione",
-    "processing": "Elaborazione...",
-    "back_to_cart": "Torna alla Richiesta"
+    "view_detail": "Vedi Dettagli",
+    "update_status": "Aggiorna Stato",
+    "customer_info": "Informazioni Cliente",
+    "shipping_info": "Informazioni Servizio",
+    "tracking": "Tracciamento",
+    "order_items": "Articoli Richiesta",
+    "notes": "Note",
+    "new_status": "Nuovo Stato",
+    "users_description": "Gestisci account utente e permessi",
+    "search_users": "Cerca Utenti",
+    "search_users_placeholder": "Cerca per nome o email...",
+    "filter_by_role": "Filtra per Ruolo",
+    "all_roles": "Tutti i Ruoli",
+    "role_admin": "Amministratore",
+    "role_client": "Cliente",
+    "user": "Utente",
+    "company": "Azienda",
+    "role": "Ruolo",
+    "created_at": "Creato",
+    "loading_users": "Caricamento utenti...",
+    "disabled": "Disabilitato",
+    "active": "Attivo",
+    "change_role": "Cambia Ruolo",
+    "enable_user": "Abilita Utente",
+    "disable_user": "Disabilita Utente",
+    "no_users_found": "Nessun utente trovato",
+    "change_role_for": "Cambia ruolo per",
+    "new_role": "Nuovo Ruolo",
+    "confirm": "Conferma",
+    "catalog": {
+      "title": "Gestione Catalogo",
+      "subtitle": "Gestisci modelli, categorie e attributi dei servizi",
+      "categories": "Categorie",
+      "models": "Modelli",
+      "tags": "Tag",
+      "sizes": "Dimensioni",
+      "new_category": "Nuova Categoria",
+      "no_categories": "Nessuna categoria trovata",
+      "inactive": "Inattivo",
+      "slug": "Slug",
+      "order": "Ordine",
+      "edit_category": "Modifica Categoria",
+      "saving": "Salvataggio...",
+      "edit_model": "Modifica Modello",
+      "new_model": "Nuovo Modello",
+      "edit_size": "Modifica Dimensione",
+      "new_size": "Nuova Dimensione",
+      "confirm_delete_title": "Conferma Eliminazione",
+      "confirm_delete_message": "Sei sicuro di voler eliminare",
+      "confirm_delete_warning": "Questa azione non può essere annullata.",
+      "deleting": "Eliminazione..."
+    },
+    "seed": {
+      "title": "Inizializzazione Database",
+      "subtitle": "Inizializza Firestore con categorie, modelli e template",
+      "operations": "Operazioni di Inizializzazione",
+      "operations_hint": "Questo creerà dati iniziali in Firestore",
+      "run_seed": "Esegui Inizializzazione",
+      "seeding": "Inizializzazione...",
+      "categories": "Categorie",
+      "categories_count": "3 tipi di servizio",
+      "categories_list": "",
+      "email_orders": "Richieste via Email",
+      "models": "Modelli",
+      "models_count": "12 modelli di servizio",
+      "models_list": "",
+      "templates": "Template",
+      "templates_count": "3 template globali",
+      "templates_list": "Descrizione, SEO, Meta",
+      "success_title": "Inizializzazione Completata con Successo!",
+      "success_message": "Il tuo database Firestore è stato inizializzato con i dati iniziali.",
+      "error_title": "Inizializzazione Fallita",
+      "console_output": "Output Console",
+      "clear": "Cancella",
+      "back_to_products": "Torna a Servizi Admin"
+    },
+    "analytics": {
+      "title": "Pannello Analitica",
+      "subtitle": "Monitora l'attività dei clienti, aggiornamenti galleria e richieste di servizio",
+      "eyebrow": "Riepilogo Prestazioni",
+      "period": {
+        "today": "Oggi",
+        "week": "Ultimi 7 Giorni",
+        "month": "Questo Mese",
+        "year": "Quest'Anno"
+      },
+      "metrics": {
+        "total_orders": "Richieste di Servizio",
+        "revenue": "Entrate",
+        "average_order_value": "Valore Medio Richiesta",
+        "new_customers": "Nuovi Clienti",
+        "products_updated": "Aggiornamenti Galleria",
+        "gallery_uploads": "Caricamenti Foto"
+      },
+      "recent_activity": "Attività Recente",
+      "showing_period": "Mostrando informazioni per {{period}}",
+      "no_activity": "Nessuna attività registrata per questo periodo",
+      "future_title": "Approfondimenti in arrivo",
+      "future_description": "Stiamo costruendo dashboard interattive con tendenze clienti, prestazioni servizi e tracciamento richieste. Ecco come si sta sviluppando la roadmap.",
+      "future_status": {
+        "in_discovery": "Scoperta",
+        "in_design": "In progettazione",
+        "in_development": "In sviluppo",
+        "internal_beta": "Beta interna"
+      },
+      "future_items": {
+        "charts": {
+          "title": "Grafici interattivi servizi",
+          "description": "Tendenze richieste servizio in tempo reale, tassi di completamento e tracciamento entrate con report esportabili.",
+          "status": "admin.analytics.future_status.internal_beta"
+        },
+        "top_products": {
+          "title": "Servizi più performanti",
+          "description": "Report prestazioni segmentati per identificare i servizi più richiesti e le tendenze stagionali.",
+          "status": "admin.analytics.future_status.in_development"
+        },
+        "geo": {
+          "title": "Distribuzione geografica",
+          "description": "Mappe che mostrano le posizioni delle richieste di servizio per identificare opportunità di copertura e aree ad alta domanda.",
+          "status": "admin.analytics.future_status.in_design"
+        },
+        "funnels": {
+          "title": "Funnel di conversione",
+          "description": "Traccia il percorso del cliente dal contatto iniziale al servizio completato, evidenziando i punti di conversione.",
+          "status": "admin.analytics.future_status.in_discovery"
+        }
+      }
+    },
+    "models": {
+      "title": "Biblioteca Modelli",
+      "subtitle": "Gestisci modelli di servizio, valori predefiniti e organizzazione catalogo",
+      "actions": {
+        "add": "Aggiungi Modello",
+        "edit": "Modifica",
+        "delete": "Elimina",
+        "create": "Crea Modello",
+        "update": "Aggiorna Modello",
+        "cancel": "Annulla",
+        "create_first": "Crea Primo Modello"
+      },
+      "filters": {
+        "search_placeholder": "Cerca modelli...",
+        "status_label": "Stato",
+        "status_all": "Tutti",
+        "status_active": "Attivi",
+        "status_inactive": "Inattivi"
+      },
+      "table": {
+        "name": "Nome",
+        "slug": "Slug",
+        "category": "Categoria",
+        "status": "Stato",
+        "actions": "Azioni",
+        "active": "Attivo",
+        "inactive": "Inattivo",
+        "unassigned": "Non assegnato"
+      },
+      "empty": "Nessun modello corrisponde ai filtri",
+      "messages": {
+        "name_required": "Il nome è obbligatorio",
+        "slug_exists": "Lo slug \"{{slug}}\" esiste già",
+        "created": "Modello creato correttamente",
+        "updated": "Modello aggiornato correttamente",
+        "deleted": "Modello eliminato correttamente",
+        "save_failed": "Impossibile salvare il modello. Riprova.",
+        "delete_failed": "Impossibile eliminare il modello. Riprova.",
+        "confirm_delete": "Eliminare il modello \"{{name}}\"? Questa azione non può essere annullata."
+      },
+      "modal": {
+        "new_title": "Nuovo Modello",
+        "edit_title": "Modifica Modello"
+      },
+      "fields": {
+        "name": "Nome modello",
+        "name_placeholder": "Inserisci il nome",
+        "slug": "Slug",
+        "slug_help": "Identificatore in minuscolo senza spazi.",
+        "category": "Categoria",
+        "texture_hints": "Suggerimenti texture",
+        "texture_hints_placeholder": "es. finitura satinata\npietra levigata",
+        "texture_hints_help": "Un suggerimento per riga. Esempi di finiture o alias.",
+        "default_tags": "Tag predefiniti",
+        "default_tags_placeholder": "es. premium, in evidenza",
+        "default_tags_help": "Separati da virgola. Aggiunti ai nuovi servizi di questo modello.",
+        "active": "Attivo"
+      }
+    },
+    "settings": {
+      "title": "Configurazione e Impostazioni",
+      "subtitle": "Gestisci configurazione sito, integrazioni e impostazioni chiave",
+      "actions": {
+        "save": "Salva Tutte le Impostazioni",
+        "saving": "Salvataggio...",
+        "lock": "Blocca",
+        "unlock": "Sblocca",
+        "show": "Mostra",
+        "hide": "Nascondi"
+      },
+      "states": {
+        "enabled": "Abilitato",
+        "disabled": "Disabilitato"
+      },
+      "feedback": {
+        "success": "Configurazione salvata correttamente.",
+        "error_details": "Impossibile salvare le impostazioni: {{message}}"
+      }
+    },
+    "total_revenue": "Entrate Totali"
+  },
+  "checkout": {
+    "breadcrumb": {
+      "home": "Home",
+      "cart": "Carrello",
+      "review": "Rivedi",
+      "payment": "Pagamento"
+    },
+    "review_title": "Rivedi la Tua",
+    "review_title_highlight": "Richiesta",
+    "review_subtitle": "Conferma la tua selezione di servizio e i dettagli dell'appuntamento",
+    "order_items": "Articoli Richiesta",
+    "edit_cart": "Modifica Carrello",
+    "shipping_address": "Indirizzo Servizio",
+    "no_addresses": "Nessun indirizzo trovato",
+    "no_addresses_message": "Per favore aggiungi un indirizzo di servizio per continuare",
+    "add_shipping_address": "Aggiungi Indirizzo",
+    "add_new_address": "Aggiungi Nuovo Indirizzo",
+    "new_shipping_address": "Nuovo Indirizzo",
+    "first_name": "Nome",
+    "last_name": "Cognome",
+    "email": "Email",
+    "phone": "Telefono (formato E.164)",
+    "phone_hint": "Formato: +[codice paese][numero] (es., +14155551234)",
+    "address_line1": "Indirizzo Riga 1",
+    "address_line2": "Indirizzo Riga 2",
+    "city": "Città",
+    "state_region": "Stato/Regione",
+    "postal_code": "Codice Postale",
+    "country": "Paese",
+    "save_address": "Salva Indirizzo",
+    "saving": "Salvataggio...",
+    "cancel": "Annulla",
+    "default": "Predefinito",
+    "shipping_method": "Metodo Programmazione",
+    "calculating_shipping": "Calcolo disponibilità...",
+    "order_summary": "Riepilogo Richiesta",
+    "subtotal": "Subtotale",
+    "shipping": "Programmazione",
+    "tax": "Tasse",
+    "discount": "Sconto",
+    "total": "Totale",
+    "proceed_to_payment": "Procedi al Pagamento",
+    "back_to_cart": "Torna al Carrello",
+    "secure_checkout": "Prenotazione Sicura",
+    "ssl_encrypted": "Crittografia SSL",
+    "qty": "Qta",
+    "each": "cad",
+    "sku": "SKU"
   },
   "payment": {
     "title": "Pagamento",
-    "card_number": "Numero Carta",
-    "card_name": "Nome sulla Carta",
-    "expiry_date": "Data Scadenza",
-    "cvv": "CVV",
+    "title_highlight": "Sicuro",
+    "subtitle": "Completa la tua prenotazione con fiducia",
+    "payment_information": "Informazioni Pagamento",
+    "cardholder_name": "Nome Titolare",
+    "cardholder_name_error": "Per favore inserisci il nome del titolare (minimo 3 caratteri)",
+    "card_details": "Dettagli Carta",
+    "loading_payment_form": "Caricamento modulo pagamento...",
+    "card_secure_message": "Le informazioni della tua carta sono crittografate e sicure. Non memorizziamo mai i dettagli completi della tua carta.",
     "billing_address": "Indirizzo Fatturazione",
-    "same_as_service": "Uguale all'indirizzo servizio",
-    "pay_now": "Paga Ora",
-    "processing": "Elaborazione Pagamento...",
-    "secure_payment": "Pagamento Sicuro",
-    "success_title": "Pagamento Riuscito!",
-    "success_message": "Il tuo servizio è stato prenotato con successo.",
-    "order_number": "N. Ordine",
-    "error_title": "Pagamento Fallito",
-    "error_message": "Si è verificato un errore nell'elaborazione del pagamento.",
+    "change_billing_address": "Cambia indirizzo fatturazione",
+    "pay": "Paga",
+    "processing": "Elaborazione...",
     "back": "Indietro",
-    "order_summary": "Riepilogo Ordine",
+    "order_summary": "Riepilogo Richiesta",
     "subtotal": "Subtotale",
-    "shipping": "Spedizione",
-    "tax": "Tassa",
+    "shipping": "Programmazione",
+    "tax": "Tasse",
     "discount": "Sconto",
     "total": "Totale",
     "security_ssl": "Crittografia SSL 256-bit",
@@ -1497,66 +1909,66 @@
     "security_stripe": "Powered by Stripe"
   },
   "maintenance": {
-    "title": "Torneremo presto",
-    "support": "Hai bisogno di aiuto immediato? Contatta il nostro team:",
+    "title": "Torniamo presto",
+    "support": "Hai bisogno di assistenza urgente? Contatta il nostro team:",
     "email_label": "Email:",
-    "phone_label": "Chiamaci:",
-    "admin_link": "Login Admin"
+    "phone_label": "Telefono:",
+    "admin_link": "Accesso amministratori"
   },
   "about": {
     "hero": {
-      "title": "Su CMK Home Services",
+      "title": "Chi Siamo - CMK Home Services",
       "subtitle": "Pulizia professionale con un tocco personale a Miami"
     },
     "founder_story": {
       "eyebrow": "La Nostra Fondatrice",
       "title": "Incontra Gloria",
       "image_tag_line1": "Gloria, Fondatrice",
-      "image_tag_line2": "Oltre 15 Anni a Guidare Team",
+      "image_tag_line2": "Oltre 15 anni alla guida di team",
       "paragraphs": [
-        "Gloria ha fondato CMK Home Services con una visione chiara: fornire alle famiglie e alle aziende di Miami una pulizia affidabile di cui possono fidarsi. Con anni di esperienza e una profonda comprensione di ciò che rende uno spazio elevato e accogliente, ha costruito CMK sui principi di eccellenza, affidabilità e cura con guanti bianchi.",
-        "Oggi, Gloria guida un team dedicato di professionisti controllati che condividono il suo impegno a rendere le case e le aziende di Miami impeccabili, un piano di pulizia su misura alla volta."
+        "Gloria ha fondato CMK Home Services con una visione chiara: fornire alle famiglie e alle aziende di Miami una pulizia affidabile di cui fidarsi. Con anni di esperienza e una profonda comprensione di ciò che rende uno spazio elevato e accogliente, ha costruito CMK sui principi di eccellenza, affidabilità e cura white-glove.",
+        "Oggi, Gloria guida un team dedicato di professionisti verificati che condividono il suo impegno a rendere impeccabili case e aziende di Miami, un piano di pulizia personalizzato alla volta."
       ],
-      "quote": "Ho avviato questa attività perché troppe persone avevano difficoltà a trovare addetti alle pulizie affidabili e attenti ai dettagli. Volevo un'azienda dove la qualità è garantita ad ogni visita.",
+      "quote": "Ho iniziato questa attività perché molte persone faticavano a trovare addetti alle pulizie affidabili e attenti ai dettagli. Volevo un'azienda dove la qualità fosse garantita ad ogni visita.",
       "highlights": [
         {
           "label": "Focus",
           "value": "Residenziale boutique e commerciale selezionato"
         },
         {
-          "label": "Approccio",
-          "value": "Programmazione concierge con ispezioni qualità"
+          "label": "Metodo",
+          "value": "Programmazione concierge con ispezioni di qualità"
         },
         {
           "label": "Promessa",
-          "value": "Licenziati, assicurati e soddisfazione garantita"
+          "value": "Autorizzato, assicurato e soddisfazione garantita"
         }
       ]
     },
     "values": {
-      "eyebrow": "Ciò Che Rappresentiamo",
+      "eyebrow": "Cosa rappresentiamo",
       "title": "I Nostri Valori Fondamentali",
-      "subtitle": "Questi principi guidano tutto ciò che facciamo presso CMK Home Services",
+      "subtitle": "Questi principi guidano tutto ciò che facciamo a CMK Home Services",
       "items": [
         {
           "icon": "sparkle",
           "title": "Eccellenza",
-          "description": "Ci atteniamo ai più alti standard in ogni lavoro di pulizia, indipendentemente dalle dimensioni."
+          "description": "Manteniamo i più alti standard in ogni lavoro di pulizia, indipendentemente dalla dimensione."
         },
         {
           "icon": "shield",
           "title": "Fiducia",
-          "description": "Professionisti licenziati, assicurati e controllati che puoi accogliere nella tua casa."
+          "description": "Professionisti autorizzati, assicurati e con controllo dei precedenti che puoi accogliere nella tua casa."
         },
         {
           "icon": "heart",
           "title": "Cura",
-          "description": "Trattiamo ogni casa e azienda come se fosse nostra, con attenzione ai dettagli e rispetto."
+          "description": "Trattiamo ogni casa e azienda come fosse nostra, con attenzione ai dettagli e rispetto."
         },
         {
           "icon": "clock",
           "title": "Affidabilità",
-          "description": "Qualità e puntualità costanti—puoi contare su di noi per presentarci e dare risultati."
+          "description": "Qualità e puntualità costanti—puoi contare su di noi per presentarci e mantenere."
         }
       ]
     },
@@ -1566,7 +1978,7 @@
         "label": "Clienti Felici"
       },
       {
-        "number": "10.000+",
+        "number": "10,000+",
         "label": "Pulizie Completate"
       },
       {
@@ -1584,17 +1996,17 @@
       "benefits": [
         {
           "icon": "shield",
-          "title": "Licenziati e Assicurati",
-          "description": "Completamente licenziati, garantiti e assicurati per la tua tranquillità."
+          "title": "Autorizzato e Assicurato",
+          "description": "Completamente autorizzato, garantito e assicurato per la tua tranquillità."
         },
         {
           "icon": "clipboard",
-          "title": "Controlli Background",
-          "description": "Tutti i membri del team sono sottoposti a controlli approfonditi dei precedenti."
+          "title": "Controllo Precedenti",
+          "description": "Tutti i membri del team si sottopongono a controlli approfonditi dei precedenti."
         },
         {
           "icon": "leaf",
-          "title": "Ecologici",
+          "title": "Eco-compatibile",
           "description": "Prodotti sicuri ed efficaci che proteggono la tua famiglia e l'ambiente."
         },
         {
@@ -1605,18 +2017,18 @@
         {
           "icon": "guarantee",
           "title": "Soddisfazione Garantita",
-          "description": "Non soddisfatto? Lo sistemeremo con pulizia di follow-up prioritario."
+          "description": "Non sei soddisfatto? Lo risolviamo con una pulizia di follow-up prioritaria."
         },
         {
           "icon": "home",
-          "title": "Locali di Miami",
+          "title": "Locale di Miami",
           "description": "Comprendiamo le case di Miami e le esigenze uniche della nostra comunità."
         }
       ]
     },
     "cta": {
       "title": "Pronto a Sperimentare la Differenza CMK?",
-      "description": "Unisciti a centinaia di clienti soddisfatti di Miami che si fidano di noi per le loro case e aziende.",
+      "description": "Unisciti a centinaia di clienti soddisfatti di Miami che si fidano di noi con le loro case e aziende.",
       "chat_whatsapp": "Chatta su WhatsApp",
       "get_quote": "Ottieni Preventivo Gratuito",
       "call": "Chiama (786) 380-7579"
