@@ -488,7 +488,7 @@
       },
       {
         "question": "¿Qué áreas atienden?",
-        "answer": "Cubrimos el área metropolitana de Miami incluyendo Miami Beach, Coral Gables, Coconut Grove, Brickell, Key Biscayne, Aventura y vecindarios circundantes."
+        "answer": "Cubrimos el área metropolitana de Miami incluyendo Miami Beach, Bal Harbour, Aventura, Sunny Isles, Broward y vecindarios circundantes."
       }
     ],
     "residential": {
@@ -496,7 +496,7 @@
       "tagline": "Servicio boutique de limpieza para la vida cotidiana",
       "description": "Mantenimiento detallado para residencias primarias y secundarias. Cuidamos cada habitación con toques de acabado de nivel hotelero y programación estilo conserjería.",
       "quick_facts": [
-        { "label": "Ideal para", "value": "Residencias y pied-a-terre" },
+        { "label": "Ideal para", "value": "Residencias y casas de vacaciones" },
         { "label": "Cadencia", "value": "Semanal / Quincenal" },
         { "label": "Equipo", "value": "2 empleadas dedicadas" }
       ],

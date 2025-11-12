@@ -50,8 +50,7 @@ export class ContactoPageComponent {
       { value: 'move-in-out', label: this.translate.instant('contact.services.move_in_out') },
       { value: 'post-construction', label: this.translate.instant('contact.services.post_construction') },
       { value: 'windows', label: this.translate.instant('contact.services.windows') },
-      { value: 'carpet', label: this.translate.instant('contact.services.carpet') },
-      { value: 'airbnb', label: this.translate.instant('contact.services.airbnb') }
+      { value: 'carpet', label: this.translate.instant('contact.services.carpet') }
     ];
   }
 

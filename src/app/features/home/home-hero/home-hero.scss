@@ -72,44 +72,82 @@
 .hero-inner {
   position: relative;
   z-index: 2;
-  width: min(520px, 100% - 2rem);
+  width: min(340px, 100% - 2rem);
+  max-height: 110px;
+  overflow: hidden;
   margin-inline: auto;
-  padding: clamp(1.75rem, 5vw, 3rem);
-  border-radius: 28px;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border-radius: 20px;
   background: rgba(12, 16, 24, 0.75);
   border: 1px solid rgba(255, 255, 255, 0.08);
   color: #f8f6f2;
   text-align: center;
   box-shadow: 0 30px 70px rgba(2, 4, 8, 0.82);
   backdrop-filter: blur(16px);
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+              padding 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  animation: gentle-bounce 2s ease-in-out infinite;
+
+  &:hover {
+    max-height: 600px;
+    cursor: default;
+    animation: none;
+  }
 }
 
 .hero-brand {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+  gap: 0.5rem;
+  margin-bottom: 0;
+  opacity: 1;
+  transition: opacity 0.3s ease, margin-bottom 0.3s ease;
+
+  .hero-inner:hover & {
+    margin-bottom: 1rem;
+  }
 }
 
 .hero-brand img {
-  width: 76px;
-  height: 76px;
-  border-radius: 24px;
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease;
+
+  .hero-inner:hover & {
+    transform: scale(1.1);
+  }
+}
+
+.hero-eyebrow,
+.hero-inner h1 {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, max-height 0.3s ease;
+
+  .hero-inner:hover & {
+    opacity: 1;
+    max-height: 200px;
+    transform: translateY(0);
+  }
 }
 
 .hero-eyebrow {
   text-transform: uppercase;
-  letter-spacing: 0.32em;
-  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  font-size: 0.65rem;
   color: rgba(255, 255, 255, 0.65);
 }
 
 .hero-inner h1 {
   font-family: 'Cormorant Garamond', 'Times New Roman', serif;
-  font-size: clamp(2.4rem, 6vw, 4.8rem);
+  font-size: clamp(2rem, 5vw, 3.5rem);
   letter-spacing: -0.02em;
   margin: 0;
   background: linear-gradient(135deg, #fff, #f5d6a1, #f7931a);
@@ -119,26 +157,44 @@
 }
 
 .hero-lede {
-  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  font-size: clamp(0.9rem, 1.8vw, 1.1rem);
   color: rgba(255, 255, 255, 0.82);
-  margin: 1rem auto 1.5rem;
-  line-height: 1.7;
+  margin: 0.75rem auto 1rem;
+  line-height: 1.5;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease 0.1s, transform 0.3s ease 0.1s;
+
+  .hero-inner:hover & {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero-ctas {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease 0.2s, transform 0.3s ease 0.2s;
+
+  .hero-inner:hover & {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero-cta {
   border-radius: 999px;
-  padding: 0.95rem 2rem;
+  padding: 0.75rem 1.5rem;
   font-weight: 600;
+  font-size: 0.875rem;
   text-decoration: none;
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+  cursor: pointer;
 }
 
 .hero-cta--primary {
@@ -172,6 +228,14 @@
   font-size: 0.65rem;
   color: rgba(255, 255, 255, 0.6);
   margin-top: 0.5rem;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease 0.25s, transform 0.3s ease 0.25s;
+
+  .hero-inner:hover & {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero-dots {
@@ -179,6 +243,14 @@
   justify-content: center;
   gap: 0.6rem;
   margin-top: 1.25rem;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease 0.3s, transform 0.3s ease 0.3s;
+
+  .hero-inner:hover & {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero-dot {
@@ -197,11 +269,26 @@
 
 @media (max-width: 768px) {
   .hero-inner {
-    padding: 2.5rem 1.5rem;
+    padding: 1.5rem 1rem;
+    width: min(300px, 100% - 2rem);
+    max-height: 100px;
+
+    &:hover {
+      max-height: 550px;
+    }
   }
 
   .hero-dots {
-    margin-top: 1rem;
+    margin-top: 0.75rem;
+  }
+}
+
+@keyframes gentle-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
   }
 }
 

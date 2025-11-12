@@ -111,11 +111,13 @@ interface Category {
         </div>
 
         <div class="grid md:grid-cols-2 gap-6 mb-12 p-6 bg-bitcoin-dark/40 rounded-xl border border-bitcoin-orange/20">
-          <div class="text-center">
-            <h4 class="font-semibold text-bitcoin-gold mb-2">{{ 'footer.address' | translate }}</h4>
-            <p class="text-white/70 text-sm whitespace-pre-line">{{ contactAddress }}</p>
-          </div>
-          <div class="text-center space-y-2">
+          @if (contactAddress) {
+            <div class="text-center">
+              <h4 class="font-semibold text-bitcoin-gold mb-2">{{ 'footer.address' | translate }}</h4>
+              <p class="text-white/70 text-sm whitespace-pre-line">{{ contactAddress }}</p>
+            </div>
+          }
+          <div [class]="contactAddress ? 'text-center space-y-2' : 'col-span-2 text-center space-y-2'">
             <h4 class="font-semibold text-bitcoin-gold mb-2">{{ 'footer.contact_info' | translate }}</h4>
             <p class="text-white/70 text-sm">
               <a *ngIf="contactEmail" [href]="'mailto:' + contactEmail" class="hover:text-bitcoin-orange transition-colors">{{ contactEmail }}</a>

@@ -15,7 +15,6 @@ export const SERVICE_IDS = [
   'organization',
   'deep_clean',
   'move',
-  'property',
   'snowbird'
 ] as const;
 
@@ -30,7 +29,6 @@ export const SERVICE_ICONS: Record<ServiceId, ServiceIcon> = {
   organization: 'organize',
   deep_clean: 'sparkles',
   move: 'keys',
-  property: 'building',
   snowbird: 'sun'
 };
 

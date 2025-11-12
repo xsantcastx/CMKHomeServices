@@ -488,7 +488,7 @@
       },
       {
         "question": "What areas do you serve?",
-        "answer": "We cover the greater Miami area including Miami Beach, Coral Gables, Coconut Grove, Brickell, Key Biscayne, Aventura, and surrounding neighborhoods."
+        "answer": "We cover the greater Miami area including Miami Beach, Bal Harbour, Aventura, Sunny Isles, Broward, and surrounding neighborhoods."
       }
     ],
     "residential": {
@@ -496,7 +496,7 @@
       "tagline": "Boutique housekeeping for everyday living",
       "description": "Detailed upkeep for primary and secondary residences. We care for every room with hotel-level finishing touches and concierge-style scheduling.",
       "quick_facts": [
-        { "label": "Ideal for", "value": "Residences & pied-a-terre" },
+        { "label": "Ideal for", "value": "Residences & vacation homes" },
         { "label": "Cadence", "value": "Weekly / Bi-weekly" },
         { "label": "Team", "value": "2 dedicated housekeepers" }
       ],

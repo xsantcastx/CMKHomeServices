@@ -14,17 +14,10 @@
             (error)="$event.target.src='/assets/productos/placeholder.jpg'">
         </div>
         <div class="carousel-overlay">
-          <div class="carousel-caption" (click)="openSlideDetails(slide)">
+          <div class="carousel-caption">
             <span class="eyebrow">{{ 'gallery.featured' | translate }}</span>
             <h2>{{ slide.altText || ('gallery.hero_title_1' | translate) }}</h2>
             <p>{{ slide.caption || ('gallery.hero_subtitle_1' | translate) }}</p>
-            
-            <button class="read-more-btn" type="button">
-              <span>{{ 'gallery.read_more' | translate }}</span>
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-              </svg>
-            </button>
           </div>
         </div>
       </div>
@@ -57,17 +50,6 @@
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
       </svg>
     </button>
-  } @else {
-    <!-- Fallback placeholder if no images loaded yet -->
-    <div class="carousel-slide active">
-      <div class="carousel-overlay">
-        <div class="carousel-caption">
-          <span class="eyebrow">{{ 'gallery.featured' | translate }}</span>
-          <h2>{{ 'gallery.hero_title_1' | translate }}</h2>
-          <p>{{ 'gallery.hero_subtitle_1' | translate }}</p>
-        </div>
-      </div>
-    </div>
   }
 </section>
 
@@ -77,7 +59,7 @@
     <div class="filter-header">
       <h3>{{ 'gallery.browse_portfolio' | translate }}</h3>
       <div class="results-count">
-        <strong>{{ filteredProjects.length }}</strong> {{ 'gallery.projects_found' | translate }}
+        <strong>{{ getTotalImages() }}</strong> {{ 'gallery.photos_found' | translate }}
       </div>
     </div>
     
@@ -86,11 +68,11 @@
         (click)="filtrarPorCategoria('todos')"
         class="gallery-pill"
         [class.gallery-pill--active]="categoriaActiva === 'todos'">
-        <span>{{ 'gallery.all_projects' | translate }}</span>
-        <span class="count">{{ getProjectCountByTag('todos') }}</span>
+        <span>{{ 'gallery.all_photos' | translate }}</span>
+        <span class="count">{{ getImageCountByTag('todos') }}</span>
       </button>
       
-      @for (tag of getAvailableProjectTags(); track tag.id) {
+      @for (tag of getAvailableTags(); track tag.id) {
         <button 
           (click)="filtrarPorCategoria(tag.slug)"
           class="gallery-pill"
@@ -99,82 +81,82 @@
             <span>{{ tag.icon }}</span>
           }
           <span>{{ tag.name }}</span>
-          <span class="count">{{ getProjectCountByTag(tag.slug) }}</span>
+          <span class="count">{{ getImageCountByTag(tag.slug) }}</span>
         </button>
       }
     </div>
   </div>
 </section>
 
-<!-- Masonry Grid Section -->
-<section class="gallery-masonry-section">
+<!-- Instagram-Style Grid Section -->
+<section class="gallery-instagram-section">
   <div class="page-container">
-    <div class="section-header">
-      <span class="eyebrow">{{ 'gallery.our_work' | translate }}</span>
-      <h2>{{ 'gallery.portfolio_title' | translate }}</h2>
-      <p>{{ 'gallery.portfolio_subtitle' | translate }}</p>
-    </div>
     
     @if (isLoading) {
-      <div class="gallery-masonry-grid">
-        @for (i of [1,2,3,4,5,6,7,8]; track i) {
-          <div class="gallery-card--masonry gallery-card--loading">
-            <div class="gallery-card__image"></div>
+      <div class="instagram-grid">
+        @for (i of [1,2,3,4,5,6,7,8,9,10,11,12]; track i) {
+          <div class="instagram-grid-item instagram-grid-item--loading">
+            <div class="grid-item__image"></div>
           </div>
         }
       </div>
     }
     
-    @if (!isLoading && filteredProjects.length > 0) {
-      <div class="gallery-masonry-grid">
-        @for (project of filteredProjects; track project.id; let i = $index) {
+    @if (!isLoading && displayedImages.length > 0) {
+      <div class="instagram-grid">
+        @for (image of displayedImages; track image.id; let i = $index) {
           <article
-            class="gallery-card--masonry gallery-card--fade-in"
-            [style.animation-delay]="(i * 0.05) + 's'"
-            (click)="abrirProyecto(project)">
-            <div class="gallery-card__image">
+            class="instagram-grid-item"
+            (click)="abrirImagen(image, i)">
+            <div class="grid-item__image">
               <img
-                [src]="project.featuredImage.url"
-                [alt]="project.name"
+                [src]="image.url"
+                [alt]="image.altText || 'Gallery image'"
                 loading="lazy"
                 (error)="$event.target.src='/assets/productos/placeholder.jpg'"/>
             </div>
-            <div class="gallery-card__overlay">
-              <span class="gallery-card__category">
-                {{ getTag(project.tags[0])?.name || 'General' }}
-              </span>
-              <h3 class="gallery-card__title">{{ project.name }}</h3>
-              <p class="gallery-card__description">
-                {{ project.description || ('gallery.default_description' | translate) }}
-              </p>
-              <button class="gallery-card__cta">
-                <span>{{ 'gallery.view_project' | translate }}</span>
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                </svg>
-              </button>
+            <div class="grid-item__overlay">
+              <div class="overlay-content">
+                @if (image.tags && image.tags.length > 0) {
+                  <span class="image-category">{{ getTag(image.tags[0])?.name || 'General' }}</span>
+                }
+                <p class="image-caption">{{ image.altText || image.caption }}</p>
+              </div>
             </div>
           </article>
         }
       </div>
+      
+      <!-- Loading More Indicator -->
+      @if (isLoadingMore) {
+        <div class="loading-more">
+          <div class="spinner"></div>
+          <p>{{ 'gallery.loading_more' | translate }}</p>
+        </div>
+      }
+      
+      <!-- End Message -->
+      @if (!hasMoreImages && displayedImages.length > 0) {
+        <div class="end-message">
+          <p>{{ 'gallery.all_loaded' | translate }} ({{ displayedImages.length }} {{ 'gallery.photos' | translate }})</p>
+        </div>
+      }
     }
     
-    @if (!isLoading && filteredProjects.length === 0) {
+    @if (!isLoading && displayedImages.length === 0) {
       <div class="text-center py-24">
-        <h3>{{ 'gallery.no_projects' | translate }}</h3>
-        <p>{{ 'gallery.no_projects_message' | translate }}</p>
+        <h3>{{ 'gallery.no_photos' | translate }}</h3>
+        <p>{{ 'gallery.no_photos_message' | translate }}</p>
       </div>
     }
   </div>
 </section>
 
-
 <!-- Lightbox Modal -->
-@if (selectedProject) {
-  @let currentImage = getCurrentImage();
+@if (selectedImage) {
   <div 
     class="gallery-lightbox"
-    [class.gallery-lightbox--active]="selectedProject"
+    [class.gallery-lightbox--active]="selectedImage"
     (click)="cerrarModal()"
     (keydown)="onKeydown($event)"
     tabindex="0"
@@ -193,7 +175,7 @@
       </button>
       
       <!-- Navigation Buttons -->
-      @if (selectedProject.images.length > 1 && currentImageIndex > 0) {
+      @if (selectedImageIndex > 0) {
         <button
           class="lightbox-nav lightbox-nav--prev"
           (click)="anteriorImagen(); $event.stopPropagation()"
@@ -204,7 +186,7 @@
         </button>
       }
       
-      @if (selectedProject.images.length > 1 && currentImageIndex < selectedProject.images.length - 1) {
+      @if (selectedImageIndex < displayedImages.length - 1) {
         <button
           class="lightbox-nav lightbox-nav--next"
           (click)="siguienteImagen(); $event.stopPropagation()"
@@ -217,38 +199,23 @@
       
       <!-- Image Container -->
       <div class="lightbox-image-container">
-        @if (currentImage) {
-          <img 
-            [src]="currentImage.url" 
-            [alt]="currentImage.altText || selectedProject.name"
-            (error)="$event.target.src='/assets/productos/placeholder.jpg'">
-        }
+        <img 
+          [src]="selectedImage.url" 
+          [alt]="selectedImage.altText || 'Gallery image'"
+          (error)="$event.target.src='/assets/productos/placeholder.jpg'">
       </div>
       
       <!-- Info Panel -->
       <div class="lightbox-info">
         <div class="lightbox-header">
-          <span class="lightbox-category">
-            {{ getTag(selectedProject.tags[0])?.name || ('gallery.general' | translate) }}
-          </span>
-          <h2>{{ selectedProject.name }}</h2>
-          <p>{{ selectedProject.description || ('gallery.default_description' | translate) }}</p>
+          @if (selectedImage.tags && selectedImage.tags.length > 0) {
+            <span class="lightbox-category">{{ getTag(selectedImage.tags[0])?.name || 'General' }}</span>
+          }
+          <h2>{{ selectedImage.altText || ('gallery.image' | translate) }}</h2>
+          <p>{{ selectedImage.caption || ('gallery.no_description' | translate) }}</p>
         </div>
         
         <div class="lightbox-details">
-          <div class="detail-item">
-            <div class="detail-icon">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 111.314 0z"/>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-              </svg>
-            </div>
-            <div class="detail-text">
-              <div class="detail-label">{{ 'gallery.location' | translate }}</div>
-              <div class="detail-value">{{ selectedProject.location || ('gallery.miami_fl' | translate) }}</div>
-            </div>
-          </div>
-          
           <div class="detail-item">
             <div class="detail-icon">
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -256,8 +223,8 @@
               </svg>
             </div>
             <div class="detail-text">
-              <div class="detail-label">{{ 'gallery.photos' | translate }}</div>
-              <div class="detail-value">{{ currentImageIndex + 1 }} / {{ selectedProject.photoCount }}</div>
+              <div class="detail-label">{{ 'gallery.photo' | translate }}</div>
+              <div class="detail-value">{{ selectedImageIndex + 1 }} / {{ displayedImages.length }}</div>
             </div>
           </div>
         </div>
@@ -275,51 +242,4 @@
     </div>
   </div>
 }
-
-<!-- Slide Details Modal -->
-@if (isSlideDetailsOpen && selectedSlide) {
-  <div class="slide-details-modal" (click)="closeSlideDetails()">
-    <div class="slide-details-content" (click)="$event.stopPropagation()">
-      <button class="close-btn" (click)="closeSlideDetails()" [attr.aria-label]="'gallery.aria_close' | translate">
-        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-        </svg>
-      </button>
-      
-      <div class="slide-details-image">
-        <img [src]="selectedSlide.url" [alt]="selectedSlide.altText || 'Gallery image'">
-      </div>
-      
-      <div class="slide-details-info">
-        <span class="details-eyebrow">{{ 'gallery.featured' | translate }}</span>
-        <h2>{{ selectedSlide.altText || ('gallery.untitled' | translate) }}</h2>
-        <p class="details-description">{{ selectedSlide.caption || ('gallery.no_description' | translate) }}</p>
-        
-        @if (selectedSlide.tags && selectedSlide.tags.length > 0) {
-          <div class="details-tags">
-            @for (tag of selectedSlide.tags; track tag) {
-              <span class="tag-badge">{{ tag }}</span>
-            }
-          </div>
-        }
-        
-        <button class="book-service-btn" (click)="bookThisService()">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-          </svg>
-          <span>{{ 'gallery.book_service' | translate }}</span>
-        </button>
-      </div>
-    </div>
-  </div>
-}
 </div>
-
-
-
-
-
-
-
-
-
