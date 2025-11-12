@@ -54,6 +54,13 @@
   gap: 0.75rem;
 }
 
+.reviews-stars,
+.reviews-mini-stars {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
 .reviews-stars svg,
 .reviews-mini-stars svg {
   color: #f4c384;
