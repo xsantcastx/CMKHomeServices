@@ -28,7 +28,8 @@ export class AnalyticsService {
   private consentService = inject(ConsentService);
   private analytics?: Analytics;
   private analyticsConsentGranted = false;
-  private measurementId = environment.firebase?.measurementId;
+  private measurementId = (environment.firebase?.measurementId || environment.analytics?.gaMeasurementId || '')
+    ?.trim() || undefined;
   private gtagInitialized = false;
   private gtagLoadPromise: Promise<void> | null = null;
   private analyticsReady = false;
@@ -434,3 +435,4 @@ declare global {
     gtag?: (...args: any[]) => void;
   }
 }
+
